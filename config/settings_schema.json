@@ -12,8 +12,62 @@
     "settings": [
       {
         "type": "header",
-        "content": "t:settings_schema.colors.settings.header__1.content"
+        "content": "Custom Color"
       },
+      {
+        "type": "color",
+        "id": "heading_color",
+        "label": "Heading",
+        "default": "#000"
+      },
+      {
+        "type": "color",
+        "id": "subheading_color",
+        "label": "Sub Heading",
+        "default": "#000"
+      },
+      {
+        "type": "color",
+        "id": "text_color",
+        "label": "Body text",
+        "default": "#000"
+      }, 
+      {
+        "type": "header",
+        "content": "Header"
+      },
+      {
+        "type": "color",
+        "id": "header_background",
+        "label": "Background",
+        "default": "#fff"
+      },
+      {
+        "type": "color",
+        "id": "header_text_color",
+        "label": "Text",
+        "default": "#000"
+      },
+      {
+        "type": "header",
+        "content": "Footer"
+      },
+      {
+        "type": "color",
+        "id": "footer_background",
+        "label": "Background",
+        "default": "#000"
+      },
+      {
+        "type": "color",
+        "id": "footer_text_color",
+        "label": "Text",
+        "default": "#fff"
+      },
+      {
+        "type": "header",
+        "content": "t:settings_schema.colors.settings.header__1.content"
+      },       
       {
         "type": "color",
         "id": "colors_solid_button_labels",
@@ -92,6 +146,105 @@
       {
         "type": "header",
         "content": "t:settings_schema.typography.settings.header__1.content"
+      },
+      {
+        "type": "checkbox",
+        "id": "custom_theme",
+        "label": "Custom Theme Settings",
+        "default": false
+      },
+      {
+        "type": "select",
+        "id": "custom_heading_font",
+        "label": "Heading Custom Font Family",
+        "default": "none",
+        "options": [
+          {
+            "value": "Hiragino Kaku Gothic StdN",
+            "label": "Hiragino Kaku Gothic StdN"
+          },
+          {
+            "value": "Hiragino Sans",
+            "label": "Hiragino Sans"
+          },
+          {
+            "value": "'Bangers', cursive",
+            "label": "Bangers"
+          },
+          {
+            "value": "'Permanent Marker', cursive",
+            "label": "Permanent Marker"
+          },
+          {
+            "value": "none",
+            "label": "None"
+          }
+        ]
+      },
+      {
+        "type": "select",
+        "id": "custom_body_font",
+        "label": "Body Custom Font Family",
+        "default": "none",
+        "options": [
+          {
+            "value": "Hiragino Kaku Gothic StdN",
+            "label": "Hiragino Kaku Gothic StdN"
+          },
+          {
+            "value": "Hiragino Sans",
+            "label": "Hiragino Sans"
+          },
+          {
+            "value": "'Bangers', cursive",
+            "label": "Bangers"
+          },
+          {
+            "value": "'Permanent Marker', cursive",
+            "label": "Permanent Marker"
+          },
+          {
+            "value": "none",
+            "label": "None"
+          }
+        ]
+      },
+      {
+        "type": "select",
+        "id": "navigation_font",
+        "label": "Navigation Custom Font Family",
+        "default": "none",
+        "options": [
+          {
+            "value": "Hiragino Kaku Gothic StdN",
+            "label": "Hiragino Kaku Gothic StdN"
+          },
+          {
+            "value": "Hiragino Sans",
+            "label": "Hiragino Sans"
+          },
+          {
+            "value": "'Bangers', cursive",
+            "label": "Bangers"
+          },
+          {
+            "value": "'Permanent Marker', cursive",
+            "label": "Permanent Marker"
+          },
+          {
+            "value": "none",
+            "label": "None"
+          }
+        ]
+      },
+      {
+        "type": "range",
+        "id": "nav_size",
+        "min": 0,
+        "max": 100,
+        "unit": "px",
+        "label": "Navigation Font Size",
+        "default": 88
       },
       {
         "type": "font_picker",
