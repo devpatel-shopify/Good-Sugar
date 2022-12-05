@@ -7,3 +7,7 @@
 body{
     font-family: 'hiragino_kaku_gothic_stdw8';
 }
+header-drawer
+{
+    display: block;
+}
