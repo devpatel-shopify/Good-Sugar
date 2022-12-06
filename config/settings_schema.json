@@ -4,8 +4,8 @@
     "theme_name": "Dawn",
     "theme_version": "7.0.1",
     "theme_author": "Shopify",
-    "theme_documentation_url": "https://help.shopify.com/manual/online-store/themes",
-    "theme_support_url": "https://support.shopify.com/"
+    "theme_documentation_url": "https:\/\/help.shopify.com\/manual\/online-store\/themes",
+    "theme_support_url": "https:\/\/support.shopify.com\/"
   },
   {
     "name": "t:settings_schema.colors.name",
@@ -31,7 +31,7 @@
         "id": "text_color",
         "label": "Body text",
         "default": "#000"
-      }, 
+      },
       {
         "type": "header",
         "content": "Header"
@@ -67,7 +67,7 @@
       {
         "type": "header",
         "content": "t:settings_schema.colors.settings.header__1.content"
-      },       
+      },
       {
         "type": "color",
         "id": "colors_solid_button_labels",
@@ -187,10 +187,6 @@
         "label": "Body Custom Font Family",
         "default": "none",
         "options": [
-          {
-            "value": "Hiragino Kaku Gothic StdN",
-            "label": "Hiragino Kaku Gothic StdN"
-          },
           {
             "value": "Hiragino Sans",
             "label": "Hiragino Sans"
