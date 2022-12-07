@@ -41,3 +41,22 @@ body.overflow-hidden-tablet{overflow-x: hidden;}
 .search_model .field__input:focus ~ .field__label{top: 50%; transform: translateY(-50%); left: 21px; font-size: 16px; letter-spacing: 0;}
 .search_model .field__input:focus, .search_model .field__input:not(:placeholder-shown), .search_model .field__input:-webkit-autofill{box-shadow: inherit;}
 .search_model .search-input:focus-visible {box-shadow: inherit; outline: none; outline-offset: 0; }
+
+.list-menu__item{font-family: var(--nav-font-family); font-weight: var(--nav-body-weight); font-size: var(--nav-font-size);}
+
+:root,
+p, body {
+  color: rgb(var(--text-color));
+}
+
+:root,
+h1, .h1-style, h2, h3, h4, h5, h6, .heading-font {
+    color: rgb(var(--heading-color));
+}
+
+:root,
+span {
+    color: rgb(var(--sub-heading-color));
+}
+
+.header__inline-menu, .header__icons .predictive-search{width: 0; height: 0;}

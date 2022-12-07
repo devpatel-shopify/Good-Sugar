@@ -98,7 +98,59 @@
   
           --font-body-scale: {{ settings.body_scale | divided_by: 100.0 }};
           --font-heading-scale: {{ settings.heading_scale | times: 1.0 | divided_by: settings.body_scale }};
+
+
+          {% if settings.custom_theme == true %}
+            --nav-font-family: {{ settings.navigation_font }};
+          {% else %}
+            -nav-font-family: {{ settings.type_body_font.family }};
+          {% endif %}
+
+          {% if settings.custom_theme == true %}
+            --nav-body-weight: {{ settings.navigation_font_weight }};
+          {% else %}
+            --nav-body-weight: {{ settings.type_body_font.weight }};
+          {% endif %}
+          
+          {% if settings.custom_theme == true %}
+          --nav-font-size: {{ settings.nav_size }}px;
+          {% else %}
+          --nav-font-size: 16px;
+          {% endif %}
   
+          --text-color: 
+          {{ settings.text_color.red }},
+          {{ settings.text_color.green }}, {{ settings.text_color.blue }};
+
+          --heading-color: 
+          {{ settings.heading_color.red }},
+          {{ settings.heading_color.green }}, {{ settings.heading_color.blue }};
+
+          --sub-heading-color: 
+          {{ settings.subheading_color.red }},
+          {{ settings.subheading_color.green }}, {{ settings.subheading_color.blue }};
+
+          --brand-primary-color: 
+          {{ settings.brand_primary_color.red }},
+          {{ settings.brand_primary_color.green }}, {{ settings.brand_primary_color.blue }};
+
+          --brand-second-color: 
+          {{ settings.brand_Second_color.red }},
+          {{ settings.brand_Second_color.green }}, {{ settings.brand_Second_color.blue }};
+
+          --brand-third-color: 
+          {{ settings.brand_third_color.red }},
+          {{ settings.brand_third_color.green }}, {{ settings.brand_third_color.blue }};
+
+          --brand-fourth-color: 
+          {{ settings.brand_four_color.red }},
+          {{ settings.brand_four_color.green }}, {{ settings.brand_four_color.blue }};
+
+          --brand-fifth-color: 
+          {{ settings.brand_fifth_color.red }},
+          {{ settings.brand_fifth_color.green }}, {{ settings.brand_fifth_color.blue }};
+
+
           --color-base-text: 
           {{ settings.colors_text.red }},
           {{ settings.colors_text.green }}, {{ settings.colors_text.blue }};
@@ -319,6 +371,61 @@
             font-size: 1.6rem;
           }
         }
+
+    {% if settings.custom_theme == true %}
+    :root {
+      --heading-text-transform: {{ settings.heading_text_transform}};
+      --heading-large-font-size: {{ settings.heading_h1_large_mob }}px;
+      --heading-h1-font-size: {{ settings.heading_h1_mob }}px;
+      --heading-h2-font-size: {{ settings.heading_h2_mob }}px;
+      --heading-h3-font-size: {{ settings.heading_h3_mob }}px;
+      --heading-h4-font-size: {{ settings.heading_h4_mob }}px;
+      --heading-h5-font-size: {{ settings.heading_h5_mob }}px;
+      --heading-h6-font-size: {{ settings.heading_h6_mob }}px;
+      --heading-large-font-weight: {{ settings.heading_h1_large_font_weight }};
+      --heading-h1-font-weight: {{ settings.heading_h1_font_weight }};
+      --heading-h2-font-weight: {{ settings.heading_h2_font_weight }};
+      --heading-h3-font-weight: {{ settings.heading_h3_font_weight }};
+      --heading-h4-font-weight: {{ settings.heading_h4_font_weight }};
+      --heading-h5-font-weight: {{ settings.heading_h5_font_weight }};
+      --heading-h6-font-weight: {{ settings.heading_h6_font_weight }};
+      --base-large-font-size: 14px;
+      --base-sm-font-size: 14px;
+      --caption-font-size: 12px;
+      --caption-font-weight: 400;
+      --caption-sm-font-size: 10px;
+    }
+    @media screen and (min-width: 741px){:root {
+        --heading-large-font-size: {{ settings.heading_h1_large_tab }}px;
+        --heading-h1-font-size: {{ settings.heading_h1_tab }}px;
+        --heading-h2-font-size: {{ settings.heading_h2_tab }}px;
+        --heading-h3-font-size: {{ settings.heading_h3_tab }}px;
+        --heading-h4-font-size: {{ settings.heading_h4_tab }}px;
+        --heading-h5-font-size: {{ settings.heading_h5_tab }}px;
+        --heading-h6-font-size: {{ settings.heading_h6_tab }}px;
+        --base-large-font-size: 20px;
+      }
+    }
+    @media screen and (min-width: 1200px){:root {
+      --heading-large-font-size: {{ settings.heading_h1_large }}px;
+      --heading-h1-font-size: {{ settings.heading_h1 }}px;
+      --heading-h2-font-size: {{ settings.heading_h2 }}px;
+      --heading-h3-font-size: {{ settings.heading_h3 }}px;
+      --heading-h4-font-size: {{ settings.heading_h4 }}px;
+      --heading-h5-font-size: {{ settings.heading_h5 }}px;
+      --heading-h6-font-size: {{ settings.heading_h6 }}px;
+    }
+  }
+  {% else %}
+  :root {
+    --heading-h1-font-size: calc(var(--font-heading-scale) * 3rem);
+    --heading-h2-font-size: calc(var(--font-heading-scale) * 2rem);
+    --heading-h3-font-size: calc(var(--font-heading-scale) * 1.7rem);
+    --heading-h4-font-size: calc(var(--font-heading-scale) * 1.5rem);
+    --heading-h5-font-size: calc(var(--font-heading-scale) * 1.2rem);
+
+  }
+  {% endif %}
       {% endstyle %}
   
       <link href="{{ 'PermanentMarker-Regular.woff' | file_url}}" rel="stylesheet">
