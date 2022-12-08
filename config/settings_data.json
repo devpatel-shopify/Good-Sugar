@@ -123,7 +123,6 @@
     "predictive_search_show_vendor": false,
     "predictive_search_show_price": false,
     "currency_code_enabled": true,
-    "cart_type": "drawer",
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",
@@ -146,11 +145,11 @@
       "header": {
         "type": "header",
         "settings": {
-          "header_bg": "rgba(0,0,0,0)",
+          "header_bg": "transparent",
           "logo": "shopify:\/\/shop_images\/logo.png",
           "logo_width": 160,
           "menu": "main-menu",
-          "enable_sticky_header": false
+          "enable_sticky_header": true
         }
       },
       "footer": {
