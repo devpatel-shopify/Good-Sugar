@@ -11,6 +11,11 @@
     "gradient_background_1": "",
     "colors_background_2": "#f3f3f3",
     "gradient_background_2": "",
+    "custom_theme": true,
+    "custom_heading_font": "Hiragino Sans",
+    "custom_body_font": "Hiragino Sans",
+    "navigation_font": "Permanent Marker",
+    "nav_size": 35,
     "type_header_font": "assistant_n4",
     "heading_scale": 100,
     "type_body_font": "assistant_n4",
@@ -140,17 +145,11 @@
       "header": {
         "type": "header",
         "settings": {
-          "color_scheme": "background-1",
+          "header_bg": "rgba(0,0,0,0)",
           "logo": "shopify:\/\/shop_images\/logo.png",
-          "logo_width": 90,
+          "logo_width": 160,
           "menu": "main-menu",
-          "menu_type_desktop": "dropdown",
-          "show_line_separator": true,
-          "enable_sticky_header": true,
-          "mobile_logo_position": "center",
-          "margin_bottom": 0,
-          "padding_top": 20,
-          "padding_bottom": 20
+          "enable_sticky_header": true
         }
       },
       "footer": {
