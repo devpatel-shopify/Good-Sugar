@@ -74,6 +74,25 @@
             font-style: normal;
             font-display: swap;
         }
+
+        @font-face {
+            font-family: 'Bangers';
+            src: url({{ 'Bangers-Regular.woff2' | file_url }}) format('woff2'),
+                url({{ 'Bangers-Regular.woff' | file_url }}) format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Permanent Marker';
+            src: url({{ 'PermanentMarker-Regular_668d1f1c-14a7-4d9c-ab4b-ca6d91021bcc.woff' | file_url }}) format('woff2'),
+                url({{ 'PermanentMarker-Regular_b305ac43-a125-4d67-913e-72adb5f48ec0.woff' | file_url }}) format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
   
         :root {
           {% if settings.custom_theme == true %}
