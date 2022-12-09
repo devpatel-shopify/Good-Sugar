@@ -194,8 +194,8 @@
         "default": "none",
         "options": [
           {
-            "value": "Hiragino Kaku Gothic StdN",
-            "label": "Hiragino Kaku Gothic StdN"
+            "value": "Hiragino Sans bold",
+            "label": "Hiragino Sans bold"
           },
           {
             "value": "Hiragino Sans",
@@ -222,6 +222,10 @@
         "default": "none",
         "options": [
           {
+            "value": "Hiragino Sans bold",
+            "label": "Hiragino Sans bold"
+          },
+          {
             "value": "Hiragino Sans",
             "label": "Hiragino Sans"
           },
@@ -246,8 +250,8 @@
         "default": "none",
         "options": [
           {
-            "value": "Hiragino Kaku Gothic StdN",
-            "label": "Hiragino Kaku Gothic StdN"
+            "value": "Hiragino Sans bold",
+            "label": "Hiragino Sans bold"
           },
           {
             "value": "Hiragino Sans",

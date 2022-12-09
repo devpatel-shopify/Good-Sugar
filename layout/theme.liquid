@@ -50,26 +50,18 @@
   
   
         @font-face {
-          font-family: 'hiragino_kaku_gothic_stdw8';
-          src: url({{ 'hiragino_kaku_gothic_std_w8-webfont.woff' | file_url }}) format('woff'),
-            url({{ 'hiragino_kaku_gothic_std_w8-webfont.woff2' | file_url }}) format('woff2');
+          font-family: 'Hiragino Sans';
+          src: url({{ 'Hiragino_Sans.woff' | file_url }}) format('woff'),
+            url({{ 'Hiragino_Sans.woff2' | file_url }}) format('woff2');
           font-weight: normal;
           font-style: normal;
           font-display: swap;
         }
   
         @font-face {
-            font-family: 'Hiragino Sans';
-            src: url({{ 'Hiragino-Sans-W3.woff2' | file_url }}) format('woff2'),
-                url({{ 'Hiragino-Sans-W3.woff' | file_url }}) format('woff');
-            font-weight: 300;
-            font-style: normal;
-            font-display: swap;
-        }
-        @font-face {
-            font-family: 'Hiragino Sans';
-            src: url({{ 'Hiragino-Sans-W8.woff2' | file_url }}) format('woff2'),
-                url({{ 'Hiragino-Sans-W8.woff' | file_url }}) format('woff');
+            font-family: 'Hiragino Sans bold';
+            src: url({{ 'Hiragino_Sans_bold.woff2' | file_url }}) format('woff2'),
+                url({{ 'Hiragino_Sans_bold.woff' | file_url }}) format('woff');
             font-weight: 800;
             font-style: normal;
             font-display: swap;
@@ -109,9 +101,13 @@
           --font-body-weight: {{ settings.type_body_font.weight }};
           --font-body-weight-bold: {{ settings.type_body_font.weight | plus: 300 | at_most: 1000 }};
   
-          --font-heading-family: 
-          {{ settings.type_header_font.family }},
-          {{ settings.type_header_font.fallback_families }};
+          {% if settings.custom_theme == true %}
+            --font-heading-family: {{ settings.custom_heading_font }};
+          {% else %}
+          --font-heading-family: {{ settings.type_header_font.family }};
+          {% endif %}
+
+          
           --font-heading-style: {{ settings.type_header_font.style }};
           --font-heading-weight: {{ settings.type_header_font.weight }};
   
