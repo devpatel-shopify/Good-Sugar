@@ -122,7 +122,6 @@ main#MainContent {min-height: 700px; }
     h1.header__heading {position: relative; z-index: 9; }
     .header .menu-drawer__navigation {padding: 110px 0; }
     .header .search__button:not(:focus-visible):not(.focused){display: none;}
-    .search_model .search-input{padding: 0 21px;}
 }
 
 @media screen and (max-width: 639px) {
@@ -131,6 +130,7 @@ main#MainContent {min-height: 700px; }
 @media screen and (max-width: 567px) {
     .section-header .menu-drawer{padding: 100px 25px 50px 45px;}
     main#MainContent {min-height: 690px;}
+    .search_model .search-input{padding: 0px 10px 2px 15px;}
     
 }
 
@@ -139,7 +139,7 @@ main#MainContent {min-height: 700px; }
     .section-header .menu-drawer {padding: 80px 25px 40px 45px;} 
     .header .menu-drawer .list-menu__item {font-size: 32px; } 
     .js .header .menu-drawer__menu li {margin: 0 0 30px; } 
-    .search_model .search-input {padding: 0 15px; font-size: 16px; } 
+    .search_model .search-input {font-size: 16px; } 
     .header-right .header-cart {font-size: 17px; line-height: 19px; } 
     .header__icon .icon.icon-close {height: 18px; } 
     .header .header__heading-logo {max-width: 155px; } 
