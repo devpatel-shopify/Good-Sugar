@@ -148,7 +148,7 @@ main#MainContent {min-height: 700px; }
     .search_model .search-input{height: 48px;} 
     .header__icon .icon {height: 16px; width: 26px;} 
     .footer-grid .copyright__content {font-size: 11px; line-height: 14px;} 
-    .footer-grid .footer-menu .footer-block__details-content li .list-menu__item{font-size: 13px; line-height: 15px;} 
+    .footer-grid .footer-menu .footer-block__details-content li .list-menu__item{font-size: 11px; line-height: 14px;} 
     .footer-grid .footer-menu .footer-block__details-content li{padding: 0 10px;} 
     .footer-grid {padding: 10px 0; }
 }
