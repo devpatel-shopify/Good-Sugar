@@ -63,6 +63,10 @@ div#menu-drawer:after {content: ""; display: inline-block; background: url(menu-
 .header .menu-drawer .list-menu__item:hover:after {content: ""; display: inline-block; background: #000; width: 100%; height: 5px; border-radius: 5px; position: absolute; left: 0; bottom: 0; }
 .header__icon--menu[aria-expanded="true"]::before{display: none;}
 .header .menu-drawer__navigation-container{overflow: hidden;}
+.search_model:focus-visible, .search_model .search-modal__form:focus-visible,.search_model .field:focus-visible{outline: none;
+    outline-offset: inherit;
+    box-shadow: inherit;}
+.header .menu-drawer .list-menu__item.menu-drawer__menu-item--active:after{content: ""; display: inline-block; background: #000; width: 100%; height: 5px; border-radius: 5px; position: absolute; left: 0; bottom: 0;}   
 
 .footer-grid {width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 21px 0; }
 .footer-grid .copyright__content {font-size: 14px; line-height: 16px; letter-spacing: 0; color: #5C398D; font-family: var(--font-body-family); font-weight: 400; }
