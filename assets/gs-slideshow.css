@@ -20,9 +20,18 @@
     margin: auto;
     display: block;
     width: 100%;
-    padding: 0 var(--page-padding);
+    padding: 0 15px;
 }
-
+@media screen and (max-width:1749px) {
+    .swiper-carousel {
+        padding: 0 20px;
+    } 
+}
+@media screen and (max-width:413px) {
+    .swiper-carousel {
+        padding: 0 15px;
+    } 
+}
 .swiper-carousel .swiper-slide {
     width: calc(100% - 6px);
     height: calc(87.5vh - var(--header-height) - var(--footer-height));

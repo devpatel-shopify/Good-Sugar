@@ -2,7 +2,7 @@
 {{ 'gs-slideshow.css' | asset_url | stylesheet_tag }}
 <script type="module" src="{{ 'swiper-bundle.min.js' | asset_url }}"></script>
 <script type="module" src="{{ 'swiper-bundle.esm.browser.min.js' | asset_url }}"></script>
-<div class="container">
+
 <!-- Slider main container -->
 <div class="swiper swiper-carousel">
     <!-- Additional required wrapper -->
@@ -49,7 +49,6 @@
   
     <!-- If we need scrollbar -->
     <div class="swiper-scrollbar"></div>
-</div>
 </div>
 <script type="module" src="{{ 'gs-slideshow.js' | asset_url }}"></script>
 {% schema %}
