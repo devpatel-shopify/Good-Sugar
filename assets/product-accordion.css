@@ -1,0 +1,135 @@
+.product_accordion p {
+    color: var(--custom-color);
+}
+
+
+.product_accordion_wrapper {
+display: grid;
+grid-template-columns: 40% 60%;
+}
+
+.product_accordion .image {
+    max-height: 400px;
+    max-width: 400px;
+}
+.product_accordion img {
+    height: 100%;
+    width: 100%;
+}
+.product_accordion .left_item {
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+}
+
+.product_accordion_main.right_item {
+    padding: 40px 30px;
+    display: flex;
+    align-items: center;
+}
+
+.accordion_main details .icon-minus {
+    display: none;
+}
+
+.accordion_main details[open] .icon-plus {
+display: none;
+}
+
+.accordion_main details[open] .icon-minus {
+    display: block;
+}
+.accordion_main details {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.accordion_main summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.accordion_main .title {
+    margin: 0; 
+    font-family:var(--font-body-family);
+    /* font-weight: 400; */
+}
+.accordion_main .title strong {
+    font-family: var(--font-heading-family);
+    
+}
+
+.accordion_main .title,
+.accordian_content {
+    font-size: var(--body-font-size);
+    line-height: 1.6;
+    color: #5C398D;
+}
+.accordion_main details {
+    border-top: 3px solid #f58325;
+
+}
+.product_accordion_main.left_item {
+    /* border-top: 3px solid #5C398D; */    
+}
+.product_accordion_main.right_item {
+    border-left: 3px solid #5C398D;
+}
+.product_accordion_main.left_item .title {
+    font-family: var(--font-heading-family);
+    font-size: 50px;
+    color: #5C398D;
+    line-height: 1.1;
+}
+.product_accordion_wrapper {
+    border-bottom: 3px solid #5C398D;
+}
+.product_accordion p {
+    padding: 0;
+    margin: 0;
+}
+
+
+
+@media screen and (min-width:990px) {
+    .accordian_content {
+        margin-bottom: 10px;
+        margin-top: 35px;    
+    }
+    .product_accordion_main_wrapper {
+        max-width: 600px;
+        margin: 0 auto;
+        min-height: 300px;
+        width: 100%;
+    }
+    
+}
+
+@media screen and (max-width:989px) {
+    .product_accordion_main.right_item,
+    .product_accordion_wrapper {
+        display: block;
+    }
+    .accordion_content_main {
+        display: flex;
+        align-items: center;
+        column-gap: 30px;
+        justify-content: space-around;
+        margin-top: 15px;
+        flex-wrap: nowrap;
+    }
+    .accordion_content_main .accordian_content,
+    .accordion_content_main .image {
+        width: 100%;
+    }
+    .product_accordion .image {
+        max-width: 150px;
+        max-height: 150px;
+    }
+    .product_accordion_main.right_item {
+        padding: 40px 20px;
+    }
+}

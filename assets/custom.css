@@ -154,3 +154,6 @@ main#MainContent {min-height: 700px; }
 }
 
 
+.predictive-search.predictive-search--header {
+    display: none;
+}

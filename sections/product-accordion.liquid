@@ -1,0 +1,136 @@
+{{ 'product-accordion.css' | asset_url | stylesheet_tag }}
+
+<style>
+    {{ section.settings.add_css }}
+</style>
+<style>
+    {% if section.settings.bg_image != blank %}       
+    #product_accordion--{{ section.id }} {
+        background-image: url({{ section.settings.bg_image | img_url: 'master' }});
+    }
+    {% else %}
+    #product_accordion--{{ section.id }} {
+        background:{{ section.settings.bg_color }};
+    }
+    {% endif %}
+</style>
+
+<div class="product_accordion {{ section.settings.add_class }}" id="product_accordion--{{ section.id }}">
+    <div class="{% if section.settings.full_width == false %} page-width {% endif %} ">
+        <div class="product_accordion_wrapper">
+            <div class="product_accordion_main left_item medium-hide small-hide">
+                <div class="image_wrapper">
+                    <div class="title medium-hide small-hide">attribute title</div>
+                    {% for block in section.blocks %}
+                    {% if block.settings.image != blank %}
+                    <div class="image" for="item--{{ block.id }}">
+                        <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.image.alt }}">
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="product_accordion_main right_item">
+                <div class="product_accordion_main_wrapper">
+                {% for block in section.blocks %}
+                    <div class="accordion_main">
+                        {% if block.settings.title != blank %}
+                        <details>
+                            <summary>
+                                <div class="title" id="item--{{ block.id }}">
+                                    {{ block.settings.title }}
+                                </div>
+                            <div class="product_accordion_icon">{% render 'icon-round-plus' %}{% render 'icon-round-minus' %}</div>
+                            </summary>
+                            <div class="accordion_content_main">
+                            {% if block.settings.image != blank %}                            
+                            <div class="image large-up-hide" for="item--{{ block.id }}">
+                                <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.image.alt }}">
+                            </div>
+                            {% endif %}
+                            {% if block.settings.text != blank %}<div class="accordian_content">{{ block.settings.text }}</div> {% endif %} 
+                            </div>                    
+                        </details>
+                        {% endif %}            
+                    </div>                    
+                {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "Product Accordion",
+  "tag": "section",
+  "settings": [
+    {
+        "type":"checkbox",
+        "id":"full_width",
+        "label":"Full Width",
+        "default":true
+    },
+    {
+        "type":"image_picker",
+        "id":"bg_image",
+        "label":"Background Image"
+    },
+    {
+        "type":"image_picker",
+        "id":"image",
+        "label":"Image"
+    },
+    {
+        "type":"color_background",
+        "id":"bg_color",
+        "label":"Background Color"
+    },
+    {
+        "type":"header",
+        "content":"Advance"
+    },
+    {
+        "type":"text",
+        "id":"add_class",
+        "label":"CSS Class"
+    },
+    {
+        "type":"textarea",
+        "id":"add_css",
+        "label":"Custom CSS"
+    }
+  ],
+  "blocks":[
+    {
+        "type":"text",
+        "name":"Accordion Item",
+        "settings":[
+            {
+                "type":"richtext",
+                "id":"title",
+                "label":"Title"
+            },
+            {
+                "type":"richtext",
+                "id":"text",
+                "label":"Text"
+            },
+            {
+                "type":"image_picker",
+                "id":"image",
+                "label":"Image"
+            }
+        ]
+    }
+  ],
+  "presets": [
+     {
+       "name": "Product Accordion",
+       "settings": {
+          
+        }
+     }
+   ]
+}
+{% endschema %}

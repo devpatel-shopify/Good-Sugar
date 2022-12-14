@@ -1,0 +1,108 @@
+{
+  "sections": {
+    "main": {
+      "type": "product-custom",
+      "settings": {
+        "full_width": true,
+        "image_size": "large",
+        "show_dots": false
+      }
+    },
+    "c48fad16-e469-431b-a872-0d2d6996a8fa": {
+      "type": "product-accordion",
+      "blocks": {
+        "1d158969-f9e4-4bca-b3a9-ae48d9c9c06e": {
+          "type": "text",
+          "settings": {
+            "title": "<p><strong>nutritional fact<\/strong> <br\/>Description line<\/p>",
+            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>"
+          }
+        },
+        "cd49b268-5855-455f-b7bf-a068e547724d": {
+          "type": "text",
+          "settings": {
+            "title": "<p><strong>nutritional fact<\/strong> <br\/>Description line<\/p>",
+            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>"
+          }
+        },
+        "96bf4251-652c-42fb-b592-730c1dbd5400": {
+          "type": "text",
+          "settings": {
+            "title": "<p><strong>nutritional fact<\/strong> <br\/>Description line<\/p>",
+            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>",
+            "image": "shopify:\/\/shop_images\/round_image.png"
+          }
+        }
+      },
+      "block_order": [
+        "1d158969-f9e4-4bca-b3a9-ae48d9c9c06e",
+        "cd49b268-5855-455f-b7bf-a068e547724d",
+        "96bf4251-652c-42fb-b592-730c1dbd5400"
+      ],
+      "settings": {
+        "full_width": true,
+        "image": "shopify:\/\/shop_images\/round_image.png",
+        "bg_color": "linear-gradient(83deg, rgba(210, 200, 219, 1), rgba(255, 204, 75, 1) 100%)",
+        "add_class": "",
+        "add_css": ""
+      }
+    },
+    "3237a599-468d-4d50-9b0f-2db29853a122": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "title": "Product",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "frontpage",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "4bae39e8-78e7-48d6-b65f-86bfbef722a0": {
+      "type": "related-product",
+      "settings": {
+        "full_width": true,
+        "bg_color": "#FFFFFF",
+        "header": "goes great with",
+        "header_text_alignment": "center",
+        "collection": "frontpage",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_description": false,
+        "add_class": "",
+        "add_css": "",
+        "margin_top_dek": 0,
+        "margin_bottom_dek": 0,
+        "padding_top_dek": 0,
+        "padding_bottom_dek": 0,
+        "margin_top_mob": 0,
+        "margin_bottom_mob": 0,
+        "padding_top_mob": 0,
+        "padding_bottom_mob": 0
+      }
+    }
+  },
+  "order": [
+    "main",
+    "c48fad16-e469-431b-a872-0d2d6996a8fa",
+    "3237a599-468d-4d50-9b0f-2db29853a122",
+    "4bae39e8-78e7-48d6-b65f-86bfbef722a0"
+  ]
+}

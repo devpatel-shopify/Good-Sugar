@@ -2,14 +2,42 @@
 {{ 'gs-slideshow.css' | asset_url | stylesheet_tag }}
 <script type="module" src="{{ 'swiper-bundle.min.js' | asset_url }}"></script>
 <script type="module" src="{{ 'swiper-bundle.esm.browser.min.js' | asset_url }}"></script>
-
+<div class="container">
 <!-- Slider main container -->
 <div class="swiper swiper-carousel">
     <!-- Additional required wrapper -->
     <div class="swiper-wrapper">
       <!-- Slides -->
       {%- for i in (1..10) -%}
-      <div class="swiper-slide" data-index="{{- i -}}">Slide {{ i }}</div>
+      <div class="swiper-slide" data-index="{{- i -}}">
+        <div class="main_slider_wrapper">
+          <div class="main_slider_image">
+            <div class="image">
+              <img src="https://cdn.shopify.com/s/files/1/0680/9331/3298/files/open-mouth-lightning_01.png?v=1671020061" alt="Slider Image">
+            </div>
+          </div>
+          <div class="main_slider_content_box">
+            <div class="main_slider_content">
+              <div class="main_slider_subheader mobile-view medium-hide large-up-hide item-1">
+                <div class="subheader item_1">The current state of mass health food is certainly not healthful and, with so many additives and preservatives, can barely be called ‘food.’</div>
+              </div>
+              <div class="main_slider_header">It’s Time to Eat the Truth.</div>
+              <div class="main_slider_subheader small-hide">
+                <div class="subheader item_1">The current state of mass health food is certainly not healthful and, with so many additives and preservatives, can barely be called ‘food.’</div>
+                <div class="subheader item_2">You’re just consuming well-marketed convenience, and if your brain can’t tell the difference your body certainly will.</div>
+              </div>
+              <div class="main_slider_button">
+                <a href="#" class="btn">
+                  <img src="https://cdn.shopify.com/s/files/1/0680/9331/3298/files/image_2_2.png?v=1671025890" alt="Slider Button">
+                </a>
+              </div>
+              <div class="main_slider_subheader mobile-view medium-hide large-up-hide item-2">
+                <div class="subheader item_2">You’re just consuming well-marketed convenience, and if your brain can’t tell the difference your body certainly will.</div>
+              </div> 
+            </div>
+          </div>
+        </div>
+      </div>
       {%- endfor -%}
     </div>
     <!-- If we need pagination -->
@@ -21,6 +49,7 @@
   
     <!-- If we need scrollbar -->
     <div class="swiper-scrollbar"></div>
+</div>
 </div>
 <script type="module" src="{{ 'gs-slideshow.js' | asset_url }}"></script>
 {% schema %}

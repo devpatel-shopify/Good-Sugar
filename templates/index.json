@@ -2,7 +2,6 @@
   "sections": {
     "image_banner": {
       "type": "image-banner",
-      "disabled": true,
       "blocks": {
         "heading": {
           "type": "heading",
@@ -48,64 +47,9 @@
         "stack_images_on_mobile": false,
         "show_text_below": false
       }
-    },
-    "2c25acb0-c835-4d23-9168-2ce7b1bf5cf4": {
-      "type": "gs-slideshow",
-      "blocks": {
-        "template--17211838923026__2c25acb0-c835-4d23-9168-2ce7b1bf5cf4-1670927596adeb5653-0": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/open-mouth-lightning_01_1.png",
-            "heading": "Image slide",
-            "heading_size": "h1",
-            "subheading": "Tell your brand's story through images",
-            "button_label": "Button label",
-            "link": "",
-            "button_style_secondary": true,
-            "box_align": "middle-center",
-            "show_text_box": true,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "background-1",
-            "text_alignment_mobile": "center"
-          }
-        },
-        "template--17211838923026__2c25acb0-c835-4d23-9168-2ce7b1bf5cf4-1670927596adeb5653-1": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/open-mouth-lightning_01_1.png",
-            "heading": "Image slide",
-            "heading_size": "h1",
-            "subheading": "Tell your brand's story through images",
-            "button_label": "Button label",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": true,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "background-1",
-            "text_alignment_mobile": "center"
-          }
-        }
-      },
-      "block_order": [
-        "template--17211838923026__2c25acb0-c835-4d23-9168-2ce7b1bf5cf4-1670927596adeb5653-0",
-        "template--17211838923026__2c25acb0-c835-4d23-9168-2ce7b1bf5cf4-1670927596adeb5653-1"
-      ],
-      "settings": {
-        "layout": "full_bleed",
-        "slide_height": "adapt_image",
-        "slider_visual": "counter",
-        "auto_rotate": true,
-        "change_slides_speed": 5,
-        "show_text_below": true,
-        "accessibility_info": "Slideshow about our brand"
-      }
     }
   },
   "order": [
-    "image_banner",
-    "2c25acb0-c835-4d23-9168-2ce7b1bf5cf4"
+    "image_banner"
   ]
 }

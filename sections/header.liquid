@@ -325,12 +325,16 @@
       this.currentScrollTop = 0;
       this.preventReveal = false;
       this.predictiveSearch = this.querySelector('predictive-search');
+      this.footer = document.getElementById('shopify-section-footer');
 
       this.onScrollHandler = this.onScroll.bind(this);
       this.hideHeaderOnScrollUp = () => this.preventReveal = true;
 
       this.addEventListener('preventHeaderReveal', this.hideHeaderOnScrollUp);
       window.addEventListener('scroll', this.onScrollHandler, false);
+      document.documentElement.style.setProperty('--header-height', `${parseInt(this.header.getBoundingClientRect().height)}px`);
+      document.documentElement.style.setProperty('--footer-height', `${parseInt(this.footer.getBoundingClientRect().height)}px`);
+
 
       this.createObserver();
     }

@@ -1,0 +1,206 @@
+{{ 'product-custom.css' | asset_url | stylesheet_tag }}
+
+<div class="product-custom product_custom-{{ section.id }}" id="product_custom--{{ section.id }}">
+<div class="{% if section.settings.full_width == false %} page-width {% endif %} ">
+  <div class="product_custom product--{{ section.settings.image_size }}">
+   <div class="product_custom_wrapper">
+    <div class="product_custom_image_wrapper">
+      <div class="product_custom_image">
+        <div class="product_custom_image_thumb"></div>
+        <div class="product_custom_image_main swiper">
+          <div class="swiper-wrapper">
+            {% for media in product.media %}
+            <div class="swiper-slide">          
+            <div class="product-image swiper-slide">
+              <img src="{{ media | img_url: 'master'}}" alt="{{ media.alt }}">
+             </div>
+          </div>
+           {% endfor %}
+          </div>
+          <div class="swiper-pagination {% if section.settings.show_dots == false %} hidden {% endif %} "></div>
+          <div class="swiper--prev">
+            {% render 'slider-arrow' %}
+          </div>
+          <div class="swiper--next">
+            {% render 'slider-arrow' %}
+          </div>
+          <div class="swiper-scrollbar"></div>
+        </div>
+      </div>
+    </div>
+    <div class="product_custom_content_wrapper header_part">
+      <div class="product_custom_content">
+        <div class="left_item">
+          <div class="product_title">
+              <h1> {{ product.title | escape }} </h1> 
+            </div>
+            <div class="product_custom_vender">
+          <div class="vender">
+            <span>attribute 1 • attribute 2</span>
+          </div>
+        </div>
+        </div>
+        
+        <div class="right_item">
+          <button class="product_custom_price">
+                  <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
+                    {%- render 'price' -%}
+                  </div>
+          </button>
+        </div>                
+      </div>
+    </div>
+    <div class="product_custom_content_wrapper discription_part">
+      <div class="product_custom_content">
+        <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
+          {{ product.description }}
+        </div>
+      </div>
+       
+    </div>
+    <div class="product_custom_content_wrapper list_part">
+      <div class="product_custom_content">
+        <div class="left_item">
+          <div class="item_title">full of</div>
+          <div class="item_list_wrapper">
+            <ul>
+              <li>
+                <div class="item_list">
+                  {% render 'icon-true' %}
+                  <span class="item_text">iaculis</span>
+                </div>
+              </li>
+              <li>
+                <div class="item_list">
+                  {% render 'icon-true' %}
+                  <span class="item_text">urna</span>
+                </div>
+              </li>
+              <li>
+                <div class="item_list">
+                  {% render 'icon-true' %}
+                  <span class="item_text">volutpat</span>
+                </div>
+              </li>
+              <li>
+                <div class="item_list">
+                  {% render 'icon-true' %}
+                  <span class="item_text">lacus</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="right_item">
+          <div class="item_title">free of</div>
+          <div class="item_list_wrapper">
+            <ul>
+              <li>
+                <div class="item_list">
+                  {% render 'icon-false' %}
+                  <span class="item_text">iaculis</span>
+                </div>
+              </li>
+              <li>
+                <div class="item_list">
+                  {% render 'icon-false' %}
+                  <span class="item_text">urna</span>
+                </div>
+              </li>
+              <li>
+                <div class="item_list">
+                  {% render 'icon-false' %}
+                  <span class="item_text">volutpat</span>
+                </div>
+              </li>
+              <li>
+                <div class="item_list">
+                  {% render 'icon-false' %}
+                  <span class="item_text">lacus</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="product_custom_content_wrapper image_part"></div>
+    
+  </div>
+  </div>
+</div>
+</div>
+
+<script src="{{ 'product-custom.js' | asset_url }}" defer="defer"></script>
+{% schema %}
+  {
+    "name": "Product Custom",
+    "settings": [
+      {
+        "type":"checkbox",
+        "id":"full_width",
+        "label":"Full Width",
+        "default":true
+      },
+      {
+        "type":"select",
+        "id":"image_size",
+        "label":"Image Size",
+        "default":"large",
+        "options":[
+          {
+            "value":"small",
+            "label":"Small"
+          },
+          {
+            "value":"medium",
+            "label":"Medium"
+          },
+          {
+            "value":"large",
+            "label":"Large"
+          }
+        ]
+      },
+      {
+        "type":"checkbox",
+        "id":"show_dots",
+        "label":"Show Dots",
+        "default":false
+      }
+    ],
+    "blocks":[
+        {
+          "type":"title",
+          "name":"Title",
+          "settings":[]
+        },
+        {
+          "type":"breadcrumb",
+          "name":"Breadcrumb",
+          "settings":[]
+        },
+        {
+          "type":"price",
+          "name":"Price",
+          "settings":[]
+        }
+    ],
+    "presets": [
+    {
+      "name": "Product Custom",
+      "blocks": [
+        {
+          "type": "title"
+        }
+      ]
+    }
+  ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

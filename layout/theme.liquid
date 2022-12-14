@@ -7,6 +7,8 @@
       <meta name="theme-color" content="">
       <link rel="canonical" href="{{ canonical_url }}">
       <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+      {% comment %} <link  rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.3.1/swiper-bundle.css"/> {% endcomment %}
+      {% comment %} <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.3.1/swiper-bundle.min.js"></script> {% endcomment %}
   
       {%- if settings.favicon != blank -%}
         <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
@@ -33,6 +35,16 @@
       {% render 'meta-tags' %}
   
       <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
+      {% comment %} <script src="{{ 'postinstall.js' | asset_url }}" defer="defer"></script> {% endcomment %}
+      {% comment %} <script src="{{ 'swiper.esm.js' | asset_url }}" defer="defer"></script> {% endcomment %}
+      {% comment %} <script src="{{ 'swiper-bundle.esm.browser.js' | asset_url }}" defer="defer"></script> {% endcomment %}
+      {% comment %} <script src="{{ 'swiper-bundle.esm.browser.min.js' | asset_url }}" defer="defer"></script> {% endcomment %}
+      {% comment %} <script src="{{ 'swiper-bundle.esm.js' | asset_url }}" defer="defer"></script> {% endcomment %}
+      {% comment %} <script src="{{ 'swiper-bundle.js' | asset_url }}" defer="defer"></script> {% endcomment %}
+      {% comment %} <script src="{{ 'swiper-bundle.min.js' | asset_url }}" defer="defer"></script> {% endcomment %}
+      <script type="module" src="{{ 'swiper-bundle.min.js' | asset_url }}"></script>
+      <script type="module" src="{{ 'swiper-bundle.esm.browser.min.js' | asset_url }}"></script>
+
       {{ content_for_header }}
   
       {%- liquid
@@ -447,6 +459,10 @@
       <link href="{{ 'PermanentMarker-Regular.woff2' | file_url}}" rel="stylesheet">
       {{ 'base.css' | asset_url | stylesheet_tag }}
       {{ 'custom.css' | asset_url | stylesheet_tag }}
+      {% comment %} {{ 'swiper.min.css' | asset_url | stylesheet_tag }} {% endcomment %}
+      {% comment %} {{ 'swiper-bundle.css' | asset_url | stylesheet_tag }} {% endcomment %}
+      {{ 'swiper-bundle.min.css' | asset_url | stylesheet_tag }}
+      
   
       {%- unless settings.type_body_font.system? -%}
         <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
@@ -465,6 +481,7 @@
           document.documentElement.classList.add('shopify-design-mode');
         }
       </script>
+      
     </head>
   
     <body>
@@ -522,5 +539,6 @@
       {%- if settings.predictive_search_enabled -%}
         <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
       {%- endif -%}
+      
     </body>
   </html>
