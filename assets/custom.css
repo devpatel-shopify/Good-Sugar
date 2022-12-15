@@ -133,6 +133,9 @@ main#MainContent {
     .header-wrapper .header {
         padding: 35px 0px 25px;
     }
+    .search_model .search-input {
+        border: 2px solid #000000;
+    }
 }
 @media screen and (max-width: 639px) {
 }

@@ -320,7 +320,8 @@ font-family: var(--font-body-family);
 }
 @media screen and (max-width:749px) {
     .main_slider_subheader .subheader {
-        max-width: 100%;
+        max-width: 90%;
+        margin: 0 auto;
     }
     .main_slider_content {
         display: flex;
@@ -340,12 +341,13 @@ font-family: var(--font-body-family);
     }
     .main_slider_button img,
     .main_slider_button .btn {
-        max-width: 140px;
-        max-height: 140px;
+        max-width: 120px;
+        max-height: 120px;
         display: block;
     }
     .btn_text {
-        font-size: 12px;
+        font-size: 10px;
+        line-height: 1;
     }
     .mobile-btn-position--left {
         justify-content: flex-start;
@@ -361,5 +363,8 @@ font-family: var(--font-body-family);
     }
     .swiper-carousel .swiper-slide {
         border: 2px solid rgb(var(--gs-black-color));
+    }
+    .main_slider_wrapper {
+        border: 2px solid #000000;
     }
 }
