@@ -159,7 +159,7 @@
     width: 90%;
     margin: 0 auto;
     padding: 30px;
-    max-width: 145rem;
+    max-width: 160rem;
 }
 
 /* .main_slider_button .btn {
@@ -251,7 +251,7 @@ font-family: var(--font-body-family);
         display: grid;
         /* justify-content: space-between; */
         grid-template-columns: repeat(3, 1fr);
-        margin-top: 55px;
+        margin-top: 35px;
     }
     .main_slider_content .desktop-box-position--left {
         grid-column: 1;
