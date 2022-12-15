@@ -212,7 +212,7 @@
       "search_for": "Search for “{{ terms }}”"
     },
     "cart": {
-      "cart": "Cart"
+      "cart": "Order"
     },
     "contact": {
       "form": {
