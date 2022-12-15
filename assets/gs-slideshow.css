@@ -28,7 +28,7 @@
 }
 @media screen and (max-width:413px) {
     .swiper-carousel {
-        padding: 0 15px;
+        /* padding: 0 15px; */
     } 
 }
 .swiper-carousel .swiper-slide {
@@ -358,5 +358,8 @@ font-family: var(--font-body-family);
     }
     .main_slider_header {
         -webkit-text-stroke-width: 2px;
+    }
+    .swiper-carousel .swiper-slide {
+        border: 2px solid rgb(var(--gs-black-color));
     }
 }

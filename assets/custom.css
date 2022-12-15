@@ -131,7 +131,7 @@ main#MainContent {
 
 @media screen and (max-width:749px) {
     .header-wrapper .header {
-        padding: 35px 20px 25px;
+        padding: 35px 0px 25px;
     }
 }
 @media screen and (max-width: 639px) {
@@ -153,7 +153,7 @@ main#MainContent {
     .header-right .header-cart {font-size: 17px; line-height: 19px; } 
     .header__icon .icon.icon-close {height: 18px; } 
     .header .header__heading-logo {max-width: 155px; } 
-    .container {width: 100%; padding: 0 15px; } 
+    /* .container {width: 100%; padding: 0 15px; }  */
     .header__icons{margin: 34px 0 0;} 
     .search_model .search-input{height: 48px;} 
     .header__icon .icon {height: 16px; width: 26px;} 
@@ -162,7 +162,7 @@ main#MainContent {
     .footer-grid .footer-menu .footer-block__details-content li{padding: 0 10px;} 
     .footer-grid {padding: 10px 0; }
     .header-wrapper .header {
-        padding: 35px 15px 25px;
+        padding: 35px 0px 25px;
     }
 }
 
