@@ -9,11 +9,6 @@
     <div class="swiper-wrapper">
       <!-- Slides -->
       {%- for block in section.blocks -%}
-      <style>
-        #Slide-{{ section.id }}-{{ forloop.index }} .banner__media::after {
-          opacity: {{ block.settings.image_overlay_opacity | divided_by: 100.0 }};
-        }
-      </style>  
       <div class="swiper-slide" 
         id="Slide-{{ section.id }}-{{ forloop.index }}" 
         {{ block.shopify_attributes }}
@@ -22,6 +17,11 @@
         aria-label="{{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
         tabindex="-1"
         data-index="{{- forloop.index -}}">
+        <style>
+          #Slide-{{ section.id }}-{{ forloop.index }} .banner__media::after {
+            opacity: {{ block.settings.image_overlay_opacity | divided_by: 100.0 }};
+          }
+        </style>
         <div class="main_slider_wrapper">
           <div class="main_slider_image">
             <div class="image">
