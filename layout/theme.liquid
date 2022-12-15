@@ -8,7 +8,8 @@
       <link rel="canonical" href="{{ canonical_url }}">
       <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
       {% comment %} <link  rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.3.1/swiper-bundle.css"/> {% endcomment %}
-      {% comment %} <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.3.1/swiper-bundle.min.js"></script> {% endcomment %}
+      {% comment %} <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.3.1/swiper-bundle.min.js"></script> {% endcomment %}    
+      
   
       {%- if settings.favicon != blank -%}
         <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
@@ -90,7 +91,7 @@
 
         @font-face {
             font-family: 'Permanent Marker';
-            src: url({{ 'PermanentMarker-Regular_668d1f1c-14a7-4d9c-ab4b-ca6d91021bcc.woff' | file_url }}) format('woff2'),
+            src: url({{ 'PermanentMarker-Regular_668d1f1c-14a7-4d9c-ab4b-ca6d91021bcc.woff2' | file_url }}) format('woff2'),
                 url({{ 'PermanentMarker-Regular_b305ac43-a125-4d67-913e-72adb5f48ec0.woff' | file_url }}) format('woff');
             font-weight: normal;
             font-style: normal;
@@ -108,7 +109,7 @@
           {{ settings.type_body_font.fallback_families }};
           --font-body-style: {{ settings.type_body_font.style }};
 
-          /* --font-body-family: {{ settings.type_body_font.family }},{{ settings.type_body_font.fallback_families }}; */
+          
           --font-body-style: {{ settings.type_body_font.style }};
           --font-body-weight: {{ settings.type_body_font.weight }};
           --font-body-weight-bold: {{ settings.type_body_font.weight | plus: 300 | at_most: 1000 }};
@@ -454,9 +455,17 @@
   }
   {% endif %}
       {% endstyle %}
-  
-      <link href="{{ 'PermanentMarker-Regular.woff' | file_url}}" rel="stylesheet">
-      <link href="{{ 'PermanentMarker-Regular.woff2' | file_url}}" rel="stylesheet">
+
+
+      
+      
+      
+
+
+      {% comment %} <link href="{{ 'PermanentMarker-Regular.woff' | file_url}}" rel="stylesheet">
+      <link href="{{ 'PermanentMarker-Regular.woff2' | file_url}}" rel="stylesheet"> {% endcomment %}
+
+      {%- render 'css-variables' -%}
       {{ 'base.css' | asset_url | stylesheet_tag }}
       {{ 'custom.css' | asset_url | stylesheet_tag }}
       {% comment %} {{ 'swiper.min.css' | asset_url | stylesheet_tag }} {% endcomment %}
@@ -481,6 +490,14 @@
           document.documentElement.classList.add('shopify-design-mode');
         }
       </script>
+
+      <link rel="preload" as="font" href="{{ 'Hiragino_Sans.woff2' | asset_url }}" type="font/woff2" crossorigin>
+      
+      <link rel="preload" as="font" href="{{ 'Hiragino_Sans_bold.woff2' | asset_url }}" type="font/woff2" crossorigin>
+      
+      <link rel="preload" as="font" href="{{ 'Bangers-Regular.woff2' | asset_url }}" type="font/woff2" crossorigin>
+      
+      <link rel="preload" as="font" href="{{ 'PermanentMarker-Regular.woff2' | asset_url }}" type="font/woff2" crossorigin>
       
     </head>
   

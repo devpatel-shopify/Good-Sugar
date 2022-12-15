@@ -3,6 +3,14 @@
 <script type="module" src="{{ 'swiper-bundle.min.js' | asset_url }}"></script>
 <script type="module" src="{{ 'swiper-bundle.esm.browser.min.js' | asset_url }}"></script>
 
+<style>
+  {% comment %}
+  {%- for block in section.blocks -%}
+  .btn_bg--{{ block.id }} {
+    background-image: url({{ block.settings.buttonbgimage | img_url: 'master' }});
+  }
+  {%- endfor -%}{% endcomment %}
+</style>
 <!-- Slider main container -->
 <div class="swiper swiper-carousel">
     <!-- Additional required wrapper -->
@@ -31,8 +39,26 @@
                   loading: 'lazy',
                   height: height,
                   sizes: "100vw",
+                  class:"desktop_image small-hide",
                   widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
                 }}
+                {%- if block.settings.mobile-image != blank -%}
+                {{ block.settings.mobile-image | image_url: width: 750 | image_tag:
+                  loading: 'lazy',
+                  height: height,
+                  sizes: "100vw",
+                  class:"mobile_image medium-hide large-up-hide",
+                  widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+                }}
+                {%- else -%}
+                {{ block.settings.image | image_url: width: 3840 | image_tag:
+                  loading: 'lazy',
+                  height: height,
+                  sizes: "100vw",
+                  class:"desktop_image desktop_image_for_mobile medium-hide large-up-hide",
+                  widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+                }}
+                {%- endif -%}
               {%- else -%}
                 {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
               {%- endif -%}
@@ -40,22 +66,37 @@
           </div>
           <div class="main_slider_content_box">
             <div class="main_slider_content">
+              {% if block.settings.leftsubheading != blank %}
               <div class="main_slider_subheader mobile-view medium-hide large-up-hide item-1">
-                <div class="subheader item_1">The current state of mass health food is certainly not healthful and, with so many additives and preservatives, can barely be called ‘food.’</div>
+                <div class="subheader item_1">{{ block.settings.leftsubheading }}</div>
               </div>
-              <div class="main_slider_header">It’s Time to Eat the Truth.</div>
+              {% endif %}
+              {% if block.settings.heading != blank %}
+              <div class="main_slider_header">{{ block.settings.heading }}</div>
+              {% endif %}  
+              {% if block.settings.leftsubheading != blank or block.settings.rightsubheading != blank %}
               <div class="main_slider_subheader small-hide">
-                <div class="subheader item_1">The current state of mass health food is certainly not healthful and, with so many additives and preservatives, can barely be called ‘food.’</div>
-                <div class="subheader item_2">You’re just consuming well-marketed convenience, and if your brain can’t tell the difference your body certainly will.</div>
+                {% if block.settings.leftsubheading != blank %}
+                <div class="subheader item_1">{{ block.settings.leftsubheading }}</div>
+                {% endif %}    
+                {% if block.settings.rightsubheading != blank %}  
+                <div class="subheader item_2">{{ block.settings.rightsubheading }}</div>
+                {% endif %}    
               </div>
+              {% endif %}  
+              {% if block.settings.link != blank %}
               <div class="main_slider_button">
-                <a href="#" class="btn">
-                  <img src="https://cdn.shopify.com/s/files/1/0680/9331/3298/files/image_2_2.png?v=1671025890" alt="Slider Button">
+                <a href="{{ block.settings.link }}" class="btn btn_bg--{{ block.id }}">
+                  <img src="{{ block.settings.buttonbgimage | img_url: 'master' }}" alt="Slider Button">
+                  <span class="btn_text">{{ block.settings.button_label }}</span>
                 </a>
               </div>
+              {% endif %}
+              {% if block.settings.rightsubheading != blank %}
               <div class="main_slider_subheader mobile-view medium-hide large-up-hide item-2">
-                <div class="subheader item_2">You’re just consuming well-marketed convenience, and if your brain can’t tell the difference your body certainly will.</div>
+                <div class="subheader item_2">{{ block.settings.rightsubheading }}</div>
               </div> 
+              {% endif %}
             </div>
           </div>
         </div>
@@ -156,6 +197,12 @@
           "default": "Button label",
           "label": "t:sections.gs-slideshow.blocks.slide.settings.button_label.label",
           "info": "t:sections.gs-slideshow.blocks.slide.settings.button_label.info"
+        },
+        {
+          "type": "image_picker",
+          "id": "buttonbgimage",
+          "label": "t:sections.gs-slideshow.blocks.slide.settings.buttonbgimage.label",
+          "info": "t:sections.gs-slideshow.blocks.slide.settings.buttonbgimage.info"
         },
         {
           "type": "url",

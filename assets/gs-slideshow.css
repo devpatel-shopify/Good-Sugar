@@ -159,22 +159,82 @@
     max-width: 145rem;
 }
 
-.main_slider_button .btn {
+/* .main_slider_button .btn {
     background-color: transparent;
-    height: 150px;
-    width: 150px;
-    float: right;
+    
+    background-repeat: no-repeat;
+    background-size: 80%;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 95%;
+    width: 95%;
+    background-position: center;
+    transition: background-size .8s ease-in;
+}
+.main_slider_button .btn:hover {
+    background-size: 100%;
+    
 }
 .main_slider_button {
     text-align: right;
     margin-top: -40px;
+    float: right;
+}
+.btn_text {
+    padding: 50px;
+    display: block;
+    font-family: var(--font-body-family);
+    font-size: 15px;
+    color: #F9EE43;
+    transform: rotate(-10deg);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+} */
+
+.main_slider_button {
+    float: right;
+    margin-top: -40px;
+}
+.main_slider_button img {
+    height: 100%;
+    width: 100%;
+    /* max-height: 150px; */
+    /* max-width: 150px; */
+    transition: all .5s ease;
+
+}
+.main_slider_button .btn {
+    text-decoration: none;
+    position: relative;
+    transition: all .5s ease;
+
+}
+.btn_text {
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+height: 100%;
+width: 100%;
+font-family: var(--font-body-family);
+    font-size: 15px;
+    color: #F9EE43;
+    transform: rotate(-10deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
-.main_slider_button img {
-    height: 150px;
-    width: 150px;
-    display: block;
-    object-fit: contain;
+.main_slider_button .btn:hover img {
+    transform: scale(1.2);
+    transition: all .5s ease;
 }
 
 @media screen and (min-width:750px) {
@@ -244,12 +304,25 @@
     .subheader.item_1 {
         text-align: center;
     }
-    .main_slider_button .btn,
-    .main_slider_button img {
-        height: 90px;
-        width: 90px;
-    }
     .main_slider_subheader .subheader {
         font-size: 15px;
+    }
+    .main_slider_button img {
+        /* max-width: 90px; */
+        /* max-height: 90px; */
+        display: inline-block;
+        object-fit: cover;
+    }
+    .main_slider_button img,
+    .main_slider_button .btn {
+        max-width: 140px;
+        max-height: 140px;
+        display: block;
+    }
+    .main_slider_button .btn {
+        margin: 0 0 0 auto;
+    }
+    .btn_text {
+        font-size: 12px;
     }
 }

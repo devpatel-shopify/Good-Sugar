@@ -2879,6 +2879,10 @@
             "link": {
               "label": "Button link"
             },
+            "buttonbgimage": {
+              "label": "Button BG Image",
+              "info": "Upload Image if we required at button Background."
+            },
             "secondary_style": {
               "label": "Use outline button style"
             },
