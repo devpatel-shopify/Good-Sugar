@@ -132,15 +132,17 @@
   -webkit-text-fill-color:#000000;
   -webkit-text-stroke-width: 3px;
   -webkit-text-stroke-color: #D1C8E3;
+  color: #000000;
 }
 
 
 .main_slider_subheader .subheader {
-    max-width: 300px;
+    max-width: 350px;
     width: 100%;
     font-family: 'Bangers';
     font-size: 25px;
     line-height: 1;
+    letter-spacing: 0;
 }
 .subheader.item_1 {
     /* float: left; */
@@ -249,6 +251,7 @@ font-family: var(--font-body-family);
         display: grid;
         /* justify-content: space-between; */
         grid-template-columns: repeat(3, 1fr);
+        margin-top: 55px;
     }
     .main_slider_content .desktop-box-position--left {
         grid-column: 1;
