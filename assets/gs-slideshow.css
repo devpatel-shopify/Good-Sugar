@@ -326,10 +326,6 @@ font-family: var(--font-body-family);
         width: 100%;
         padding: 45px 15px;
     }
-    .subheader.item_2,
-    .subheader.item_1 {
-        text-align: center;
-    }
     .main_slider_subheader .subheader {
         font-size: 15px;
     }
@@ -345,10 +341,16 @@ font-family: var(--font-body-family);
         max-height: 140px;
         display: block;
     }
-    .main_slider_button .btn {
-        margin: 0 0 0 auto;
-    }
     .btn_text {
         font-size: 12px;
+    }
+    .mobile-btn-position--left {
+        justify-content: flex-start;
+    }
+    .mobile-btn-position--center {
+        justify-content: center;
+    }
+    .mobile-btn-position--right {
+        justify-content: flex-end;
     }
 }

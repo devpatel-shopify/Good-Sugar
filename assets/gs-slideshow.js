@@ -38,3 +38,7 @@ let mySwiper = new Swiper(".swiper", {
     }
 });
 
+let GSSlideshowParent = document.getElementById('MainContent');
+let GSSlideshow = document.querySelector('.gs-slideshow-section');
+let GSSlideshowHeight = GSSlideshow.getBoundingClientRect().height;
+GSSlideshowParent.style.setProperty('min-height', `${parseInt(GSSlideshowHeight)}px`);

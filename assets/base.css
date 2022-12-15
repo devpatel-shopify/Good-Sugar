@@ -624,6 +624,18 @@ table:not([class]) th {
   }
 }
 
+@media screen and (max-width:749px) {
+  .mobile-left {
+    text-align: left;
+  }
+  .mobile-center {
+    text-align: center;
+  }
+  .mobile-right {
+    text-align: right;
+  }
+}
+
 a:empty,
 ul:empty,
 dl:empty,

@@ -68,11 +68,11 @@
             <div class="main_slider_content">
               {% if block.settings.leftsubheading != blank %}
               <div class="main_slider_subheader mobile-view medium-hide large-up-hide item-1">
-                <div class="subheader item_1">{{ block.settings.leftsubheading }}</div>
+                <div class="subheader item_1 mobile-{{ block.settings.mobile_left_subheading_text_alignment }}">{{ block.settings.leftsubheading }}</div>
               </div>
               {% endif %}
               {% if block.settings.heading != blank %}
-              <div class="main_slider_header desktop-{{ block.settings.heading_text_alignment }} ">{{ block.settings.heading }}</div>
+              <div class="main_slider_header desktop-{{ block.settings.heading_text_alignment }} mobile-{{ block.settings.mobile_heading_text_alignment }} ">{{ block.settings.heading }}</div>
               {% endif %}  
               {% if block.settings.leftsubheading != blank or block.settings.rightsubheading != blank %}
               <div class="main_slider_subheader small-hide">
@@ -85,7 +85,7 @@
               </div>
               {% endif %}  
               {% if block.settings.link != blank %}
-              <div class="main_slider_button desktop-btn-position--{{ block.settings.btn_position }}">
+              <div class="main_slider_button desktop-btn-position--{{ block.settings.btn_position }} mobile-btn-position--{{ block.settings.mobile_btn_position }}">
                 <a href="{{ block.settings.link }}" class="btn btn_bg--{{ block.id }}">
                   <img src="{{ block.settings.buttonbgimage | img_url: 'master' }}" alt="Slider Button">
                   <span class="btn_text">{{ block.settings.button_label }}</span>
@@ -94,7 +94,7 @@
               {% endif %}
               {% if block.settings.rightsubheading != blank %}
               <div class="main_slider_subheader mobile-view medium-hide large-up-hide item-2">
-                <div class="subheader item_2">{{ block.settings.rightsubheading }}</div>
+                <div class="subheader item_2 mobile-{{ block.settings.mobile_right_subheading_text_alignment }}">{{ block.settings.rightsubheading }}</div>
               </div> 
               {% endif %}
             </div>
@@ -162,7 +162,27 @@
         {
           "type":"select",
           "id":"heading_text_alignment",
-          "label":"Heading  Text Alignment",
+          "label":"Heading Text Alignment for Desktop",
+          "default":"center",
+          "options":[
+            {
+              "value":"left",
+              "label":"Left"
+            },
+            {
+              "value":"center",
+              "label":"Center"
+            },
+            {
+              "value":"right",
+              "label":"Right"
+            }
+          ]
+        },
+        {
+          "type":"select",
+          "id":"mobile_heading_text_alignment",
+          "label":"Heading Text Alignment for Mobile",
           "default":"center",
           "options":[
             {
@@ -188,8 +208,28 @@
         {
           "type":"select",
           "id":"left_subheading_text_alignment",
-          "label":"Left Subheadibg Text Alignment",
+          "label":"Left Subheadibg Text Alignment for Desktop",
           "default":"left",
+          "options":[
+            {
+              "value":"left",
+              "label":"Left"
+            },
+            {
+              "value":"center",
+              "label":"Center"
+            },
+            {
+              "value":"right",
+              "label":"Right"
+            }
+          ]
+        },
+        {
+          "type":"select",
+          "id":"mobile_left_subheading_text_alignment",
+          "label":"Left Subheadibg Text Alignment for Mobile",
+          "default":"center",
           "options":[
             {
               "value":"left",
@@ -234,8 +274,28 @@
         {
           "type":"select",
           "id":"right_subheading_text_alignment",
-          "label":"Right Subheading  Text Alignment",
+          "label":"Right Subheading Text Alignment for Desktop",
           "default":"right",
+          "options":[
+            {
+              "value":"left",
+              "label":"Left"
+            },
+            {
+              "value":"center",
+              "label":"Center"
+            },
+            {
+              "value":"right",
+              "label":"Right"
+            }
+          ]
+        },
+        {
+          "type":"select",
+          "id":"mobile_right_subheading_text_alignment",
+          "label":"Right Subheading Text Alignment for Mobile",
+          "default":"center",
           "options":[
             {
               "value":"left",
@@ -281,7 +341,27 @@
         {
           "type":"select",
           "id":"btn_position",
-          "label":"Button Position",
+          "label":"Button Position for Desktop",
+          "default":"right",
+          "options":[
+            {
+              "value":"left",
+              "label":"Left"
+            },
+            {
+              "value":"center",
+              "label":"Center"
+            },
+            {
+              "value":"right",
+              "label":"Right"
+            }
+          ]
+        },
+        {
+          "type":"select",
+          "id":"mobile_btn_position",
+          "label":"Button Position for Mobile",
           "default":"right",
           "options":[
             {
@@ -363,30 +443,6 @@
           "unit": "%",
           "label": "t:sections.gs-slideshow.blocks.slide.settings.image_overlay_opacity.label",
           "default": 0
-        },
-        {
-          "type": "header",
-          "content": "t:sections.gs-slideshow.settings.mobile.content"
-        },
-        {
-          "type": "select",
-          "id": "text_alignment_mobile",
-          "options": [
-            {
-              "value": "left",
-              "label": "t:sections.gs-slideshow.blocks.slide.settings.text_alignment_mobile.options__1.label"
-            },
-            {
-              "value": "center",
-              "label": "t:sections.gs-slideshow.blocks.slide.settings.text_alignment_mobile.options__2.label"
-            },
-            {
-              "value": "right",
-              "label": "t:sections.gs-slideshow.blocks.slide.settings.text_alignment_mobile.options__3.label"
-            }
-          ],
-          "default": "center",
-          "label": "t:sections.gs-slideshow.blocks.slide.settings.text_alignment_mobile.label"
         }
       ]
     }
