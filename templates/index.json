@@ -75,13 +75,32 @@
             "color_scheme": "background-1",
             "text_alignment_mobile": "center"
           }
+        },
+        "04a9fd82-698f-4fcf-a300-7f4f73c6a273": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_4.png",
+            "heading": "Image slide",
+            "heading_size": "h1",
+            "leftsubheading": "Tell your brand's story through images",
+            "rightsubheading": "Tell your brand's story through images",
+            "button_label": "Button label",
+            "link": "",
+            "box_align": "middle-center",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center"
+          }
         }
       },
       "block_order": [
         "template--17213669736722__e2dfb2e9-ee76-4736-a4e8-c80bcd44b659-16710187022ef32044-0",
         "template--17213669736722__e2dfb2e9-ee76-4736-a4e8-c80bcd44b659-16710187022ef32044-1",
         "3fa29295-61b1-46f6-9e93-69ee1f1dd98e",
-        "f6115104-bdc5-45e9-8642-9980f729f7a7"
+        "f6115104-bdc5-45e9-8642-9980f729f7a7",
+        "04a9fd82-698f-4fcf-a300-7f4f73c6a273"
       ],
       "settings": {
         "accessibility_info": "Slideshow about our brand"
