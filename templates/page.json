@@ -2,13 +2,79 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "3317da28-3a03-4b3a-ac5f-d274f9807026": {
+      "type": "menu-grid",
+      "blocks": {
+        "ddf73acd-0470-4bc3-8e42-8d5914599952": {
+          "type": "text",
+          "settings": {
+            "bg_image": "shopify:\/\/shop_images\/trinh-le-nguyen-ai-6fYh2Nqjhxk-unsplash-2_1.png",
+            "title": "s.f. smoothies",
+            "sub_title": "<p>10x healthier, with 1\/10 the calories – our S.F. Smoothies vs. Their Animal-Based Crap – you do the math.<br\/><\/p>",
+            "btn_bg": "shopify:\/\/shop_images\/price_button_bg.png",
+            "btn_text": "DrinkSuperGood"
+          }
+        },
+        "064a00ad-7d25-4c72-9f8f-9b43cc64b4ef": {
+          "type": "text",
+          "settings": {
+            "bg_image": "shopify:\/\/shop_images\/alex-lvrs-JJKEQgcNzS4-unsplash_1.png",
+            "title": "juices",
+            "sub_title": "<p>We’re cutting root veg and leafy greens and fresh fruit and ginger galore; just not corners.<br\/><\/p>",
+            "btn_bg": "shopify:\/\/shop_images\/image_8.png",
+            "btn_text": "Get the<br>Juices Flowin’"
+          }
+        },
+        "f9477e10-be19-4fa1-a973-63b0e721168f": {
+          "type": "text",
+          "settings": {
+            "bg_image": "shopify:\/\/shop_images\/aliet-kitchen-733kX9cX3JU-unsplash_1.png",
+            "title": "shots",
+            "sub_title": "<p>More concentrated, less moolah; like an unpaid intern that you’ve got goferin’ gut goodness.<\/p>",
+            "btn_bg": "shopify:\/\/shop_images\/image_15.png",
+            "btn_text": "Say<br>Yes<br>to<br>Shots"
+          }
+        },
+        "7d150227-88cf-42a5-b966-11bdf248201d": {
+          "type": "text",
+          "settings": {
+            "bg_image": "shopify:\/\/shop_images\/Rectangle_4.png",
+            "title": "asd",
+            "sub_title": "<p>sd<\/p>",
+            "btn_bg": "shopify:\/\/shop_images\/image_8.png",
+            "btn_text": "asdasd"
+          }
+        },
+        "722e7a03-21e6-40a3-9ece-c6034700b5c9": {
+          "type": "text",
+          "settings": {
+            "bg_image": "shopify:\/\/shop_images\/justus-menke-47cW0To8dQY-unsplash_1.png",
+            "title": "asdasd",
+            "sub_title": "<p>sdasd<\/p>",
+            "btn_bg": "shopify:\/\/shop_images\/btn_bg_image.png",
+            "btn_text": "asd"
+          }
+        }
+      },
+      "block_order": [
+        "ddf73acd-0470-4bc3-8e42-8d5914599952",
+        "064a00ad-7d25-4c72-9f8f-9b43cc64b4ef",
+        "f9477e10-be19-4fa1-a973-63b0e721168f",
+        "7d150227-88cf-42a5-b966-11bdf248201d",
+        "722e7a03-21e6-40a3-9ece-c6034700b5c9"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "3317da28-3a03-4b3a-ac5f-d274f9807026"
   ]
 }

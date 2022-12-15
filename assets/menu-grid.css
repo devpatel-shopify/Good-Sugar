@@ -1,0 +1,123 @@
+.menu-grid {
+    width: 100%;
+    height: calc(100vh - var(--header-height) - var(--footer-height) - 5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 3px solid #5C398D;
+    border-bottom: 3px solid #5C398D;
+}
+.swiper-slide_main,
+.menu-grid_slider,
+.menu-grid_main,
+.menu-grid .page-width,
+.menu-grid .swiper-slide {
+    height: 100%;
+    width: 100%;
+}
+
+.menu_slider_wrapper {
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: block;
+    height: 100%;
+}
+.menu-grid_box {
+    display:grid;
+    /* grid-template-columns: repeat(2,1fr); */
+    grid-template-columns: 50% 50%;
+    /* flex-wrap: wrap; */
+    height: 100%;
+}
+.menu-grid_title {
+    /* grid-column: 1; */
+    /* grid-row: 1; */
+    border-right: 3px solid #5C398D;
+    border-bottom: 3px solid #5C398D;
+    /* width: 50%; */
+}
+.menu-grid_subtitle {
+    grid-column: 1;
+    grid-row: 2;
+    border-right: 3px solid #5C398D;
+    /* width: 50%; */
+}
+
+.menu-grid_box_item.item_left {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 100%;
+}
+
+.menu-grid_subtitle,
+.menu-grid_title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50%;
+}
+.menu-grid_subtitle span {
+    max-width: 450px;
+}
+.menu-grid_btn_box {
+    grid-column: 2;
+    grid-row: 1/ span 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.menu-grid_btn_wrapper {
+    max-width: 200px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all .8s ease-in-out;
+}
+.menu-grid_btn_wrapper:hover img {
+    transform: scale(1.2);
+    transition: all .8s ease-in;
+}
+.menu-grid_btn_wrapper img {
+    height: 100%;
+    width: 100%;
+    /* min-width: 200px; */
+    display: block;
+    transition: all .8s ease-in;
+}
+.btn_text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    font-size: 25px;
+    font-family: var(--nav-font-family);
+    font-weight: 400;
+    line-height: 1;
+    text-align: center;
+}
+.menu-grid_subtitle p {
+    font-size: 18px;
+    line-height: 1;
+    /* color: #5C398D; */
+    font-family: var(--font-body-family);
+    font-weight: 800;
+}
+.menu-grid_title span {
+    font-size: 50px;
+    line-height: 1;
+    /* color: #5C398D; */
+    font-family: var(--font-body-family);
+    font-weight: 800;
+}

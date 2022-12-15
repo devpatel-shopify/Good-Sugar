@@ -1,0 +1,161 @@
+{{ 'menu-grid.css' | asset_url | stylesheet_tag }}
+
+<style>
+  {%- for block in section.blocks -%}
+    .grid-bg--{{ block.id }}{
+      background-image: url('{{ block.settings.bg_image | img_url: 'master' }}');
+    }
+    .grid-bg--{{ block.id }} .menu-grid_title span {
+      color: {{ block.settings.title_color }};
+    }
+
+    .grid-bg--{{ block.id }} .menu-grid_subtitle p {
+      color: {{ block.settings.subtitle_color }};
+    }
+
+    .grid-bg--{{ block.id }} .btn_text {
+      color: {{ block.settings.button_color }};
+    }
+
+  {%- endfor -%}
+</style>
+
+<div class="menu-grid" id="menu-grid--{{ section.id }}">
+
+  <div class="menu-grid_main">
+    <div class="swiper menu-grid_slider">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        {%- for block in section.blocks -%}
+          <div class="swiper-slide swiper-slide_main">
+            <div class="menu_slider_wrapper grid-bg--{{ block.id }}">
+              <div class="menu-grid_box">
+                <div class="menu-grid_box_item item_left">
+                  {%- if block.settings.title != blank -%}
+                    <div class="menu-grid_title">
+                      <span>{{ block.settings.title }}</span>
+                    </div>
+                  {%- endif -%}
+                  {%- if block.settings.sub_title != blank -%}
+                    <div class="menu-grid_subtitle">
+                      <span>{{ block.settings.sub_title }}</span>
+                    </div>
+                  {%- endif -%}
+                </div>
+                <div class="menu-grid_box_item item_right">
+                  {%- if block.settings.btn_bg != blank and block.settings.btn_text != blank -%}
+                    <div class="menu-grid_btn_box">
+                      <a href="#" class="menu-grid_btn_wrapper">
+                        <img src="{{ block.settings.btn_bg | img_url: 'master' }}" alt="{{ block.settings.btn_bg.alt }}}">
+                        <span class="btn_text">{{ block.settings.btn_text }}</span>
+                      </a>
+                    </div>
+                  {%- endif -%}
+                </div>
+              </div>
+            </div>
+          </div>
+        {%- endfor -%}
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+
+      <!-- If we need scrollbar -->
+      <div class="swiper-scrollbar"></div>
+    </div>
+  </div>
+
+</div>
+
+<script type="module" src="{{ 'menu-grid.js' | asset_url }}"></script>
+
+{% schema %}
+  {
+    "name": "Menu Grid",
+    "settings": [],
+    "blocks": [
+      {
+        "type": "text",
+        "name": "Menu Item",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "bg_image",
+            "label": "Background Image"
+          },
+          {
+            "type": "header",
+            "content": "Title Section"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+          },
+          {
+            "type": "select",
+            "id": "title_text_alignment",
+            "label": "Title Text Alignment",
+            "default": "center",
+            "options": [
+              {
+                "value": "left",
+                "label": "Left"
+              }, {
+                "value": "center",
+                "label": "Center"
+              }, {
+                "value": "right",
+                "label": "Right"
+              }
+            ]
+          }, {
+            "type": "color",
+            "id": "title_color",
+            "label": "Color",
+            "default": "#000000"
+          }, {
+            "type": "header",
+            "content": "Sub Title Section"
+          }, {
+            "type": "richtext",
+            "id": "sub_title",
+            "label": "Sub Title "
+          }, {
+            "type": "color",
+            "id": "subtitle_color",
+            "label": "Color",
+            "default": "#000000"
+          }, {
+            "type": "header",
+            "content": "BUtton Section"
+          }, {
+            "type": "image_picker",
+            "id": "btn_bg",
+            "label": "Button Background Image"
+          }, {
+            "type": "text",
+            "id": "btn_text",
+            "label": "Button Text"
+          }, {
+            "type": "color",
+            "id": "button_color",
+            "label": "Color",
+            "default": "#000000"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Menu Grid",
+        "settings": {}
+      }
+    ]
+  }
+{% endschema %}

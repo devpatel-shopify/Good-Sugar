@@ -80,7 +80,7 @@ div#menu-drawer:after {content: ""; display: inline-block; background: url(menu-
 .footer-grid .footer-menu .footer-block__details-content li:last-child a:after {display: none; }
 footer.footer {position: relative; z-index: 9; }
 main#MainContent { 
-    min-height: 700px; 
+    /* min-height: 700px;  */
 }  
 
 @media screen and (max-width: 1749px) {
