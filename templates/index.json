@@ -6,14 +6,14 @@
         "template--17213669736722__e2dfb2e9-ee76-4736-a4e8-c80bcd44b659-16710187022ef32044-0": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Rectangle_4.png",
+            "image": "shopify:\/\/shop_images\/open-mouth-lightning_01.png",
             "mobile-image": "shopify:\/\/shop_images\/banner-image-mobile.jpg",
-            "heading": "It’s Time to Eat the Truth.ggggggg",
+            "heading": "It’s Time to Eat the Truth.",
             "heading_size": "h1",
-            "leftsubheading": "The current state of mass health food is certainly not healthful and, with so many additives and preservatives, can barely be called ‘food.’gggg",
-            "rightsubheading": "You’re just consuming well-marketed convenience, and if your brain can’t tell the difference your body certainly gggggggggggggggwill.",
-            "button_label": "Button labelgggggg",
-            "link": "shopify:\/\/collections",
+            "leftsubheading": "The current state of mass health food is certainly not healthful and, with so many additives and preservatives, can barely be called ‘food.’",
+            "rightsubheading": "You’re just consuming well-marketed convenience, and if your brain can’t tell the difference your body certainly will.",
+            "button_label": "Button label",
+            "link": "",
             "box_align": "middle-center",
             "show_text_box": true,
             "text_alignment": "center",
@@ -122,7 +122,7 @@
         "4ddec2aa-b78d-4039-b6d0-8a1351eb9d88"
       ],
       "settings": {
-        "accessibility_info": "Slideshow about our brandgggggg"
+        "accessibility_info": "Slideshow about our brand"
       }
     }
   },
