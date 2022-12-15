@@ -18,7 +18,7 @@
         tabindex="-1"
         data-index="{{- forloop.index -}}">
         <style>
-          #Slide-{{ section.id }}-{{ forloop.index }} .banner__media::after {
+          #Slide-{{ section.id }}-{{ forloop.index }} .main_slider_image .image::after {
             opacity: {{ block.settings.image_overlay_opacity | divided_by: 100.0 }};
           }
         </style>
