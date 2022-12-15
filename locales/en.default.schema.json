@@ -2866,8 +2866,11 @@
             "heading": {
               "label": "Heading"
             },
-            "subheading": {
-              "label": "Subheading"
+            "leftsubheading": {
+              "label": "Left Subheading"
+            },
+            "rightsubheading": {
+              "label": "Right Subheading"
             },
             "button_label": {
               "label": "Button label",
