@@ -7,6 +7,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/open-mouth-lightning_01.png",
+            "mobile-image": "shopify:\/\/shop_images\/banner-image-mobile.jpg",
             "heading": "Image slide",
             "heading_size": "h1",
             "subheading": "Tell your brand's story through images",
