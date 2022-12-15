@@ -356,4 +356,7 @@ font-family: var(--font-body-family);
     .mobile-btn-position--right {
         justify-content: flex-end;
     }
+    .main_slider_header {
+        -webkit-text-stroke-width: 2px;
+    }
 }
