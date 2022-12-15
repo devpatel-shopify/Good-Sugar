@@ -72,20 +72,20 @@
               </div>
               {% endif %}
               {% if block.settings.heading != blank %}
-              <div class="main_slider_header">{{ block.settings.heading }}</div>
+              <div class="main_slider_header desktop-{{ block.settings.heading_text_alignment }} ">{{ block.settings.heading }}</div>
               {% endif %}  
               {% if block.settings.leftsubheading != blank or block.settings.rightsubheading != blank %}
               <div class="main_slider_subheader small-hide">
                 {% if block.settings.leftsubheading != blank %}
-                <div class="subheader item_1">{{ block.settings.leftsubheading }}</div>
+                <div class="subheader item_1 desktop-{{ block.settings.left_subheading_text_alignment }} desktop-box-position--{{ block.settings.left_box_position }}">{{ block.settings.leftsubheading }}</div>
                 {% endif %}    
                 {% if block.settings.rightsubheading != blank %}  
-                <div class="subheader item_2">{{ block.settings.rightsubheading }}</div>
+                <div class="subheader item_2 desktop-{{ block.settings.right_subheading_text_alignment }} desktop-box-position--{{ block.settings.right_box_position }}">{{ block.settings.rightsubheading }}</div>
                 {% endif %}    
               </div>
               {% endif %}  
               {% if block.settings.link != blank %}
-              <div class="main_slider_button">
+              <div class="main_slider_button desktop-btn-position--{{ block.settings.btn_position }}">
                 <a href="{{ block.settings.link }}" class="btn btn_bg--{{ block.id }}">
                   <img src="{{ block.settings.buttonbgimage | img_url: 'master' }}" alt="Slider Button">
                   <span class="btn_text">{{ block.settings.button_label }}</span>
@@ -160,10 +160,70 @@
           "label": "t:sections.gs-slideshow.blocks.slide.settings.heading.label"
         },
         {
+          "type":"select",
+          "id":"heading_text_alignment",
+          "label":"Heading  Text Alignment",
+          "default":"center",
+          "options":[
+            {
+              "value":"left",
+              "label":"Left"
+            },
+            {
+              "value":"center",
+              "label":"Center"
+            },
+            {
+              "value":"right",
+              "label":"Right"
+            }
+          ]
+        },
+        {
           "type": "textarea",
           "id": "leftsubheading",
           "default": "Tell your brand's story through images",
           "label": "t:sections.gs-slideshow.blocks.slide.settings.leftsubheading.label"
+        },
+        {
+          "type":"select",
+          "id":"left_subheading_text_alignment",
+          "label":"Left Subheadibg Text Alignment",
+          "default":"left",
+          "options":[
+            {
+              "value":"left",
+              "label":"Left"
+            },
+            {
+              "value":"center",
+              "label":"Center"
+            },
+            {
+              "value":"right",
+              "label":"Right"
+            }
+          ]
+        },
+        {
+          "type":"select",
+          "id":"left_box_position",
+          "label":"Left Content Position",
+          "default":"left",
+          "options":[
+            {
+              "value":"left",
+              "label":"Left"
+            },
+            {
+              "value":"center",
+              "label":"Center"
+            },
+            {
+              "value":"right",
+              "label":"Right"
+            }
+          ]
         },
         {
           "type": "textarea",
@@ -172,11 +232,71 @@
           "label": "t:sections.gs-slideshow.blocks.slide.settings.rightsubheading.label"
         },
         {
+          "type":"select",
+          "id":"right_subheading_text_alignment",
+          "label":"Right Subheading  Text Alignment",
+          "default":"right",
+          "options":[
+            {
+              "value":"left",
+              "label":"Left"
+            },
+            {
+              "value":"center",
+              "label":"Center"
+            },
+            {
+              "value":"right",
+              "label":"Right"
+            }
+          ]
+        },
+        {
+          "type":"select",
+          "id":"right_box_position",
+          "label":"Right Content Position",
+          "default":"right",
+          "options":[
+            {
+              "value":"left",
+              "label":"Left"
+            },
+            {
+              "value":"center",
+              "label":"Center"
+            },
+            {
+              "value":"right",
+              "label":"Right"
+            }
+          ]
+        },
+        {
           "type": "text",
           "id": "button_label",
           "default": "Button label",
           "label": "t:sections.gs-slideshow.blocks.slide.settings.button_label.label",
           "info": "t:sections.gs-slideshow.blocks.slide.settings.button_label.info"
+        },
+        {
+          "type":"select",
+          "id":"btn_position",
+          "label":"Button Position",
+          "default":"right",
+          "options":[
+            {
+              "value":"left",
+              "label":"Left"
+            },
+            {
+              "value":"center",
+              "label":"Center"
+            },
+            {
+              "value":"right",
+              "label":"Right"
+            }
+          ]
         },
         {
           "type": "image_picker",

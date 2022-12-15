@@ -79,7 +79,9 @@ div#menu-drawer:after {content: ""; display: inline-block; background: url(menu-
 .footer-grid .footer-menu .footer-block__details-content li a:after {content: ""; display: inline-block; background: #5C398D; width: 1px; height: 100%; position: absolute; top: 55%; right: -12px; transform: translateY(-50%); }
 .footer-grid .footer-menu .footer-block__details-content li:last-child a:after {display: none; }
 footer.footer {position: relative; z-index: 9; }
-main#MainContent {min-height: 700px; }  
+main#MainContent { 
+    min-height: 700px; 
+}  
 
 @media screen and (max-width: 1749px) {
     .header-wrapper .header{padding: 43px 0 47px;}

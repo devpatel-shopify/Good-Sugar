@@ -612,6 +612,18 @@ table:not([class]) th {
   opacity: 0.7;
 }
 
+@media screen and (min-width:750px) {
+  .desktop-left {
+    text-align: left;
+  }
+  .desktop-center {
+    text-align: center;
+  }
+  .desktop-right {
+    text-align: right;
+  }
+}
+
 a:empty,
 ul:empty,
 dl:empty,
