@@ -320,7 +320,7 @@ font-family: var(--font-body-family);
 }
 @media screen and (max-width:749px) {
     .main_slider_subheader .subheader {
-        max-width: 90%;
+        max-width: 85%;
         margin: 0 auto;
     }
     .main_slider_content {
@@ -360,6 +360,7 @@ font-family: var(--font-body-family);
     }
     .main_slider_header {
         -webkit-text-stroke-width: 2px;
+        line-height: 1.06;
     }
     .swiper-carousel .swiper-slide {
         border: 2px solid rgb(var(--gs-black-color));
