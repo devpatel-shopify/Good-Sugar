@@ -1,4 +1,5 @@
 {{ 'menu-grid.css' | asset_url | stylesheet_tag }}
+{{ 'menu-grid-animation.css' | asset_url | stylesheet_tag }}
 
 <style>
   {%- for block in section.blocks -%}
@@ -68,6 +69,11 @@
   {%- endfor -%}
 </style>
 
+<style>
+  {%- for block in section.blocks -%}
+   
+  {%- endfor -%}
+</style>
 <div class="menu-grid" id="menu-grid--{{ section.id }}">
 
   <div class="menu-grid_main">
@@ -81,7 +87,7 @@
               <div class="menu-grid_box">
                 <div class="menu-grid_box_item item_left">
                   {%- if block.settings.title != blank -%}
-                    <div class="menu-grid_title desktop-position--{{ block.settings.title_text_position }}">
+                    <div class="fadeInUp menu-grid_title desktop-position--{{ block.settings.title_text_position }}">
                       <span class="desktop-{{ block.settings.title_text_alignment }} mobile-{{ block.settings.title_text_alignment_mob }}">{{ block.settings.title }}</span>
                     </div>
                   {%- endif -%}
