@@ -21,13 +21,13 @@
       <div class="product_accordion_main left_item medium-hide small-hide">
         <div class="image_wrapper">
           <div class="title medium-hide small-hide">attribute title</div>
-          {% assign MeteImage = product.metafields.accordion.image %}
-          {% for block in section.blocks %}
-            {% if block.settings.image != blank %}
-              <div class="image" for="item--{{ block.id }}">
-                <img src="{{ MeteImage | json }}" alt="{{ block.settings.image.alt }}">
-              </div>
-            {% endif %}
+          {% assign productMetaAccordions = product.metafields.accordion | json %}
+
+          {% for metaImage in productMetaAccordions %}
+            {{ metaImage[0] }}
+            <div class="image" for="item--{{ block.id }}">
+              <img src="{{ metaImage }}" alt="{{ block.settings.image.alt }}">
+            </div>
           {% endfor %}
         </div>
       </div>
@@ -49,9 +49,9 @@
                     </div>
                   </summary>
                   <div class="accordion_content_main">
-                    {% if MeteImage != blank %}
+                    {% if MetaImage != blank %}
                       <div class="image large-up-hide" for="item--{{ block.id }}">
-                        <img src="{{ MeteImage.src }}" alt="{{ block.settings.image.alt }}">
+                        <img src="{{ MetaImage.original_src }}" alt="{{ block.settings.image.alt }}">
                       </div>
                     {% endif %}
                     {% if MeteContent != blank -%}
