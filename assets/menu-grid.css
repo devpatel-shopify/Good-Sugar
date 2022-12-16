@@ -116,7 +116,9 @@
     width: 100%;
     display: block;
 }
-
+.menu-grid_box {
+    z-index: 2;
+}
 
 @media screen and (min-width:750px) {
     .menu-grid_box {
@@ -125,6 +127,13 @@
         grid-template-columns: 50% 50%;
         /* flex-wrap: wrap; */
         height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        
     }
     .menu-grid_title {
         /* grid-column: 1; */

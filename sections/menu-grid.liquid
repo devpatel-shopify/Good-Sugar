@@ -25,7 +25,7 @@
   .grid-bg--{{ block.id }} .menu-grid_title {
     border-bottom: 3px solid {{ block.settings.border_color }};
   }
-
+  
   @media screen and (min-width:750px){
     .grid-bg--{{ block.id }} .menu-grid_box_item.item_left {
       border-right: 3px solid {{ block.settings.border_color }};
@@ -41,6 +41,9 @@
     .grid-bg--{{ block.id }} .menu-grid_sticker {
       top:{{ block.settings.sticker_top_position }}%;
       left:{{ block.settings.sticker_left_position }}%;
+    }
+    .grid-bg--{{ block.id }} .menu-grid_sticker {
+      z-index:{{ block.settings.sticker_z_index }};
     }  
   }
 
@@ -56,6 +59,9 @@
     .grid-bg--{{ block.id }} .menu-grid_sticker {
       top:{{ block.settings.sticker_top_position_mob }}%;
       left:{{ block.settings.sticker_left_position_mob }}%;
+    }
+    .grid-bg--{{ block.id }} .menu-grid_sticker {
+      z-index:{{ block.settings.sticker_z_index_mob }};
     } 
   }
 
@@ -70,7 +76,7 @@
       <div class="swiper-wrapper">
         <!-- Slides -->
         {%- for block in section.blocks -%}
-          <div class="swiper-slide swiper-slide_main">
+          <div class="swiper-slide swiper-slide_main" {{ block.shopify_attributes }}>
             <div class="menu_slider_wrapper grid-bg--{{ block.id }}">
               <div class="menu-grid_box">
                 <div class="menu-grid_box_item item_left">
@@ -81,7 +87,7 @@
                   {%- endif -%}
                   {%- if block.settings.sub_title != blank -%}
                     <div class="menu-grid_subtitle desktop-position--{{ block.settings.sub_title_text_position }}">
-                      <span class="desktop-{{ block.settings.sub_title_text_alignment }}">{{ block.settings.sub_title }}</span>
+                      <span class="desktop-{{ block.settings.sub_title_text_alignment }} mobile-{{ block.settings.sub_title_text_alignment_mob }}">{{ block.settings.sub_title }}</span>
                     </div>
                   {%- endif -%}
                 </div>
@@ -304,6 +310,24 @@
                 "label": "Right"
               }
             ]
+          },
+          {
+            "type": "select",
+            "id": "sub_title_text_alignment_mob",
+            "label": "Subtitle Text Alignment for Mobile",
+            "default": "left",
+            "options": [
+              {
+                "value": "left",
+                "label": "Left"
+              }, {
+                "value": "center",
+                "label": "Center"
+              }, {
+                "value": "right",
+                "label": "Right"
+              }
+            ]
           }, {
             "type": "color",
             "id": "subtitle_color",
@@ -415,6 +439,20 @@
             "id":"sticker_image_width_mob",
             "label":"Image Weight for Mobile",
             "default":50
+          },
+          {
+            "type":"number",
+            "id":"sticker_z_index",
+            "label":"Z index for Desktop",
+            "default":0,
+            "info":"Text and Button Z-index is 2"
+          },
+          {
+            "type":"number",
+            "id":"sticker_z_index_mob",
+            "label":"Z index for Mobile",
+            "default":0,
+            "info":"Text and Button Z-index is 2"
           }
         ]
       }

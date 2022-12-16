@@ -17,7 +17,7 @@
         margin-bottom: {{ section.settings.margin_bottom_mob }}px;
         padding-top: {{ section.settings.padding_top_dek }}px;
         padding-bottom: {{ section.settings.padding_bottom_dek }}px;
-      } 
+      }
   }
 </style>
 
@@ -31,79 +31,34 @@
   <div class=" {% if section.settings.full_width == false %} page-width {% endif %} ">
     <div class="related_product_wrapper_main">
       <div class="header_main {{ section.settings.header_text_alignment }}">
-        <div class="header_text">{{ section.settings.header }} </div>
+        <div class="header_text">{{ section.settings.header }}</div>
       </div>
 
       <div class="related_product_main">
         <div class="related_product_main_wrapper">
-              <div class="related_product_box">
-                <div class="related_product_item">
-                  <div class="related_product_item_wrapper">
-                    <div class="related_product_image_main">
-                      <div class="image">
-                        {% if section.settings.product_imagr != blank %}
-                        <img src="{{ }}" alt="{{ }}">
-                        {% else %}
-                        {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
-                        {% endif %}
-                      </div>
+          <div class="related_product_box">
+            {% assign collections = section.settings.collection %}
+            {% for product in collections.products limit: 3 %}
+              <div class="related_product_item">
+                <div class="related_product_item_wrapper">
+                  <div class="related_product_image_main">
+                    <div class="image">
+                      <img src="{{ product | image_url }}" alt="{{ }}">
                     </div>
-                    <div class="related_product_title">{{ product.title | escape }}</div>
+                  </div>
+                  <div class="related_product_title">{{ product.title | escape }}</div>
                   <div class="related_product_description">{{ product.description | truncatewords: 30 }}</div>
                   <div class="related_product_price">
                     <button class="price-btn">
                       <div class="price_bg_image">
                         <div class="price_content">{%- render 'price' -%}</div>
                       </div>
-                    </button>                    
-                  </div>
-                  </div>
-                </div>
-                <div class="related_product_item">
-                  <div class="related_product_item_wrapper">
-                    <div class="related_product_image_main">
-                      <div class="image">
-                        {% if section.settings.product_imagr != blank %}
-                        <img src="{{ }}" alt="{{ }}">
-                        {% else %}
-                        {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
-                        {% endif %}
-                      </div>
-                    </div>
-                    <div class="related_product_title">{{ product.title | escape }}</div>
-                  <div class="related_product_description">{{ product.description | truncatewords: 30 }}</div>
-                  <div class="related_product_price">
-                    <button class="price-btn">
-                      <div class="price_bg_image">
-                        <div class="price_content">{%- render 'price' -%}</div>
-                      </div>
-                    </button>                    
-                  </div>
-                  </div>
-                </div>
-                <div class="related_product_item">
-                  <div class="related_product_item_wrapper">
-                    <div class="related_product_image_main">
-                      <div class="image">
-                        {% if section.settings.product_imagr != blank %}
-                        <img src="{{ }}" alt="{{ }}">
-                        {% else %}
-                        {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
-                        {% endif %}
-                      </div>
-                    </div>
-                    <div class="related_product_title">{{ product.title | escape }}</div>
-                  <div class="related_product_description">{{ product.description | truncatewords: 30 }}</div>
-                  <div class="related_product_price">
-                    <button class="price-btn">
-                      <div class="price_bg_image">
-                        <div class="price_content">{%- render 'price' -%}</div>
-                      </div>
-                    </button>                    
-                  </div>
+                    </button>
                   </div>
                 </div>
               </div>
+            {% endfor %}
+          </div>
         </div>
       </div>
     </div>
@@ -111,175 +66,175 @@
 </div>
 
 {% schema %}
-  {
-    "name": "Related Product",
-    "tag": "section",
-    "settings": [
-      {
-        "type":"checkbox",
-        "id":"full_width",
-        "label":"Show Full Width",
-        "default":true
-      },
-      {
-        "type":"color",
-        "id":"bg_color",
-        "label":"Background Color"
-      },
-      {
-        "type":"text",
-        "id":"header",
-        "label":"Header"
-      },
-      {
-        "type":"select",
-        "id":"header_text_alignment",
-        "label":"Header Text Alignment",
-        "default":"center",
-        "options":[
-          {
-            "value":"left",
-            "label":"Left"
-          },
-          {
-            "value":"center",
-            "label":"Center"
-          },
-          {
-            "value":"right",
-            "label":"Right"
-          }
-        ]
-      },
-      {
-        "type": "collection",
-        "id": "collection",
-        "label": "Collection"
-      },
-      {
-        "type": "select",
-        "id": "image_ratio",
-        "options": [
-          {
-            "value": "adapt",
-            "label": "Adaptive Height"
-          },
-          {
-            "value": "portrait",
-            "label": "Portrait"
-          },
-          {
-            "value": "square",
-            "label": "Square"
-          }
-        ],
-        "default": "adapt",
-        "label": "Image Ratio"
-      },
-      {
-        "type": "checkbox",
-        "id": "show_secondary_image",
-        "default": false,
-        "label": "Show Secondary Image"
-      },
-      {
-        "type": "checkbox",
-        "id": "show_description",
-        "default": false,
-        "label": "Show Description"
-      },
-      {
-        "type": "header",
-        "content": "Advance"
-      },
-      {
-        "type": "text",
-        "id": "add_class",
-        "label": "CSS Class"
-      },
-      {
-        "type": "textarea",
-        "id": "add_css",
-        "label": "Custom CSS"
-      },
-      {
-        "type": "header",
-        "content": "Desktop Spacing"
-      }, {
-        "type": "range",
-        "id": "margin_top_dek",
-        "min": 0,
-        "max": 100,
-        "unit": "px",
-        "default": 0,
-        "label": "Margin Top"
-      }, {
-        "type": "range",
-        "id": "margin_bottom_dek",
-        "min": 0,
-        "max": 100,
-        "unit": "px",
-        "default": 0,
-        "label": "Margin Bottom"
-      }, {
-        "type": "range",
-        "id": "padding_top_dek",
-        "min": 0,
-        "max": 100,
-        "unit": "px",
-        "default": 0,
-        "label": "Padding Top"
-      }, {
-        "type": "range",
-        "id": "padding_bottom_dek",
-        "min": 0,
-        "max": 100,
-        "unit": "px",
-        "default": 0,
-        "label": "Padding Bottom"
-      }, {
-        "type": "header",
-        "content": "Mobile Spacing"
-      }, {
-        "type": "range",
-        "id": "margin_top_mob",
-        "min": 0,
-        "max": 100,
-        "unit": "px",
-        "default": 0,
-        "label": "Margin Top"
-      }, {
-        "type": "range",
-        "id": "margin_bottom_mob",
-        "min": 0,
-        "max": 100,
-        "unit": "px",
-        "default": 0,
-        "label": "Margin Bottom"
-      }, {
-        "type": "range",
-        "id": "padding_top_mob",
-        "min": 0,
-        "max": 100,
-        "unit": "px",
-        "default": 0,
-        "label": "Padding Top"
-      }, {
-        "type": "range",
-        "id": "padding_bottom_mob",
-        "min": 0,
-        "max": 100,
-        "unit": "px",
-        "default": 0,
-        "label": "Padding Bottom"
-      }
-    ],
+{
+  "name": "Related Product",
+  "tag": "section",
+  "settings": [
+    {
+      "type":"checkbox",
+      "id":"full_width",
+      "label":"Show Full Width",
+      "default":true
+    },
+    {
+      "type":"color",
+      "id":"bg_color",
+      "label":"Background Color"
+    },
+    {
+      "type":"text",
+      "id":"header",
+      "label":"Header"
+    },
+    {
+      "type":"select",
+      "id":"header_text_alignment",
+      "label":"Header Text Alignment",
+      "default":"center",
+      "options":[
+        {
+          "value":"left",
+          "label":"Left"
+        },
+        {
+          "value":"center",
+          "label":"Center"
+        },
+        {
+          "value":"right",
+          "label":"Right"
+        }
+      ]
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
+    },
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "options": [
+        {
+          "value": "adapt",
+          "label": "Adaptive Height"
+        },
+        {
+          "value": "portrait",
+          "label": "Portrait"
+        },
+        {
+          "value": "square",
+          "label": "Square"
+        }
+      ],
+      "default": "adapt",
+      "label": "Image Ratio"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_secondary_image",
+      "default": false,
+      "label": "Show Secondary Image"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_description",
+      "default": false,
+      "label": "Show Description"
+    },
+    {
+      "type": "header",
+      "content": "Advance"
+    },
+    {
+      "type": "text",
+      "id": "add_class",
+      "label": "CSS Class"
+    },
+    {
+      "type": "textarea",
+      "id": "add_css",
+      "label": "Custom CSS"
+    },
+    {
+      "type": "header",
+      "content": "Desktop Spacing"
+    }, {
+      "type": "range",
+      "id": "margin_top_dek",
+      "min": 0,
+      "max": 100,
+      "unit": "px",
+      "default": 0,
+      "label": "Margin Top"
+    }, {
+      "type": "range",
+      "id": "margin_bottom_dek",
+      "min": 0,
+      "max": 100,
+      "unit": "px",
+      "default": 0,
+      "label": "Margin Bottom"
+    }, {
+      "type": "range",
+      "id": "padding_top_dek",
+      "min": 0,
+      "max": 100,
+      "unit": "px",
+      "default": 0,
+      "label": "Padding Top"
+    }, {
+      "type": "range",
+      "id": "padding_bottom_dek",
+      "min": 0,
+      "max": 100,
+      "unit": "px",
+      "default": 0,
+      "label": "Padding Bottom"
+    }, {
+      "type": "header",
+      "content": "Mobile Spacing"
+    }, {
+      "type": "range",
+      "id": "margin_top_mob",
+      "min": 0,
+      "max": 100,
+      "unit": "px",
+      "default": 0,
+      "label": "Margin Top"
+    }, {
+      "type": "range",
+      "id": "margin_bottom_mob",
+      "min": 0,
+      "max": 100,
+      "unit": "px",
+      "default": 0,
+      "label": "Margin Bottom"
+    }, {
+      "type": "range",
+      "id": "padding_top_mob",
+      "min": 0,
+      "max": 100,
+      "unit": "px",
+      "default": 0,
+      "label": "Padding Top"
+    }, {
+      "type": "range",
+      "id": "padding_bottom_mob",
+      "min": 0,
+      "max": 100,
+      "unit": "px",
+      "default": 0,
+      "label": "Padding Bottom"
+    }
+  ],
 
-    "presets": [
-      {
-        "name": "Related Product",
-        "settings": {}
-      }
-    ]
-  }
+  "presets": [
+    {
+      "name": "Related Product",
+      "settings": {}
+    }
+  ]
+}
 {% endschema %}
