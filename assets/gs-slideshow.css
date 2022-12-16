@@ -285,14 +285,17 @@ font-family: var(--font-body-family);
 
 @media screen and (max-width:1400px) {
     .main_slider_header {
-        font-size: 110px;
+        font-size: 90px;
+    }
+    .main_slider_subheader .subheader {
+        font-size: 22px;
+    }
+    .main_slider_button .btn {
+        max-width: 150px;
     }
 }
 
 @media screen and (max-width:1200px) {
-    .main_slider_header {
-        font-size: 90px;
-    }
     .main_slider_subheader .subheader {
         font-size: 20px;
     }
