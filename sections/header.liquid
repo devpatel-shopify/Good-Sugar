@@ -318,13 +318,23 @@
       super();
     }
 
+    
     connectedCallback() {
       this.header = document.getElementById('shopify-section-header');
       this.headerBounds = {};
       this.currentScrollTop = 0;
       this.preventReveal = false;
       this.predictiveSearch = this.querySelector('predictive-search');
-      this.footer = document.getElementById('custom-footer-grid');
+      if(document.querySelector("body").classList.contains("template-index") || document.querySelector("body").classList.contains("page-menu")){
+        this.footer = document.getElementById('custom-footer-grid');  
+        
+      }else{
+        this.footer = document.getElementById('shopify-section-footer');
+
+        let GSSlideshowParent = document.getElementById('MainContent');
+        GSSlideshowParent.style.setProperty('min-height', `${parseInt(this.footer.getBoundingClientRect().height)}px`);
+      }
+      
 
       this.onScrollHandler = this.onScroll.bind(this);
       this.hideHeaderOnScrollUp = () => this.preventReveal = true;
@@ -334,9 +344,11 @@
       document.documentElement.style.setProperty('--header-height', `${parseInt(this.header.getBoundingClientRect().height)}px`); 
       document.documentElement.style.setProperty('--footer-height', `${parseInt(this.footer.getBoundingClientRect().height)}px`);
 
+      
 
       this.createObserver();
     }
+    
 
     disconnectedCallback() {
       this.removeEventListener('preventHeaderReveal', this.hideHeaderOnScrollUp);

@@ -54,6 +54,13 @@
                   {%- endif -%}
                 </div>
               </div>
+              {%- if block.settings.sticker_image != blank -%}
+              <div class="menu-grid_sticker">
+                <div class="sticker_image">
+                  <img src="{{ block.settings.sticker_image | img_url: 'master' }}" alt="{{ block.settings.sticker_image.alt }}">
+                </div>
+              </div>
+              {%- endif -%}
             </div>
           </div>
         {%- endfor -%}
@@ -147,6 +154,15 @@
             "id": "button_color",
             "label": "Color",
             "default": "#000000"
+          },
+          {
+            "type":"header",
+            "content":"Sticker Settings"
+          },
+          {
+            "type":"image_picker",
+            "id":"sticker_image",
+            "label":"Sticker Image"
           }
         ]
       }
