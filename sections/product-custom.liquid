@@ -1,6 +1,6 @@
 <section
     id="MainProduct-{{ section.id }}"
-    class="page-width section-{{ section.id }}-padding product_custom"
+    class="{% if section.settings.full_width == false %} page-width {% endif %} section-{{ section.id }}-padding product_custom"
     data-section="{{ section.id }}"
   >
     {{ 'section-main-product.css' | asset_url | stylesheet_tag }}
@@ -605,6 +605,7 @@
         ]
       }
     </script>
+    <script src="{{ 'product-custom.js' | asset_url }}" defer="defer"></script>
   </section>
   
   {% schema %}
@@ -1932,6 +1933,12 @@
       }
     ],
     "settings": [
+        {
+            "type":"checkbox",
+            "id":"full_width",
+            "label":"Full Width",
+            "default":true
+          },
       {
         "type": "checkbox",
         "id": "enable_sticky_info",
@@ -2005,6 +2012,10 @@
           {
             "value": "thumbnail_slider",
             "label": "t:sections.main-product.settings.gallery_layout.options__4.label"
+          },
+          {
+            "value":"slider",
+            "label":"Slider"
           }
         ],
         "default": "stacked",
