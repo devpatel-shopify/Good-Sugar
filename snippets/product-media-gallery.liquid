@@ -47,7 +47,7 @@
   id="MediaGallery-{{ section.id }}{{ id_append }}"
   role="region"
   {% if section.settings.enable_sticky_info %}
-    class="{%- if section.settings.gallery_layout == 'slider' -%} 11 {%- else -%} product__column-sticky {%- endif -%}"
+    class="{%- if section.settings.gallery_layout == 'slider' -%} swiper_slider_main {%- else -%} product__column-sticky {%- endif -%}"
   {% endif %}
   aria-label="{{ 'products.product.media.gallery_viewer' | t }}"
   data-desktop-layout="{{ section.settings.gallery_layout }}"
@@ -179,17 +179,18 @@
       </div>
     {%- endunless -%}
   {%- endif -%}
-  </slider-component>
   {%- if section.settings.gallery_layout == 'slider' -%}
-  {% comment %} <div class="swiper-pagination hidden {% if section.settings.show_dots == false %} hidden {% endif %} "></div> {% endcomment %}
-  <div class="swiper--prev swiper-arrow">
-    {% render 'slider-arrow' %}
-  </div>
-  <div class="swiper--next swiper-arrow">
-    {% render 'slider-arrow' %}
-  </div>
-  <div class="swiper-scrollbar"></div>
-{%- endif -%}
+    {% comment %} <div class="swiper-pagination hidden {% if section.settings.show_dots == false %} hidden {% endif %} "></div> {% endcomment %}
+    <div class="swiper--prev swiper-arrow">
+      {% render 'slider-arrow' %}
+    </div>
+    <div class="swiper--next swiper-arrow">
+      {% render 'slider-arrow' %}
+    </div>
+    <div class="swiper-scrollbar"></div>
+  {%- endif -%}
+  </slider-component>
+  
   {%- if first_3d_model -%}
     <button
       class="button button--full-width product__xr-button"
