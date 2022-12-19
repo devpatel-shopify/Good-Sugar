@@ -108,7 +108,7 @@
                           src="{{ block.settings.btn_bg | img_url: 'master' }}"
                           alt="{{ block.settings.btn_bg.alt }}}"
                         >
-                        <span class="btn_text">{{ block.settings.btn_text }}</span>
+                        <div class="btn_text"><p>{{ block.settings.btn_text }}</p></div>
                       </a>
                     </div>
                   {%- endif -%}
@@ -376,7 +376,7 @@
           "label":"Image Width for Mobile",
           "default":99
         }, {
-          "type": "text",
+          "type": "richtext",
           "id": "btn_text",
           "label": "Button Text"
         }, {
