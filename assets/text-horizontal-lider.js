@@ -7,7 +7,6 @@ function swiperCard() {
       swiper = new Swiper('.text_horizonatl_slider_main', {
         slidesPerView: 1,
         spaceBetween: 0,
-        loop: !0,
         mousewheel: true,
         noSwiping: false,
         keyboard: {

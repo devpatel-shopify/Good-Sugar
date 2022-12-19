@@ -2,11 +2,20 @@
 
 <style>
   #image-horizontal-slider--{{ section.id }}{
-    background: {{ section.settings.bg_color }}
-    ;
+    background: {{ section.settings.bg_color }};
   }
 </style>
 
+<style>
+  {%- for block in section.blocks -%}
+    .image_slider--{{ block.id }} .title {
+      color: {{ block.settings.title_color }};
+    }
+    .image_slider--{{ block.id }} .text p {
+      color: {{ block.settings.text_color }};
+    }
+  {%- endfor -%}
+</style>
 <div class="image_horizontal_slider" id="image-horizontal-slider--{{ section.id }}">
   <div class="image_horizontal_slider_wrapper">
     <div class="swiper image_horizontal_slider_main">
@@ -14,12 +23,22 @@
       <div class="swiper-wrapper">
         <!-- Slides -->
         {%- for block in section.blocks -%}
-          <div class="swiper-slide image_slider_wrapper">
+          <div class="swiper-slide image_slider_wrapper image_slider--{{ block.id }}">
             <div class="image_slider_main">
               <div class="image_box">
                 <div class="image">
                   <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.image.alt }}">
                 </div>
+              </div>
+              <div class="image_slider_content">
+                {%- if block.settings.title != blank -%}
+                  <div class="title left">
+                    {{ block.settings.title }}
+                  </div>
+                {%- endif -%}
+                {%- if block.settings.text -%}
+                  <div class="text center">{{ block.settings.text }}</div>
+                {%- endif -%}
               </div>
             </div>
           </div>
@@ -60,6 +79,30 @@
             "type": "image_picker",
             "id": "image",
             "label": "Image"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+          },
+          {
+            "type": "richtext",
+            "id": "text",
+            "label": "Text"
+          },
+          {
+            "type": "header",
+            "content": "Color Settings"
+          }, {
+            "type": "color",
+            "id": "title_color",
+            "label": "Title",
+            "default": "#000000"
+          }, {
+            "type": "color",
+            "id": "text_color",
+            "label": "Text",
+            "default": "#000000"
           }
         ]
       }
