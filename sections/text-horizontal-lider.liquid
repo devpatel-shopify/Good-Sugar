@@ -6,6 +6,33 @@
         .text-slider--{{ block.id }} .text {
             color:{{ block.settings.text_color }};
         }
+        .text-slider--{{ block.id }} .text p {
+            font-size: {{ block.settings.font-size }}px;
+            font-family: var({{ block.settings.font_family }});
+        }
+        
+        @media screen and (max-width:749px) {
+            .text-slider--{{ block.id }} {
+                width:{{ block.settings.block_width }}%;
+            } 
+            .text-slider--{{ block.id }} .text p  {
+                font-size: {{ block.settings.font-size_mob }}px; 
+            }
+            .text-slider--{{ block.id }} {
+                {%- if block.settings.show_border_top == true -%}
+                border-top:3px solid #5C398D;
+                {%- endif -%}
+                {%- if block.settings.show_border_bottom == true -%}
+                border-bottom:3px solid #5C398D;
+            {%- endif -%}
+                {%- if block.settings.show_border_left == true -%}
+                border-left:3px solid #5C398D;
+            {%- endif -%}
+            {%- if block.settings.show_border_right == true -%}
+                border-right:3px solid #5C398D;
+        {%- endif -%}
+            }
+        }
     {%- endfor -%}    
 </style>
 
@@ -60,6 +87,77 @@
                 "id": "text_color",
                 "label": "Text Color",
                 "default": "#5C398D"
+            },
+            {
+                "type": "range",
+                "id": "font-size",
+                "min":10,
+                "max":110,
+                "unit": "px",
+                "label": "Font size for Desktop",
+                "default": 16
+            },            
+            {
+                "type": "select",
+                "id":"font_family",
+                "label": "Font Family",
+                "options": [
+                    {
+                        "value": "--font-body-family",
+                        "label": "Body Font"
+                    },
+                    {
+                        "value": "--font-heading-family",
+                        "label": "Heading Font"
+                    }
+                ]
+            },            
+            {
+                "type": "header",
+                "content": "For Mobile"
+            },
+            {
+                "type": "range",
+                "id": "font-size_mob",
+                "min":0,
+                "max":100,
+                "unit": "px",
+                "label": "Font size for Mobile",
+                "default": 9
+            },
+            {
+                "type": "range",
+                "id": "block_width",
+                "min": 0,
+                "max": 100,
+                "unit": "%",
+                "step": 50,
+                "label": "Block Width for Mobile",
+                "default": 50
+            },
+            {
+                "type": "checkbox",
+                "id":"show_border_top",
+                "label": "Show Top Border",
+                "default": false
+            },
+            {
+                "type": "checkbox",
+                "id":"show_border_bottom",
+                "label": "Show Bottom Border",
+                "default": false
+            },
+            {
+                "type": "checkbox",
+                "id":"show_border_left",
+                "label": "Show Left Border",
+                "default": false
+            },
+            {
+                "type": "checkbox",
+                "id":"show_border_right",
+                "label": "Show Right Border",
+                "default": false
             }
         ]
     }

@@ -1,0 +1,47 @@
+{{ 'image-horizontal-slider.css' | asset_url | stylesheet_tag }}
+
+<style>
+  #image-horizontal-slider--{{ section.id }}{
+    background: {{ section.settings.bg_color }}
+    ;
+  }
+</style>
+
+<div class="image_horizontal_slider" id="image-horizontal-slider--{{ section.id }}">
+  <div class="image_horizontal_slider_wrapper"></div>
+</div>
+
+<script type="module" src="{{ 'image-horizontal-slider.js' | asset_url }}"></script>
+
+{% schema %}
+  {
+    "name": "Image Horizontal Slider",
+    "tag": "section",
+    "settings": [
+      {
+        "type": "color_background",
+        "id": "bg_color",
+        "label": "Background Color"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "image",
+        "name": "Image Slider",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Image Horizontal Slider",
+        "settings": {}
+      }
+    ]
+  }
+{% endschema %}
