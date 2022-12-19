@@ -17,8 +17,8 @@
     .grid-bg--{{ block.id }} .btn_text {
       color: {{ block.settings.button_color }};
     }
-      
-    
+
+
     .grid-bg--{{ block.id }} {
     border-top: 3px solid {{ block.settings.border_color }};
     border-bottom: 3px solid {{ block.settings.border_color }};
@@ -26,7 +26,7 @@
   .grid-bg--{{ block.id }} .menu-grid_title {
     border-bottom: 3px solid {{ block.settings.border_color }};
   }
-  
+
   @media screen and (min-width:750px){
     .grid-bg--{{ block.id }} .menu-grid_box_item.item_left {
       border-right: 3px solid {{ block.settings.border_color }};
@@ -45,7 +45,7 @@
     }
     .grid-bg--{{ block.id }} .menu-grid_sticker {
       z-index:{{ block.settings.sticker_z_index }};
-    }  
+    }
   }
 
   @media screen and (max-width:749px){
@@ -63,7 +63,7 @@
     }
     .grid-bg--{{ block.id }} .menu-grid_sticker {
       z-index:{{ block.settings.sticker_z_index_mob }};
-    } 
+    }
   }
 
   {%- endfor -%}
@@ -71,11 +71,10 @@
 
 <style>
   {%- for block in section.blocks -%}
-   
+
   {%- endfor -%}
 </style>
 <div class="menu-grid" id="menu-grid--{{ section.id }}">
-
   <div class="menu-grid_main">
     <div class="swiper menu-grid_slider">
       <!-- Additional required wrapper -->
@@ -88,12 +87,16 @@
                 <div class="menu-grid_box_item item_left">
                   {%- if block.settings.title != blank -%}
                     <div class="fadeInUp menu-grid_title desktop-position--{{ block.settings.title_text_position }}">
-                      <span class="desktop-{{ block.settings.title_text_alignment }} mobile-{{ block.settings.title_text_alignment_mob }}">{{ block.settings.title }}</span>
+                      <span class="desktop-{{ block.settings.title_text_alignment }} mobile-{{ block.settings.title_text_alignment_mob }}">
+                        {{- block.settings.title -}}
+                      </span>
                     </div>
                   {%- endif -%}
                   {%- if block.settings.sub_title != blank -%}
                     <div class="menu-grid_subtitle desktop-position--{{ block.settings.sub_title_text_position }}">
-                      <span class="desktop-{{ block.settings.sub_title_text_alignment }} mobile-{{ block.settings.sub_title_text_alignment_mob }}">{{ block.settings.sub_title }}</span>
+                      <span class="desktop-{{ block.settings.sub_title_text_alignment }} mobile-{{ block.settings.sub_title_text_alignment_mob }}">
+                        {{- block.settings.sub_title -}}
+                      </span>
                     </div>
                   {%- endif -%}
                 </div>
@@ -101,7 +104,10 @@
                   {%- if block.settings.btn_bg != blank and block.settings.btn_text != blank -%}
                     <div class="menu-grid_btn_box">
                       <a href="#" class="menu-grid_btn_wrapper">
-                        <img src="{{ block.settings.btn_bg | img_url: 'master' }}" alt="{{ block.settings.btn_bg.alt }}}">
+                        <img
+                          src="{{ block.settings.btn_bg | img_url: 'master' }}"
+                          alt="{{ block.settings.btn_bg.alt }}}"
+                        >
                         <span class="btn_text">{{ block.settings.btn_text }}</span>
                       </a>
                     </div>
@@ -109,11 +115,14 @@
                 </div>
               </div>
               {%- if block.settings.sticker_image != blank -%}
-              <div class="menu-grid_sticker">
-                <div class="sticker_image">
-                  <img src="{{ block.settings.sticker_image | img_url: 'master' }}" alt="{{ block.settings.sticker_image.alt }}">
+                <div class="menu-grid_sticker">
+                  <div class="sticker_image">
+                    <img
+                      src="{{ block.settings.sticker_image | img_url: 'master' }}"
+                      alt="{{ block.settings.sticker_image.alt }}"
+                    >
+                  </div>
                 </div>
-              </div>
               {%- endif -%}
             </div>
           </div>
@@ -130,344 +139,343 @@
       <div class="swiper-scrollbar"></div>
     </div>
   </div>
-
 </div>
 
 <script type="module" src="{{ 'menu-grid.js' | asset_url }}"></script>
 
 {% schema %}
-  {
-    "name": "Menu Grid",
-    "settings": [],
-    "blocks": [
-      {
-        "type": "text",
-        "name": "Menu Item",
-        "settings": [
-          {
-            "type": "image_picker",
-            "id": "bg_image",
-            "label": "Background Image"
-          },
-          {
-            "type":"color",
-            "id":"border_color",
-            "label":"Border Color",
-            "default":"#5C398D"
-          },
-          {
-            "type": "header",
-            "content": "Title Section"
-          },
-          {
-            "type": "text",
-            "id": "title",
-            "label": "Title"
-          },
-          {
-            "type":"select",
-            "id":"title_text_position",
-            "label":"Text Position for Desktop",
-            "default":"middle-center",
-            "options":[
-              {
-                "value":"top-left",
-                "label":"Top Left"
-              },
-              {
-                "value":"top-center",
-                "label":"Top Center"
-              },
-              {
-                "value":"top-right",
-                "label":"Top Right"
-              },
-              {
-                "value":"middle-left",
-                "label":"Middle Left"
-              },
-              {
-                "value":"middle-center",
-                "label":"Middle Center"
-              },
-              {
-                "value":"middle-right",
-                "label":"Middle Right"
-              },
-              {
-                "value":"bottom-left",
-                "label":"Bottom Left"
-              },
-              {
-                "value":"bottom-center",
-                "label":"Bottom Center"
-              },
-              {
-                "value":"bottom-right",
-                "label":"Bottom Right"
-              }
-            ]
-          },
-          {
-            "type": "select",
-            "id": "title_text_alignment",
-            "label": "Title Text Alignment for Desktop",
-            "default": "center",
-            "options": [
-              {
-                "value": "left",
-                "label": "Left"
-              }, {
-                "value": "center",
-                "label": "Center"
-              }, {
-                "value": "right",
-                "label": "Right"
-              }
-            ]
-          },{
-            "type": "select",
-            "id": "title_text_alignment_mob",
-            "label": "Title Text Alignment for Mobile",
-            "default": "left",
-            "options": [
-              {
-                "value": "left",
-                "label": "Left"
-              }, {
-                "value": "center",
-                "label": "Center"
-              }, {
-                "value": "right",
-                "label": "Right"
-              }
-            ]
-          }, {
-            "type": "color",
-            "id": "title_color",
-            "label": "Color",
-            "default": "#000000"
-          }, {
-            "type": "header",
-            "content": "Sub Title Section"
-          }, {
-            "type": "richtext",
-            "id": "sub_title",
-            "label": "Sub Title "
-          },
-          {
-            "type":"select",
-            "id":"sub_itle_text_position",
-            "label":"Text Position for Desktop",
-            "default":"middle-center",
-            "options":[
-              {
-                "value":"top-left",
-                "label":"Top Left"
-              },
-              {
-                "value":"top-center",
-                "label":"Top Center"
-              },
-              {
-                "value":"top-right",
-                "label":"Top Right"
-              },
-              {
-                "value":"middle-left",
-                "label":"Middle Left"
-              },
-              {
-                "value":"middle-center",
-                "label":"Middle Center"
-              },
-              {
-                "value":"middle-right",
-                "label":"Middle Right"
-              },
-              {
-                "value":"bottom-left",
-                "label":"Bottom Left"
-              },
-              {
-                "value":"bottom-center",
-                "label":"Bottom Center"
-              },
-              {
-                "value":"bottom-right",
-                "label":"Bottom Right"
-              }
-            ]
-          },
-          {
-            "type": "select",
-            "id": "sub_title_text_alignment",
-            "label": "Subtitle Text Alignment for Desktop",
-            "default": "center",
-            "options": [
-              {
-                "value": "left",
-                "label": "Left"
-              }, {
-                "value": "center",
-                "label": "Center"
-              }, {
-                "value": "right",
-                "label": "Right"
-              }
-            ]
-          },
-          {
-            "type": "select",
-            "id": "sub_title_text_alignment_mob",
-            "label": "Subtitle Text Alignment for Mobile",
-            "default": "left",
-            "options": [
-              {
-                "value": "left",
-                "label": "Left"
-              }, {
-                "value": "center",
-                "label": "Center"
-              }, {
-                "value": "right",
-                "label": "Right"
-              }
-            ]
-          }, {
-            "type": "color",
-            "id": "subtitle_color",
-            "label": "Color",
-            "default": "#000000"
-          }, {
-            "type": "header",
-            "content": "BUtton Section"
-          }, {
-            "type": "image_picker",
-            "id": "btn_bg",
-            "label": "Button Background Image"
-          },{
-            "type":"number",
-            "id":"button_bg_image_height",
-            "label":"Image Height for Desktop",
-            "default":200
-          },{
-            "type":"number",
-            "id":"button_bg_image_width",
-            "label":"Image Width for Desktop",
-            "default":200
-          },
-          {
-            "type":"number",
-            "id":"button_bg_image_height_mob",
-            "label":"Image Height for Mobile",
-            "default":67
-          },{
-            "type":"number",
-            "id":"button_bg_image_width_mob",
-            "label":"Image Width for Mobile",
-            "default":99
-          }, {
-            "type": "text",
-            "id": "btn_text",
-            "label": "Button Text"
-          }, {
-            "type": "color",
-            "id": "button_color",
-            "label": "Color",
-            "default": "#000000"
-          },
-          {
-            "type":"header",
-            "content":"Sticker Settings"
-          },
-          {
-            "type":"image_picker",
-            "id":"sticker_image",
-            "label":"Sticker Image"
-          },
-          {
-            "type":"range",
-            "id":"sticker_top_position",
-            "min":0,
-            "max":100,
-            "unit":"%",
-            "default":38,
-            "label":"Positon From Top (Desktop)"
-          },
-          {
-            "type":"range",
-            "id":"sticker_left_position",
-            "min":0,
-            "max":100,
-            "unit":"%",
-            "default":4,
-            "label":"Positon From Left (Desktop)"
-          },
-          {
-            "type":"range",
-            "id":"sticker_top_position_mob",
-            "min":0,
-            "max":100,
-            "unit":"%",
-            "default":38,
-            "label":"Positon From Top (Mobile)"
-          },
-          {
-            "type":"range",
-            "id":"sticker_left_position_mob",
-            "min":0,
-            "max":100,
-            "unit":"%",
-            "default":4,
-            "label":"Positon From Left (Mobile)"
-          },
-          {
-            "type":"number",
-            "id":"sticker_image_height",
-            "label":"Image Height for Desktop",
-            "default":100
-          },
-          {
-            "type":"number",
-            "id":"sticker_image_width",
-            "label":"Image Width for Desktop",
-            "default":100
-          },
-          {
-            "type":"number",
-            "id":"sticker_image_height_mob",
-            "label":"Image Height for Mobile",
-            "default":50
-          },
-          {
-            "type":"number",
-            "id":"sticker_image_width_mob",
-            "label":"Image Width for Mobile",
-            "default":50
-          },
-          {
-            "type":"number",
-            "id":"sticker_z_index",
-            "label":"Z index for Desktop",
-            "default":0,
-            "info":"Text and Button Z-index is 2"
-          },
-          {
-            "type":"number",
-            "id":"sticker_z_index_mob",
-            "label":"Z index for Mobile",
-            "default":0,
-            "info":"Text and Button Z-index is 2"
-          }
-        ]
-      }
-    ],
-    "presets": [
-      {
-        "name": "Menu Grid",
-        "settings": {}
-      }
-    ]
-  }
+{
+  "name": "Menu Grid",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "Menu Item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "bg_image",
+          "label": "Background Image"
+        },
+        {
+          "type":"color",
+          "id":"border_color",
+          "label":"Border Color",
+          "default":"#5C398D"
+        },
+        {
+          "type": "header",
+          "content": "Title Section"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type":"select",
+          "id":"title_text_position",
+          "label":"Text Position for Desktop",
+          "default":"middle-center",
+          "options":[
+            {
+              "value":"top-left",
+              "label":"Top Left"
+            },
+            {
+              "value":"top-center",
+              "label":"Top Center"
+            },
+            {
+              "value":"top-right",
+              "label":"Top Right"
+            },
+            {
+              "value":"middle-left",
+              "label":"Middle Left"
+            },
+            {
+              "value":"middle-center",
+              "label":"Middle Center"
+            },
+            {
+              "value":"middle-right",
+              "label":"Middle Right"
+            },
+            {
+              "value":"bottom-left",
+              "label":"Bottom Left"
+            },
+            {
+              "value":"bottom-center",
+              "label":"Bottom Center"
+            },
+            {
+              "value":"bottom-right",
+              "label":"Bottom Right"
+            }
+          ]
+        },
+        {
+          "type": "select",
+          "id": "title_text_alignment",
+          "label": "Title Text Alignment for Desktop",
+          "default": "center",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            }, {
+              "value": "center",
+              "label": "Center"
+            }, {
+              "value": "right",
+              "label": "Right"
+            }
+          ]
+        },{
+          "type": "select",
+          "id": "title_text_alignment_mob",
+          "label": "Title Text Alignment for Mobile",
+          "default": "left",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            }, {
+              "value": "center",
+              "label": "Center"
+            }, {
+              "value": "right",
+              "label": "Right"
+            }
+          ]
+        }, {
+          "type": "color",
+          "id": "title_color",
+          "label": "Title Color",
+          "default": "#000000"
+        }, {
+          "type": "header",
+          "content": "Sub Title Section"
+        }, {
+          "type": "richtext",
+          "id": "sub_title",
+          "label": "Sub Title "
+        },
+        {
+          "type":"select",
+          "id":"sub_itle_text_position",
+          "label":"Text Position for Desktop",
+          "default":"middle-center",
+          "options":[
+            {
+              "value":"top-left",
+              "label":"Top Left"
+            },
+            {
+              "value":"top-center",
+              "label":"Top Center"
+            },
+            {
+              "value":"top-right",
+              "label":"Top Right"
+            },
+            {
+              "value":"middle-left",
+              "label":"Middle Left"
+            },
+            {
+              "value":"middle-center",
+              "label":"Middle Center"
+            },
+            {
+              "value":"middle-right",
+              "label":"Middle Right"
+            },
+            {
+              "value":"bottom-left",
+              "label":"Bottom Left"
+            },
+            {
+              "value":"bottom-center",
+              "label":"Bottom Center"
+            },
+            {
+              "value":"bottom-right",
+              "label":"Bottom Right"
+            }
+          ]
+        },
+        {
+          "type": "select",
+          "id": "sub_title_text_alignment",
+          "label": "Subtitle Text Alignment for Desktop",
+          "default": "center",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            }, {
+              "value": "center",
+              "label": "Center"
+            }, {
+              "value": "right",
+              "label": "Right"
+            }
+          ]
+        },
+        {
+          "type": "select",
+          "id": "sub_title_text_alignment_mob",
+          "label": "Subtitle Text Alignment for Mobile",
+          "default": "left",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            }, {
+              "value": "center",
+              "label": "Center"
+            }, {
+              "value": "right",
+              "label": "Right"
+            }
+          ]
+        }, {
+          "type": "color",
+          "id": "subtitle_color",
+          "label": "Sub Title Color",
+          "default": "#000000"
+        }, {
+          "type": "header",
+          "content": "BUtton Section"
+        }, {
+          "type": "image_picker",
+          "id": "btn_bg",
+          "label": "Button Background Image"
+        },{
+          "type":"number",
+          "id":"button_bg_image_height",
+          "label":"Image Height for Desktop",
+          "default":200
+        },{
+          "type":"number",
+          "id":"button_bg_image_width",
+          "label":"Image Width for Desktop",
+          "default":200
+        },
+        {
+          "type":"number",
+          "id":"button_bg_image_height_mob",
+          "label":"Image Height for Mobile",
+          "default":67
+        },{
+          "type":"number",
+          "id":"button_bg_image_width_mob",
+          "label":"Image Width for Mobile",
+          "default":99
+        }, {
+          "type": "text",
+          "id": "btn_text",
+          "label": "Button Text"
+        }, {
+          "type": "color",
+          "id": "button_color",
+          "label": "Button Color",
+          "default": "#000000"
+        },
+        {
+          "type":"header",
+          "content":"Sticker Settings"
+        },
+        {
+          "type":"image_picker",
+          "id":"sticker_image",
+          "label":"Sticker Image"
+        },
+        {
+          "type":"range",
+          "id":"sticker_top_position",
+          "min":0,
+          "max":100,
+          "unit":"%",
+          "default":38,
+          "label":"Positon From Top (Desktop)"
+        },
+        {
+          "type":"range",
+          "id":"sticker_left_position",
+          "min":0,
+          "max":100,
+          "unit":"%",
+          "default":4,
+          "label":"Positon From Left (Desktop)"
+        },
+        {
+          "type":"range",
+          "id":"sticker_top_position_mob",
+          "min":0,
+          "max":100,
+          "unit":"%",
+          "default":38,
+          "label":"Positon From Top (Mobile)"
+        },
+        {
+          "type":"range",
+          "id":"sticker_left_position_mob",
+          "min":0,
+          "max":100,
+          "unit":"%",
+          "default":4,
+          "label":"Positon From Left (Mobile)"
+        },
+        {
+          "type":"number",
+          "id":"sticker_image_height",
+          "label":"Image Height for Desktop",
+          "default":100
+        },
+        {
+          "type":"number",
+          "id":"sticker_image_width",
+          "label":"Image Width for Desktop",
+          "default":100
+        },
+        {
+          "type":"number",
+          "id":"sticker_image_height_mob",
+          "label":"Image Height for Mobile",
+          "default":50
+        },
+        {
+          "type":"number",
+          "id":"sticker_image_width_mob",
+          "label":"Image Width for Mobile",
+          "default":50
+        },
+        {
+          "type":"number",
+          "id":"sticker_z_index",
+          "label":"Z index for Desktop",
+          "default":0,
+          "info":"Text and Button Z-index is 2"
+        },
+        {
+          "type":"number",
+          "id":"sticker_z_index_mob",
+          "label":"Z index for Mobile",
+          "default":0,
+          "info":"Text and Button Z-index is 2"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Menu Grid",
+      "settings": {}
+    }
+  ]
+}
 {% endschema %}
