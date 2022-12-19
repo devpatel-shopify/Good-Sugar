@@ -3,7 +3,6 @@ new Swiper('.menu-grid_slider', {
     slidesPerView: 1,
     direction: 'vertical',
     spaceBetween: 0,
-    loop: !0,
     mousewheel: true,
     keyboard: {
         enabled: true,
