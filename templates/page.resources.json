@@ -2,11 +2,132 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "22619ee9-0d59-4edf-9723-1cbdcac4f061": {
+      "type": "text-horizontal-lider",
+      "blocks": {
+        "fa7b2565-5550-4292-8e30-70b346c96819": {
+          "type": "text",
+          "settings": {
+            "text": "<p>goodsugar is bigger than some edible purity test.<\/p>",
+            "text_color": "#5C398D",
+            "font-size": 50,
+            "font_family": "--font-heading-family",
+            "font-size_mob": 25,
+            "block_width": 100,
+            "show_border_top": false,
+            "show_border_bottom": true,
+            "show_border_left": false,
+            "show_border_right": false
+          }
+        },
+        "2db8630c-5227-407b-9ba1-bc835702efbc": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Sure, we sell juices and smoothies and vegan stuff that taste like non-vegan stuff, but we’re actual in it for one simple reason: that you live a healthier life.<br\/><\/p>",
+            "text_color": "#5C398D",
+            "font-size": 20,
+            "font_family": "--font-heading-family",
+            "font-size_mob": 9,
+            "block_width": 50,
+            "show_border_top": false,
+            "show_border_bottom": false,
+            "show_border_left": false,
+            "show_border_right": true
+          }
+        },
+        "0c40241f-4a50-42de-949a-91599207cde4": {
+          "type": "text",
+          "settings": {
+            "text": "<p>It took a nice-looking website and some clever wordplay to get you here…but it’ll take real smarts for you to keep this way of living up.<\/p>",
+            "text_color": "#5C398D",
+            "font-size": 20,
+            "font_family": "--font-body-family",
+            "font-size_mob": 9,
+            "block_width": 50,
+            "show_border_top": false,
+            "show_border_bottom": false,
+            "show_border_left": false,
+            "show_border_right": false
+          }
+        },
+        "7e87669d-882d-4155-b0c8-273e25a0b8c4": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We know because we’ve read all the misclaims and junk science out there, which is why we continue to put these resources together.<\/p>",
+            "text_color": "#5C398D",
+            "font-size": 20,
+            "font_family": "--font-body-family",
+            "font-size_mob": 9,
+            "block_width": 100,
+            "show_border_top": true,
+            "show_border_bottom": false,
+            "show_border_left": false,
+            "show_border_right": false
+          }
+        }
+      },
+      "block_order": [
+        "fa7b2565-5550-4292-8e30-70b346c96819",
+        "2db8630c-5227-407b-9ba1-bc835702efbc",
+        "0c40241f-4a50-42de-949a-91599207cde4",
+        "7e87669d-882d-4155-b0c8-273e25a0b8c4"
+      ],
+      "settings": {
+      }
+    },
+    "2670c225-cdfe-4a7e-b319-1237da9ef254": {
+      "type": "image-horizontal-slider",
+      "blocks": {
+        "c8edeed7-1a17-410e-bdac-a67fb72da30d": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_28.png",
+            "title": "blog",
+            "text": "<p>Learn from Marcus<\/p>",
+            "title_color": "#eca847",
+            "text_color": "#fff"
+          }
+        },
+        "f7dae696-d8d3-4759-b2ec-2e198559c542": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_27.png",
+            "title": "library",
+            "text": "<p>Learn from others<\/p>",
+            "title_color": "#5c398d",
+            "text_color": "#000000"
+          }
+        },
+        "98922060-4799-4846-b99b-decf03aa02a1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_29.png",
+            "title": "book",
+            "text": "<p>get the <br\/>book<\/p>",
+            "title_color": "#5c398d",
+            "text_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "c8edeed7-1a17-410e-bdac-a67fb72da30d",
+        "f7dae696-d8d3-4759-b2ec-2e198559c542",
+        "98922060-4799-4846-b99b-decf03aa02a1"
+      ],
+      "settings": {
+        "bg_color": "radial-gradient(rgba(245, 131, 37, 1) 47%, rgba(208, 199, 227, 1) 83%)"
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "22619ee9-0d59-4edf-9723-1cbdcac4f061",
+    "2670c225-cdfe-4a7e-b319-1237da9ef254"
   ]
 }

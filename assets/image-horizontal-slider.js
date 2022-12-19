@@ -1,6 +1,6 @@
 new Swiper('.image_horizontal_slider_main', {
     // Default parameters
-    slidesPerView: 2,
+    slidesPerView: 1.8,
     spaceBetween: 30,
     mousewheel: true,
     autoHeight:100,
@@ -12,7 +12,7 @@ new Swiper('.image_horizontal_slider_main', {
     // Responsive breakpoints
     breakpoints: {
       // when window width is >= 640px
-      640: {
+      750: {
         slidesPerView: 4,
         spaceBetween: 60,
         autoHeight:100,

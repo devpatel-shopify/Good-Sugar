@@ -24,8 +24,16 @@
 @media screen and (min-width:750px) {
     .text_horizonatl_slider.swiper-slide-next,
 .text_horizonatl_slider.swiper-slide-active {
+    /* border-right: 3px solid #5C398D; */
+}
+.text_horizonatl_slider {
     border-right: 3px solid #5C398D;
 }
+
+.text_horizonatl_slider:last-child {
+    border-right: none;
+}
+
 .text_horizontal_slider .swiper-autoheight,
 .text_horizontal_slider .swiper-autoheight .swiper-slide {
     height: 100%;
