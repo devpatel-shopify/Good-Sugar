@@ -34,6 +34,12 @@
       },
       {
         "type":"color",
+        "id":"custom_text_color",
+        "label":"Custom Text",
+        "default":"#5c398d"
+      },
+      {
+        "type":"color",
         "id":"custom_button_border_color",
         "label":"Custom Border",
         "default":"#5c398d"

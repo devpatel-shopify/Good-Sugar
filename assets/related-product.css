@@ -28,7 +28,11 @@
     height: 100%;
     padding: 35px; 
 }
-
+.related_product_image_main img {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
 .related_product_image_main svg {
     color: aqua;
     fill: #000000;

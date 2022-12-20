@@ -461,15 +461,24 @@
             </p>
             
               {%- when 'title' -%}
-              <div class="product-title--{{ block.id }} product-title_wrapper">
-                <div class="product__title" {{ block.shopify_attributes }}>
-                  <h1>{{ product.title | escape }}</h1>
-                  <a href="{{ product.url }}" class="product__title">
-                    <h2 class="h1">
-                      {{ product.title | escape }}
-                    </h2>
-                  </a>
+              <div class="product-title--{{ block.id }} product-title_wrapper" {{ block.shopify_attributes }}>
+                <div class="product_title_subwrapper">
+                  <div class="product__title">
+                    <h1>{{ product.title | escape }}</h1>
+                    <a href="{{ product.url }}" class="product__title">
+                      <h2 class="h1">
+                        {{ product.title | escape }}
+                      </h2>
+                    </a>
+                  </div>
+                  {%- if block.settings.text != blank -%}
+                  <div class="product_title_attribute">
+                  <div class="left text">{{ block.settings.text }}</div>
+                  </div>
+                {%- endif -%}
                 </div>
+                
+                {%- if block.settings.show_buy_button == true -%}
                 <div class="product_custom_buy_button">
                   <div
                     class="no-js-hidden product_buy_btn"
@@ -525,6 +534,7 @@
                     </product-form>
                   </div>
                 </div>
+              {%- endif -%}
               </div>
               
 
@@ -1277,6 +1287,21 @@
             "type": "image_picker",
             "id": "bg_image",
             "label": "Background Image"
+          },
+          {
+            "type":"checkbox",
+            "id":"show_buy_button",
+            "label":"Show Buy Button",
+            "default":false
+          },
+          {
+            "type":"header",
+            "content":"Attribute"
+          },
+          {
+            "type":"richtext",
+            "id":"text",
+            "label":"Text"
           },
           {
             "type":"checkbox",
