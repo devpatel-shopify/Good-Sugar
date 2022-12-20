@@ -33,6 +33,7 @@
         .custom-product__description--{{ block.id }} {
           {%- if block.settings.show_border_top == true -%} border-top:3px solid var(--custom-border-color); {%- endif -%}
           {%- if block.settings.show_border_bottom == true -%}border-bottom:3px solid var(--custom-border-color); {%- endif -%}
+          padding:50px;
         }
       }
       {%- endif -%}
@@ -42,6 +43,7 @@
           .custom-product-form__quantity--{{ block.id }} {
             {%- if block.settings.show_border_top == true -%} border-top:3px solid var(--custom-border-color); {%- endif -%}
           {%- if block.settings.show_border_bottom == true -%}border-bottom:3px solid var(--custom-border-color); {%- endif -%}
+          padding:50px;
           }
         }
       {%- endif -%} 
@@ -51,9 +53,30 @@
           .custom-variant-picker--{{ block.id }} {
             {%- if block.settings.show_border_top == true -%} border-top:3px solid var(--custom-border-color); {%- endif -%}
           {%- if block.settings.show_border_bottom == true -%}border-bottom:3px solid var(--custom-border-color); {%- endif -%}
+          padding:50px;
           }
         }
       {%- endif -%}
+      
+      {%- if block.type == 'text' -%}
+        @media screen and (min-width:750px) {
+          .product__text--{{ block.id}} {
+            padding-top:{{ block.settings.padding_top_dek }}px;
+            padding-bottom:{{ block.settings.padding_bottom_dek }}px;
+            padding-left:{{ block.settings.padding_left_dek }}px;
+            padding-right:{{ block.settings.padding_right_dek }}px;
+          }
+        }
+        @media screen and (max-width:749px) {
+          .product__text--{{ block.id}} {
+            padding-top:{{ block.settings.padding_top_mob }}px;
+            padding-bottom:{{ block.settings.padding_bottom_mob }}px;
+            padding-left:{{ block.settings.padding_left_mob }}px;
+            padding-right:{{ block.settings.padding_right_mob }}px;
+          }
+        }
+      {%- endif -%} 
+
     {%- endfor -%}
   </style>
 
@@ -99,76 +122,82 @@
           {%- case block.type -%}
             {%- when '@app' -%}
             {% render block %}
+
             {%- when 'text' -%}
-              <p class="product__text {% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}" {{ block.shopify_attributes }}>
+              <p class="product__text--{{ block.id}} product__text {% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}" {{ block.shopify_attributes }}>
               {{- block.settings.text -}}
             </p>
-            <div class="product_title_box">
+            
               {%- when 'title' -%}
-              <div class="product__title product-title--{{ block.id }}" {{ block.shopify_attributes }}>
-                <h1>{{ product.title | escape }}</h1>
-                <a href="{{ product.url }}" class="product__title">
-                  <h2 class="h1">
-                    {{ product.title | escape }}
-                  </h2>
-                </a>
+              <div class="product-title--{{ block.id }} product-title_wrapper">
+                <div class="product__title" {{ block.shopify_attributes }}>
+                  <h1>{{ product.title | escape }}</h1>
+                  <a href="{{ product.url }}" class="product__title">
+                    <h2 class="h1">
+                      {{ product.title | escape }}
+                    </h2>
+                  </a>
+                </div>
+                <div class="product_custom_buy_buttom">
+                  <div
+                    class="no-js-hidden product_buy_btn"
+                    id="price-{{ section.id }}"
+                    role="status"
+                    {{ block.shopify_attributes }}>
+                    <product-form class="product-form">
+                      {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
+                        <input
+                          type="hidden"
+                          name="id"
+                          value="{{ product.selected_or_first_available_variant.id }}">
+                        <div class="product-form__buttons">
+                          <button type="submit"
+                            name="add"
+                            class="product_buy_button"
+                            {% if product.selected_or_first_available_variant.available == false %}disabled{% endif %}>
+                            {%- comment -%}
+                            <span>
+                            {%- if product.selected_or_first_available_variant.available -%}
+                            {{ 'products.product.add_to_cart' | t }}
+                            {%- else -%}
+                            {{ 'products.product.sold_out' | t }}
+                            {%- endif -%}
+                            </span>
+                          {%- endcomment -%}
+                            <div class="btn_bg">
+                              <img src="{{ block.settings.bg_image | img_url: 'master' }}">
+                            </div>
+                            <div class="product_custom_price">
+                              {%- render 'price' -%}
+                            </div>
+                            
+                            <div class="loading-overlay__spinner hidden">
+                            <svg
+                            aria-hidden="true"
+                            focusable="false"
+                            role="presentation"
+                            class="spinner"
+                            viewBox="0 0 66 66"
+                            xmlns="http://www.w3.org/2000/svg"
+                            >
+                            <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                            </svg>
+                            </div>
+                            
+                          </button>
+                          {%- if block.settings.show_dynamic_checkout -%}
+                            {{ form | payment_button }}
+                          {%- endif -%}
+                        </div>
+                      {%- endform -%}
+                    </product-form>
+                  </div>
+                </div>
               </div>
+              
 
               {%- when 'buy_buttons' -%}
-              <div
-                class="no-js-hidden product_buy_btn"
-                id="price-{{ section.id }}"
-                role="status"
-                {{ block.shopify_attributes }}>
-                <product-form class="product-form">
-                  {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
-                    <input
-                      type="hidden"
-                      name="id"
-                      value="{{ product.selected_or_first_available_variant.id }}">
-                    <div class="product-form__buttons">
-                      <button type="submit"
-                        name="add"
-                        class="product_buy_button"
-                        {% if product.selected_or_first_available_variant.available == false %}disabled{% endif %}>
-                        {%- comment -%}
-                        <span>
-                        {%- if product.selected_or_first_available_variant.available -%}
-                        {{ 'products.product.add_to_cart' | t }}
-                        {%- else -%}
-                        {{ 'products.product.sold_out' | t }}
-                        {%- endif -%}
-                        </span>
-                      {%- endcomment -%}
-                        <div class="btn_bg">
-                          <img src="{{ block.settings.bg_image | img_url: 'master' }}">
-                        </div>
-                        <div class="product_custom_price">
-                          {%- render 'price' -%}
-                        </div>
-                        
-                        <div class="loading-overlay__spinner hidden">
-                        <svg
-                        aria-hidden="true"
-                        focusable="false"
-                        role="presentation"
-                        class="spinner"
-                        viewBox="0 0 66 66"
-                        xmlns="http://www.w3.org/2000/svg"
-                        >
-                        <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
-                        </svg>
-                        </div>
-                        
-                      </button>
-                      {%- if block.settings.show_dynamic_checkout -%}
-                        {{ form | payment_button }}
-                      {%- endif -%}
-                    </div>
-                  {%- endform -%}
-                </product-form>
-              </div>
-            </div>
+                {%- render 'buy-buttons', block: block, product: product, product_form_id: product_form_id, show_pickup_availability: true -%}            
 
             {%- when 'price' -%}
             <div
@@ -784,6 +813,86 @@
             ],
             "default": "body",
             "label": "t:sections.main-product.blocks.text.settings.text_style.label"
+          },
+          {
+            "type":"header",
+            "content":"Block Desktop Spacing"
+          },
+          {
+            "type":"range",
+            "id":"padding_top_dek",
+            "min":0,
+            "max":100,
+            "unit":"px",
+            "default":0,
+            "label":"Padding Top"            
+          },
+          {
+            "type":"range",
+            "id":"padding_bottom_dek",
+            "min":0,
+            "max":100,
+            "unit":"px",
+            "default":0,
+            "label":"Padding Bottom"            
+          },
+          {
+            "type":"range",
+            "id":"padding_left_dek",
+            "min":0,
+            "max":100,
+            "unit":"px",
+            "default":0,
+            "label":"Padding Left"            
+          },
+          {
+            "type":"range",
+            "id":"padding_right_dek",
+            "min":0,
+            "max":100,
+            "unit":"px",
+            "default":0,
+            "label":"Padding Right"            
+          },
+          {
+            "type":"header",
+            "content":"Block Mobile Spacing"
+          },
+          {
+            "type":"range",
+            "id":"padding_top_mob",
+            "min":0,
+            "max":100,
+            "unit":"px",
+            "default":0,
+            "label":"Padding Top"            
+          },
+          {
+            "type":"range",
+            "id":"padding_bottom_mob",
+            "min":0,
+            "max":100,
+            "unit":"px",
+            "default":0,
+            "label":"Padding Bottom"            
+          },
+          {
+            "type":"range",
+            "id":"padding_left_mob",
+            "min":0,
+            "max":100,
+            "unit":"px",
+            "default":0,
+            "label":"Padding Left"            
+          },
+          {
+            "type":"range",
+            "id":"padding_right_mob",
+            "min":0,
+            "max":100,
+            "unit":"px",
+            "default":0,
+            "label":"Padding Right"            
           }
         ]
       },
@@ -797,6 +906,11 @@
             "id": "title_color",
             "label": "Color",
             "default": "#5C398D"
+          },
+          {
+            "type": "image_picker",
+            "id": "bg_image",
+            "label": "Background Image"
           }
         ]
       },

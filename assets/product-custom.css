@@ -113,16 +113,22 @@ display: none;
 .product_custom .product__info-wrapper {
     background-color: #ffffff;
 }
-.product_custom .product__info-wrapper > * {
-    padding: 50px;
-}
+
 .product_custom .product-form__input {
     margin: 0;
 }
+
+.product-title_wrapper {
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+
+}
 @media screen and (min-width:750px) {
     .product_custom .product__column-sticky {
-        display: flex;
-        flex-wrap: wrap;
+        /* display: flex; */
+        /* flex-wrap: wrap; */
+        /* padding: 50px; */
     }
     .product_custom .product__column-sticky > * {
         width: 100%;        

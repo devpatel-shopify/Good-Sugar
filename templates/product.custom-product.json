@@ -6,7 +6,8 @@
         "f6d4d68b-16b4-4cd1-8105-5756beab856e": {
           "type": "title",
           "settings": {
-            "title_color": "#5c398d"
+            "title_color": "#5c398d",
+            "bg_image": "shopify:\/\/shop_images\/image_8.png"
           }
         },
         "1ddb3de2-f3c4-4ce1-951e-0865482c658c": {
@@ -16,9 +17,23 @@
             "bg_image": "shopify:\/\/shop_images\/image_8.png"
           }
         },
+        "ffff6674-b86a-4658-9cd7-379571b32bb2": {
+          "type": "text",
+          "settings": {
+            "text": "TEST PRoduct DESCRIPTION from CMS",
+            "text_style": "body",
+            "padding_top_dek": 0,
+            "padding_bottom_dek": 0,
+            "padding_left_dek": 0,
+            "padding_right_dek": 0,
+            "padding_top_mob": 0,
+            "padding_bottom_mob": 0,
+            "padding_left_mob": 0,
+            "padding_right_mob": 0
+          }
+        },
         "b61d4f88-1479-4c5e-9a69-99603d25ea7c": {
           "type": "inventory",
-          "disabled": true,
           "settings": {
             "text_style": "body",
             "inventory_threshold": 10,
@@ -27,7 +42,6 @@
         },
         "49606496-9526-464c-8dd2-98844aca934d": {
           "type": "price",
-          "disabled": true,
           "settings": {
           }
         },
@@ -89,11 +103,30 @@
             "text": "Pop-up link text",
             "page": "menu"
           }
+        },
+        "f03c0f0b-37dc-4b4a-8c7b-cc3bb9d14e42": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "content": "",
+            "page": ""
+          }
+        },
+        "92270220-299f-4860-bc45-4f35a7d289d8": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "content": "",
+            "page": ""
+          }
         }
       },
       "block_order": [
         "f6d4d68b-16b4-4cd1-8105-5756beab856e",
         "1ddb3de2-f3c4-4ce1-951e-0865482c658c",
+        "ffff6674-b86a-4658-9cd7-379571b32bb2",
         "b61d4f88-1479-4c5e-9a69-99603d25ea7c",
         "49606496-9526-464c-8dd2-98844aca934d",
         "135fddbb-3ef2-4993-9b1f-2d3df144b36c",
@@ -103,7 +136,9 @@
         "e98db3cc-55b7-47e4-b63a-c72e890e4c93",
         "2b07d346-7117-42c0-a381-1e5dc7645ee2",
         "ca1c1514-99be-4798-a066-0c1f6ca1f700",
-        "9157de4c-72d6-45cf-aa7c-d2fcdb6fe774"
+        "9157de4c-72d6-45cf-aa7c-d2fcdb6fe774",
+        "f03c0f0b-37dc-4b4a-8c7b-cc3bb9d14e42",
+        "92270220-299f-4860-bc45-4f35a7d289d8"
       ],
       "settings": {
         "full_width": true,
