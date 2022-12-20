@@ -2,7 +2,7 @@
 new Swiper(".product_page_slider_image", {
     slidesPerView: 1,
     loop: false,
-    spaceBetween: 35,
+    spaceBetween:0,
     autoHeight: false,
     //grabCursor: true,
     //centeredSlides: true,

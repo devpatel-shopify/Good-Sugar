@@ -24,9 +24,13 @@
     height: 0;
     pointer-events: none;
 }
+.product_page_slider_image .product__media-item,
+.product_page_slider_image .global-media-settings,
 .product_page_slider_image img {
     border: none;
+    border-radius: 0;
 }
+
 .product_page_slider_image .gradient {
     background: transparent;
 }
