@@ -152,7 +152,10 @@
               {{ card_product.title | escape }}
             </a>
           </h3>
-          <div class="card-information">
+          {%- if show_description -%}
+          <div class="card__description">{{ product.description | truncatewords: 20 }}</div>
+          {%- endif -%}
+          <div class="card-information 11">
             {%- if show_vendor -%}
               <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
               <div class="caption-with-letter-spacing light">{{ card_product.vendor }}</div>
@@ -195,8 +198,10 @@
                 </span>
               </p>
             {%- endif -%}
-
+            <div class="card__price_main">
+              <div></div>
             {% render 'price', product: card_product, price_class: '' %}
+            </div>
           </div>
         </div>
         {%- if show_quick_add -%}
