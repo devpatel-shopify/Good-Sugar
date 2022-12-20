@@ -33,6 +33,12 @@
         "default": "#000"
       },
       {
+        "type":"color",
+        "id":"custom_button_border_color",
+        "label":"Custom Border",
+        "default":"#5c398d"
+      },
+      {
         "type": "header",
         "content": "Brand Color"
       },

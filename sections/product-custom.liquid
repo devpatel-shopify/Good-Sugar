@@ -14,23 +14,48 @@
 
   {%- style -%}
     .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}
-      px;
-      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}
-      px;
+      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
     }
 
     @media screen and (min-width: 750px) {
       .section-{{ section.id }}-padding {
-        padding-top: {{ section.settings.padding_top }}
-        px;
-        padding-bottom: {{ section.settings.padding_bottom }}
-        px;
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
       }
     }
   {%- endstyle -%}
 
-  <style></style>
+  <style>
+    {%- for block in section.blocks -%} 
+        {%- if block.type == 'description'-%}
+          @media screen and (min-width:750px) {
+        .custom-product__description--{{ block.id }} {
+          {%- if block.settings.show_border_top == true -%} border-top:3px solid var(--custom-border-color); {%- endif -%}
+          {%- if block.settings.show_border_bottom == true -%}border-bottom:3px solid var(--custom-border-color); {%- endif -%}
+        }
+      }
+      {%- endif -%}
+
+      {%- if block.type == 'quantity_selector' -%}
+        @media screen and (min-width:750px) {
+          .custom-product-form__quantity--{{ block.id }} {
+            {%- if block.settings.show_border_top == true -%} border-top:3px solid var(--custom-border-color); {%- endif -%}
+          {%- if block.settings.show_border_bottom == true -%}border-bottom:3px solid var(--custom-border-color); {%- endif -%}
+          }
+        }
+      {%- endif -%} 
+
+      {%- if block.type == 'variant_picker' -%}
+        @media screen and (min-width:750px) {
+          .custom-variant-picker--{{ block.id }} {
+            {%- if block.settings.show_border_top == true -%} border-top:3px solid var(--custom-border-color); {%- endif -%}
+          {%- if block.settings.show_border_bottom == true -%}border-bottom:3px solid var(--custom-border-color); {%- endif -%}
+          }
+        }
+      {%- endif -%}
+    {%- endfor -%}
+  </style>
 
   <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
   {% if section.settings.image_zoom == 'hover' %}
@@ -75,7 +100,7 @@
             {%- when '@app' -%}
             {% render block %}
             {%- when 'text' -%}
-            <p class="product__text{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}" {{ block.shopify_attributes }}>
+              <p class="product__text {% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}" {{ block.shopify_attributes }}>
               {{- block.settings.text -}}
             </p>
             <div class="product_title_box">
@@ -106,7 +131,7 @@
                         name="add"
                         class="product_buy_button"
                         {% if product.selected_or_first_available_variant.available == false %}disabled{% endif %}>
-                        {% comment %}
+                        {%- comment -%}
                         <span>
                         {%- if product.selected_or_first_available_variant.available -%}
                         {{ 'products.product.add_to_cart' | t }}
@@ -114,14 +139,14 @@
                         {{ 'products.product.sold_out' | t }}
                         {%- endif -%}
                         </span>
-                        {% endcomment %}
+                      {%- endcomment -%}
                         <div class="btn_bg">
                           <img src="{{ block.settings.bg_image | img_url: 'master' }}">
                         </div>
                         <div class="product_custom_price">
                           {%- render 'price' -%}
                         </div>
-                        {%- comment -%}
+                        
                         <div class="loading-overlay__spinner hidden">
                         <svg
                         aria-hidden="true"
@@ -134,7 +159,7 @@
                         <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
                         </svg>
                         </div>
-                        {%- endcomment -%}
+                        
                       </button>
                       {%- if block.settings.show_dynamic_checkout -%}
                         {{ form | payment_button }}
@@ -147,12 +172,11 @@
 
             {%- when 'price' -%}
             <div
-              class="no-js-hidden"
+              class="no-js-hidden custom-price--{{ block.id }}"
               id="price-{{ section.id }}"
               role="status"
               {{ block.shopify_attributes }}>
-              {%- render 'price' 
-                , product: product,
+              {%- render 'price', product: product,
                 use_variant: true,
                 show_badges: true,
                 price_class: 'price--large' -%}
@@ -277,10 +301,11 @@
             </p>
             {%- when 'description' -%}
             {%- if product.description != blank -%}
-              <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
+              <div class="product__description rte quick-add-hidden custom-product__description--{{ block.id }}" {{ block.shopify_attributes }}>
                 {{ product.description }}
               </div>
             {%- endif -%}
+
             {%- when 'sku' -%}
             <p
               class="product__sku no-js-hidden{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.sku.size == 0 %} visibility-hidden{% endif %}"
@@ -311,7 +336,7 @@
               </details>
             </div>
             {%- when 'quantity_selector' -%}
-            <div class="product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %}" {{ block.shopify_attributes }}>
+            <div class="custom-product-form__quantity--{{ block.id }} product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %}" {{ block.shopify_attributes }}>
               <label class="form__label" for="Quantity-{{ section.id }}">
                 {{ 'products.product.quantity.label' | t }}
               </label>
@@ -368,8 +393,9 @@
              share_link: share_url %}
 
             {%- when 'variant_picker' -%}
+              <div class="custom-variant-picker--{{ block.id }}">
             {% render 'product-variant-picker', block: block, product: product %}
-
+              </div>
             {%- when 'rating' -%}
             {%- if product.metafields.reviews.rating.value != blank -%}
               {% liquid
@@ -843,7 +869,21 @@
       }, {
         "type": "quantity_selector",
         "name": "t:sections.main-product.blocks.quantity_selector.name",
-        "limit": 1
+        "limit": 1,
+        "settings":[
+          {
+            "type":"checkbox",
+            "id":"show_border_top",
+            "label":"Show Border Top",
+            "default":false
+          },
+          {
+            "type":"checkbox",
+            "id":"show_border_bottom",
+            "label":"Show Border Bottom",
+            "default":false
+          }
+        ]
       }, {
         "type": "variant_picker",
         "name": "t:sections.main-product.blocks.variant_picker.name",
@@ -863,6 +903,18 @@
             ],
             "default": "button",
             "label": "t:sections.main-product.blocks.variant_picker.settings.picker_type.label"
+          },
+          {
+            "type":"checkbox",
+            "id":"show_border_top",
+            "label":"Show Border Top",
+            "default":false
+          },
+          {
+            "type":"checkbox",
+            "id":"show_border_bottom",
+            "label":"Show Border Bottom",
+            "default":false
           }
         ]
       }, {
@@ -885,7 +937,21 @@
       }, {
         "type": "description",
         "name": "t:sections.main-product.blocks.description.name",
-        "limit": 1
+        "limit": 1,
+        "settings":[
+          {
+            "type":"checkbox",
+            "id":"show_border_top",
+            "label":"Show Border Top",
+            "default":false
+          },
+          {
+            "type":"checkbox",
+            "id":"show_border_bottom",
+            "label":"Show Border Bottom",
+            "default":false
+          }
+        ]        
       }, {
         "type": "share",
         "name": "t:sections.main-product.blocks.share.name",
