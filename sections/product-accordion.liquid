@@ -20,7 +20,7 @@
     <div class="product_accordion_wrapper">
       <div class="product_accordion_main left_item medium-hide small-hide">
         <div class="image_wrapper">
-          <div class="title medium-hide small-hide">attribute title</div>
+          {% if section.settings.image_title != blank %}<div class="title medium-hide small-hide">{{ section.settings.image_title }}</div> {% endif %}
           {% assign productMetaAccordions = product.metafields.accordion.image[1] %}
           {% for metaImage in productMetaAccordions %}
             <div class="image" for="item--{{ block.id }}">
@@ -78,15 +78,20 @@
         "default":true
     },
     {
+      "type":"text",
+      "id":"image_title",
+      "label":"Image Title"
+    },
+    {
         "type":"image_picker",
         "id":"bg_image",
         "label":"Background Image"
     },
-    {
+    /*{
         "type":"image_picker",
         "id":"image",
         "label":"Image"
-    },
+    },*/
     {
         "type":"color_background",
         "id":"bg_color",

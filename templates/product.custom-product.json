@@ -434,6 +434,7 @@
       ],
       "settings": {
         "full_width": true,
+        "image_title": "attribute title",
         "image": "shopify:\/\/shop_images\/round_image.png",
         "bg_color": "linear-gradient(83deg, rgba(210, 200, 219, 1), rgba(255, 204, 75, 1) 100%)",
         "add_class": "",
@@ -499,7 +500,6 @@
         "heading": "You may also like",
         "heading_size": "h1",
         "products_to_show": 3,
-        "columns_desktop": 3,
         "color_scheme": "background-1",
         "image_ratio": "square",
         "show_secondary_image": true,
@@ -507,7 +507,6 @@
         "show_rating": false,
         "show_description": true,
         "price_bg_image": "shopify:\/\/shop_images\/image_8.png",
-        "columns_mobile": "2",
         "padding_top": 36,
         "padding_bottom": 28
       }
