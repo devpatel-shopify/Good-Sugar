@@ -32,6 +32,7 @@
               show_vendor: section.settings.show_vendor,
               show_rating: section.settings.show_rating,
               show_description: section.settings.show_description,
+              price_bg_image: section.settings.price_bg_image,
             %}
           </li>
         {% endfor %}
@@ -177,6 +178,11 @@
       "id": "show_description",
       "default": false,
       "label": "Show Description"
+    },
+    {
+      "type":"image_picker",
+      "id":"price_bg_image",
+      "label":"Price Background Image"
     },
     {
       "type": "header",

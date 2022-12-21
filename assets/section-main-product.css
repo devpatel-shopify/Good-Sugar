@@ -383,10 +383,6 @@ a.product__text {
   display: none;
 }
 
-.product_page_slider_image {
-  border-bottom: 3px solid var(--custom-border-color);
-}
-
 @media screen and (min-width: 750px) {
   .product__info-container {
     max-width: 60rem;

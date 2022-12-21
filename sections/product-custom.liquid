@@ -420,7 +420,7 @@
 
       {%- if block.type == 'true_false_icons' -%}
         @media screen and (min-width:750px) {
-          .true_false_icons--{{ block.id }} {
+          .true_false_icons--{{ block.id }} { 
             padding-top:{{ block.settings.padding_top_dek }}px;
             padding-bottom:{{ block.settings.padding_bottom_dek }}px;
             padding-left:{{ block.settings.padding_left_dek }}px;
@@ -431,7 +431,8 @@
       }
 
       @media screen and (max-width:749px) {
-        .true_false_icons--{{ block.id }} {
+        .true_false_icons--{{ block.id }} .right_item,
+        .true_false_icons--{{ block.id }} .left_item {
           padding-top:{{ block.settings.padding_top_mob }}px;
           padding-bottom:{{ block.settings.padding_bottom_mob }}px;
           padding-left:{{ block.settings.padding_left_mob }}px;

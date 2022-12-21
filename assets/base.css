@@ -442,37 +442,40 @@ h5,
 
 h1,
 .h1 {
-  font-size: calc(var(--font-heading-scale) * 3rem);
+  /* font-size: calc(var(--font-heading-scale) * 3rem); */
+  font-size: var(--heading-h1-font-size);
 }
 
 @media only screen and (min-width: 750px) {
   h1,
   .h1 {
-    font-size: calc(var(--font-heading-scale) * 4rem);
+    /* font-size: calc(var(--font-heading-scale) * 4rem); */
   }
 }
 
 h2,
 .h2 {
-  font-size: calc(var(--font-heading-scale) * 2rem);
+  /* font-size: calc(var(--font-heading-scale) * 2rem); */
+  font-size: var(--heading-h2-font-size);
 }
 
 @media only screen and (min-width: 750px) {
   h2,
   .h2 {
-    font-size: calc(var(--font-heading-scale) * 2.4rem);
+    /* font-size: calc(var(--font-heading-scale) * 2.4rem); */
   }
 }
 
 h3,
 .h3 {
-  font-size: calc(var(--font-heading-scale) * 1.7rem);
+  /* font-size: calc(var(--font-heading-scale) * 1.7rem); */
+  font-size: var(--heading-h2-font-size);
 }
 
 @media only screen and (min-width: 750px) {
   h3,
   .h3 {
-    font-size: calc(var(--font-heading-scale) * 1.8rem);
+    /* font-size: calc(var(--font-heading-scale) * 1.8rem); */
   }
 }
 
@@ -480,18 +483,20 @@ h4,
 .h4 {
   font-family: var(--font-heading-family);
   font-style: var(--font-heading-style);
-  font-size: calc(var(--font-heading-scale) * 1.5rem);
+  /* font-size: calc(var(--font-heading-scale) * 1.5rem); */
+  font-size: var(--heading-h4-font-size);
 }
 
 h5,
 .h5 {
-  font-size: calc(var(--font-heading-scale) * 1.2rem);
+  /* font-size: calc(var(--font-heading-scale) * 1.2rem); */
+  font-size: var(--heading-h5-font-size);
 }
 
 @media only screen and (min-width: 750px) {
   h5,
   .h5 {
-    font-size: calc(var(--font-heading-scale) * 1.3rem);
+    /* font-size: calc(var(--font-heading-scale) * 1.3rem); */
   }
 }
 
@@ -500,6 +505,7 @@ h6,
   color: rgba(var(--color-foreground), 0.75);
   margin-block-start: 1.67em;
   margin-block-end: 1.67em;
+  font-size: var(--heading-h6-font-size);
 }
 
 blockquote {

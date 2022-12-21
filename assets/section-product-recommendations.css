@@ -9,7 +9,7 @@
 }
 
 .product-recommendations__heading {
-  font-size: 50px;
+  /* font-size: 50px; */
   font-family: var(--font-heading-family);
   line-height: 1.1;
   color: var(--custom-text_color);
@@ -38,7 +38,7 @@
   border-right: none;
 }
 .product-recommendations .card__heading {
-  font-size: 35px;
+  /* font-size: 35px; */
   font-family: var(--font-heading-family);
   line-height: 1;
   color: var(--custom-text_color);
@@ -53,7 +53,74 @@
   margin: 0;
 }
 .product-recommendations .card__description p {
-font-size: 18px;
+font-size: var(--body-font-size);
 line-height: 1.2;
 color: var(--custom-text_color);
+}
+.product-recommendations .price {
+  font-size:var(--price-font-size);
+  line-height: 1;
+}
+.card__bg_image_main {
+  height: 100%;
+  width: 100%;
+}
+.card__bg_image_main img {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+.card__price_main {
+  position: relative;
+  width: 200px;
+  height: 140px;
+  z-index: 2;
+  cursor: pointer;
+}
+.card_price {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.price__sale {
+  font-family: var(--font-heading-family);
+}
+.price__sale s {
+  opacity: 0;
+  height: 0;
+  width: 0;
+  font-size: 0px;
+}
+.card__price_main img {
+  transition: all 1s ease;
+}
+.card__price_main:hover img {
+  transform: scale(1.2);
+  transition: all 1s ease;
+}
+.product-recommendations .card-information {
+  width: auto;
+}
+
+@media screen and (max-width:749px) {
+  .card__price_main {
+    width: 110px;
+    height: 70px;
+  }
+  .product-recommendations .grid__item {
+    padding: 20px 20px;
+  }
+  .product-recommendations .card-information {
+    margin-top: 15px;
+  }
+  .product-recommendations__heading {
+    padding: 25px 0;
+  }
 }

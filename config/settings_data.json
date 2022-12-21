@@ -5,6 +5,12 @@
     "custom_body_font": "Hiragino Sans",
     "navigation_font": "Permanent Marker",
     "nav_size": 35,
+    "heading_h1": 50,
+    "heading_h4": 35,
+    "heading_h1_tab": 50,
+    "heading_h4_tab": 35,
+    "heading_h1_mob": 25,
+    "heading_h4_mob": 16,
     "favicon": "shopify:\/\/shop_images\/favicon.jpg",
     "currency_code_enabled": false,
     "sections": {

@@ -138,7 +138,7 @@
       <div class="card__content 11">
         <div class="card__information">
           <h3
-            class="card__heading{% if card_product.featured_media or settings.card_style == 'standard' %} h5{% endif %}"
+            class="card__heading{% if card_product.featured_media or settings.card_style == 'standard' %} h4 {% endif %}"
             {% if card_product.featured_media or settings.card_style == 'card' %}
               id="title-{{ section_id }}-{{ card_product.id }}"
             {% endif %}
@@ -199,8 +199,14 @@
               </p>
             {%- endif -%}
             <div class="card__price_main">
-              <div></div>
-            {% render 'price', product: card_product, price_class: '' %}
+              {%- if price_bg_image != blank -%}
+              <div class="card__bg_image_main">
+                <img src="{{ price_bg_image | img_url: 'master' }}">
+              </div>
+            {%- endif -%}
+            <div class="card_price">
+              {% render 'price', product: card_product, price_class: '' %}
+            </div>
             </div>
           </div>
         </div>
