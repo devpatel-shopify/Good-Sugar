@@ -210,13 +210,18 @@
     width: 100%;
     /* max-height: 150px; */
     /* max-width: 150px; */
-    transition: all .5s ease;
+    /* transition: all .5s ease; */
 
+}
+.main_slider_button .btn:hover img,
+.main_slider_button img,
+.main_slider_button .btn {
+    transition: all .4s ease;
 }
 .main_slider_button .btn {
     text-decoration: none;
     position: relative;
-    transition: all .5s ease;
+    
 
 }
 .btn_text {
@@ -239,7 +244,7 @@ font-family: var(--font-body-family);
 
 .main_slider_button .btn:hover img {
     transform: scale(1.2);
-    transition: all .5s ease;
+    /* transition: all .5s ease; */
 }
 
 @media screen and (min-width:750px) {

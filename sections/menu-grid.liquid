@@ -14,7 +14,7 @@
       color: {{ block.settings.subtitle_color }};
     }
 
-    .grid-bg--{{ block.id }} .btn_text {
+    .grid-bg--{{ block.id }} .btn_text p {
       color: {{ block.settings.button_color }};
     }
 
@@ -101,14 +101,14 @@
                   {%- endif -%}
                 </div>
                 <div class="menu-grid_box_item item_right">
-                  {%- if block.settings.btn_bg != blank and block.settings.btn_text != blank -%}
+                  {%- if block.settings.btn_bg != blank and block.settings.btn_text_11 != blank -%}
                     <div class="menu-grid_btn_box">
                       <a href="#" class="menu-grid_btn_wrapper">
                         <img
                           src="{{ block.settings.btn_bg | img_url: 'master' }}"
                           alt="{{ block.settings.btn_bg.alt }}}"
                         >
-                        <div class="btn_text"><p>{{ block.settings.btn_text }}</p></div>
+                        <div class="btn_text">{{ block.settings.btn_text_11 }}</div>
                       </a>
                     </div>
                   {%- endif -%}
@@ -377,7 +377,7 @@
           "default":99
         }, {
           "type": "richtext",
-          "id": "btn_text",
+          "id": "btn_text_11",
           "label": "Button Text"
         }, {
           "type": "color",
@@ -406,8 +406,8 @@
         {
           "type":"range",
           "id":"sticker_left_position",
-          "min":0,
-          "max":100,
+          "min":-5,
+          "max":95,
           "unit":"%",
           "default":4,
           "label":"Positon From Left (Desktop)"
@@ -424,8 +424,8 @@
         {
           "type":"range",
           "id":"sticker_left_position_mob",
-          "min":0,
-          "max":100,
+          "min":-5,
+          "max":95,
           "unit":"%",
           "default":4,
           "label":"Positon From Left (Mobile)"

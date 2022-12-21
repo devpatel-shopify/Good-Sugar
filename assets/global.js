@@ -991,6 +991,16 @@ class ProductRecommendations extends HTMLElement {
 
           if (recommendations && recommendations.innerHTML.trim().length) {
             this.innerHTML = recommendations.innerHTML;
+            console.log("Recommendation Loaded");
+            let sliderInterval = setInterval(function(){
+                if(window.productRecommendationsSwiper != undefined){
+                  window.productRecommendationsSwiper();
+                  clearInterval(sliderInterval);
+                }
+              setTimeout(function(){
+                clearInterval(sliderInterval);
+              },1000);
+            },100);
           }
 
           if (!this.querySelector('slideshow-component') && this.classList.contains('complementary-products')) {

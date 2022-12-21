@@ -51,25 +51,29 @@
     justify-content: center;
     height: 100%;
 }
+.menu-grid_btn_wrapper img,
+.menu-grid_btn_wrapper:hover img,
+.menu-grid_btn_wrapper {
+    transition: all .4s ease;
+}
 .menu-grid_btn_wrapper {
     /* max-width: 200px; */
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
-    transition: all .8s ease-in-out;
+    cursor: pointer;    
 }
 .menu-grid_btn_wrapper:hover img {
     transform: scale(1.2);
-    transition: all .8s ease-in;
+    /* transition: all .8s ease-in; */
 }
 .menu-grid_btn_wrapper img {
     height: 100%;
     width: 100%;
     /* min-width: 200px; */
     display: block;
-    transition: all .8s ease-in;
+    /* transition: all .8s ease-in; */
 }
 .btn_text {
     position: absolute;
@@ -89,6 +93,11 @@
     line-height: 1;
     text-align: center;
 }
+
+.btn_text p {
+    margin: 0;
+}
+
 .menu-grid_subtitle p {
     font-size: 18px;
     line-height: 1.1;
