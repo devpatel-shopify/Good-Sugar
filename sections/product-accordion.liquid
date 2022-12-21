@@ -21,12 +21,10 @@
       <div class="product_accordion_main left_item medium-hide small-hide">
         <div class="image_wrapper">
           <div class="title medium-hide small-hide">attribute title</div>
-          {% assign productMetaAccordions = product.metafields.accordion | json %}
-
+          {% assign productMetaAccordions = product.metafields.accordion.image[1] %}
           {% for metaImage in productMetaAccordions %}
-            {{ metaImage[0] }}
             <div class="image" for="item--{{ block.id }}">
-              <img src="{{ metaImage }}" alt="{{ block.settings.image.alt }}">
+              <img src="{{ metaImage.src }}" alt="{{ block.settings.image.alt }}">
             </div>
           {% endfor %}
         </div>

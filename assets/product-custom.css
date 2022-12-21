@@ -228,9 +228,9 @@
     border-right: 3px solid var(--custom-border-color);
     border-bottom: 3px solid var(--custom-border-color);
 }
-.product__column-sticky_custom media-gallery {
+.product__column-sticky_custom .swiper_slider_main {
     position: sticky;
-    top:130px;
+    top:128px;
 } 
 }
 

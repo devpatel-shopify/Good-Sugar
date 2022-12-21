@@ -1,0 +1,30 @@
+{{ 'about-map.css' | asset_url | stylesheet_tag }}
+
+<div class="about_map" id="about-mp--{{ section.id }}">
+    <div class="about_map_main">
+        <div class="about_map_wrapper">
+            <div class=""></div>
+        </div>
+    </div>
+</div>
+
+<script src="{{ 'about-map.js' | asset_url }}" defer="defer"></script>
+
+{% schema %}
+{
+  "name": "About Map",
+  "settings": [
+    
+  ],
+  
+  "presets": [
+     {
+       "name": "About Map",
+       "settings": {
+          
+        }
+     }
+   ]
+}
+{% endschema %}
+

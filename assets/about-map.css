@@ -1,0 +1,10 @@
+.about_map {
+    width: 100%;
+    height: calc(100vh - var(--header-height) - var(--footer-height) - 5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .page-about main#MainContent {
+    min-height: 100% !important;
+  }
