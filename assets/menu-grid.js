@@ -5,9 +5,13 @@ new Swiper('.menu-grid_slider', {
     grabCursor: true,
     spaceBetween: 0,
     mousewheel: true,
+    speed: 1000,
     mousewheel: {
       forceToAxis: false,
-      releaseOnEdges: true
+      releaseOnEdges: true,
+      thresholdTime: '5000ms',
+      thresholdDelta:2,
+      sensitivity:5
     },
     effect: "creative",
         creativeEffect: {
