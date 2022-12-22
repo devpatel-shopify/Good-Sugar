@@ -1,35 +1,57 @@
-/* .swiper-slide.swiper-slide-active {
-    animation-delay:5s;
-    animation: fadeInSlider 3s;
-}
+.swiper-slide-active .splitting .char {
+    visibility: hidden;
+  }
+ .swiper-slide-active .splitting .char::before {
+    visibility: visible;
+    --duration: 1s;
+    --delay: 0ms;
+    -webkit-animation: slide-in var(--duration) cubic-bezier(0.1, 0, 0.1, 1) both;
+            animation: slide-in var(--duration) cubic-bezier(0.1, 0, 0.1, 1) both;
+            animation-delay: 500ms;
+   /* -webkit-animation-delay: calc(var(--delay) + (100ms * var(--char-index)));
+            animation-delay: calc(var(--delay) + (100ms * var(--char-index)));*/
+  }
 
-@keyframes fadeInSlider {
-    from {
-        opacity: 0.9;
-        transform: scale(1.1);
+  .splitting .char::before {
+    /* color: red; */
+  }
+  
+  @-webkit-keyframes slide-in {
+    0% {
+        clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
     }
-    to {
-        opacity: 1;
-        transform: scale(1);
+    /* 30%, 70% {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+              clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    } */
+    100% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     }
-} */
+  }
 
-.swiper-slide-active .fadeInUp span {
+  /*---------------------------------------*/
 
-    opacity:0;  /* make things invisible upon start */
-    animation:fadeIn ease-in 1;
-    animation-fill-mode:forwards;
-    animation-duration: 2s;
-}
-@keyframes fadeIn { 
+  @keyframes fadeInUp {
     from { 
-        opacity:0; 
-        transform: translate3d(0, 100%, 0);
-    } 
-    to 
-    { 
-        opacity:1; 
-        transform: none;
-    } 
-}
+      opacity: 0;
+      -webkit-transform: translate3d(0, 100%, 0);
+      transform: translate3d(0, 100%, 0);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
 
+.swiper-slide-active .menu-grid_sticker {
+  opacity: 0;
+  animation: fadeInUp 1s ease-in-out 0s forwards;
+  animation-delay: 300ms; 
+}
+.swiper-slide-active .menu-grid_btn_wrapper {
+ opacity: 0;
+ animation: fadeInUp 1s ease-in-out 0s forwards;
+ animation-delay: 100ms;
+}

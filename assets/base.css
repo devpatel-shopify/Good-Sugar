@@ -2990,6 +2990,7 @@ details-disclosure > details {
 
 #shopify-section-footer {
   background-color: #FFFF73;
+  height: fit-content;
 }
 .template-index #shopify-section-footer {
   background-color: transparent;

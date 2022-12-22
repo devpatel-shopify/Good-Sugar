@@ -1,10 +1,46 @@
+
+
+/* Map Section */
+
 .about_map {
     width: 100%;
     height: calc(100vh - var(--header-height) - var(--footer-height) - 5px);
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  .page-about main#MainContent {
+}
+#googleMap iframe,
+#googleMap,
+.map_container_main,
+.map_container,
+.about_map_wrapper,
+.about_map_main {
+  height: 100%;
+  width: 100%;
+}
+.page-about main#MainContent {
     min-height: 100% !important;
   }
+
+  .about_map_wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .map--small .map_container {
+    width: 45%;
+  }
+
+  .map--small .map_text_container {
+    width: 55%;
+  }
+  #googleMap iframe {
+    border: none;
+  }
+.about_map_main {
+  border-top: 3px solid var(--custom-text_color);
+}
+.map_container {
+  border-left: 3px solid var(--custom-text_color);
+}

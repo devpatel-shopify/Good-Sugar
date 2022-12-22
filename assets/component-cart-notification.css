@@ -39,7 +39,7 @@
   .cart-notification {
     border-width: 0 var(--popup-border-width) var(--popup-border-width);
     max-width: 36.8rem;
-    right: 4rem;
+    /* right: 4rem; */
   }
 }
 
@@ -111,4 +111,11 @@
 .cart-notification-product__name {
   margin-bottom: 0.5rem;
   margin-top: 0;
+  color: var(--custom-text_color);
+  line-height: 1.1;
+}
+
+#cart-notification {
+  background-color: #ffffff;
+  z-index: 1;
 }

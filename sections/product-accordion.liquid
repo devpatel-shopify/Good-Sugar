@@ -1,5 +1,7 @@
+{% assign productMetaAccordionsSize = product.metafields.accordion.image | size %}
+{% if productMetaAccordionsSize > 1 %}
+  
 {{ 'product-accordion.css' | asset_url | stylesheet_tag }}
-
 <style>
   {{ section.settings.add_css }}
 </style>
@@ -20,13 +22,17 @@
     <div class="product_accordion_wrapper">
       <div class="product_accordion_main left_item medium-hide small-hide">
         <div class="image_wrapper">
-          {% if section.settings.image_title != blank %}<div class="title medium-hide small-hide">{{ section.settings.image_title }}</div> {% endif %}
-          {% assign productMetaAccordions = product.metafields.accordion.image[1] %}
+          {% if section.settings.image_title != blank -%}
+            <div class="title medium-hide small-hide">{{ section.settings.image_title }}</div>
+          {% endif %}          
+          {% assign productMetaAccordions = product.metafields.accordion.image %}    
+          {% if productMetaAccordionsSize > 1 %}
           {% for metaImage in productMetaAccordions %}
-            <div class="image" for="item--{{ block.id }}">
-              <img src="{{ metaImage.src }}" alt="{{ block.settings.image.alt }}">
+            <div class="image js-image " for="item--{{ forloop.index0 }}" {% if forloop.index > 0 %}style="display:none"{% endif %}>
+              <img src="{{ metaImage[0].original_src }}" alt="{{ block.settings.image.alt }}" image-index="{{ forloop.index0 }}">
             </div>
           {% endfor %}
+          {% endif %}  
         </div>
       </div>
       <div class="product_accordion_main right_item">
@@ -34,22 +40,23 @@
           {% assign MeteTitle = product.metafields.accordion.title %}
           {% assign MeteContent = product.metafields.accordion.content %}
           {% for title in MeteTitle %}
-            <div class="accordion_main">
+            <div class="accordion_main js-details-tab" data-item-id="{{ forloop.index0 }}">
               {% if title != blank %}
                 <details>
                   <summary>
-                    <div class="title" id="item--{{ block.id }}">
-                      {{ title }}
-                    </div>
+                    <div class="title" id="item--{{ block.id }}" >{{ title }}</div>
                     <div class="product_accordion_icon">
-                      {% render 'icon-round-plus' -%}
-                      {%- render 'icon-round-minus' %}
+                      {%- render 'icon-round-plus' -%}
+                      {%- render 'icon-round-minus' -%}
                     </div>
                   </summary>
                   <div class="accordion_content_main">
-                    {% if MetaImage != blank %}
+                    {% if productMetaAccordions != blank %}                     
                       <div class="image large-up-hide" for="item--{{ block.id }}">
-                        <img src="{{ MetaImage.original_src }}" alt="{{ block.settings.image.alt }}">
+                        <img
+                          src="{{ productMetaAccordions[forloop.index0][0].original_src }}"
+                          alt="{{ block.settings.image.alt }}"
+                         image-index="{{ forloop.index0 }}">
                       </div>
                     {% endif %}
                     {% if MeteContent != blank -%}
@@ -65,6 +72,51 @@
     </div>
   </div>
 </div>
+<script>
+
+  let tabElements = document.querySelectorAll(".js-details-tab");
+  document.querySelectorAll(".js-image").forEach(function(e) {
+      let imageIndex = document.querySelector(".js-image").querySelector("img").getAttribute("image-index");
+      if (imageIndex === "0") {
+          document.querySelectorAll(".js-image")[0].style.display = "block"
+      }
+  });
+  tabElements.forEach(function(tabElement) {
+      tabElement.addEventListener("click", function(event) {
+          let Element = event.currentTarget.querySelector("details")
+        let _this = event.currentTarget.closest(".js-details-tab")
+        // Element.setAttribute("open",true)
+        setTimeout(function(){
+           console.log(Element.hasAttribute("open"))
+          if(Element.hasAttribute("open") ){
+                    
+          let ElementIndex = _this.getAttribute("data-item-id");
+          let imageElements = _this.closest(".product_accordion_main").closest(".product_accordion_wrapper").querySelector(".image_wrapper").querySelectorAll(".js-image");
+          imageElements.forEach(function(imageElement) {
+              let imageIndex = imageElement.querySelector("img").getAttribute("image-index");
+              if (ElementIndex === imageIndex) {
+                  imageElement.style.display = "block"
+              }else{
+                imageElement.style.display = "none"
+              }
+          })
+          }
+        },10)
+
+         
+        // tabElement.querySelectorAll("details").forEach(function(e){
+        //     e.removeAttribute("open")
+        // })
+      })
+  })
+    
+  
+  
+  
+  
+</script>
+
+{% endif %}
 
 {% schema %}
 {

@@ -11,7 +11,9 @@ class DetailsModal extends HTMLElement {
     this.summaryToggle.addEventListener(
       'click',
       this.onSummaryClick.bind(this)
+      
     );
+    
     this.querySelector('button[type="button"]').addEventListener(
       'click',
       this.close.bind(this)
@@ -22,6 +24,7 @@ class DetailsModal extends HTMLElement {
 
   isOpen() {
     return this.detailsContainer.hasAttribute('open');
+    
   }
 
   onSummaryClick(event) {

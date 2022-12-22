@@ -6,15 +6,17 @@
     .grid-bg--{{ block.id }}{
       background-image: url('{{ block.settings.bg_image | img_url: 'master' }}');
     }
-    .grid-bg--{{ block.id }} .menu-grid_title span {
+    .grid-bg--{{ block.id }} .menu-grid_title span,
+    .grid-bg--{{ block.id }} .menu-grid_title span .char::before {
       color: {{ block.settings.title_color }};
     }
-
-    .grid-bg--{{ block.id }} .menu-grid_subtitle p {
+    .grid-bg--{{ block.id }} .menu-grid_subtitle p span,
+    .grid-bg--{{ block.id }} .menu-grid_subtitle p,
+    .grid-bg--{{ block.id }} .menu-grid_subtitle p .char::before {
       color: {{ block.settings.subtitle_color }};
     }
-
-    .grid-bg--{{ block.id }} .btn_text p {
+    .grid-bg--{{ block.id }} .btn_text p,
+    .grid-bg--{{ block.id }} .btn_text p .char::before {
       color: {{ block.settings.button_color }};
     }
 
@@ -86,15 +88,15 @@
               <div class="menu-grid_box">
                 <div class="menu-grid_box_item item_left">
                   {%- if block.settings.title != blank -%}
-                    <div class="fadeInUp menu-grid_title desktop-position--{{ block.settings.title_text_position }}">
-                      <span class="desktop-{{ block.settings.title_text_alignment }} mobile-{{ block.settings.title_text_alignment_mob }}">
+                    <div class="menu-grid_title desktop-position--{{ block.settings.title_text_position }}">
+                      <span class="menu-grid_title_text desktop-{{ block.settings.title_text_alignment }} mobile-{{ block.settings.title_text_alignment_mob }}" data-splitting>
                         {{- block.settings.title -}}
                       </span>
                     </div>
                   {%- endif -%}
                   {%- if block.settings.sub_title != blank -%}
                     <div class="menu-grid_subtitle desktop-position--{{ block.settings.sub_title_text_position }}">
-                      <span class="desktop-{{ block.settings.sub_title_text_alignment }} mobile-{{ block.settings.sub_title_text_alignment_mob }}">
+                      <span class="menu-grid_subtitle_text desktop-{{ block.settings.sub_title_text_alignment }} mobile-{{ block.settings.sub_title_text_alignment_mob }}" data-splitting >
                         {{- block.settings.sub_title -}}
                       </span>
                     </div>
@@ -142,6 +144,7 @@
 </div>
 
 <script type="module" src="{{ 'menu-grid.js' | asset_url }}"></script>
+
 
 {% schema %}
 {
@@ -265,9 +268,9 @@
         },
         {
           "type":"select",
-          "id":"sub_itle_text_position",
+          "id":"sub_title_text_position",
           "label":"Text Position for Desktop",
-          "default":"middle-center",
+          "default":"middle-left",
           "options":[
             {
               "value":"top-left",

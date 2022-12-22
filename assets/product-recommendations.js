@@ -29,7 +29,11 @@ function productRecommendationsSwiper() {
         slidesPerView: 2,
         spaceBetween: 0,
         mousewheel: true,
-        loop:!0,
+        mousewheel: {
+          //invert: true,
+          forceToAxis: false,
+          releaseOnEdges: true,
+        },
         autoHeight:100,
         noSwiping: false,
         keyboard: {

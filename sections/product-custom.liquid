@@ -713,7 +713,7 @@
             {%- when 'description' -%}
             {%- if product.description != blank -%}
               <div class="product_custom_block product__description rte quick-add-hidden custom-product__description--{{ block.id }}" {{ block.shopify_attributes }}>
-                {{ product.description }}
+                <div class="product__description_container">{{ product.description }}</div>                
               </div>
             {%- endif -%}
 
@@ -724,30 +724,15 @@
                     <div class="item_title">full of</div>
                     <div class="item_list_wrapper">
                       <ul>
-                        <li>
-                          <div class="item_list">
-                            {% render 'icon-true' %}
-                            <span class="item_text">iaculis</span>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="item_list">
-                            {% render 'icon-true' %}
-                            <span class="item_text">urna</span>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="item_list">
-                            {% render 'icon-true' %}
-                            <span class="item_text">volutpat</span>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="item_list">
-                            {% render 'icon-true' %}
-                            <span class="item_text">lacus</span>
-                          </div>
-                        </li>
+                        {% assign full_of = product.metafields.full_of.text %}
+                        {% for value in full_of %}
+                          <li>
+                            <div class="item_list">
+                              {% render 'icon-true' %}
+                              <span class="item_text">{{ value }}</span>
+                            </div>
+                          </li>
+                        {% endfor %}
                       </ul>
                     </div>
                   </div>
@@ -755,30 +740,15 @@
                     <div class="item_title">free of</div>
                     <div class="item_list_wrapper">
                       <ul>
-                        <li>
-                          <div class="item_list">
-                            {% render 'icon-false' %}
-                            <span class="item_text">iaculis</span>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="item_list">
-                            {% render 'icon-false' %}
-                            <span class="item_text">urna</span>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="item_list">
-                            {% render 'icon-false' %}
-                            <span class="item_text">volutpat</span>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="item_list">
-                            {% render 'icon-false' %}
-                            <span class="item_text">lacus</span>
-                          </div>
-                        </li>
+                        {% assign free_of = product.metafields.accentuate.text %}
+                        {% for value in free_of %}
+                          <li>
+                            <div class="item_list">
+                              {% render 'icon-false' %}
+                              <span class="item_text">{{ value }}</span>
+                            </div>
+                          </li>
+                        {% endfor %}
                       </ul>
                     </div>
                   </div>

@@ -146,7 +146,7 @@ main#MainContent {
 
 @media screen and (max-width: 567px) {
     .section-header .menu-drawer{padding: 100px 25px 50px 45px;}
-    main#MainContent {min-height: 690px;}
+    /* main#MainContent {min-height: 690px;} */
     .search_model .search-input{padding: 0px 10px 2px 15px;}
     
 }

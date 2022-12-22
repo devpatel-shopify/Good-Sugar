@@ -1,3 +1,4 @@
+{% comment %}
 {%- liquid
   if cart == empty
     render 'icon-cart-empty'
@@ -5,9 +6,10 @@
     render 'icon-cart'
   endif
 -%}
-<span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
+{% endcomment %}
+<span class="visually-hidden1">{{ 'templates.cart.cart' | t }}</span>
 {%- if cart != empty -%}
-  <div class="cart-count-bubble">
+  <div class="cart-count-bubble visually-hidden">
       {%- if cart.item_count < 100 -%}
         <span aria-hidden="true">{{ cart.item_count }}</span>
       {%- endif -%}

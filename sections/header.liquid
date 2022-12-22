@@ -318,37 +318,37 @@
       super();
     }
 
-    
     connectedCallback() {
       this.header = document.getElementById('shopify-section-header');
       this.headerBounds = {};
       this.currentScrollTop = 0;
       this.preventReveal = false;
       this.predictiveSearch = this.querySelector('predictive-search');
-      if(document.querySelector("body").classList.contains("template-index") || document.querySelector("body").classList.contains("page-menu")){
-        this.footer = document.getElementById('custom-footer-grid');  
-        
-      }else{
-        this.footer = document.getElementById('shopify-section-footer');
-
-        let GSSlideshowParent = document.getElementById('MainContent');
-        GSSlideshowParent.style.setProperty('min-height', `${parseInt(this.footer.getBoundingClientRect().height)}px`);
-      }
-      
+      this.footer = document.getElementById('shopify-section-footer');
 
       this.onScrollHandler = this.onScroll.bind(this);
       this.hideHeaderOnScrollUp = () => this.preventReveal = true;
 
       this.addEventListener('preventHeaderReveal', this.hideHeaderOnScrollUp);
       window.addEventListener('scroll', this.onScrollHandler, false);
-      document.documentElement.style.setProperty('--header-height', `${parseInt(this.header.getBoundingClientRect().height)}px`); 
+      document.documentElement.style.setProperty('--header-height', `${parseInt(this.header.getBoundingClientRect().height)}px`);
       document.documentElement.style.setProperty('--footer-height', `${parseInt(this.footer.getBoundingClientRect().height)}px`);
-      // console.log("Iski maa ki")
-      
 
+
+      setTimeout(() => {
+      document.documentElement.style.setProperty('--header-height', `${parseInt(this.header.getBoundingClientRect().height)}px`);
+      document.documentElement.style.setProperty('--footer-height', `${parseInt(this.footer.getBoundingClientRect().height)}px`);
+      }, 100);
+      this.custom = document.querySelector('.header');
+      if( this.custom.classList.contains('header--custom') ){
+        this.custom_enable = true
+      }else{
+        this.custom_enable = false
+      }
+     // console.log(this.custom_enable);
+      
       this.createObserver();
     }
-    
 
     disconnectedCallback() {
       this.removeEventListener('preventHeaderReveal', this.hideHeaderOnScrollUp);
@@ -369,10 +369,10 @@
 
       if (this.predictiveSearch && this.predictiveSearch.isOpen) return;
 
-      if (scrollTop > this.currentScrollTop && scrollTop > this.headerBounds.bottom) {
+      if (scrollTop > this.currentScrollTop && scrollTop > this.headerBounds.top) {
         if (this.preventHide) return;
         requestAnimationFrame(this.hide.bind(this));
-      } else if (scrollTop < this.currentScrollTop && scrollTop > this.headerBounds.bottom) {
+      } else if (scrollTop < this.currentScrollTop && scrollTop > this.headerBounds.top) {
         if (!this.preventReveal) {
           requestAnimationFrame(this.reveal.bind(this));
         } else {
@@ -392,18 +392,28 @@
     }
 
     hide() {
-      this.header.classList.add('shopify-section-header-hidden', 'shopify-section-header-sticky');
-      this.closeMenuDisclosure();
-      this.closeSearchModal();
+      if(!this.custom_enable){
+        this.header.classList.add('shopify-section-header-hidden', 'shopify-section-header-sticky');
+        this.closeMenuDisclosure();
+        this.closeSearchModal();
+      }else{
+        this.header.classList.add('shopify-section-header-sticky');
+      }
     }
 
     reveal() {
       this.header.classList.add('shopify-section-header-sticky', 'animate');
-      this.header.classList.remove('shopify-section-header-hidden');
+      if(!this.custom_enable){
+        this.header.classList.remove('shopify-section-header-hidden');
+        }
     }
 
     reset() {
-      this.header.classList.remove('shopify-section-header-hidden', 'shopify-section-header-sticky', 'animate');
+      if(!this.custom_enable){
+        this.header.classList.remove('shopify-section-header-hidden', 'shopify-section-header-sticky', 'animate');
+      }else{
+        this.header.classList.remove('shopify-section-header-sticky', 'animate');
+      }
     }
 
     closeMenuDisclosure() {
