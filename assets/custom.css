@@ -9,6 +9,14 @@ header-drawer
 {
     display: block;
 }
+
+.header{
+    background: url("https://cdn.shopify.com/s/files/1/0680/9331/3298/files/main-bg.png?v=1670477655");
+   background-repeat: repeat;
+    background-size: cover;
+  background-position: top center;
+}
+
 .container {width: 1810px;max-width: 100%;padding: 0 15px;margin: 0 auto;clear: both;}
 .header-wrapper .header {width: 100%;float: left;display: block;padding:50px 15px;background: transparent;transition: 175ms ease-in;position: relative;}
 .section-header {display: flex;flex-wrap: wrap;justify-content: space-between;width: 100%;align-items: center;}
