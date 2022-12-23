@@ -5,7 +5,11 @@ new Swiper('.menu-grid_slider', {
     grabCursor: true,
     spaceBetween: 0,
     mousewheel: true,
-    speed: 1000,
+    //parallax: !0,
+    //loop:true,
+    //roundLengths: true,
+    speed: 800,
+    //longSwipesMs:1500,
     mousewheel: {
       forceToAxis: false,
       releaseOnEdges: true,
@@ -13,16 +17,18 @@ new Swiper('.menu-grid_slider', {
       thresholdDelta:2,
       sensitivity:5
     },
-    effect: "creative",
-        creativeEffect: {
-          prev: {
-            shadow: true,
-            translate: [0, "0", -1]
-          },
-          next: {
-            translate: [0,"100%", 0]
-          },
-        },
+    effect: "slide",
+    //effect: "fade",
+    // effect: "creative",
+    //     creativeEffect: {
+    //       prev: {
+    //         shadow: true,
+    //         translate: [0, "0", -1]
+    //       },
+    //       next: {
+    //         translate: [0,"100%", 0]
+    //       },
+    //     },
     keyboard: {
         enabled: true,
     },
