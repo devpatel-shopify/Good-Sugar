@@ -3,7 +3,7 @@
 }
 .js-product__description .swiper_slider_main{
   position:sticky;
-  top:0;
+  top:var(--header-height);
 }
 .product_page_slider_image ul {
     list-style-type: none;
