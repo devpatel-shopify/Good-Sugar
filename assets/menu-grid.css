@@ -55,7 +55,7 @@
 .menu-grid_btn_wrapper img,
 .menu-grid_btn_wrapper:hover img,
 .menu-grid_btn_wrapper {
-    transition: all .4s ease;
+    transition: all 200ms ease;
 }
 .menu-grid_btn_wrapper {
     /* max-width: 200px; */

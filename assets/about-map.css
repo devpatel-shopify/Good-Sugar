@@ -45,3 +45,32 @@
 .map_container {
   border-left: 3px solid var(--custom-text_color);
 }
+.map_text_title {
+  max-width: 520px;
+  /* margin: 0 auto; */
+}
+.map_text_title h1 {
+  color: var(--custom-text_color);
+}
+.map_text_subtext_box,
+.map_text_title_box {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 100px;
+}
+.map_text_title_box {
+  border-bottom: 3px solid var(--custom-text_color);  
+}
+.map_text_container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  height: 100%;
+}
+.about_map_wrapper {
+  background: linear-gradient(83deg, rgba(210, 200, 219, 1), rgba(255, 204, 75, 1) 100%);
+}

@@ -210,7 +210,7 @@
       <div class="header-right">      
         <div class="cart">
           <a href="{{ routes.cart_url }}" class="header-cart" id="cart-icon-bubble">
-            <span class="visually-hidden1">{{ 'templates.cart.cart' | t }}</span>
+            <span class="link-animation visually-hidden1">{{ 'templates.cart.cart' | t }}</span>
             {%- if cart != empty -%}
               <div class="cart-count-bubble visually-hidden" >
                 {%- if cart.item_count < 100 -%}
@@ -288,8 +288,8 @@
                                 </div>
                               </details>
                             {%- else -%}
-                              <a href="{{ link.url }}" class="menu-drawer__menu-item list-menu__item link link--text focus-inset{% if link.current %} menu-drawer__menu-item--active{% endif %}"{% if link.current %} aria-current="page"{% endif %}>
-                                {{ link.title | escape }}
+                              <a href="{{ link.url }}" class="link-animation menu-drawer__menu-item list-menu__item link link--text focus-inset{% if link.current %} menu-drawer__menu-item--active{% endif %}"{% if link.current %} aria-current="page"{% endif %}>
+                                {{ link.title | escape | downcase }}
                               </a>
                             {%- endif -%}
                           </li>

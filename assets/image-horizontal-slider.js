@@ -3,12 +3,15 @@ new Swiper('.image_horizontal_slider_main', {
     slidesPerView: 1.8,
     spaceBetween: 30,
     mousewheel: true,
+    mousewheel: {
+      forceToAxis: false,
+      releaseOnEdges: true,
+    },
     autoHeight:100,
     centeredSlides: true,
     keyboard: {
         enabled: true,
-    },
-    
+    },    
     // Responsive breakpoints
     breakpoints: {
       // when window width is >= 640px

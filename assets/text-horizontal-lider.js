@@ -8,7 +8,11 @@ function swiperCard() {
         slidesPerView: 1,
         spaceBetween: 0,
         mousewheel: true,
-        noSwiping: false,
+        mousewheel: {
+          forceToAxis: false,
+          releaseOnEdges: true,
+        },
+        //noSwiping: false,
         keyboard: {
             enabled: true,
         },
