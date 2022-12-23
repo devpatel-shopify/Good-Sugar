@@ -31,17 +31,17 @@ new Swiper(".product_page_slider_image", {
     
   });
 
-  if (document.querySelector('.js-product__description')) {
-    const navbar = document.getElementById('js-addClass');
-    const description = document.querySelector('.header').scrollHeight;
-    const onScroll = () => {
-        const scroll = document.documentElement.scrollTop
-        if (scroll > description) {
-            navbar.classList.add("product__column-sticky_custom");
-        }
-        if (scroll < 2) {
-            navbar.classList.remove("product__column-sticky_custom")
-        }
-    }
-    window.addEventListener('scroll', onScroll)
-}
+//   if (document.querySelector('.js-product__description')) {
+//     const navbar = document.getElementById('js-addClass');
+//     const description = document.querySelector('.header').scrollHeight;
+//     const onScroll = () => {
+//         const scroll = document.documentElement.scrollTop
+//         if (scroll > description) {
+//             navbar.classList.add("product__column-sticky_custom");
+//         }
+//         if (scroll < 2) {
+//             navbar.classList.remove("product__column-sticky_custom")
+//         }
+//     }
+//     window.addEventListener('scroll', onScroll)
+// }
