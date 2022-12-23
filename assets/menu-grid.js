@@ -8,7 +8,7 @@ new Swiper('.menu-grid_slider', {
     //parallax: !0,
     //loop:true,
     //roundLengths: true,
-    speed: 800,
+    speed: 500,
     //longSwipesMs:1500,
     mousewheel: {
       forceToAxis: false,
@@ -42,8 +42,6 @@ new Swiper('.menu-grid_slider', {
       }
     }
   })
-
-
 
 Splitting();
 //const target = document.querySelector('#target');
