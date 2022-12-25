@@ -2,55 +2,38 @@
 
 /* Map Section */
 
-.about_map {
+/* .about_map {
     width: 100%;
     height: calc(100vh - var(--header-height) - var(--footer-height) - 5px);
     display: flex;
     justify-content: center;
     align-items: center;
-}
-#googleMap iframe,
-#googleMap,
+} */
 .map_container_main,
-.map_container,
-.about_map_wrapper,
-.about_map_main {
-  height: 100%;
-  width: 100%;
+#googleMap,
+#googleMap iframe {
+height: 100%;
+width: 100%;
 }
+
 .page-about main#MainContent {
     min-height: 100% !important;
-  }
+}
 
-  .about_map_wrapper {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-  }
-
-  .map--small .map_container {
-    width: 45%;
-  }
-
-  .map--small .map_text_container {
-    width: 55%;
-  }
-  #googleMap iframe {
+#googleMap iframe {
     border: none;
-  }
+    display: block;
+}
+
 .about_map_main {
   border-top: 3px solid var(--custom-text_color);
   border-bottom: 3px solid var(--custom-text_color);
+  position: relative;
 }
-.map_container {
-  border-left: 3px solid var(--custom-text_color);
-}
-.map_text_title {
-  max-width: 520px;
-  /* margin: 0 auto; */
-}
+
 .map_text_title h1 {
   color: var(--custom-text_color);
+  margin: 0;
 }
 .map_text_subtext_box,
 .map_text_title_box {
@@ -73,4 +56,161 @@
 }
 .about_map_wrapper {
   background: linear-gradient(83deg, rgba(210, 200, 219, 1), rgba(255, 204, 75, 1) 100%);
+}
+.map_text_subtext p {
+  margin: 0;
+  color: var(--custom-text_color);
+  line-height: 1.1;
+  font-size: var(--body-font-size);
+}
+.about_map_sticker {
+  position: absolute;
+  /* top:0; */
+  /* left: 0; */
+  /* right: 0; */
+  /* bottom: 0; */
+  /* height: 100%; */
+  /* width: 100%; */
+  z-index: 3;
+
+}
+.about_map_sticker.item_1 {
+top:-40px;
+left: 30%;
+}
+.about_map_sticker.item_2 {
+  top:40%;
+  left: -30px;
+}
+
+.about_map_sticker.item_3 {
+  top:60%;
+  left: 48%;
+}
+
+.about_map_sticker img {
+  height: 100%;
+  width: 100%;
+}
+.about_map_sticker.item_1 .map_sticker_container {
+  max-height: 160px;
+  max-width: 250px;
+  transform: rotate(4deg);
+}
+.about_map_sticker.item_2 .map_sticker_container {
+width: 240px;
+height: 110px;
+transform: rotate(-10deg);
+}
+.about_map_sticker.item_3 .map_sticker_container {
+  height: 165px;
+  width: 165px;
+  transform: rotate(5deg);
+}
+
+.map_sticker_text .text {
+  font-size: 25px;
+  line-height: 1.01;
+  color: #000000;
+  font-family: var(--nav-font-family);
+}
+.map_sticker_container {
+  position: relative;
+}
+.map_sticker_text {
+  position: absolute;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.map_text_subtext {
+  max-width: 450px;
+}
+
+@media screen and (min-width:750px) {
+  .about_map_wrapper {
+    display: flex;
+    /* align-items: flex-start; */
+    /* justify-content: center; */
+  }
+  .map--small .map_container {
+    width: 45%;
+  }
+  .map--small .map_text_container {
+    width: 55%;
+  }
+  .map_container {
+    border-left: 3px solid var(--custom-text_color);
+  }
+  .map_text_title {
+    max-width: 520px;
+    /* margin: 0 auto; */
+  }
+}
+
+@media screen and (max-width:1024px) {
+  .map_text_subtext_box, .map_text_title_box {
+    padding: 70px;
+  }
+}
+
+@media screen and (max-width:749px) {
+  .about_map_sticker.item_1 .map_sticker_container {
+    width: 100px;
+    height: 70px;
+  }
+  .about_map_sticker.item_2 .map_sticker_container {
+    height: 45px;
+    width: 100px;
+  }
+  .about_map_sticker.item_3 .map_sticker_container {
+    height: 70px;
+    width: 70px;
+  }
+  .map_sticker_text .text {
+    font-size: 11px;
+  }
+  .map_text_subtext_box, .map_text_title_box {
+    padding: 20px;
+  }
+  .map_text_title {
+    max-width: 220px;
+  }
+  .map_text_subtext {
+    max-width: 134px;
+  }
+  .map_text_container {
+    border-bottom: 3px solid var(--custom-border-color);
+  }
+  .map_container {
+    display: flex;
+    align-items: center;
+  }
+  .map_container_main,
+  .map_location_main {
+    width: 50%;
+  }
+  .map_location_main {
+    border-left: 3px solid var(--custom-border-color);
+  }
+  .map_location_text {
+    font-size: var(--body-font-size);
+    line-height: 1.1;
+    color: var(--custom-text_color);
+    padding: 25px 25px 25px 30px;
+  }
+  .map_location_text span {
+    font-family: var(--font-heading-family);
+    color: var(--custom-text_color);
+  }
+  #googleMap,
+  .map_container_main {
+    height: 100%;
+  }
 }
