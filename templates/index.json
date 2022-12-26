@@ -8,7 +8,6 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/open-mouth-lightning_01.png",
             "mobile-image": "shopify:\/\/shop_images\/banner-image-mobile.jpg",
-            "full_width": true,
             "video_url": "https:\/\/youtu.be\/bON-KPiiNCk",
             "heading": "It’s Time to Eat the Truth.",
             "heading_text_alignment": "center",
@@ -34,16 +33,15 @@
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/trinh-le-nguyen-ai-6fYh2Nqjhxk-unsplash-2_1.png",
-            "full_width": false,
             "video_url": "",
-            "heading": "It’s Time to Eat the Truth.",
+            "heading": "It’s Time to Eat the Truth.It’s Time to Eat the Truth.It’s Time to Eat the Truth.It’s Time to Eat the Truth.It’s Time to Eat the Truth.It’s Time to Eat the Truth.It’s Time to Eat the Truth.",
             "heading_text_alignment": "center",
             "mobile_heading_text_alignment": "center",
-            "leftsubheading": "The current state of mass health food is certainly not healthful and, with so many additives and preservatives, can barely be called ‘food.’",
+            "leftsubheading": "The current state of mass health food is certainly not healthful and, with so many additives and preservatives, can barely be called ‘food.The current state of mass health food is certainly not healthful and, with so many additives and preservatives, can barely be called ‘food.’",
             "left_subheading_text_alignment": "left",
             "mobile_left_subheading_text_alignment": "left",
             "left_box_position": "left",
-            "rightsubheading": "You’re just consuming well-marketed convenience, and if your brain can’t tell the difference your body certainly will.",
+            "rightsubheading": "You’re just consuming well-marketed convenience, and if your brain can’t tell the difference your body certainly‘food.The current state of mass health food is certainly not healthful and, with so many additives and preservatives, can barely be called ‘food.’ will.",
             "right_subheading_text_alignment": "right",
             "mobile_right_subheading_text_alignment": "left",
             "right_box_position": "right",
@@ -60,7 +58,6 @@
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/alex-lvrs-JJKEQgcNzS4-unsplash_1.png",
-            "full_width": false,
             "video_url": "",
             "heading": "It’s Time to Eat the Truth.",
             "heading_text_alignment": "center",
@@ -86,7 +83,6 @@
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/aliet-kitchen-733kX9cX3JU-unsplash_1.png",
-            "full_width": false,
             "video_url": "",
             "heading": "It’s Time to Eat the Truth.",
             "heading_text_alignment": "center",
@@ -111,7 +107,6 @@
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/Rectangle_4.png",
-            "full_width": false,
             "video_url": "",
             "heading": "It’s Time to Eat the Truth.",
             "heading_text_alignment": "center",
@@ -136,7 +131,6 @@
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/justus-menke-47cW0To8dQY-unsplash_1.png",
-            "full_width": false,
             "video_url": "",
             "heading": "It’s Time to Eat the Truth.",
             "heading_text_alignment": "center",
