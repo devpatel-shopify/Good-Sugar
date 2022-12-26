@@ -35,7 +35,6 @@
 }
 .image_box .image,
 .image_box,
-.image_slider_main,
 .image_horizontal_slider .swiper-autoheight,
 .image_horizontal_slider .swiper-autoheight .swiper-slide {
     height: 100%;
@@ -56,7 +55,12 @@
     border-bottom: 3px solid #5C398D;
     max-height: calc(100vh - var(--header-height) - var(--footer-height) - 5px);
 }
-
+.image_horizontal_main .swiper-wrapper {
+    justify-content: center;
+}
+.image_horizontal_main .swiper-slide {
+width: calc(100% / 5);
+}
 @media screen and (min-width:750px) {
     .image_slider_content .title {
         font-size: 50px;       

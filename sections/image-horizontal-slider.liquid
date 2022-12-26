@@ -16,14 +16,16 @@
     }
   {%- endfor -%}
 </style>
+{% assign count = 0 %}
 <div class="image_horizontal_slider" id="image-horizontal-slider--{{ section.id }}">
   <div class="image_horizontal_slider_wrapper">
-    <div class="swiper image_horizontal_slider_main">
+    <div class="swiper {% if count > 4 %} image_horizontal_slider_main {% else %} image_horizontal_main {% endif %}">
       <!-- Additional required wrapper -->
       <div class="swiper-wrapper">
         <!-- Slides -->
         {%- for block in section.blocks -%}
-          <div class="swiper-slide image_slider_wrapper image_slider--{{ block.id }}">
+          {% assign count = count | plus: 1 %}
+          <div class="block_{{ count }} swiper-slide {% if count > 4 %} image_slider_wrapper {% endif %} image_slider--{{ block.id }}" class="">
             <div class="image_slider_main">
               <div class="image_box">
                 <div class="image">
