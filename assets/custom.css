@@ -370,7 +370,7 @@ footer.footer {
 }
 
 main#MainContent {
-	/* min-height: 700px;  */
+	min-height: 100% !important;
 }
 
 @media screen and (max-width: 1749px) {

@@ -174,16 +174,6 @@
 {% comment %} <script type="module" src="{{ 'gs-slideshow.js' | asset_url }}"></script> {% endcomment %}
 
 <script>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-
   let mySwiper = new Swiper(".swiper", {
     direction: "vertical",
     effect: "coverflow",
@@ -230,16 +220,8 @@ let GSSlideshow = document.querySelector('.gs-slideshow-section');
 let GSSlideshowHeight = GSSlideshow.getBoundingClientRect().height;
 GSSlideshowParent.style.setProperty('min-height', `${parseInt(GSSlideshowHeight)}px`);
 
-
-
-
-
-
-
-
-
-
 </script>
+
 {%- if request.design_mode -%}
   <script src="{{ 'theme-editor.js' | asset_url }}" defer="defer"></script>
 {%- endif -%}
