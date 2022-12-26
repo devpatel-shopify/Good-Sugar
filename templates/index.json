@@ -8,6 +8,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/open-mouth-lightning_01.png",
             "mobile-image": "shopify:\/\/shop_images\/banner-image-mobile.jpg",
+            "local_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/eb5ad927e2014c828b85ccc82aa6e53c.mp4",
             "video_url": "https:\/\/youtu.be\/bON-KPiiNCk",
             "heading": "It’s Time to Eat the Truth.",
             "heading_text_alignment": "center",
@@ -33,6 +34,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/trinh-le-nguyen-ai-6fYh2Nqjhxk-unsplash-2_1.png",
+            "local_video": "",
             "video_url": "",
             "heading": "It’s Time to Eat the Truth.",
             "heading_text_alignment": "center",
@@ -58,6 +60,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/alex-lvrs-JJKEQgcNzS4-unsplash_1.png",
+            "local_video": "",
             "video_url": "",
             "heading": "It’s Time to Eat the Truth.",
             "heading_text_alignment": "center",
@@ -83,6 +86,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/aliet-kitchen-733kX9cX3JU-unsplash_1.png",
+            "local_video": "",
             "video_url": "",
             "heading": "It’s Time to Eat the Truth.",
             "heading_text_alignment": "center",
@@ -107,6 +111,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/Rectangle_4.png",
+            "local_video": "",
             "video_url": "",
             "heading": "It’s Time to Eat the Truth.",
             "heading_text_alignment": "center",
@@ -131,6 +136,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/justus-menke-47cW0To8dQY-unsplash_1.png",
+            "local_video": "",
             "video_url": "",
             "heading": "It’s Time to Eat the Truth.",
             "heading_text_alignment": "center",
@@ -162,7 +168,8 @@
         "4ddec2aa-b78d-4039-b6d0-8a1351eb9d88"
       ],
       "settings": {
-        "accessibility_info": "Slideshow about our brand"
+        "accessibility_info": "Slideshow about our brand",
+        "speed": 400
       }
     }
   },

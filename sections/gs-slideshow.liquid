@@ -33,6 +33,15 @@
         <div class="main_slider_wrapper">
           <div class="main_slider_image">
             {% if block.settings.video_url != blank %}
+              {% if block.settings.local_video != blank %}
+                <div class="local_video">
+                  <div class="local_video_container">
+                    <video autoplay loop muted>
+                      <source src="{{ block.settings.local_video }}" type="video/mp4" />
+                    </video>
+                  </div>
+                </div>
+                {% else %}
               <div class="video">
                 <div class="video_container">
                   <deferred-media
@@ -55,6 +64,7 @@
                   </deferred-media>
                 </div>
               </div>
+            {% endif %}
             {% else %}
               <div class="image">
                 {%- if block.settings.image -%}
@@ -277,6 +287,11 @@ GSSlideshowParent.style.setProperty('min-height', `${parseInt(GSSlideshowHeight)
         {
           "type":"header",
           "content":"Video Settings"
+        },
+        {
+          "type":"url",
+          "id":"local_video",
+          "label":"Local Video"
         },
         {
           "type": "video_url",

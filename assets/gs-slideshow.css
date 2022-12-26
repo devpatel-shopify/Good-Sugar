@@ -95,6 +95,9 @@
     -webkit-line-clamp: 2;
     overflow:hidden
 }
+.local_video_container video,
+.local_video_container,
+.main_slider_wrapper .local_video,
 .main_slider_wrapper .video-section__media,
 .video_container,
 .main_slider_image .image,
@@ -102,6 +105,9 @@
 .main_slider_wrapper {
     height: 100%;
     width: 100%;
+}
+.local_video_container video {
+    object-fit: cover;
 }
 .main_slider_image img {
     height: 100%;
@@ -452,6 +458,5 @@ padding-bottom:0;
         font-size: 8px;
     }     
 }
-
 
 
