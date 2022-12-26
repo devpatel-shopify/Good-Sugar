@@ -41,7 +41,7 @@
                   >
                     {%- if block.settings.video_url.type == 'youtube' -%}
                       <iframe
-                        src="https://www.youtube.com/embed/{{ block.settings.video_url.id }}?autoplay=1&mute=1"
+                        src="https://www.youtube.com/embed/{{ block.settings.video_url.id }}?autoplay=1&mute=1&loop=1"
                       ></iframe>
                     {%- else -%}
                       <iframe
@@ -170,6 +170,7 @@
   
   
   
+  
 
   let mySwiper = new Swiper(".swiper", {
     direction: "vertical",
@@ -216,6 +217,7 @@ let GSSlideshowParent = document.getElementById('MainContent');
 let GSSlideshow = document.querySelector('.gs-slideshow-section');
 let GSSlideshowHeight = GSSlideshow.getBoundingClientRect().height;
 GSSlideshowParent.style.setProperty('min-height', `${parseInt(GSSlideshowHeight)}px`);
+
 
 
 
