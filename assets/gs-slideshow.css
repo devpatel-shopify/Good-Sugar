@@ -115,6 +115,7 @@
     position: relative;
     border: 3px solid #000000;
     /* overflow-x: hidden; */
+    /* z-index: 11; */
 }
 .main_slider_content_box {
     position: absolute;
@@ -126,7 +127,8 @@
     width:100%;
     display: flex;
     justify-content: center;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
+    /* z-index: 10; */
 }
 .main_slider_header {
     font-size: 125px;
@@ -314,7 +316,7 @@ padding-bottom:0;
 
 @media screen and (max-width:1400px) {
     .main_slider_header {
-        font-size: 90px;
+        font-size: 80px;
     }
     .main_slider_subheader .subheader {
         font-size: 22px;

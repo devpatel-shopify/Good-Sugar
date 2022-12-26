@@ -6,16 +6,11 @@
 <script type="module" src="{{ 'swiper-bundle.min.js' | asset_url }}"></script>
 <script type="module" src="{{ 'swiper-bundle.esm.browser.min.js' | asset_url }}"></script>
 
-<style>
-  {% comment %}
-    {%- for block in section.blocks -%}
-      .btn_bg--{{ block.id }}{
-        background-image: url('{{ block.settings.buttonbgimage | img_url: 'master' }}');
-      }
-    {%- endfor -%}
-  {% endcomment %}
-</style>
+
 <!-- Slider main container -->
+{% assign speed = section.settings.speed %}
+
+
 <div class="swiper swiper-carousel">
   <!-- Additional required wrapper -->
   <div class="swiper-wrapper">
@@ -133,8 +128,57 @@
   <div class="swiper-scrollbar"></div>
 </div>
 
-<script type="module" src="{{ 'gs-slideshow.js' | asset_url }}"></script>
+{% comment %} <script type="module" src="{{ 'gs-slideshow.js' | asset_url }}"></script> {% endcomment %}
 
+<script>
+
+  let mySwiper = new Swiper(".swiper", {
+    direction: "vertical",
+    effect: "coverflow",
+    spaceBetween: 0,
+    grabCursor: !0,
+    centeredSlides: !0,
+    speed: {{ speed }},
+    loop: !0,
+    loopedSlides: 6,
+    slidesPerView: "auto",
+    mousewheel: true,
+    keyboard: {
+        enabled: true,
+    },
+    coverflowEffect: {
+        rotate: 0,
+        stretch: '86%',
+        depth: '200',
+        modifier: 1,
+        slideShadows: true,
+    },
+    on: {
+        init(e){
+            for (let r = 0; r < e.slides.length; r += 1) {
+              const t = e.slides[r],
+                    o = e.slides[r].progress,
+                    i = Math.abs(o);
+                t.style.opacity = i > 2.5 ? 0 : 1;
+            }
+        },
+        progress(e){
+            for (let r = 0; r < e.slides.length; r += 1) {
+              const t = e.slides[r],
+                    o = e.slides[r].progress,
+                    i = Math.abs(o);
+                    t.style.opacity = i > 2.5 ? 0 : 1;
+            }
+        }
+    }
+});
+
+let GSSlideshowParent = document.getElementById('MainContent');
+let GSSlideshow = document.querySelector('.gs-slideshow-section');
+let GSSlideshowHeight = GSSlideshow.getBoundingClientRect().height;
+GSSlideshowParent.style.setProperty('min-height', `${parseInt(GSSlideshowHeight)}px`);
+
+</script>
 {%- if request.design_mode -%}
   <script src="{{ 'theme-editor.js' | asset_url }}" defer="defer"></script>
 {%- endif -%}
@@ -154,6 +198,13 @@
         "label": "t:sections.gs-slideshow.settings.accessibility.label",
         "info": "t:sections.gs-slideshow.settings.accessibility.info",
         "default": "Slideshow about our brand"
+      },
+      {
+        "type":"number",
+        "id":"speed",
+        "label":"Slider Speed",
+        "default":500,
+        "info":"Speed in MS"
       }
     ],
     "blocks": [

@@ -4,6 +4,7 @@ let mySwiper = new Swiper(".swiper", {
     spaceBetween: 0,
     grabCursor: !0,
     centeredSlides: !0,
+    //speed: {{ speed }},
     loop: !0,
     loopedSlides: 6,
     slidesPerView: "auto",
