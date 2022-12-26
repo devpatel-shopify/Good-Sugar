@@ -41,9 +41,7 @@
                   >
                     {%- if block.settings.video_url.type == 'youtube' -%}
                       <iframe
-                        width="420"
-                        height="345"
-                        src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1"
+                        src="https://www.youtube.com/embed/{{ block.settings.video_url.id }}?autoplay=1&mute=1"
                       ></iframe>
                     {%- else -%}
                       <iframe
