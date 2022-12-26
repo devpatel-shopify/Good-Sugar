@@ -41,13 +41,12 @@
                   >
                     {%- if block.settings.video_url.type == 'youtube' -%}
                       <iframe
-                        width="560"
-                        height="315"
-                        src="https://www.youtube-nocookie.com/embed/7Y9nX0QHqzA?start=6"
-                        title="YouTube video player"
+                        src="https://www.youtube.com/embed/{{ block.settings.video_url.id }}?autoplay=1"
+                        class="js-youtube"
                         frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen
+                        title="{{ block.settings.description | escape }}"
                       ></iframe>
                     {%- else -%}
                       <iframe
