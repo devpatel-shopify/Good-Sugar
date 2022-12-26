@@ -1,5 +1,7 @@
 {{ 'swiper-bundle.min.css' | asset_url | stylesheet_tag }}
 {{ 'gs-slideshow.css' | asset_url | stylesheet_tag }}
+{{ 'video-section.css' | asset_url | stylesheet_tag }}
+{{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
 
 <script type="module" src="{{ 'swiper-bundle.min.js' | asset_url }}"></script>
 <script type="module" src="{{ 'swiper-bundle.esm.browser.min.js' | asset_url }}"></script>
@@ -36,6 +38,20 @@
         </style>
         <div class="main_slider_wrapper">
           <div class="main_slider_image">
+            {% if block.settings.video_url != blank %}
+              <div class="video">
+                <div class="video_container">
+                  <deferred-media class="video-section__media deferred-media no-js-hidden gradient global-media-settings" data-media-id="{{ block.settings.video_url.id }}">
+                      {%- if block.settings.video_url.type == 'youtube' -%}
+                        <iframe src="https://www.youtube.com/embed/{{ block.settings.video_url.id }}?autoplay=1" class="js-youtube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="{{ block.settings.description | escape }}"></iframe>
+                      {%- else -%}
+                        <iframe src="https://player.vimeo.com/video/{{ block.settings.video_url.id }}" class="js-vimeo" allow="autoplay; encrypted-media" allowfullscreen title="{{ block.settings.description | escape }}"></iframe>
+                      {%- endif -%}                    
+                  </deferred-media>
+                </div>
+              </div>
+              {% else %}
+
             <div class="image">
               {%- if block.settings.image -%}
                 {%- assign height = block.settings.image.width | divided_by: block.settings.image.aspect_ratio | round -%}
@@ -64,6 +80,8 @@
                 {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
               {%- endif -%}
             </div>
+          {% endif %}
+            
           </div>
           <div class="main_slider_content_box">
             <div class="main_slider_content">
@@ -153,6 +171,21 @@
             "type": "image_picker",
             "id": "mobile-image",
             "label": "t:sections.gs-slideshow.blocks.slide.settings.mobileimage.label"
+          },
+          {
+            "type":"header",
+            "content":"Video Settings"
+          },
+          {
+            "type": "video_url",
+      "id": "video_url",
+      "accept": [
+        "youtube",
+        "vimeo"
+      ],
+      /*"default": "https://www.youtube.com/watch?v=_9VUPq3SxOc",*/
+      "label": "t:sections.video.settings.video_url.label",
+      "info": "t:sections.video.settings.video_url.info"
           },
           {
             "type": "text",

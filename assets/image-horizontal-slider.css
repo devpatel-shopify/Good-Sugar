@@ -54,6 +54,7 @@
 
 .image_horizontal_slider_wrapper {
     border-bottom: 3px solid #5C398D;
+    max-height: calc(100vh - var(--header-height) - var(--footer-height) - 5px);
 }
 
 @media screen and (min-width:750px) {

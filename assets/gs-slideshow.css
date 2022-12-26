@@ -95,6 +95,8 @@
     -webkit-line-clamp: 2;
     overflow:hidden
 }
+.main_slider_wrapper .video-section__media,
+.video_container,
 .main_slider_image .image,
 .main_slider_image,
 .main_slider_wrapper {
@@ -112,6 +114,7 @@
 .main_slider_wrapper {
     position: relative;
     border: 3px solid #000000;
+    /* overflow-x: hidden; */
 }
 .main_slider_content_box {
     position: absolute;
@@ -123,6 +126,7 @@
     width:100%;
     display: flex;
     justify-content: center;
+    overflow-x: hidden;
 }
 .main_slider_header {
     font-size: 125px;
@@ -249,6 +253,24 @@ font-family: var(--font-body-family);
     /* transition: all .5s ease; */
 }
 
+.main_slider_wrapper .video {
+    height: 100%;
+}
+.main_slider_wrapper .video-section__media {
+padding-bottom:0;
+}
+
+.main_slider_wrapper .video-section__media.deferred-media {
+    box-shadow: none;
+}
+.main_slider_wrapper .global-media-settings {
+    border: none;
+    border-radius: 0;
+}
+.main_slider_wrapper .global-media-settings iframe {
+    border: 0;
+    border-radius: 0;
+}
 @media screen and (min-width:750px) {
     .main_slider_content_box {
         align-items:center;
@@ -380,6 +402,54 @@ font-family: var(--font-body-family);
     }
 }
 
-@media screen and (max-height:600px) {
-
+@media screen and (max-width:320px) {
+    .main_slider_header {
+        font-size: 40px;
+        line-height: 1;
+    }
+    .main_slider_content {
+        padding: 20px 15px;
+    }
+    .main_slider_subheader .subheader {
+        font-size: 13px;
+    }
 }
+
+@media screen and (max-height:600px) {
+    .main_slider_subheader {
+        margin-top: 20px;
+    }
+    .main_slider_header {
+        font-size: 50px;
+    }
+    .main_slider_subheader .subheader {
+        font-size: 15px;
+    }
+    .main_slider_button .btn {
+        max-width: 120px;
+    }
+    .btn_text {
+        font-size: 10px;
+    }
+    .header-wrapper .header {
+        padding: 20px;
+    }
+}
+
+@media screen and (max-height:450px) {
+    .header-wrapper .header {
+        padding: 10px;
+    }
+    .main_slider_subheader {
+        margin-top: 5px;
+    }
+    .main_slider_button .btn {
+        max-width: 100px;
+    } 
+    .btn_text {
+        font-size: 8px;
+    }     
+}
+
+
+
