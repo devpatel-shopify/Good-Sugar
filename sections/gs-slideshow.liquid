@@ -41,7 +41,7 @@
                   >
                     {%- if block.settings.video_url.type == 'youtube' -%}
                       <iframe
-                        src="https://www.youtube.com/embed/{{ block.settings.video_url.id }}??rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1"
+                        src="https://www.youtube.com/embed/{{ block.settings.video_url.id }}?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1"
                         class="js-youtube"
                         frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -173,6 +173,7 @@
   
   
   
+  
 
   let mySwiper = new Swiper(".swiper", {
     direction: "vertical",
@@ -219,6 +220,7 @@ let GSSlideshowParent = document.getElementById('MainContent');
 let GSSlideshow = document.querySelector('.gs-slideshow-section');
 let GSSlideshowHeight = GSSlideshow.getBoundingClientRect().height;
 GSSlideshowParent.style.setProperty('min-height', `${parseInt(GSSlideshowHeight)}px`);
+
 
 
 
