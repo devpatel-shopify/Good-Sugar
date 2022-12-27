@@ -1,17 +1,16 @@
-document.addEventListener("DOMContentLoaded", function() {
-    var scrollElement = document.getElementById('watchScroll');
-    var scrollElementPos = scrollElement.scrollTop;
-    var header = document.getElementsByClassName("about_map_main");
-  
-    scrollElement.addEventListener('scroll', function() {
-      scrollElementPos = scrollElement.scrollTop;
-      if(scrollElementPos >= 100){
-        header.classList.add("scrolled");
-      }
-      else {
-        header.classList.remove("scrolled");
-      }
-  
-      console.log(scrollElementPos);
-    });
-  });
+var menu = document.getElementById('about_map_main');
+var menuOpen = false;
+window.onscroll = function() {
+  if (window.pageYOffset > 1 ) {
+    menu.classList.add('sticky');
+  } else {
+    menu.classList.remove('sticky');
+  }
+  if (window.pageYOffset > 0 && !menuOpen) {
+    menu.classList.add('open');
+    menuOpen = true;
+  } else if (window.pageYOffset < 100 && menuOpen) {
+    menu.classList.remove('open');
+    menuOpen = false;
+  }
+};

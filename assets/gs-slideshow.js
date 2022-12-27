@@ -8,7 +8,10 @@ let mySwiper = new Swiper(".swiper", {
     loop: !0,
     loopedSlides: 6,
     slidesPerView: "auto",
-    mousewheel: true,
+    freeMode: true,
+    freeModeMomentum: true,
+    mousewheelSensitivity: 0.002,
+    watchSlidesProgress: true,
     keyboard: {
         enabled: true,
     },

@@ -338,7 +338,7 @@
       setTimeout(() => {
       document.documentElement.style.setProperty('--header-height', `${parseInt(this.header.getBoundingClientRect().height)}px`);
       document.documentElement.style.setProperty('--footer-height', `${parseInt(this.footer.getBoundingClientRect().height)}px`);
-      }, 100);
+      }, 1000);
       this.custom = document.querySelector('.header');
       if( this.custom.classList.contains('header--custom') ){
         this.custom_enable = true
