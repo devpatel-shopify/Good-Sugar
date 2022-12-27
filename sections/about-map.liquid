@@ -1,5 +1,6 @@
 {{ 'about-map.css' | asset_url | stylesheet_tag }}
 {{ 'about-center-image.css' | asset_url | stylesheet_tag }}
+{{ 'about-custom-heading.css' | asset_url | stylesheet_tag }}
 
 <div class="about_map" id="about-mp--{{ section.id }}">
     <div class="about_map_main" id="about_map_main">
@@ -74,7 +75,7 @@
 <div class="about_center_image" id="about-center-image--{{ section.id }}">
   <div class="about_center_image_wrapper">
     <div class="heading">
-      <div class="heading_text h1 desktop-center">We were meant to eat plants.</div>
+      <div class="heading_text h1 center">We were meant to eat plants.</div>
     </div>
     <div class="image_text_wrapper">
       <div class="image_text_main">
@@ -85,12 +86,12 @@
         <div class="image_text_item item_2">
           <div class="text">He just listened...and learned...and tinkered...and toiled...until finally he created an approach to juicing that didn’t require pasteurization or additives or preservatives: just the pure way nature intended.<br><br>You can taste it in all of our offerings and how good they make us feel</div>
           <div class="imagr_text_button">
-            <div class="button_wrapper">
+            <a class="button_wrapper" href="#">
               <div class="image">
                 <img src="https://cdn.shopify.com/s/files/1/0680/9331/3298/files/image_10.png?v=1671191937">  
               </div>
               <div class="btn_text">Learn More <br>from Marcus</div>  
-            </div>
+            </a>
           </div>
         </div>  
       </div>
@@ -145,6 +146,19 @@
     </div>
   </div>
 </div>
+
+
+<div class="about_custom_heading">
+  <div class="custom_heading_wrapper">
+    <div class="heading center">
+      <div class="text">
+        <span>so</span><span>how is goodsugar</span><span>purely different:</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
 <script src="{{ 'about-map.js' | asset_url }}" defer="defer"></script>
 

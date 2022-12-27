@@ -1,0 +1,27 @@
+.custom_heading_wrapper span {
+    font-family: var(--nav-font-family);
+    font-size: 45px;
+    line-height: 1.05;
+    padding: 0 7px;
+    display: inline-block;
+}
+
+.custom_heading_wrapper .heading {
+    padding: 60px 100px;
+}
+
+.custom_heading_wrapper span:nth-of-type(1) {
+    transform: rotate(-1deg);
+}
+.custom_heading_wrapper span:nth-of-type(2) {
+    transform: rotate(-2deg);
+}
+
+@media screen and (max-width:749px) {
+    .custom_heading_wrapper span {
+        font-size: 18px;
+    }
+    .custom_heading_wrapper .heading {
+        padding: 20px 20px;
+    }
+}
