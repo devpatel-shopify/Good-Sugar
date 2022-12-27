@@ -8,14 +8,14 @@ new Swiper('.menu-grid_slider', {
     //parallax: !0,
     //loop:true,
     //roundLengths: true,
-    speed: 500,
+    speed: 800,
     //longSwipesMs:1500,
     mousewheel: {
       forceToAxis: false,
       releaseOnEdges: true,
       thresholdTime: '5000ms',
       thresholdDelta:2,
-      sensitivity:5
+      //sensitivity:5
     },
     effect: "slide",
     //effect: "fade",
@@ -46,3 +46,4 @@ new Swiper('.menu-grid_slider', {
 Splitting();
 //const target = document.querySelector('#target');
 //const results = Splitting({ target: target, by: 'lines' });
+
