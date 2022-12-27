@@ -146,4 +146,11 @@ align-items: center;
         /* right: -50px; */
         top: 5%;
     }
+    .slide_item_wrapper .text {
+        padding: 20px;
+    }
+    .slide_item_wrapper .image {
+        max-width: 100%;
+        max-height: 100%;
+    }
 }
