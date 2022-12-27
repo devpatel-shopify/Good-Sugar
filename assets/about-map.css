@@ -213,4 +213,24 @@ transform: rotate(-10deg);
   .map_container_main {
     height: 100%;
   }
+  .about_map_sticker.item_2 {
+    padding: 20px;
+    top: 0%;
+    left: auto;
+    right: 0;
+  }
+  .about_map_sticker.item_1 {
+    padding: 20px;
+    top: 35px;
+    left: auto;
+    right: 0;
+    z-index: 4;
+  }
+  .about_map_sticker.item_3 {
+    padding: 20px;
+    left: auto;
+    right: 15px;
+    top: 85px;
+    z-index: 5;
+  }
 }

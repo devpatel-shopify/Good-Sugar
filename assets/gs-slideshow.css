@@ -106,8 +106,13 @@
     height: 100%;
     width: 100%;
 }
+.local_video_container {
+    overflow: hidden;
+}
 .local_video_container video {
     object-fit: cover;
+    height: calc(100% + 6px);
+    width: calc(100% + 6px);
 }
 .main_slider_image img {
     height: 100%;
