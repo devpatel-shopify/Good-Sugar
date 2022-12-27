@@ -1,0 +1,118 @@
+.about_center_image .heading_text {
+    color: var(--custom-text_color);
+    line-height: 1.05;
+}
+.about_center_image .heading {
+    padding: 155px 20px;
+    background-color: #ECA847;
+}
+.image_text_main {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 135px 100px;
+}
+.image_text_main > div {
+    width: calc(100% / 3);
+}
+.button_wrapper {
+    max-width: 220px;
+    max-height: 126px;
+    position: relative;
+}
+.button_wrapper img,
+.button_wrapper .image {
+    height: 100%;
+    width: 100%;
+}
+.button_wrapper img {
+    display: block;
+}
+.btn_text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right:0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: var(--price-font-size);
+    line-height: 1.05;
+    font-family: var(--nav-font-family);
+}
+
+.imagr_text_button {
+    margin-top: 75px;
+}
+.image_text_item.item_1 .text {
+    font-family: var(--font-heading-family);
+}
+.image_text_item .text {
+    font-size: var(--body-font-size);
+    color: var(--custom-text_color);
+    line-height: 1.12;
+    
+}
+
+.slide_item_wrapper .text {
+    max-width: 700px;
+    color: var(--custom-text_color);
+    line-height: 1.15;
+    padding: 70px;
+}
+.slide_item_wrapper {
+    height: 100%;
+}
+.image_text_slider_wrapper .swiper-wrapper  {
+align-items: center;
+}
+.slide_item_wrapper img,
+.slide_item_wrapper .image {
+    /* height: 100%; */
+    /* width: 100%; */
+}
+
+.slide_item_wrapper .image {
+    max-height: 373px;
+    max-width: 400px;
+}
+.slide_item_wrapper img {
+    display: block;
+    /* object-fit: cover; */
+    height: 100%;
+    width: 100%;
+    
+}
+/* .slide_item_wrapper {
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+} */
+
+.image_text_slider_wrapper {
+    background: linear-gradient(83deg, rgba(210, 200, 219, 1), rgba(255, 204, 75, 1) 100%);
+}
+
+.center_image_wrapper img {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.about_center_image_wrapper {
+    position: relative;
+}
+.center_image_main {
+    position: absolute;
+    top:200px;
+}
+.center_image_wrapper {
+    max-width: calc(100% / 3);
+    margin: 0 auto;
+}

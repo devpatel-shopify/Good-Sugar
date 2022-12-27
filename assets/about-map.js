@@ -14,3 +14,27 @@ window.onscroll = function() {
     menuOpen = false;
   }
 };
+
+new Swiper('.image_text_slide_main', {
+    // Default parameters
+    slidesPerView: 'auto',
+    spaceBetween: 0,
+    mousewheel: true,
+    autoHeight: true,
+    mousewheel: {
+      forceToAxis: false,
+      releaseOnEdges: true,
+    },
+    centeredSlides: true,
+    keyboard: {
+        enabled: true,
+    },    
+    // Responsive breakpoints
+    breakpoints: {
+      // when window width is >= 640px
+      750: {
+        slidesPerView: 1.8,
+        spaceBetween:0,
+      }
+    }
+  })
