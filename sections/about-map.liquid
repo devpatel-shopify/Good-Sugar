@@ -1,6 +1,7 @@
 {{ 'about-map.css' | asset_url | stylesheet_tag }}
 {{ 'about-center-image.css' | asset_url | stylesheet_tag }}
 {{ 'about-custom-heading.css' | asset_url | stylesheet_tag }}
+{{ 'about-compair.css' | asset_url | stylesheet_tag }}
 
 <div class="about_map" id="about-mp--{{ section.id }}">
     <div class="about_map_main" id="about_map_main">
@@ -158,7 +159,42 @@
   </div>
 </div>
 
+<div class="about_compair">
+  <div class="about_compair_wrapper">
+  <div class="about_compair_main">
+    <div class="compair_item item_1">
+      <div class="compair_item_wrapper">
+        <div class="compair_header h1">goodsugar</div>
+        <div class="compair_sub_text">(us)</div>
+        <div class="compair_details_data">
+          <ul>
+            <li>a</li>
+            <li>b</li>
+            <li>c</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="compair_item item_2">
+      <div class="compair_item_wrapper">
+        <div class="compair_header h1">badsugar</div>
+        <div class="compair_sub_text">(them)</div>
+        <div class="compair_details_data">
+          <ul>
+            <li>a</li>
+            <li>b</li>
+            <li>c</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
 
+<div class="about_image_text">
+  <div class=""></div>
+</div>
 
 <script src="{{ 'about-map.js' | asset_url }}" defer="defer"></script>
 

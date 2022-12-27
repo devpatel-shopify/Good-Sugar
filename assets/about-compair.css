@@ -1,0 +1,43 @@
+.compair_header {
+    color: var(--custom-text_color);
+    line-height: 1.05;
+}
+.about_compair_main {
+    display: flex;
+    align-items: flex-start;
+}
+.compair_item {
+    width: calc(100% / 2);
+    padding: 100px 50px 100px 100px;
+}
+.about_compair_wrapper {
+    border-top: 3px solid var(--custom-border-color);
+    border-bottom: 3px solid var(--custom-border-color);
+    background-color:#ECA847;
+}
+.compair_item.item_1 {
+    border-right: 3px solid var(--custom-border-color);
+}
+
+.compair_sub_text {
+    font-family: var(--nav-font-family);
+    font-size: 45px;
+    line-height: 1.05;
+}
+.compair_details_data ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+.compair_details_data {
+    margin-top:84px;
+}
+.compair_details_data li {
+    font-size: 20px;
+    color: var(--custom-text_color);
+    font-family: var(--font-heading-family);
+    line-height: 1.15;
+}

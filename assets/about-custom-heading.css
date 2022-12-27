@@ -17,6 +17,10 @@
     transform: rotate(-2deg);
 }
 
+.custom_heading_wrapper {
+    background-color: #ffffff;
+}
+
 @media screen and (max-width:749px) {
     .custom_heading_wrapper span {
         font-size: 18px;
