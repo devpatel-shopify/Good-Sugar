@@ -20,6 +20,9 @@
     z-index: 2;
     cursor: pointer;
 }
+.product_page_slider_image .swiper-arrow svg {
+    color: var(--custom-border-color);
+}
 .product_page_slider_image .swiper--next {
     right: 10px;
 }

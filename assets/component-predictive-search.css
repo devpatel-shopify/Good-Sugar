@@ -163,8 +163,8 @@ predictive-search[loading] .predictive-search__results-list:first-child {
 }
 
 .predictive-search__item--term .icon-arrow {
-  width: calc(var(--font-heading-scale) * 1.4rem);
-  height: calc(var(--font-heading-scale) * 1.4rem);
+  /* width: calc(var(--font-heading-scale) * 1.4rem); */
+  /* height: calc(var(--font-heading-scale) * 1.4rem); */
   flex-shrink: 0;
   margin-left: calc(var(--font-heading-scale) * 2rem);
   color: rgb(var(--color-link));
