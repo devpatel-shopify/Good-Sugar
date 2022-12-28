@@ -9,7 +9,7 @@
 
 .product_accordion_wrapper {
 display: grid;
-grid-template-columns: calc(45% - 6px / 2) calc(55% + 3px);
+grid-template-columns: calc(35% - 6px / 2) calc(65% + 3px);
 }
 
 .product_accordion .image {
@@ -130,6 +130,13 @@ display: none;
     }
     
 }
+
+@media screen and (max-width:1400px) {
+    .product_accordion_main.right_item {
+        padding: 188px 100px 140px;
+    }
+}
+
 @media screen and (max-width:989px) {
     .product_accordion_wrapper {
         grid-template-columns: calc(50% - 3px) 50%;

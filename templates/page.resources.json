@@ -15,7 +15,7 @@
           "type": "text",
           "settings": {
             "text": "<p>goodsugar is bigger than some edible purity test.<\/p>",
-            "text_color": "#5C398D",
+            "text_color": "#5c398d",
             "font-size": 50,
             "font_family": "--font-heading-family",
             "font-size_mob": 25,
@@ -30,7 +30,7 @@
           "type": "text",
           "settings": {
             "text": "<p>Sure, we sell juices and smoothies and vegan stuff that taste like non-vegan stuff, but we’re actual in it for one simple reason: that you live a healthier life.<br\/><\/p>",
-            "text_color": "#5C398D",
+            "text_color": "#5c398d",
             "font-size": 20,
             "font_family": "--font-heading-family",
             "font-size_mob": 9,
@@ -45,7 +45,7 @@
           "type": "text",
           "settings": {
             "text": "<p>It took a nice-looking website and some clever wordplay to get you here…but it’ll take real smarts for you to keep this way of living up.<\/p>",
-            "text_color": "#5C398D",
+            "text_color": "#5c398d",
             "font-size": 20,
             "font_family": "--font-body-family",
             "font-size_mob": 9,
@@ -60,7 +60,7 @@
           "type": "text",
           "settings": {
             "text": "<p>We know because we’ve read all the misclaims and junk science out there, which is why we continue to put these resources together.<\/p>",
-            "text_color": "#5C398D",
+            "text_color": "#5c398d",
             "font-size": 20,
             "font_family": "--font-body-family",
             "font-size_mob": 9,
@@ -91,7 +91,7 @@
             "title": "blog",
             "text": "<p>Learn from Marcus<\/p>",
             "title_color": "#eca847",
-            "text_color": "#fff"
+            "text_color": "#ffffff"
           }
         },
         "f7dae696-d8d3-4759-b2ec-2e198559c542": {
@@ -113,12 +113,44 @@
             "title_color": "#5c398d",
             "text_color": "#000000"
           }
+        },
+        "b6bbc944-8c96-48aa-be42-e1965ff01111": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/DISGUSTING-JUICE_1_3.png",
+            "title": "",
+            "text": "",
+            "title_color": "#000000",
+            "text_color": "#000000"
+          }
+        },
+        "1821de9b-7527-412c-81ce-b118131d9ade": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/DISGUSTING-JUICE_1_2.png",
+            "title": "",
+            "text": "",
+            "title_color": "#000000",
+            "text_color": "#000000"
+          }
+        },
+        "9b586695-e97b-47c3-a898-55a4263957ec": {
+          "type": "image",
+          "settings": {
+            "title": "",
+            "text": "",
+            "title_color": "#000000",
+            "text_color": "#000000"
+          }
         }
       },
       "block_order": [
         "c8edeed7-1a17-410e-bdac-a67fb72da30d",
         "f7dae696-d8d3-4759-b2ec-2e198559c542",
-        "98922060-4799-4846-b99b-decf03aa02a1"
+        "98922060-4799-4846-b99b-decf03aa02a1",
+        "b6bbc944-8c96-48aa-be42-e1965ff01111",
+        "1821de9b-7527-412c-81ce-b118131d9ade",
+        "9b586695-e97b-47c3-a898-55a4263957ec"
       ],
       "settings": {
         "bg_color": "radial-gradient(rgba(245, 131, 37, 1) 47%, rgba(208, 199, 227, 1) 83%)"

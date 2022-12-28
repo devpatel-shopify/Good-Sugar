@@ -16,7 +16,7 @@
     }
   {%- endfor -%}
 </style>
-{% assign count = 0 %}
+{% assign count = section.blocks | size %}
 
 <div class="image_horizontal_slider" id="image-horizontal-slider--{{ section.id }}">
   <div class="image_horizontal_slider_wrapper">
@@ -25,8 +25,7 @@
       <div class="swiper-wrapper">
         <!-- Slides -->
         {%- for block in section.blocks -%}
-          {% assign count = count | plus: 1 %}
-          <div class="block_{{ count }} swiper-slide {% if count > 4 %} image_slider_wrapper {% endif %} image_slider--{{ block.id }}" class="">
+          <div class="block_{{ forloop.index }} swiper-slide {% if count > 4 %} image_slider_wrapper {% endif %} image_slider--{{ block.id }}" class="">
             <div class="image_slider_main">
               <div class="image_box">
                 <div class="image">
@@ -59,9 +58,9 @@
     </div>
   </div>
 </div>
-
-<script type="module" src="{{ 'image-horizontal-slider.js' | asset_url }}"></script>
-
+{% if count > 4 %}
+  <script type="module" src="{{ 'image-horizontal-slider.js' | asset_url }}"></script>
+{% endif %}
 {% schema %}
   {
     "name": "Image Horizontal Slider",
