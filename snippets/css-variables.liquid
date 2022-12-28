@@ -243,11 +243,15 @@
     --font-body-style: normal;
     --font-body-weight: 400;
     --font-body-weight-bold: bold;
+
+
+    --custom-border-width:2px;
   }
   @media screen and (min-width: 750px) {
     :root{
       --page-padding: 3rem;
       --background-drawer: url({{ 'bg-drawer.png' | asset_url }}) no-repeat bottom / cover;
+      --custom-border-width:3px;
     }
   }
   @media screen and (min-width: 1300px) {
@@ -274,9 +278,12 @@
     grid-template-columns: 100%;
     min-height: 100%;
     margin: 0;
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
+    font-size:var(--body-font-size);
     /* letter-spacing: 0.06rem; */
-    line-height: calc(1 + 0.8 / var(--font-body-scale));
+    /* line-height: calc(1 + 0.8 / var(--font-body-scale)); */
+    line-height:1.15;
+    letter-spacing: normal;
     font-family: var(--font-body-family);
     font-style: var(--font-body-style);
     font-weight: var(--font-body-weight);
@@ -284,7 +291,8 @@
 
   @media screen and (min-width: 750px) {
     body {
-      font-size: 1.6rem;
+      /* font-size: 1.6rem; */
+      font-size:var(--body-font-size);
     }
   }
 

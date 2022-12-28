@@ -1,13 +1,13 @@
 
 new Swiper(".product_page_slider_image", {
-    slidesPerView: 1,
+    slidesPerView: 1.2,
     loop: false,
     spaceBetween:0,
     autoHeight: false,
     //grabCursor: true,
     //centeredSlides: true,
     autoplay: {
-      delay: 1000,
+      delay: 2000,
     },
     breakpoints: {
     991: {

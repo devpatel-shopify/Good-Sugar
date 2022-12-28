@@ -36,7 +36,7 @@ grid-template-columns: calc(45% - 6px / 2) calc(55% + 3px);
 }
 
 .product_accordion_main.right_item {
-    padding: 96px 50px 96px 75px;
+    padding: 188px 50px 140px 75px;
     display: flex;
     align-items: center;
 }
@@ -85,6 +85,7 @@ display: none;
 }
 .product_accordion_main.left_item {
     /* border-top: 3px solid #5C398D; */    
+    display: flex;
 }
 
 .product_accordion_main.left_item .title {
@@ -94,7 +95,7 @@ display: none;
     line-height: 1.1;
 }
 .product_accordion_wrapper {
-    border-bottom: 3px solid #5C398D;
+    border-bottom: var(--custom-border-width) solid #5C398D;
 }
 .product_accordion p {
     padding: 0;
@@ -109,7 +110,7 @@ display: none;
 @media screen and (min-width:750px) {
     .accordian_content {
         margin-bottom: 10px;
-        margin-top: 35px;    
+        margin-top: 30px;    
     }
     .product_accordion_main_wrapper {
         max-width: 600px;
@@ -126,7 +127,7 @@ display: none;
         width: 100%;
     }
     .product_accordion_main.right_item {
-        border-left: 3px solid #5C398D;
+        border-left: var(--custom-border-width) solid #5C398D;
     }
     
 }
@@ -158,6 +159,9 @@ display: none;
         max-height: 150px;
     }
     .product_accordion_main.right_item {
-        padding: 40px 20px;
+        padding: 32px 20px 30px 20px;
+    }
+    .accordion_main details {
+        border-top: 1px solid #f58325;
     }
 }
