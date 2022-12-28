@@ -1,0 +1,25 @@
+.about_image_text .text {
+    color: #FFFF73;
+    max-width: 880px;
+    padding-top: 135px;
+    padding-left: 220px;
+}
+
+.about_image_text {
+    background: linear-gradient(83deg, rgba(210, 200, 219, 1), rgba(255, 204, 75, 1) 100%);
+}
+
+.about_image_text img {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.about_image_text .image {
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+.image_main {
+    margin-top: 100px;
+}
