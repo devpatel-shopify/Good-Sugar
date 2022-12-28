@@ -641,6 +641,10 @@ main#MainContent {
 	bottom: -2px;
 }
 
+.price sup {
+	font-size: 60%;
+	line-height: 1;
+}
 @media screen and (max-height:500px) {
     .footer-grid {
         padding: 10px 0;

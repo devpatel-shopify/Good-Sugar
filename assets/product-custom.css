@@ -182,7 +182,7 @@
 }
 
 .true_false_icons li {
-    margin-bottom: 9px;
+    margin-bottom: 3px;
 }
 .true_false_icons .item_list {
     display: flex;
@@ -280,12 +280,12 @@ border-bottom: var(--custom-border-width) solid var(--custom-border-color);
     margin-bottom:15px;
 }
 .product_custom .product--small .product__media-wrapper {
-    width: 35%;
-    max-width: 35%;
+    width: 43%;
+    max-width:43%;
 }
 .product_custom .product--small .product__info-wrapper {
-    width: 65%;
-    max-width: 65%;
+    width: 57%;
+    max-width: 57%;
 }
 }
 

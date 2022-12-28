@@ -105,6 +105,17 @@ color: var(--custom-text_color);
   height: 140px;
   z-index: 2;
   cursor: pointer;
+  margin-top: 35px;
+}
+
+.product-recommendations .card__description {
+margin-top: 20px;
+}
+
+.product-recommendations .card__description p,
+.product-recommendations .card__description strong {
+  font-family: var(--font-body-family);
+  font-weight: 400;
 }
 .card_price {
   position: absolute;
