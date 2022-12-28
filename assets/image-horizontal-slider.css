@@ -71,6 +71,7 @@ width: calc(100% / 5);
     }
     .image_slider_wrapper {
         min-width: 300px;
+        max-width: 350px;
     }
     .image_horizontal_main .swiper-wrapper {
         column-gap: 60px;

@@ -156,7 +156,7 @@ display: none;
         align-items: center;
         column-gap: 30px;
         justify-content: space-around;
-        margin-top: 15px;
+        margin: 15px;
         flex-wrap: nowrap;
     }
     .accordion_content_main .accordian_content,
@@ -165,8 +165,8 @@ display: none;
     }
     .product_accordion .image img,
     .product_accordion .image {
-        max-width: 150px;
-        max-height: 150px;
+        max-width: 106px;
+        max-height: 106px;
     }
     .product_accordion_main.right_item {
         padding: 32px 20px 30px 20px;
@@ -178,5 +178,9 @@ display: none;
     .product_accordion_icon {
         height: 12px;
         width: 12px;
-    } 
+    }
+    .accordion_main details[open] summary {
+        padding-bottom: 0;
+    }
+
 }

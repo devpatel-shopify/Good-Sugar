@@ -22,3 +22,54 @@ new Swiper('.image_horizontal_slider_main', {
       }
     }
   })
+
+  new Swiper('.image_horizontal_slider_main_tablet', {
+    // Default parameters
+    slidesPerView: 1.8,
+    spaceBetween: 30,
+    mousewheel: true,
+    mousewheel: {
+      forceToAxis: false,
+      releaseOnEdges: true,
+    },
+    autoHeight:100,
+    centeredSlides: true,
+    keyboard: {
+        enabled: true,
+    },    
+    // Responsive breakpoints
+    breakpoints: {
+      // when window width is >= 640px
+      750: {
+        slidesPerView: 3,
+        spaceBetween: 60,
+        autoHeight:100,
+      }
+    }
+  })
+
+
+  new Swiper('.image_horizontal_slider_main_mobile', {
+    // Default parameters
+    slidesPerView: 1.8,
+    spaceBetween: 30,
+    mousewheel: true,
+    mousewheel: {
+      forceToAxis: false,
+      releaseOnEdges: true,
+    },
+    autoHeight:100,
+    centeredSlides: true,
+    keyboard: {
+        enabled: true,
+    },    
+    // Responsive breakpoints
+    breakpoints: {
+      // when window width is >= 640px
+      750: {
+        slidesPerView: 2,
+        spaceBetween: 60,
+        autoHeight:100,
+      }
+    }
+  })

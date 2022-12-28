@@ -11,12 +11,12 @@
     padding: 100px 50px 100px 100px;
 }
 .about_compair_wrapper {
-    border-top: 3px solid var(--custom-border-color);
-    border-bottom: 3px solid var(--custom-border-color);
+    border-top: var(--custom-border-width) solid var(--custom-border-color);
+    border-bottom: var(--custom-border-width) solid var(--custom-border-color);
     background-color:#ECA847;
 }
 .compair_item.item_1 {
-    border-right: 3px solid var(--custom-border-color);
+    border-right: var(--custom-border-width) solid var(--custom-border-color);
 }
 
 .compair_sub_text {
