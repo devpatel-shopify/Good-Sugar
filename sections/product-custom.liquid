@@ -40,6 +40,16 @@
           padding-right:{{ block.settings.padding_right_dek }}px;
         }
       }
+
+      @media screen and (min-width:1600px) {
+        .custom-product__description--{{ block.id }} {
+          padding-top:{{ block.settings.padding_top_dek | times: 2 | round: 0 }}px;
+          padding-bottom:{{ block.settings.padding_bottom_dek | times: 2 | round: 0 }}px;
+          padding-left:{{ block.settings.padding_left_dek | times: 2 | round: 0 }}px;
+          padding-right:{{ block.settings.padding_right_dek | times: 2 | round: 0 }}px;
+      }
+    }
+
       @media screen and (max-width:749px) {
         .custom-product__description--{{ block.id }} {
           {%- if block.settings.show_border_top_mob == true -%} border-top:3px solid var(--custom-border-color); {%- endif -%}
@@ -63,6 +73,14 @@
             padding-right:{{ block.settings.padding_right_dek }}px;
           }
         }
+        @media screen and (min-width:1600px) {
+          .custom-product-form__quantity--{{ block.id }} {
+            padding-top:{{ block.settings.padding_top_dek | times: 2 | round: 0 }}px;
+            padding-bottom:{{ block.settings.padding_bottom_dek | times: 2 | round: 0 }}px;
+            padding-left:{{ block.settings.padding_left_dek | times: 2 | round: 0 }}px;
+            padding-right:{{ block.settings.padding_right_dek | times: 2 | round: 0 }}px;
+        }
+      }
         @media screen and (max-width:749px) {
           .custom-product-form__quantity--{{ block.id }} {
             {%- if block.settings.show_border_top_mob == true -%} border-top:3px solid var(--custom-border-color); {%- endif -%}
@@ -133,6 +151,14 @@
           {%- if block.settings.show_border_bottom == true -%}border-bottom:3px solid var(--custom-border-color); {%- endif -%}
         }
       }
+      @media screen and (min-width:1600px) {
+        .product-title--{{ block.id }} {
+          padding-top:{{ block.settings.padding_top_dek | times: 2 | round: 0 }}px;
+          padding-bottom:{{ block.settings.padding_bottom_dek | times: 2 | round: 0 }}px;
+          padding-left:{{ block.settings.padding_left_dek | times: 2 | round: 0 }}px;
+          padding-right:{{ block.settings.padding_right_dek | times: 2 | round: 0 }}px;
+      }
+    }
       @media screen and (max-width:1024px) {
         .product-title--{{ block.id }} {
           padding-top:{{ block.settings.padding_top_dek | times: 0.75 | round: 0 }}px;
