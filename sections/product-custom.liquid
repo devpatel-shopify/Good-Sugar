@@ -34,19 +34,19 @@
         .custom-product__description--{{ block.id }} {
           {%- if block.settings.show_border_top == true -%} border-top:var(--custom-border-width) solid var(--custom-border-color); {%- endif -%}
           {%- if block.settings.show_border_bottom == true -%}border-bottom:var(--custom-border-width) solid var(--custom-border-color); {%- endif -%}
-          padding-top:{{ block.settings.padding_top_dek }}px;
+          {% comment %} padding-top:{{ block.settings.padding_top_dek }}px;
           padding-bottom:{{ block.settings.padding_bottom_dek }}px;
           padding-left:{{ block.settings.padding_left_dek }}px;
-          padding-right:{{ block.settings.padding_right_dek }}px;
+          padding-right:{{ block.settings.padding_right_dek }}px; {% endcomment %}
         }
       }
 
       @media screen and (min-width:1600px) {
         .custom-product__description--{{ block.id }} {
-          padding-top:{{ block.settings.padding_top_dek | times: 1.5 | round: 0 }}px;
+          {% comment %} padding-top:{{ block.settings.padding_top_dek | times: 1.5 | round: 0 }}px;
           padding-bottom:{{ block.settings.padding_bottom_dek | times: 1.5 | round: 0 }}px;
           padding-left:{{ block.settings.padding_left_dek | times: 1.5 | round: 0 }}px;
-          padding-right:{{ block.settings.padding_right_dek | times: 1.5 | round: 0 }}px;
+          padding-right:{{ block.settings.padding_right_dek | times: 1.5 | round: 0 }}px; {% endcomment %}
       }
     }
 
@@ -54,10 +54,10 @@
         .custom-product__description--{{ block.id }} {
           {%- if block.settings.show_border_top_mob == true -%} border-top:var(--custom-border-width) solid var(--custom-border-color); {%- endif -%}
           {%- if block.settings.show_border_bottom_mob == true -%}border-bottom:var(--custom-border-width) solid var(--custom-border-color); {%- endif -%}
-          padding-top:{{ block.settings.padding_top_mob }}px;
+          {% comment %} padding-top:{{ block.settings.padding_top_mob }}px;
             padding-bottom:{{ block.settings.padding_bottom_mob }}px;
             padding-left:{{ block.settings.padding_left_mob }}px;
-            padding-right:{{ block.settings.padding_right_mob }}px;
+            padding-right:{{ block.settings.padding_right_mob }}px; {% endcomment %}
         }
       }
       {%- endif -%}
@@ -143,37 +143,29 @@
       {%- if block.type == 'title' -%}
         @media screen and (min-width:750px) {
           .product-title--{{ block.id }} {
-            padding-top:{{ block.settings.padding_top_dek }}px;
+            {% comment %} padding-top:{{ block.settings.padding_top_dek }}px;
             padding-bottom:{{ block.settings.padding_bottom_dek }}px;
             padding-left:{{ block.settings.padding_left_dek }}px;
-            padding-right:{{ block.settings.padding_right_dek }}px;
+            padding-right:{{ block.settings.padding_right_dek }}px; {% endcomment %}
             {%- if block.settings.show_border_top == true -%} border-top:var(--custom-border-width) solid var(--custom-border-color); {%- endif -%}
           {%- if block.settings.show_border_bottom == true -%}border-bottom:var(--custom-border-width) solid var(--custom-border-color); {%- endif -%}
         }
       }
       @media screen and (min-width:1600px) {
         .product-title--{{ block.id }} {
-          padding-top:{{ block.settings.padding_top_dek | times: 1.5 | round: 0 }}px;
+          {% comment %} padding-top:{{ block.settings.padding_top_dek | times: 1.5 | round: 0 }}px;
           padding-bottom:{{ block.settings.padding_bottom_dek | times: 1.5 | round: 0 }}px;
           padding-left:{{ block.settings.padding_left_dek | times: 1.5 | round: 0 }}px;
-          padding-right:{{ block.settings.padding_right_dek | times: 1.5 | round: 0 }}px;
+          padding-right:{{ block.settings.padding_right_dek | times: 1.5 | round: 0 }}px; {% endcomment %}
       }
-    }
-      @media screen and (max-width:1024px) {
-        .product-title--{{ block.id }} {
-          padding-top:{{ block.settings.padding_top_dek | times: 0.75 | round: 0 }}px;
-        padding-bottom:{{ block.settings.padding_bottom_dek | times: 0.75 | round: 0 }}px;
-        padding-left:{{ block.settings.padding_left_dek | times: 0.75 | round: 0 }}px;
-        padding-right:{{ block.settings.padding_right_dek | times: 0.75 | round: 0 }}px;
-        }
-      }
+    }     
 
       @media screen and (max-width:749px) {
         .product-title--{{ block.id }} {
-          padding-top:{{ block.settings.padding_top_mob }}px;
+          {% comment %} padding-top:{{ block.settings.padding_top_mob }}px;
           padding-bottom:{{ block.settings.padding_bottom_mob }}px;
           padding-left:{{ block.settings.padding_left_mob }}px;
-          padding-right:{{ block.settings.padding_right_mob }}px;
+          padding-right:{{ block.settings.padding_right_mob }}px; {% endcomment %}
           {%- if block.settings.show_border_top_mob == true -%} border-top:var(--custom-border-width) solid var(--custom-border-color); {%- endif -%}
           {%- if block.settings.show_border_bottom_mob == true -%}border-bottom:var(--custom-border-width) solid var(--custom-border-color); {%- endif -%}
         }
@@ -447,29 +439,29 @@
       {%- if block.type == 'true_false_icons' -%}
         @media screen and (min-width:750px) {
           .true_false_icons--{{ block.id }} { 
-            padding-top:{{ block.settings.padding_top_dek }}px;
+            {% comment %} padding-top:{{ block.settings.padding_top_dek }}px;
             padding-bottom:{{ block.settings.padding_bottom_dek }}px;
             padding-left:{{ block.settings.padding_left_dek }}px;
-            padding-right:{{ block.settings.padding_right_dek }}px;
+            padding-right:{{ block.settings.padding_right_dek }}px; {% endcomment %}
             {%- if block.settings.show_border_top == true -%} border-top:var(--custom-border-width) solid var(--custom-border-color); {%- endif -%}
           {%- if block.settings.show_border_bottom == true -%}border-bottom:var(--custom-border-width) solid var(--custom-border-color); {%- endif -%}
         }
       }
       @media screen and (min-width:1600px) {
         .true_false_icons--{{ block.id }} {
-          padding-top:{{ block.settings.padding_top_dek | times: 1.5 | round: 0 }}px;
+          {% comment %} padding-top:{{ block.settings.padding_top_dek | times: 1.5 | round: 0 }}px;
           padding-bottom:{{ block.settings.padding_bottom_dek | times: 1.5 | round: 0 }}px;
           padding-left:{{ block.settings.padding_left_dek | times: 1.5 | round: 0 }}px;
-          padding-right:{{ block.settings.padding_right_dek | times: 1.5 | round: 0 }}px;
+          padding-right:{{ block.settings.padding_right_dek | times: 1.5 | round: 0 }}px; {% endcomment %}
       }
     }
       @media screen and (max-width:749px) {
         .true_false_icons--{{ block.id }} .right_item,
         .true_false_icons--{{ block.id }} .left_item {
-          padding-top:{{ block.settings.padding_top_mob }}px;
+          {% comment %} padding-top:{{ block.settings.padding_top_mob }}px;
           padding-bottom:{{ block.settings.padding_bottom_mob }}px;
           padding-left:{{ block.settings.padding_left_mob }}px;
-          padding-right:{{ block.settings.padding_right_mob }}px;
+          padding-right:{{ block.settings.padding_right_mob }}px; {% endcomment %}
           {%- if block.settings.show_border_top_mob == true -%} border-top:var(--custom-border-width) solid var(--custom-border-color); {%- endif -%}
           {%- if block.settings.show_border_bottom_mob == true -%}border-bottom:var(--custom-border-width) solid var(--custom-border-color); {%- endif -%}
         }
@@ -529,7 +521,7 @@
             
               {%- when 'title' -%}
                 
-              <div class="product_custom_block product-title--{{ block.id }} " {{ block.shopify_attributes }}>
+              <div class="product_custom_block product-title_main_block product-title--{{ block.id }} " {{ block.shopify_attributes }}>
                 {% render 'breadcrumbs' %}
                 <div class="product-title_wrapper">
                   
