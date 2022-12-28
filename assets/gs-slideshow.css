@@ -159,7 +159,7 @@
     font-family: 'Bangers';
     font-size: 25px;
     line-height: 1;
-    letter-spacing: 0;
+    /* letter-spacing: 0; */
 }
 .subheader.item_1 {
     /* float: left; */

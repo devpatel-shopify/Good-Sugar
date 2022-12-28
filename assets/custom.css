@@ -78,7 +78,7 @@ body:not(.template-index, .page-menu) .header {
 	color: #000;
 	font-family: 'Hiragino Sans';
 	line-height: normal;
-	letter-spacing: 0;
+	/* letter-spacing: 0; */
 	font-weight: 400;
 	margin: 0;
 	display: inline-block;
@@ -141,7 +141,7 @@ body.overflow-hidden-tablet {
 	font-weight: 800;
 	text-decoration: none;
 	color: #000;
-	letter-spacing: 0;
+	/* letter-spacing: 0; */
 	margin: 0 0 -5px;
 	display: inline-block;
 	text-transform: lowercase;
@@ -181,7 +181,7 @@ body.overflow-hidden-tablet {
 	transform: translateY(-50%);
 	left: 21px;
 	font-size: 16px;
-	letter-spacing: 0;
+	/* letter-spacing: 0; */
 }
 
 .search_model .field__input:focus,
@@ -304,7 +304,7 @@ div#menu-drawer:after {
 .footer-grid .copyright__content {
 	font-size: 14px;
 	line-height: 16px;
-	letter-spacing: 0;
+	/* letter-spacing: 0; */
 	color: #5C398D;
 	font-family: var(--font-body-family);
 	font-weight: 400;
@@ -341,7 +341,7 @@ div#menu-drawer:after {
 	padding: 0;
 	font-size: 14px;
 	line-height: 16px;
-	letter-spacing: 0;
+	/* letter-spacing: 0; */
 	color: #5C398D;
 	font-family: var(--font-body-family);
 	font-weight: 400;
