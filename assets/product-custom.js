@@ -10,7 +10,8 @@ new Swiper(".product_page_slider_image", {
       delay: 2000,
     },
     breakpoints: {
-    991: {
+    750: {
+      slidesPerView: 1,
       autoplay: {
       delay: 10000,
     },

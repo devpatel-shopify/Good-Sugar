@@ -72,6 +72,7 @@ color: var(--custom-text_color);
   align-items: center;
   justify-content: center;
   position: relative;
+  padding: 0;
 }
 
 .card__price_main product-form {
@@ -169,10 +170,13 @@ color: var(--custom-text_color);
     margin-top: 15px;
   }
   .product-recommendations__heading {
-    padding: 25px 0;
+    padding: 30px 20px;
   }
   .card__bg_image_main {
     width: 120px;
     height: 75px;
+  }
+  .product-recommendations .card__information {
+    padding-top: 15px;
   }
 }

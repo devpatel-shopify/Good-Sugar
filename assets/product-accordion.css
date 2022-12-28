@@ -52,7 +52,7 @@ display: none;
 .accordion_main details[open] .icon-minus {
     display: block;
 }
-.accordion_main details {
+.accordion_main details summary {
     padding-top: 20px;
     padding-bottom: 20px;
 }
@@ -85,7 +85,6 @@ display: none;
 }
 .product_accordion_main.left_item {
     /* border-top: 3px solid #5C398D; */    
-    display: flex;
 }
 
 .product_accordion_main.left_item .title {
@@ -164,4 +163,9 @@ display: none;
     .accordion_main details {
         border-top: 1px solid #f58325;
     }
+    .product_accordion_icon svg,
+    .product_accordion_icon {
+        height: 12px;
+        width: 12px;
+    } 
 }
