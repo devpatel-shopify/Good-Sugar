@@ -73,47 +73,43 @@
   </div>
 </div>
 <script>
+let tabElements = document.querySelectorAll(".js-details-tab");
+document.querySelectorAll(".js-image").forEach(function(e) {
+    let imageIndex = document.querySelector(".js-image").querySelector("img").getAttribute("image-index");
+    if (imageIndex === "0") {
+        document.querySelectorAll(".js-image")[0].style.display = "block"
+    }
+});
+tabElements.forEach(function(tabElement) {
+    tabElement.addEventListener("click", detailsTabEventHandlers.bind(this), true);
+});
 
-  let tabElements = document.querySelectorAll(".js-details-tab");
-  document.querySelectorAll(".js-image").forEach(function(e) {
-      let imageIndex = document.querySelector(".js-image").querySelector("img").getAttribute("image-index");
-      if (imageIndex === "0") {
-          document.querySelectorAll(".js-image")[0].style.display = "block"
-      }
-  });
-  tabElements.forEach(function(tabElement) {
-      tabElement.addEventListener("click", function(event) {
-          let Element = event.currentTarget.querySelector("details")
-        let _this = event.currentTarget.closest(".js-details-tab")
-        // Element.setAttribute("open",true)
-        setTimeout(function(){
-           console.log(Element.hasAttribute("open"))
-          if(Element.hasAttribute("open") ){
-                    
-          let ElementIndex = _this.getAttribute("data-item-id");
-          let imageElements = _this.closest(".product_accordion_main").closest(".product_accordion_wrapper").querySelector(".image_wrapper").querySelectorAll(".js-image");
-          imageElements.forEach(function(imageElement) {
-              let imageIndex = imageElement.querySelector("img").getAttribute("image-index");
-              if (ElementIndex === imageIndex) {
-                  imageElement.style.display = "block"
-              }else{
-                imageElement.style.display = "none"
-              }
-          })
-          }
-        },10)
+function detailsTabEventHandlers(event) {
 
-         
-        // tabElement.querySelectorAll("details").forEach(function(e){
-        //     e.removeAttribute("open")
-        // })
-      })
-  })
-    
-  
-  
-  
-  
+
+    tabElements.forEach((tabElement) => {
+        if (tabElement.querySelector("details") != event.currentTarget.querySelector("details")) {
+            tabElement.querySelector("details").removeAttribute("open")
+        }
+    })
+    let Element = event.currentTarget.querySelector("details")
+    let _this = event.currentTarget.closest(".js-details-tab")
+    setTimeout(function() {
+        if (Element.hasAttribute("open")) {
+
+            let ElementIndex = _this.getAttribute("data-item-id");
+            let imageElements = _this.closest(".product_accordion_main").closest(".product_accordion_wrapper").querySelector(".image_wrapper").querySelectorAll(".js-image");
+            imageElements.forEach(function(imageElement) {
+                let imageIndex = imageElement.querySelector("img").getAttribute("image-index");
+                if (ElementIndex === imageIndex) {
+                    imageElement.style.display = "block"
+                } else {
+                    imageElement.style.display = "none"
+                }
+            })
+        }
+    }, 10);
+}
 </script>
 
 {% endif %}
