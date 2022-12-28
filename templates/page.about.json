@@ -12,24 +12,10 @@
       "type": "about-map",
       "settings": {
       }
-    },
-    "a2aa0029-d8cd-4a7c-8dbd-4775e0225765": {
-      "type": "video",
-      "settings": {
-        "heading": "Video",
-        "heading_size": "h1",
-        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
-        "description": "",
-        "full_width": false,
-        "color_scheme": "background-1",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
     "main",
-    "0439eb05-c8c8-48df-9599-efe411340464",
-    "a2aa0029-d8cd-4a7c-8dbd-4775e0225765"
+    "0439eb05-c8c8-48df-9599-efe411340464"
   ]
 }
