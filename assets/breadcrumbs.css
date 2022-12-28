@@ -1,0 +1,22 @@
+.breadcrumbs_container ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.breadcrumbs_container a {
+    text-decoration: none;
+    
+}
+.breadcrumb_sign {
+    padding: 0 4px;
+    
+}
+.breadcrumbs_container ul,
+.breadcrumb_sign, 
+.breadcrumbs_container a {
+    color: var(--custom-text_color);
+    font-size: var(--body-font-size);
+    line-height: 1.15;
+}

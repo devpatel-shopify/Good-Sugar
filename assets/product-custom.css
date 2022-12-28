@@ -52,7 +52,7 @@
 .product_custom .product__title h1 {
     color: var(--custom-text_color);
     /* font-size: 50px; */
-    line-height: 1.1;
+    /* line-height: 1.1; */
 }
 .price_order_tag {
     font-family: var(--nav-font-family);
@@ -146,6 +146,7 @@
     font-size: var(--body-font-size);
     color:var(--custom-text_color);
     font-family: var(--font-heading-family);
+    line-height: 1.15;
 }
 
 .product_custom .product__title {
@@ -210,6 +211,9 @@
 }
 .loading-overlay__spinner {
     display: none !important;
+}
+.product_custom .breadcrumbs_container {
+    margin-bottom: 15px;
 }
 @media screen and (min-width:750px) {
     .product_custom .product__column-sticky > * {

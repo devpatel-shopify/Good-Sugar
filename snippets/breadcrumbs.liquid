@@ -1,0 +1,24 @@
+{{ 'breadcrumbs.css' | asset_url | stylesheet_tag }}
+
+<div class="breadcrumbs_container">
+    <ul class="breadcrumbs">
+      <li><a href="/">Home</a></li>
+      {% if template contains 'collection' %}
+      <span class="breadcrumb_sign">/</span> <li><a href="{{ collection.url }}">{{ collection.title }}</a></li>
+      {% elsif template contains 'product' %}
+  
+      {% if collection.title != blank %}
+        <span class="breadcrumb_sign">/</span> <li><a href="{{ collection.url }}">{{ collection.title }}</a></li>
+      {% endif %}
+      <span class="breadcrumb_sign">/</span> <li><a href="{{ product.url }}">{{ product.title }}</a></li>
+      {% endif %}
+  
+      {% if template contains 'page' %}
+        {% if page.handle  == 'new-tb-apparel-page' %}
+          <span class="breadcrumb_sign">/</span> <li>{{ page.title }}</li>
+        {% else %}
+        <span class="breadcrumb_sign">/</span> <li>{{ page.title | capitalize }}</li>
+        {% endif %}
+      {% endif %}
+    </ul>  
+  </div>

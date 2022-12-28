@@ -446,6 +446,7 @@ h1,
   /* font-size: calc(var(--font-heading-scale) * 3rem); */
   font-size: var(--heading-h1-font-size);
   font-weight: 800;
+  line-height: 1.05;
 }
 
 @media only screen and (min-width: 750px) {

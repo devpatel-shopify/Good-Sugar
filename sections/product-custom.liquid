@@ -495,9 +495,13 @@
             </p>
             
               {%- when 'title' -%}
+                
               <div class="product_custom_block product-title--{{ block.id }} " {{ block.shopify_attributes }}>
+                {% render 'breadcrumbs' %}
                 <div class="product-title_wrapper">
+                  
                   <div class="product_title_subwrapper">
+                    
                     <div class="product__title">
                       <h1>{{ product.title | escape }}</h1>
                       <a href="{{ product.url }}" class="product__title">
