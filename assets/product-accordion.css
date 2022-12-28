@@ -32,7 +32,7 @@ grid-template-columns: calc(43% - 6px / 2) calc(57% + 3px);
     align-content: center;
     justify-content: center;
     text-align: center;
-    padding: 30px;
+    padding: 188px 30px 140px;
 }
 
 .product_accordion_main.right_item {
@@ -85,7 +85,7 @@ display: none;
 }
 .product_accordion_main.left_item {
     /* border-top: 3px solid #5C398D; */  
-    display: flex;
+    /* display: flex; */
 }
 
 .product_accordion_main.left_item .title {
