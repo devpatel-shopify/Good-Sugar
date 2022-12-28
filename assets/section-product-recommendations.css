@@ -54,6 +54,7 @@
   padding: 0;
   margin: 0;
 }
+.product-recommendations .card__description,
 .product-recommendations .card__description p {
 font-size: var(--body-font-size);
 line-height: 1.2;
