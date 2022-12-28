@@ -9,7 +9,7 @@
             "title_color": "#5c398d",
             "bg_image": "shopify:\/\/shop_images\/image_8.png",
             "show_buy_button": true,
-            "text": "<p>attribute 1  attribute 2<\/p>",
+            "text": "<p>attribute 1 &#8226; attribute 2<\/p>",
             "show_border_top": false,
             "show_border_bottom": true,
             "show_border_top_mob": false,
