@@ -5,7 +5,7 @@
 .product-recommendations__heading {
   /* margin: 0 0 3rem; */
   margin: 0;
-  padding: 55px 0px;
+  padding: 65px 0px;
 }
 
 .product-recommendations__heading {
@@ -157,7 +157,7 @@ margin-top: 20px;
 }
 
 .product-recommendations .card__information {
-  padding-top: 50px;
+  padding-top: 55px;
 }
 
 .product-recommendations .card-information > *:not(.visually-hidden:first-child) + *:not(.rating) {

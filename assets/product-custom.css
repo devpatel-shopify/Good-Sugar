@@ -369,6 +369,10 @@ border-bottom: var(--custom-border-width) solid var(--custom-border-color);
         padding: 17px 20px;
     }
     .true_false_icons {
+        padding: 0;
+    }
+    .true_false_icons .right_item, 
+    .true_false_icons .left_item {
         padding: 24px 20px;
     }
 }

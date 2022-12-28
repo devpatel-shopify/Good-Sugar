@@ -4,6 +4,7 @@
     display: block;
 }
 
+.image_horizontal_main,
 .image_horizontal_slider_main {
     padding: 100px 0;
 }
@@ -71,6 +72,9 @@ width: calc(100% / 5);
     .image_slider_wrapper {
         min-width: 300px;
     }
+    .image_horizontal_main .swiper-wrapper {
+        column-gap: 60px;
+    }
 }
 
 @media screen and (max-width:749px) {
@@ -85,5 +89,8 @@ width: calc(100% / 5);
     }
     .image_slider_content {
         padding: 30px;
+    }
+    .image_horizontal_main .swiper-wrapper {
+        column-gap: 30px;
     }
 }

@@ -153,7 +153,7 @@
             </a>
           </h3>
           {%- if show_description -%}
-            <div class="card__description">{{ product.description | truncatewords: 20 }}</div>
+            <div class="card__description">{{ product.description | truncatewords: 20 | strip_html }}</div>
           {%- endif -%}
           <div class="card-information 11">
             {%- if show_vendor -%}
@@ -258,8 +258,7 @@
             {%- assign product_form_id = 'quick-add-' | append: section_id | append: card_product.id -%}
             {%- if card_product.variants.size == 1 -%}
               <product-form>
-                {%- form 'product',
-                  card_product,
+                {%- form 'product', card_product,
                   id: product_form_id,
                   class: 'form',
                   novalidate: 'novalidate',
