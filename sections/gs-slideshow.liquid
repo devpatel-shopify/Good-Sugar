@@ -289,7 +289,120 @@
           aria-label="{{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
           tabindex="-1"
           data-index="{{- forloop.index -}}">
-          
+          <div class="main_slider_box">
+            <div class="main_slider_wrapper">
+              <div class="main_slider_item item_left">
+                <div class="main_slider_item_wrapper">
+                  <div class="main_slider_image">
+                    <div class="image">
+                      {%- if block.settings.image -%}
+                        {%- assign height = block.settings.image.width
+                          | divided_by: block.settings.image.aspect_ratio
+                          | round
+                        -%}
+                        {{
+                          block.settings.image
+                          | image_url: width: 3840
+                          | image_tag:
+                            loading: 'lazy',
+                            height: height,
+                            sizes: '100vw',
+                            class: 'desktop_image small-hide',
+                            widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+                        }}
+                        {%- if block.settings['mobile-image'] != blank -%}
+                          {{
+                            block.settings['mobile-image']
+                            | image_url: width: 750
+                            | image_tag:
+                              loading: 'lazy',
+                              height: height,
+                              sizes: '100vw',
+                              class: 'mobile_image medium-hide large-up-hide',
+                              widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+                          }}
+                        {%- else -%}
+                          {{
+                            block.settings.image
+                            | image_url: width: 3840
+                            | image_tag:
+                              loading: 'lazy',
+                              height: height,
+                              sizes: '100vw',
+                              class: 'desktop_image desktop_image_for_mobile medium-hide large-up-hide',
+                              widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+                          }}
+                        {%- endif -%}
+                      {%- else -%}
+                        {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
+                      {%- endif -%}
+                    </div>
+                  </div>
+                  <div class="main_slider_content">
+                    <div class="heading">{{ block.settings.heading_3 }}</div>
+                  </div>
+                </div>
+              </div>
+              <div class="main_slider_item item_right">
+                <div class="main_slider_item_wrapper">
+                  <div class="main_slider_image">
+                    <div class="image">
+                      {%- if block.settings.image_right -%}
+                        {%- assign height = block.settings.image_right.width
+                          | divided_by: block.settings.image_right.aspect_ratio
+                          | round
+                        -%}
+                        {{
+                          block.settings.image_right
+                          | image_url: width: 3840
+                          | image_tag:
+                            loading: 'lazy',
+                            height: height,
+                            sizes: '100vw',
+                            class: 'desktop_image small-hide',
+                            widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+                        }}
+                        {%- if block.settings['mobile-image_right'] != blank -%}
+                          {{
+                            block.settings['mobile-image_right']
+                            | image_url: width: 750
+                            | image_tag:
+                              loading: 'lazy',
+                              height: height,
+                              sizes: '100vw',
+                              class: 'mobile_image medium-hide large-up-hide',
+                              widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+                          }}
+                        {%- else -%}
+                          {{
+                            block.settings.image_right
+                            | image_url: width: 3840
+                            | image_tag:
+                              loading: 'lazy',
+                              height: height,
+                              sizes: '100vw',
+                              class: 'desktop_image desktop_image_for_mobile medium-hide large-up-hide',
+                              widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+                          }}
+                        {%- endif -%}
+                      {%- else -%}
+                        {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
+                      {%- endif -%}
+                    </div>
+                  </div>
+                  <div class="main_slider_content">
+                    <div class="text">{{ block.settings.text_3 }}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="main_slider_button">
+              <a href="{{ block.settings.link }}" class="btn btn_bg--{{ block.id }}">
+                <img src="{{ block.settings.buttonbgimage | img_url: 'master' }}" alt="Slider Button">
+                <span class="btn_text">{{ block.settings.button_label }}</span>
+              </a>
+            </div>
+          </div>          
         </div>
       {%- endif -%}
     {%- endfor -%}
@@ -777,6 +890,11 @@ GSSlideshowParent.style.setProperty('min-height', `${parseInt(GSSlideshowHeight)
           "default": "Button label",
           "label": "t:sections.gs-slideshow.blocks.slide.settings.button_label.label",
           "info": "t:sections.gs-slideshow.blocks.slide.settings.button_label.info"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "t:sections.gs-slideshow.blocks.slide.settings.link.label"
         }
       ]
     },
@@ -784,6 +902,10 @@ GSSlideshowParent.style.setProperty('min-height', `${parseInt(GSSlideshowHeight)
       "type":"style_3",
       "name":"Style 3",
       "settings":[
+        {
+          "type":"header",
+          "content":"Left Content"
+        },
         {
           "type": "image_picker",
           "id": "image",
@@ -793,6 +915,52 @@ GSSlideshowParent.style.setProperty('min-height', `${parseInt(GSSlideshowHeight)
           "type": "image_picker",
           "id": "mobile-image",
           "label": "t:sections.gs-slideshow.blocks.slide.settings.mobileimage.label"
+        },
+        {
+          "type":"text",
+          "id":"heading_3",
+          "label":"Text"
+        },
+        {
+          "type":"header",
+          "content":"Right Content"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_right",
+          "label": "t:sections.gs-slideshow.blocks.slide.settings.image.label"
+        },
+        {
+          "type": "image_picker",
+          "id": "mobile-image_right",
+          "label": "t:sections.gs-slideshow.blocks.slide.settings.mobileimage.label"
+        },
+        {
+          "type":"text",
+          "id":"text_3",
+          "label":"Text"
+        },
+        {
+          "type":"header",
+          "content":"Button"
+        },
+        {
+          "type": "image_picker",
+          "id": "buttonbgimage",
+          "label": "t:sections.gs-slideshow.blocks.slide.settings.buttonbgimage.label",
+          "info": "t:sections.gs-slideshow.blocks.slide.settings.buttonbgimage.info"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "default": "Button label",
+          "label": "t:sections.gs-slideshow.blocks.slide.settings.button_label.label",
+          "info": "t:sections.gs-slideshow.blocks.slide.settings.button_label.info"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "t:sections.gs-slideshow.blocks.slide.settings.link.label"
         }
       ]
     }
