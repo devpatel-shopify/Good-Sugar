@@ -110,7 +110,7 @@ color: var(--custom-text_color);
 }
 
 .product-recommendations .card__description {
-margin-top: 20px;
+margin-top: 12px;
 }
 
 .product-recommendations .card__description p,
@@ -162,7 +162,7 @@ margin-top: 20px;
 }
 
 .product-recommendations .card-information > *:not(.visually-hidden:first-child) + *:not(.rating) {
-  margin-top: 35px;
+  margin-top: 20px;
 }
 
 @media screen and (min-width:750px) {
@@ -185,8 +185,8 @@ margin-top: 20px;
     padding: 30px 20px;
   }
   .card__bg_image_main {
-    width: 120px;
-    height: 75px;
+    width: 110px;
+    height: 65px;
   }
   .product-recommendations .card__information {
     padding-top: 15px;

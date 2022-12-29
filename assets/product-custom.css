@@ -94,7 +94,7 @@
 }
 
 .product_custom_price .price {
-    padding: 30px;
+    padding: 15px;
 }
 
 .product-form__buttons .shopify-payment-button {
@@ -338,8 +338,8 @@
         border-bottom: var(--custom-border-width) solid var(--custom-border-color);
     }
     .btn_bg {
-        width: 120px;
-        height: 90px;
+        width: 110px;
+        height: 70px;
     }
     .true_false_icons svg {
         height: 13px;
@@ -368,7 +368,7 @@
         display: none;
     }
     .product-title_main_block {
-        padding: 14px 20px 14px;
+        padding: 20px;
     }
     .product_custom_block.product__description {
         padding: 17px 20px;
