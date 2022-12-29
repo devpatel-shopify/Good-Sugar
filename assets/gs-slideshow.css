@@ -164,6 +164,19 @@ font-size: 91px;
 color: #ffffff;
 line-height: 1.05;
 }
+
+@media screen and (max-width:1600px) {
+    .gs_style_2 .main_slider_header {
+        font-size:75px;
+    }    
+}
+
+@media screen and (max-width:1400px) {
+    .gs_style_2 .main_slider_header {
+        font-size:50px;
+    }    
+}
+
 .gs_style_1 .main_slider_subheader .subheader {
     max-width: 350px;
     width: 100%;
@@ -182,8 +195,7 @@ line-height: 1.05;
     /* float: left; */
     /* text-align: left; */
 }
-
-.subheader.item_2 {
+.gs_style_1 .subheader.item_2 {
     /* float: right; */
     /* text-align: right; */
     margin: 0 0 0 auto;
@@ -233,7 +245,7 @@ line-height: 1.05;
     white-space: nowrap;
 } */
 
-.main_slider_button {
+.gs_style_1 .main_slider_button {
     /* float: right; */
     margin-top: -40px;
     display: flex;
@@ -266,10 +278,8 @@ right: 0;
 bottom: 0;
 height: 100%;
 width: 100%;
-font-family: var(--font-body-family);
+
     font-size: 13px;
-    color: #F9EE43;
-    transform: rotate(-10deg);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -277,7 +287,11 @@ font-family: var(--font-body-family);
     line-height: 1.2;
     font-weight: bold;
 }
-
+.gs_style_1 .btn_text {
+    color: #F9EE43;
+    transform: rotate(-10deg);
+    font-family: var(--font-body-family);
+}
 .main_slider_button .btn:hover img {
     transform: scale(1.2);
     /* transition: all .5s ease; */
@@ -301,16 +315,35 @@ padding-bottom:0;
     border: 0;
     border-radius: 0;
 }
+
+.gs_style_2 .main_slider_button {
+    max-width: 165px;
+    max-height: 165px;
+}
 @media screen and (min-width:750px) {
     .main_slider_content_box {
         align-items:center;
     }
-    .main_slider_subheader {
+    .gs_style_1 .main_slider_subheader {
         /* display: flex; */
         display: grid;
         /* justify-content: space-between; */
         grid-template-columns: repeat(3, 1fr);
         margin-top: 35px;
+    }
+    .gs_style_2 .main_slider_subheader {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        column-gap: 100px;
+    }
+    .gs_style_2 .subheader.item_1 {
+        max-width: 663px;
+        text-align: left;
+    }
+    .gs_style_2 .subheader.item_2 {
+        max-width: 364px;
+        text-align: right;
     }
     .main_slider_content .desktop-box-position--left {
         grid-column: 1;
@@ -349,7 +382,7 @@ padding-bottom:0;
     .gs_style_1 .main_slider_subheader .subheader {
         font-size: 22px;
     }
-    .main_slider_button .btn {
+    .gs_style_1 .main_slider_button .btn {
         max-width: 150px;
     }
 }
