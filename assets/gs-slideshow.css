@@ -694,6 +694,26 @@ color: #FFFF73;
     }
 }
 
+@media screen and (max-height:700px) {
+    .gs_style_2 .main_slider_header {
+        font-size: 30px;
+    }
+    .gs_style_2 .btn_text {
+        font-size: 12px;
+    }
+    .gs_style_2 .main_slider_button .btn {
+        height: 80px;
+        width: 80px;
+    }
+    .gs_style_2 .main_slider_button {
+        margin-top: -35px;
+        margin-right: 0;
+    }
+    .gs_style_2 .subheader {
+        font-size: 12px;
+    }
+}
+
 @media screen and (max-height:600px) {
     .main_slider_subheader {
         margin-top: 20px;

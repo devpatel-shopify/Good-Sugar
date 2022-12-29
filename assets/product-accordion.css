@@ -95,6 +95,11 @@ display: none;
     line-height: 1.1;
     margin: 0 0 40px 0;
 }
+@media screen and (min-width: 750px) and (max-width: 1080px) {
+    .product_accordion_main.left_item .title {
+        font-size: 30px;
+    }
+}
 .product_accordion_wrapper {
     border-bottom: var(--custom-border-width) solid #5C398D;
 }
@@ -150,7 +155,12 @@ display: none;
         padding: 188px 100px 94px;
     }
 }
-
+@media screen and (max-width:1080px) {
+    .product_accordion .left_item,
+    .product_accordion_main.right_item {
+        padding: 60px;
+    }
+}
 @media screen and (max-width:989px) {
     .product_accordion_wrapper {
         grid-template-columns: calc(43% - 3px) 57%;
