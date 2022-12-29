@@ -23,7 +23,7 @@
             "right_box_position": "right",
             "button_label": "learn more, <br>choose better",
             "btn_position": "right",
-            "mobile_btn_position": "right",
+            "mobile_btn_position": "center",
             "buttonbgimage": "shopify:\/\/shop_images\/btn_bg_image.png",
             "link": "shopify:\/\/products\/demo-product-1",
             "box_align": "middle-center",

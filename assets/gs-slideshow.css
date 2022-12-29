@@ -484,7 +484,7 @@
 }
 
 @media screen and (max-width:749px) {
-    .main_slider_subheader .subheader {
+    .gs_style_1 .main_slider_subheader .subheader {
         max-width: 85%;
         margin: 0 auto;
     }
