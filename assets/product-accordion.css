@@ -134,10 +134,20 @@ display: none;
     }
     
 }
+@media screen and (max-width:1600px) {
+    .product_accordion_main.right_item {
+        padding: 188px 80px 140px 124px;
+    }
+}
+@media screen and (max-width:1499px) {
+    .product_accordion_main.right_item {
+        padding: 188px 80px 140px 94px;
+    }
+}
 
 @media screen and (max-width:1400px) {
     .product_accordion_main.right_item {
-        padding: 188px 100px 140px;
+        padding: 188px 100px 94px;
     }
 }
 
