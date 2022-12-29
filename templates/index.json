@@ -43,11 +43,17 @@
             "buttonbgimage": "shopify:\/\/shop_images\/image_14_2_1.png",
             "button_label": "Help Us<br> Stop <br>Plastic"
           }
+        },
+        "dacdc06a-0ae2-48c4-884b-562c4559ca7c": {
+          "type": "style_3",
+          "settings": {
+          }
         }
       },
       "block_order": [
         "28ddc718-0e80-4086-b1a6-ff51705412b2",
-        "3343447d-49e6-47f8-ae99-7f79b247fe76"
+        "3343447d-49e6-47f8-ae99-7f79b247fe76",
+        "dacdc06a-0ae2-48c4-884b-562c4559ca7c"
       ],
       "settings": {
         "accessibility_info": "Slideshow about our brand",
