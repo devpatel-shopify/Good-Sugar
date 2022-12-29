@@ -249,23 +249,31 @@
             </div>
             <div class="main_slider_content_box">
               <div class="main_slider_content">
-                <div class="main_slider_subheader mobile-view medium-hide large-up-hide item-1">
+
+                {% comment %} <div class="main_slider_subheader mobile-view medium-hide large-up-hide item-1">
                   <div class="subheader item_1 mobile-{{ block.settings.mobile_left_subheading_text_alignment }}">
                     {{ block.settings.leftsubheading_2 }}
                   </div>
-                </div>
+                </div> {% endcomment %}
 
                 <div class="main_slider_header center desktop-{{ block.settings.heading_text_alignment }} mobile-{{ block.settings.mobile_heading_text_alignment }} ">
                   {{ block.settings.heading_2 }}
                 </div>
+                
+                <div class="main_slider_button medium-hide large-up-hide">
+                  <a href="{{ block.settings.link }}" class="btn btn_bg--{{ block.id }}">
+                    <img src="{{ block.settings.buttonbgimage | img_url: 'master' }}" alt="Slider Button">
+                    <span class="btn_text">{{ block.settings.button_label }}</span>
+                  </a>
+                </div>
 
-                <div class="main_slider_subheader small-hide">
+                <div class="main_slider_subheader">
                   {% if block.settings.leftsubheading_2 != blank %}
                     <div class="subheader item_1 desktop-{{ block.settings.left_subheading_text_alignment }} desktop-box-position--{{ block.settings.left_box_position }}">
                       {{ block.settings.leftsubheading_2 }}
                     </div>
                   {% endif %}
-                  <div class="main_slider_button">
+                  <div class="main_slider_button small-hide">
                     <a href="{{ block.settings.link }}" class="btn btn_bg--{{ block.id }}">
                       <img src="{{ block.settings.buttonbgimage | img_url: 'master' }}" alt="Slider Button">
                       <span class="btn_text">{{ block.settings.button_label }}</span>
@@ -278,17 +286,17 @@
                   {% endif %}
                 </div>
 
-                <div class="hidden main_slider_button desktop-btn-position--{{ block.settings.btn_position }} mobile-btn-position--{{ block.settings.mobile_btn_position }}">
+                {% comment %} <div class="hidden main_slider_button desktop-btn-position--{{ block.settings.btn_position }} mobile-btn-position--{{ block.settings.mobile_btn_position }}">
                   <a href="{{ block.settings.link }}" class="btn btn_bg--{{ block.id }}">
                     <img src="{{ block.settings.buttonbgimage | img_url: 'master' }}" alt="Slider Button">
                     <span class="btn_text">{{ block.settings.button_label }}</span>
                   </a>
-                </div>
+                </div> {% endcomment %}
 
-                <div class="main_slider_subheader mobile-view medium-hide large-up-hide item-2">
+                {% comment %} <div class="main_slider_subheader mobile-view medium-hide large-up-hide item-2">
                   <div class="subheader item_2 mobile-{{ block.settings.mobile_right_subheading_text_alignment }}">
                     {{ block.settings.rightsubheading_2 }}
-                  </div>
+                  </div> {% endcomment %}
                 </div>
               </div>
             </div>
