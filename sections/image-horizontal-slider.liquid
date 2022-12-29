@@ -19,14 +19,16 @@
 {% assign count = section.blocks | size %}
 
 <div class="image_horizontal_slider" id="image-horizontal-slider--{{ section.id }}">
-  
   <div class="small-hide medium-hide image_horizontal_slider_wrapper">
     <div class=" swiper image_horizontal_main {% if count > 4 %} image_horizontal_slider_main {% endif %}">
       <!-- Additional required wrapper -->
       <div class="swiper-wrapper">
         <!-- Slides -->
         {%- for block in section.blocks -%}
-          <div class="block_{{ forloop.index }} swiper-slide image_slider_wrapper image_slider--{{ block.id }}" class="">
+          <div
+            class="block_{{ forloop.index }} swiper-slide image_slider_wrapper image_slider--{{ block.id }}"
+            class=""
+          >
             <div class="image_slider_main">
               <div class="image_box">
                 <div class="image">
@@ -65,46 +67,10 @@
       <div class="swiper-wrapper">
         <!-- Slides -->
         {%- for block in section.blocks -%}
-          <div class="block_{{ forloop.index }} swiper-slide image_slider_wrapper image_slider--{{ block.id }}" class="">
-            <div class="image_slider_main">
-              <div class="image_box">
-                <div class="image">
-                  <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.image.alt }}">
-                </div>
-              </div>
-              <div class="image_slider_content">
-                {%- if block.settings.title != blank -%}
-                  <div class="title left">
-                    {{ block.settings.title }}
-                  </div>
-                {%- endif -%}
-                {%- if block.settings.text -%}
-                  <div class="text center">{{ block.settings.text }}</div>
-                {%- endif -%}
-              </div>
-            </div>
-          </div>
-        {%- endfor -%}
-      </div>
-      <!-- If we need pagination -->
-      <div class="swiper-pagination"></div>
-
-      <!-- If we need navigation buttons -->
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
-
-      <!-- If we need scrollbar -->
-      <div class="swiper-scrollbar"></div>
-    </div> 
-  </div>
-
-  <div class="medium-hide large-up-hide image_horizontal_slider_wrapper">
-    <div class="swiper image_horizontal_main {% if count > 2 %} image_horizontal_slider_main_mobile {% endif %}">
-      <!-- Additional required wrapper -->
-      <div class="swiper-wrapper">
-        <!-- Slides -->
-        {%- for block in section.blocks -%}
-          <div class="block_{{ forloop.index }} swiper-slide image_slider_wrapper image_slider--{{ block.id }}" class="">
+          <div
+            class="block_{{ forloop.index }} swiper-slide image_slider_wrapper image_slider--{{ block.id }}"
+            class=""
+          >
             <div class="image_slider_main">
               <div class="image_box">
                 <div class="image">
@@ -137,67 +103,160 @@
     </div>
   </div>
 
+  <div class="medium-hide large-up-hide image_horizontal_slider_wrapper">
+    <div class="swiper image_horizontal_main {% if count > 2 %} image_horizontal_slider_main_mobile {% endif %}">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        {%- for block in section.blocks -%}
+          <div
+            class="block_{{ forloop.index }} swiper-slide image_slider_wrapper image_slider--{{ block.id }}"
+            class=""
+          >
+            <div class="image_slider_main">
+              <div class="image_box">
+                <div class="image">
+                  <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.image.alt }}">
+                </div>
+              </div>
+              <div class="image_slider_content">
+                {%- if block.settings.title != blank -%}
+                  <div class="title left">
+                    {{ block.settings.title }}
+                  </div>
+                {%- endif -%}
+                {%- if block.settings.text -%}
+                  <div class="text center">{{ block.settings.text }}</div>
+                {%- endif -%}
+              </div>
+            </div>
+          </div>
+        {%- endfor -%}
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+
+      <!-- If we need scrollbar -->
+      <div class="swiper-scrollbar"></div>
+    </div>
+  </div>
 </div>
 
 <script type="module" src="{{ 'image-horizontal-slider.js' | asset_url }}"></script>
-
-{% if count1 > 4 %}
-  <script type="module" src="{{ 'image-horizontal-slider.js' | asset_url }}"></script>
-{% endif %}
+<script>
+  if('.image_horizontal_slider_main_tablet'){
+  new Swiper('.image_horizontal_slider_main_tablet', {
+      // Default parameters
+      slidesPerView: 1.8,
+      spaceBetween: 30,
+      mousewheel: true,
+      mousewheel: {
+        forceToAxis: false,
+        releaseOnEdges: true,
+      },
+      autoHeight:100,
+      centeredSlides: true,
+      keyboard: {
+          enabled: true,
+      },
+      // Responsive breakpoints
+      breakpoints: {
+        // when window width is >= 640px
+        750: {
+          slidesPerView: 3,
+          spaceBetween: 60,
+          autoHeight:100,
+        }
+      }
+    })
+  }
+</script>
+<script>
+    if('.image_horizontal_slider_main_mobile'){
+     new Swiper('.image_horizontal_slider_main_mobile', {
+      // Default parameters
+      slidesPerView: 1.8,
+      spaceBetween: 30,
+      mousewheel: true,
+      mousewheel: {
+        forceToAxis: false,
+        releaseOnEdges: true,
+      },
+      autoHeight:100,
+      centeredSlides: true,
+      keyboard: {
+          enabled: true,
+      },
+      // Responsive breakpoints
+      breakpoints: {
+        // when window width is >= 640px
+        750: {
+          slidesPerView: 4,
+          spaceBetween: 60,
+          autoHeight:100,
+        }
+      }
+    })
+  }
+</script>
 
 {% schema %}
-  {
-    "name": "Image Horizontal Slider",
-    "tag": "section",
-    "settings": [
-      {
-        "type": "color_background",
-        "id": "bg_color",
-        "label": "Background Color"
-      }
-    ],
-    "blocks": [
-      {
-        "type": "image",
-        "name": "Image Slider",
-        "settings": [
-          {
-            "type": "image_picker",
-            "id": "image",
-            "label": "Image"
-          },
-          {
-            "type": "text",
-            "id": "title",
-            "label": "Title"
-          },
-          {
-            "type": "richtext",
-            "id": "text",
-            "label": "Text"
-          },
-          {
-            "type": "header",
-            "content": "Color Settings"
-          }, {
-            "type": "color",
-            "id": "title_color",
-            "label": "Title",
-            "default": "#000000"
-          }, {
-            "type": "color",
-            "id": "text_color",
-            "label": "Text",
-            "default": "#000000"
-          }
-        ]
-      }
-    ],
-    "presets": [
-      {
-        "name": "Image Horizontal Slider",
-        "settings": {}
-      }
-    ]
-  }
+{
+  "name": "Image Horizontal Slider",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "color_background",
+      "id": "bg_color",
+      "label": "Background Color"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image Slider",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text"
+        },
+        {
+          "type": "header",
+          "content": "Color Settings"
+        }, {
+          "type": "color",
+          "id": "title_color",
+          "label": "Title",
+          "default": "#000000"
+        }, {
+          "type": "color",
+          "id": "text_color",
+          "label": "Text",
+          "default": "#000000"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image Horizontal Slider",
+      "settings": {}
+    }
+  ]
+}
 {% endschema %}

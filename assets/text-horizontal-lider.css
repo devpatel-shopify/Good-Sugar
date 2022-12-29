@@ -3,8 +3,8 @@
    /* height: 100%; */
 }
 .text_horizonatl_slider_main {
-    border-top: 3px solid #5C398D;
-    border-bottom: 3px solid #5C398D;
+    border-top: var(--custom-border-width) solid var(--custom-border-color);
+    border-bottom: var(--custom-border-width) solid var(--custom-border-color);
 }
 
 .text_horizonatl_slider {    
@@ -24,10 +24,10 @@
 @media screen and (min-width:750px) {
     .text_horizonatl_slider.swiper-slide-next,
 .text_horizonatl_slider.swiper-slide-active {
-    /* border-right: 3px solid #5C398D; */
+    /* border-right: var(--custom-border-width) solid #5C398D; */
 }
 .text_horizonatl_slider {
-    border-right: 3px solid #5C398D;
+    border-right: var(--custom-border-width) solid var(--custom-border-color);
 }
 
 .text_horizonatl_slider:last-child {

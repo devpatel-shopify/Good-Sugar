@@ -3,13 +3,13 @@
     "e2dfb2e9-ee76-4736-a4e8-c80bcd44b659": {
       "type": "gs-slideshow",
       "blocks": {
-        "template--17213669736722__e2dfb2e9-ee76-4736-a4e8-c80bcd44b659-16710187022ef32044-0": {
-          "type": "slide",
+        "28ddc718-0e80-4086-b1a6-ff51705412b2": {
+          "type": "style_1",
           "settings": {
             "image": "shopify:\/\/shop_images\/open-mouth-lightning_01.png",
             "mobile-image": "shopify:\/\/shop_images\/banner-image-mobile.jpg",
             "local_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/eb5ad927e2014c828b85ccc82aa6e53c.mp4",
-            "video_url": "https:\/\/youtu.be\/bON-KPiiNCk",
+            "video_url": "https:\/\/youtu.be\/Zv11L-ZfrSg",
             "heading": "It’s Time to Eat the Truth.",
             "heading_text_alignment": "center",
             "mobile_heading_text_alignment": "center",
@@ -30,142 +30,20 @@
             "image_overlay_opacity": 0
           }
         },
-        "template--17213669736722__e2dfb2e9-ee76-4736-a4e8-c80bcd44b659-16710187022ef32044-1": {
-          "type": "slide",
+        "3343447d-49e6-47f8-ae99-7f79b247fe76": {
+          "type": "style_2",
           "settings": {
-            "image": "shopify:\/\/shop_images\/trinh-le-nguyen-ai-6fYh2Nqjhxk-unsplash-2_1.png",
+            "image": "shopify:\/\/shop_images\/nemo-43-single-use_recolored_1_1.png",
+            "mobile-image": "shopify:\/\/shop_images\/nemo-43-single-use_recolored_2_1.png",
             "local_video": "",
             "video_url": "",
-            "heading": "It’s Time to Eat the Truth.",
-            "heading_text_alignment": "center",
-            "mobile_heading_text_alignment": "center",
-            "leftsubheading": "The current state of mass health food is certainly not healthful and, with so many additives and preservatives, can barely be called ‘food.’",
-            "left_subheading_text_alignment": "left",
-            "mobile_left_subheading_text_alignment": "left",
-            "left_box_position": "left",
-            "rightsubheading": "You’re just consuming well-marketed convenience, and if your brain can’t tell the difference your body certainly will.",
-            "right_subheading_text_alignment": "right",
-            "mobile_right_subheading_text_alignment": "left",
-            "right_box_position": "right",
-            "button_label": "Button label",
-            "btn_position": "right",
-            "mobile_btn_position": "right",
-            "buttonbgimage": "shopify:\/\/shop_images\/btn_bg_image.png",
-            "link": "shopify:\/\/products\/demo-product-2",
-            "box_align": "middle-center",
-            "image_overlay_opacity": 0
-          }
-        },
-        "3fa29295-61b1-46f6-9e93-69ee1f1dd98e": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/alex-lvrs-JJKEQgcNzS4-unsplash_1.png",
-            "local_video": "",
-            "video_url": "",
-            "heading": "It’s Time to Eat the Truth.",
-            "heading_text_alignment": "center",
-            "mobile_heading_text_alignment": "center",
-            "leftsubheading": "The current state of mass health food is certainly not healthful and, with so many additives and preservatives, can barely be called ‘food.’",
-            "left_subheading_text_alignment": "center",
-            "mobile_left_subheading_text_alignment": "left",
-            "left_box_position": "left",
-            "rightsubheading": "You’re just consuming well-marketed convenience, and if your brain can’t tell the difference your body certainly will.",
-            "right_subheading_text_alignment": "left",
-            "mobile_right_subheading_text_alignment": "left",
-            "right_box_position": "right",
-            "button_label": "Button label",
-            "btn_position": "right",
-            "mobile_btn_position": "right",
-            "buttonbgimage": "shopify:\/\/shop_images\/btn_bg_image.png",
-            "link": "shopify:\/\/products\/demo-product-3",
-            "box_align": "middle-center",
-            "image_overlay_opacity": 0
-          }
-        },
-        "f6115104-bdc5-45e9-8642-9980f729f7a7": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/aliet-kitchen-733kX9cX3JU-unsplash_1.png",
-            "local_video": "",
-            "video_url": "",
-            "heading": "It’s Time to Eat the Truth.",
-            "heading_text_alignment": "center",
-            "mobile_heading_text_alignment": "center",
-            "leftsubheading": "The current state of mass health food is certainly not healthful and, with so many additives and preservatives, can barely be called ‘food.’",
-            "left_subheading_text_alignment": "left",
-            "mobile_left_subheading_text_alignment": "left",
-            "left_box_position": "left",
-            "rightsubheading": "You’re just consuming well-marketed convenience, and if your brain can’t tell the difference your body certainly will.",
-            "right_subheading_text_alignment": "right",
-            "mobile_right_subheading_text_alignment": "left",
-            "right_box_position": "right",
-            "button_label": "Button label",
-            "btn_position": "right",
-            "mobile_btn_position": "right",
-            "link": "",
-            "box_align": "middle-center",
-            "image_overlay_opacity": 0
-          }
-        },
-        "04a9fd82-698f-4fcf-a300-7f4f73c6a273": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Rectangle_4.png",
-            "local_video": "",
-            "video_url": "",
-            "heading": "It’s Time to Eat the Truth.",
-            "heading_text_alignment": "center",
-            "mobile_heading_text_alignment": "center",
-            "leftsubheading": "The current state of mass health food is certainly not healthful and, with so many additives and preservatives, can barely be called ‘food.’",
-            "left_subheading_text_alignment": "left",
-            "mobile_left_subheading_text_alignment": "left",
-            "left_box_position": "left",
-            "rightsubheading": "You’re just consuming well-marketed convenience, and if your brain can’t tell the difference your body certainly will.",
-            "right_subheading_text_alignment": "right",
-            "mobile_right_subheading_text_alignment": "left",
-            "right_box_position": "right",
-            "button_label": "Button label",
-            "btn_position": "right",
-            "mobile_btn_position": "right",
-            "link": "",
-            "box_align": "middle-center",
-            "image_overlay_opacity": 0
-          }
-        },
-        "4ddec2aa-b78d-4039-b6d0-8a1351eb9d88": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/justus-menke-47cW0To8dQY-unsplash_1.png",
-            "local_video": "",
-            "video_url": "",
-            "heading": "It’s Time to Eat the Truth.",
-            "heading_text_alignment": "center",
-            "mobile_heading_text_alignment": "center",
-            "leftsubheading": "The current state of mass health food is certainly not healthful and, with so many additives and preservatives, can barely be called ‘food.’",
-            "left_subheading_text_alignment": "left",
-            "mobile_left_subheading_text_alignment": "left",
-            "left_box_position": "left",
-            "rightsubheading": "",
-            "right_subheading_text_alignment": "right",
-            "mobile_right_subheading_text_alignment": "left",
-            "right_box_position": "right",
-            "button_label": "Button label",
-            "btn_position": "left",
-            "mobile_btn_position": "right",
-            "buttonbgimage": "shopify:\/\/shop_images\/btn_bg_image.png",
-            "link": "shopify:\/\/products\/demo-where-can-i-get-some",
-            "box_align": "middle-center",
-            "image_overlay_opacity": 0
+            "heading": "All. Plastic. Ever. Still. Exists."
           }
         }
       },
       "block_order": [
-        "template--17213669736722__e2dfb2e9-ee76-4736-a4e8-c80bcd44b659-16710187022ef32044-0",
-        "template--17213669736722__e2dfb2e9-ee76-4736-a4e8-c80bcd44b659-16710187022ef32044-1",
-        "3fa29295-61b1-46f6-9e93-69ee1f1dd98e",
-        "f6115104-bdc5-45e9-8642-9980f729f7a7",
-        "04a9fd82-698f-4fcf-a300-7f4f73c6a273",
-        "4ddec2aa-b78d-4039-b6d0-8a1351eb9d88"
+        "28ddc718-0e80-4086-b1a6-ff51705412b2",
+        "3343447d-49e6-47f8-ae99-7f79b247fe76"
       ],
       "settings": {
         "accessibility_info": "Slideshow about our brand",

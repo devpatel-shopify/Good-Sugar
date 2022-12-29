@@ -33,7 +33,7 @@
   padding: 130px 30px 50px;
 }
 .product-recommendations .grid__item1 {
-  /* border-right: 3px solid var(--custom-border-color); */
+  /* border-right: var(--custom-border-width) solid var(--custom-border-color); */
 }
 .product-recommendations .grid__item1:last-child {
   /* border-right: none; */

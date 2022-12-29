@@ -44,12 +44,12 @@
 }
 
 .related_product_main {
-    border-top:3px solid var(--custom-color);
-    border-bottom:3px solid var(--custom-color);
+    border-top:var(--custom-border-width) solid var(--custom-color);
+    border-bottom:var(--custom-border-width) solid var(--custom-color);
 }
 .related_product_item:nth-of-type(2) {
-    border-left:3px solid var(--custom-color);
-    border-right:3px solid var(--custom-color);
+    border-left:var(--custom-border-width) solid var(--custom-color);
+    border-right:var(--custom-border-width) solid var(--custom-color);
 }
 .related_product_item_wrapper {
     max-width: 430px;

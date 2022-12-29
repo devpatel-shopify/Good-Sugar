@@ -14,86 +14,64 @@
   <div class="swiper-wrapper">
     <!-- Slides -->
     {%- for block in section.blocks -%}
-      <div
-        class="swiper-slide"
-        id="Slide-{{ section.id }}-{{ forloop.index }}"
-        {{ block.shopify_attributes }}
-        role="group"
-        aria-roledescription="{{ 'sections.slideshow.slide' | t }}"
-        aria-label="{{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
-        tabindex="-1"
-        data-index="{{- forloop.index -}}"
-      >
-        <style>
-          #Slide-{{ section.id }}-{{ forloop.index }}.main_slider_image .image::after {
-            opacity: {{ block.settings.image_overlay_opacity | divided_by: 100.0 }}
-            ;
-          }
-        </style>
-        <div class="main_slider_wrapper">
-          <div class="main_slider_image">
-            {% if block.settings.video_url != blank %}
-              {% if block.settings.local_video != blank %}
-                <div class="local_video">
-                  <div class="local_video_container">
-                    <video autoplay loop muted>
-                      <source src="{{ block.settings.local_video }}" type="video/mp4" />
-                    </video>
+      {%- if block.type == 'style_1' -%}
+        <div
+          class="swiper-slide"
+          id="Slide-{{ section.id }}-{{ forloop.index }}"
+          {{ block.shopify_attributes }}
+          role="group"
+          aria-roledescription="{{ 'sections.slideshow.slide' | t }}"
+          aria-label="{{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
+          tabindex="-1"
+          data-index="{{- forloop.index -}}">
+          <style>
+            #Slide-{{ section.id }}-{{ forloop.index }}.main_slider_image .image::after {
+              opacity: {{ block.settings.image_overlay_opacity | divided_by: 100.0 }}
+              ;
+            }
+          </style>
+          <div class="main_slider_wrapper">
+            <div class="main_slider_image">
+              {% if block.settings.video_url != blank or block.settings.local_video != blank %}
+                {% if block.settings.local_video != blank %}
+                  <div class="local_video">
+                    <div class="local_video_container">
+                      <video autoplay loop muted>
+                        <source src="{{ block.settings.local_video }}" type="video/mp4" />
+                      </video>
+                    </div>
+                  </div>
+                  {% else %}
+                <div class="video">
+                  <div class="video_container">
+                    <deferred-media
+                      class="video-section__media deferred-media no-js-hidden gradient global-media-settings"
+                      data-media-id="{{ block.settings.video_url.id }}"
+                    >
+                      {%- if block.settings.video_url.type == 'youtube' -%}
+                        <iframe
+                          src="https://www.youtube.com/embed/{{ block.settings.video_url.id }}?autoplay=1&mute=1&loop=1"
+                        ></iframe>
+                      {%- else -%}
+                        <iframe
+                          src="https://player.vimeo.com/video/{{ block.settings.video_url.id }}"
+                          class="js-vimeo"
+                          allow="autoplay; encrypted-media"
+                          allowfullscreen
+                          title="{{ block.settings.description | escape }}"
+                        ></iframe>
+                      {%- endif -%}
+                    </deferred-media>
                   </div>
                 </div>
-                {% else %}
-              <div class="video">
-                <div class="video_container">
-                  <deferred-media
-                    class="video-section__media deferred-media no-js-hidden gradient global-media-settings"
-                    data-media-id="{{ block.settings.video_url.id }}"
-                  >
-                    {%- if block.settings.video_url.type == 'youtube' -%}
-                      <iframe
-                        src="https://www.youtube.com/embed/{{ block.settings.video_url.id }}?autoplay=1&mute=1&loop=1"
-                      ></iframe>
-                    {%- else -%}
-                      <iframe
-                        src="https://player.vimeo.com/video/{{ block.settings.video_url.id }}"
-                        class="js-vimeo"
-                        allow="autoplay; encrypted-media"
-                        allowfullscreen
-                        title="{{ block.settings.description | escape }}"
-                      ></iframe>
-                    {%- endif -%}
-                  </deferred-media>
-                </div>
-              </div>
-            {% endif %}
-            {% else %}
-              <div class="image">
-                {%- if block.settings.image -%}
-                  {%- assign height = block.settings.image.width
-                    | divided_by: block.settings.image.aspect_ratio
-                    | round
-                  -%}
-                  {{
-                    block.settings.image
-                    | image_url: width: 3840
-                    | image_tag:
-                      loading: 'lazy',
-                      height: height,
-                      sizes: '100vw',
-                      class: 'desktop_image small-hide',
-                      widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
-                  }}
-                  {%- if block.settings['mobile-image'] != blank -%}
-                    {{
-                      block.settings['mobile-image']
-                      | image_url: width: 750
-                      | image_tag:
-                        loading: 'lazy',
-                        height: height,
-                        sizes: '100vw',
-                        class: 'mobile_image medium-hide large-up-hide',
-                        widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
-                    }}
-                  {%- else -%}
+              {% endif %}
+              {% else %}
+                <div class="image">
+                  {%- if block.settings.image -%}
+                    {%- assign height = block.settings.image.width
+                      | divided_by: block.settings.image.aspect_ratio
+                      | round
+                    -%}
                     {{
                       block.settings.image
                       | image_url: width: 3840
@@ -101,63 +79,181 @@
                         loading: 'lazy',
                         height: height,
                         sizes: '100vw',
-                        class: 'desktop_image desktop_image_for_mobile medium-hide large-up-hide',
+                        class: 'desktop_image small-hide',
                         widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
                     }}
+                    {%- if block.settings['mobile-image'] != blank -%}
+                      {{
+                        block.settings['mobile-image']
+                        | image_url: width: 750
+                        | image_tag:
+                          loading: 'lazy',
+                          height: height,
+                          sizes: '100vw',
+                          class: 'mobile_image medium-hide large-up-hide',
+                          widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+                      }}
+                    {%- else -%}
+                      {{
+                        block.settings.image
+                        | image_url: width: 3840
+                        | image_tag:
+                          loading: 'lazy',
+                          height: height,
+                          sizes: '100vw',
+                          class: 'desktop_image desktop_image_for_mobile medium-hide large-up-hide',
+                          widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+                      }}
+                    {%- endif -%}
+                  {%- else -%}
+                    {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
                   {%- endif -%}
-                {%- else -%}
-                  {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
-                {%- endif -%}
-              </div>
-            {% endif %}
-          </div>
-          <div class="main_slider_content_box">
-            <div class="main_slider_content">
-              {% if block.settings.leftsubheading != blank %}
-                <div class="main_slider_subheader mobile-view medium-hide large-up-hide item-1">
-                  <div class="subheader item_1 mobile-{{ block.settings.mobile_left_subheading_text_alignment }}">
-                    {{ block.settings.leftsubheading }}
-                  </div>
-                </div>
-              {% endif %}
-              {% if block.settings.heading != blank %}
-                <div class="main_slider_header desktop-{{ block.settings.heading_text_alignment }} mobile-{{ block.settings.mobile_heading_text_alignment }} ">
-                  {{ block.settings.heading }}
-                </div>
-              {% endif %}
-              {% if block.settings.leftsubheading != blank or block.settings.rightsubheading != blank %}
-                <div class="main_slider_subheader small-hide">
-                  {% if block.settings.leftsubheading != blank %}
-                    <div class="subheader item_1 desktop-{{ block.settings.left_subheading_text_alignment }} desktop-box-position--{{ block.settings.left_box_position }}">
-                      {{ block.settings.leftsubheading }}
-                    </div>
-                  {% endif %}
-                  {% if block.settings.rightsubheading != blank %}
-                    <div class="subheader item_2 desktop-{{ block.settings.right_subheading_text_alignment }} desktop-box-position--{{ block.settings.right_box_position }}">
-                      {{ block.settings.rightsubheading }}
-                    </div>
-                  {% endif %}
-                </div>
-              {% endif %}
-              {% if block.settings.link != blank %}
-                <div class="main_slider_button desktop-btn-position--{{ block.settings.btn_position }} mobile-btn-position--{{ block.settings.mobile_btn_position }}">
-                  <a href="{{ block.settings.link }}" class="btn btn_bg--{{ block.id }}">
-                    <img src="{{ block.settings.buttonbgimage | img_url: 'master' }}" alt="Slider Button">
-                    <span class="btn_text">{{ block.settings.button_label }}</span>
-                  </a>
-                </div>
-              {% endif %}
-              {% if block.settings.rightsubheading != blank %}
-                <div class="main_slider_subheader mobile-view medium-hide large-up-hide item-2">
-                  <div class="subheader item_2 mobile-{{ block.settings.mobile_right_subheading_text_alignment }}">
-                    {{ block.settings.rightsubheading }}
-                  </div>
                 </div>
               {% endif %}
             </div>
+            <div class="main_slider_content_box">
+              <div class="main_slider_content">
+                {% if block.settings.leftsubheading != blank %}
+                  <div class="main_slider_subheader mobile-view medium-hide large-up-hide item-1">
+                    <div class="subheader item_1 mobile-{{ block.settings.mobile_left_subheading_text_alignment }}">
+                      {{ block.settings.leftsubheading }}
+                    </div>
+                  </div>
+                {% endif %}
+                {% if block.settings.heading != blank %}
+                  <div class="main_slider_header desktop-{{ block.settings.heading_text_alignment }} mobile-{{ block.settings.mobile_heading_text_alignment }} ">
+                    {{ block.settings.heading }}
+                  </div>
+                {% endif %}
+                {% if block.settings.leftsubheading != blank or block.settings.rightsubheading != blank %}
+                  <div class="main_slider_subheader small-hide">
+                    {% if block.settings.leftsubheading != blank %}
+                      <div class="subheader item_1 desktop-{{ block.settings.left_subheading_text_alignment }} desktop-box-position--{{ block.settings.left_box_position }}">
+                        {{ block.settings.leftsubheading }}
+                      </div>
+                    {% endif %}
+                    {% if block.settings.rightsubheading != blank %}
+                      <div class="subheader item_2 desktop-{{ block.settings.right_subheading_text_alignment }} desktop-box-position--{{ block.settings.right_box_position }}">
+                        {{ block.settings.rightsubheading }}
+                      </div>
+                    {% endif %}
+                  </div>
+                {% endif %}
+                {% if block.settings.link != blank %}
+                  <div class="main_slider_button desktop-btn-position--{{ block.settings.btn_position }} mobile-btn-position--{{ block.settings.mobile_btn_position }}">
+                    <a href="{{ block.settings.link }}" class="btn btn_bg--{{ block.id }}">
+                      <img src="{{ block.settings.buttonbgimage | img_url: 'master' }}" alt="Slider Button">
+                      <span class="btn_text">{{ block.settings.button_label }}</span>
+                    </a>
+                  </div>
+                {% endif %}
+                {% if block.settings.rightsubheading != blank %}
+                  <div class="main_slider_subheader mobile-view medium-hide large-up-hide item-2">
+                    <div class="subheader item_2 mobile-{{ block.settings.mobile_right_subheading_text_alignment }}">
+                      {{ block.settings.rightsubheading }}
+                    </div>
+                  </div>
+                {% endif %}
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      {%- endif -%}
+      {%- if block.type == 'style_2' -%}
+        <div class="swiper-slide style_2" id="Slide-{{ section.id }}-{{ forloop.index }}" {{ block.shopify_attributes }}>
+          <div class="main_slider_wrapper">
+            <div class="main_slider_image">
+              {% if block.settings.video_url != blank or block.settings.local_video != blank %}
+                {% if block.settings.local_video != blank %}
+                  <div class="local_video">
+                    <div class="local_video_container">
+                      <video autoplay loop muted>
+                        <source src="{{ block.settings.local_video }}" type="video/mp4" />
+                      </video>
+                    </div>
+                  </div>
+                  {% else %}
+                <div class="video">
+                  <div class="video_container">
+                    <deferred-media
+                      class="video-section__media deferred-media no-js-hidden gradient global-media-settings"
+                      data-media-id="{{ block.settings.video_url.id }}"
+                    >
+                      {%- if block.settings.video_url.type == 'youtube' -%}
+                        <iframe
+                          src="https://www.youtube.com/embed/{{ block.settings.video_url.id }}?autoplay=1&mute=1&loop=1"
+                        ></iframe>
+                      {%- else -%}
+                        <iframe
+                          src="https://player.vimeo.com/video/{{ block.settings.video_url.id }}"
+                          class="js-vimeo"
+                          allow="autoplay; encrypted-media"
+                          allowfullscreen
+                          title="{{ block.settings.description | escape }}"
+                        ></iframe>
+                      {%- endif -%}
+                    </deferred-media>
+                  </div>
+                </div>
+              {% endif %}
+              {% else %}
+                <div class="image">
+                  {%- if block.settings.image -%}
+                    {%- assign height = block.settings.image.width
+                      | divided_by: block.settings.image.aspect_ratio
+                      | round
+                    -%}
+                    {{
+                      block.settings.image
+                      | image_url: width: 3840
+                      | image_tag:
+                        loading: 'lazy',
+                        height: height,
+                        sizes: '100vw',
+                        class: 'desktop_image small-hide',
+                        widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+                    }}
+                    {%- if block.settings['mobile-image'] != blank -%}
+                      {{
+                        block.settings['mobile-image']
+                        | image_url: width: 750
+                        | image_tag:
+                          loading: 'lazy',
+                          height: height,
+                          sizes: '100vw',
+                          class: 'mobile_image medium-hide large-up-hide',
+                          widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+                      }}
+                    {%- else -%}
+                      {{
+                        block.settings.image
+                        | image_url: width: 3840
+                        | image_tag:
+                          loading: 'lazy',
+                          height: height,
+                          sizes: '100vw',
+                          class: 'desktop_image desktop_image_for_mobile medium-hide large-up-hide',
+                          widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+                      }}
+                    {%- endif -%}
+                  {%- else -%}
+                    {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
+                  {%- endif -%}
+                </div>
+              {% endif %}
+            </div>
+            <div class="main_slider_content_box">
+              <div class="main_slider_content">
+                {% if block.settings.heading != blank %}
+                  <div class="main_slider_header desktop-{{ block.settings.heading_text_alignment }} mobile-{{ block.settings.mobile_heading_text_alignment }} ">
+                    {{ block.settings.heading }}
+                  </div>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </div>
+      {%- endif -%}  
     {%- endfor -%}
   </div>
   <!-- If we need pagination -->
@@ -252,9 +348,8 @@ GSSlideshowParent.style.setProperty('min-height', `${parseInt(GSSlideshowHeight)
   ],
   "blocks": [
     {
-      "type": "slide",
-      "name": "t:sections.gs-slideshow.blocks.slide.name",
-      "limit": 6,
+      "type": "style_1",
+      "name": "Style 1",
       "settings": [
         {
           "type": "image_picker",
@@ -277,14 +372,14 @@ GSSlideshowParent.style.setProperty('min-height', `${parseInt(GSSlideshowHeight)
         },
         {
           "type": "video_url",
-    "id": "video_url",
-    "accept": [
-      "youtube",
-      "vimeo"
-    ],
-    /*"default": "https://www.youtube.com/watch?v=_9VUPq3SxOc",*/
-    "label": "t:sections.video.settings.video_url.label",
-    "info": "t:sections.video.settings.video_url.info"
+          "id": "video_url",
+          "accept": [
+            "youtube",
+            "vimeo"
+          ],
+          /*"default": "https://www.youtube.com/watch?v=_9VUPq3SxOc",*/
+          "label": "t:sections.video.settings.video_url.label",
+          "info": "t:sections.video.settings.video_url.info"
         },
         {
           "type": "text",
@@ -537,6 +632,51 @@ GSSlideshowParent.style.setProperty('min-height', `${parseInt(GSSlideshowHeight)
           "default": 0
         }
       ]
+    },
+    {
+      "type":"style_2",
+      "name":"Style 2",
+      "settings":[
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.gs-slideshow.blocks.slide.settings.image.label"
+        },
+        {
+          "type": "image_picker",
+          "id": "mobile-image",
+          "label": "t:sections.gs-slideshow.blocks.slide.settings.mobileimage.label"
+        },
+        {
+          "type":"header",
+          "content":"Video Settings"
+        },
+        {
+          "type":"url",
+          "id":"local_video",
+          "label":"Local Video"
+        },
+        {
+          "type": "video_url",
+          "id": "video_url",
+          "accept": [
+            "youtube",
+            "vimeo"
+          ],
+          /*"default": "https://www.youtube.com/watch?v=_9VUPq3SxOc",*/
+          "label": "t:sections.video.settings.video_url.label",
+          "info": "t:sections.video.settings.video_url.info"
+        },
+        {
+          "type":"header",
+          "content":"Block Content"
+        },
+        {
+          "type":"text",
+          "id":"heading",
+          "label":"Heading"
+        }
+      ]
     }
   ],
   "presets": [
@@ -544,9 +684,9 @@ GSSlideshowParent.style.setProperty('min-height', `${parseInt(GSSlideshowHeight)
       "name": "Main Slideshow",
       "blocks": [
         {
-          "type": "slide"
+          "type": "style_1"
         }, {
-          "type": "slide"
+          "type": "style_2"
         }
       ]
     }

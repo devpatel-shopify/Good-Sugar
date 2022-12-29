@@ -22,16 +22,16 @@
 
 
     .grid-bg--{{ block.id }} {
-    border-top: 3px solid {{ block.settings.border_color }};
-    border-bottom: 3px solid {{ block.settings.border_color }};
+    border-top: var(--custom-border-width) solid {{ block.settings.border_color }};
+    border-bottom: var(--custom-border-width) solid {{ block.settings.border_color }};
   }
   .grid-bg--{{ block.id }} .menu-grid_title {
-    border-bottom: 3px solid {{ block.settings.border_color }};
+    border-bottom: var(--custom-border-width) solid {{ block.settings.border_color }};
   }
 
   @media screen and (min-width:750px){
     .grid-bg--{{ block.id }} .menu-grid_box_item.item_left {
-      border-right: 3px solid {{ block.settings.border_color }};
+      border-right: var(--custom-border-width) solid {{ block.settings.border_color }};
     }
     .grid-bg--{{ block.id }} .menu-grid_btn_wrapper {
       height:{{ block.settings.button_bg_image_height }}px;

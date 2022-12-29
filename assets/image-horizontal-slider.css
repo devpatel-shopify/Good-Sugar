@@ -10,7 +10,7 @@
 }
 .image_slider_main {
     position: relative;
-    /* min-width: 300px; */
+    min-width: 300px;
 }
 .image_slider_content {
     position: absolute;
@@ -53,7 +53,7 @@
 }
 
 .image_horizontal_slider_wrapper {
-    border-bottom: 3px solid #5C398D;
+    border-bottom: var(--custom-border-width) solid var(--custom-border-color);
     max-height: calc(100vh - var(--header-height) - var(--footer-height) - 5px);
 }
 .image_horizontal_main .swiper-wrapper {
