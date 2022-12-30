@@ -803,4 +803,7 @@ text-transform: lowercase;
     .gs_style_1 .main_slider_subheader .subheader {
         font-size: 13px;
     }
+    .gs_style_3 .main_slider_content {
+        padding: 20px;
+    }
 }
