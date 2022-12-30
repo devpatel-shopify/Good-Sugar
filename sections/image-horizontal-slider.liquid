@@ -20,7 +20,7 @@
 
 <div class="image_horizontal_slider" id="image-horizontal-slider--{{ section.id }}">
   <div class="small-hide medium-hide image_horizontal_slider_wrapper">
-    <div class=" swiper image_horizontal_main {% if count > 4 %} image_horizontal_slider_main {% endif %}">
+    <div class=" swiper image_horizontal_main {% if count > 4 %} image_horizontal_slider_main {% else %} image_horizontal_no_slider_main {% endif %}">
       <!-- Additional required wrapper -->
       <div class="swiper-wrapper">
         <!-- Slides -->
@@ -62,7 +62,7 @@
   </div>
 
   <div class="small-hide large-up-hide image_horizontal_slider_wrapper">
-    <div class="swiper image_horizontal_main {% if count > 3 %} image_horizontal_slider_main_tablet {% endif %}">
+    <div class="swiper image_horizontal_main {% if count > 3 %} image_horizontal_slider_main_tablet {% else %} image_horizontal_no_slider_main_tablet {% endif %}">
       <!-- Additional required wrapper -->
       <div class="swiper-wrapper">
         <!-- Slides -->
@@ -104,7 +104,7 @@
   </div>
 
   <div class="medium-hide large-up-hide image_horizontal_slider_wrapper">
-    <div class="swiper image_horizontal_main {% if count > 2 %} image_horizontal_slider_main_mobile {% endif %}">
+    <div class="swiper image_horizontal_main {% if count > 2 %} image_horizontal_slider_main_mobile {% else %} image_horizontal_no_slider_main_mobile {% endif %}">
       <!-- Additional required wrapper -->
       <div class="swiper-wrapper">
         <!-- Slides -->
@@ -147,62 +147,7 @@
 </div>
 
 <script type="module" src="{{ 'image-horizontal-slider.js' | asset_url }}"></script>
-<script>
-  if('.image_horizontal_slider_main_tablet'){
-  new Swiper('.image_horizontal_slider_main_tablet', {
-      // Default parameters
-      slidesPerView: 1.8,
-      spaceBetween: 30,
-      mousewheel: true,
-      mousewheel: {
-        forceToAxis: false,
-        releaseOnEdges: true,
-      },
-      autoHeight:100,
-      centeredSlides: true,
-      keyboard: {
-          enabled: true,
-      },
-      // Responsive breakpoints
-      breakpoints: {
-        // when window width is >= 640px
-        750: {
-          slidesPerView: 3,
-          spaceBetween: 60,
-          autoHeight:100,
-        }
-      }
-    })
-  }
-</script>
-<script>
-    if('.image_horizontal_slider_main_mobile'){
-     new Swiper('.image_horizontal_slider_main_mobile', {
-      // Default parameters
-      slidesPerView: 1.8,
-      spaceBetween: 30,
-      mousewheel: true,
-      mousewheel: {
-        forceToAxis: false,
-        releaseOnEdges: true,
-      },
-      autoHeight:100,
-      centeredSlides: true,
-      keyboard: {
-          enabled: true,
-      },
-      // Responsive breakpoints
-      breakpoints: {
-        // when window width is >= 640px
-        750: {
-          slidesPerView: 4,
-          spaceBetween: 60,
-          autoHeight:100,
-        }
-      }
-    })
-  }
-</script>
+
 
 {% schema %}
 {

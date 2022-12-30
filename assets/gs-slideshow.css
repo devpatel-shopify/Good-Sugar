@@ -403,7 +403,7 @@
     position: absolute;
     top: auto;
     left: auto;
-    bottom: 15%;
+    bottom: 35px;
     right: 7%;
 }
 .gs_style_3 .main_slider_content {
@@ -506,6 +506,24 @@ color: #FFFF73;
     }
 }
 
+@media screen and (max-width:1680px) {
+    .gs_style_3 .text {
+        font-size: 20px;
+    }
+    .gs_style_3 .heading {
+        font-size: 70px;
+    }
+    .gs_style_3 .main_slider_button img, .gs_style_3 .btn {
+        height: 130px;
+        width: 130px;
+    }
+    .gs_style_3 .btn_text {
+        font-size: 20px;
+    }
+    .gs_style_3 .main_slider_content {
+        padding: 60px;
+    }
+}
 @media screen and (max-width:1400px) {
     .gs_style_1 .main_slider_header {
         font-size: 80px;
@@ -519,7 +537,7 @@ color: #FFFF73;
         max-width: 150px;
     }
     .gs_style_3 .heading {
-        font-size: 70px;
+        font-size: 60px;
     }
     .gs_style_2 .subheader {
         font-size: 21px;
@@ -567,6 +585,9 @@ color: #FFFF73;
     .gs_style_2 .main_slider_button .btn {
         height: 130px;
         width: 130px;
+    }
+    .gs_style_3 .main_slider_content {
+        padding: 40px;
     }
 }
 
@@ -699,7 +720,7 @@ color: #FFFF73;
     }
 }
 
-@media screen and (max-height:700px) {
+@media screen and (max-height:700px) and (max-width:375px) {
     .gs_style_2 .main_slider_header {
         font-size: 30px;
     }
