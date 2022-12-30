@@ -424,12 +424,14 @@
     font-family: var(--font-heading-family);
     line-height: 1.05;
     color: #000000;
+    text-transform: lowercase;
 }
 .gs_style_3 .text {
 font-size: 25px;
 font-family: var(--font-heading-family);
 line-height: 1.2;
 color: #FFFF73;
+text-transform: lowercase;
 }
 
 .gs_style_3 .btn_text {
@@ -717,7 +719,9 @@ color: #FFFF73;
         display: flex;
         align-items: center;
         justify-content: center;
+        margin-top: -25px;
     }
+    
 }
 
 @media screen and (max-height:700px) and (max-width:375px) {
@@ -780,6 +784,9 @@ color: #FFFF73;
 
     .btn_text {
         font-size: 8px;
+    }
+    .gs_style_3 .main_slider_content {
+        padding: 20px;
     }
 }
 
