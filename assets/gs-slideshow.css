@@ -549,7 +549,7 @@ color: #FFFF73;
     }
     .gs_style_2 .btn_text,
     .gs_style_2 .subheader {
-        font-size: 20px;
+        font-size: 16px;
     }
     .gs_style_2 .main_slider_subheader {
         column-gap: 40px;
@@ -561,7 +561,12 @@ color: #FFFF73;
         font-size: 18px;
     }
     .gs_style_3 .btn_text {
-        font-size: 20px;
+        font-size: 18px;
+    }
+    .gs_style_3 .main_slider_button img, .gs_style_3 .btn,
+    .gs_style_2 .main_slider_button .btn {
+        height: 130px;
+        width: 130px;
     }
 }
 
