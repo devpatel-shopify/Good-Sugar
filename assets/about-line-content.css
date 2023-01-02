@@ -63,10 +63,17 @@
     }
     .about_line_content_box {
         margin-top: 10px;
-        padding: 0 20px;
+        /* padding: 0 20px; */
     }
     .about_line_box_text {
-        font-size: 9px;
+        font-size: 9px; 
     }
-    
+    .about_line_box_text {
+        padding: 0 20px;
+    }
+    .about_line_box_line_text {
+        margin-top: 30px;
+        font-size: 18px;
+        padding: 0 20px 25px 20px;
+    }
 }

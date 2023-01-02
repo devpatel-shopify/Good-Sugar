@@ -1,10 +1,10 @@
 {{ 'image-horizontal-slider.css' | asset_url | stylesheet_tag }}
 
-<style>
+{% comment %} <style>
   #image-horizontal-slider--{{ section.id }}{
     background: {{ section.settings.bg_color }};
   }
-</style>
+</style> {% endcomment %}
 
 <style>
   {%- for block in section.blocks -%}
@@ -154,11 +154,11 @@
   "name": "Image Horizontal Slider",
   "tag": "section",
   "settings": [
-    {
+    /*{
       "type": "color_background",
       "id": "bg_color",
       "label": "Background Color"
-    }
+    }*/
   ],
   "blocks": [
     {

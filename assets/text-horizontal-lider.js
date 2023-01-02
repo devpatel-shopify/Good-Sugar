@@ -5,7 +5,7 @@ function swiperCard() {
     if (!init) {
       init = true;
       swiper = new Swiper('.text_horizonatl_slider_main', {
-        slidesPerView: 1,
+        slidesPerView: 'auto',
         spaceBetween: 0,
         mousewheel: true,
         mousewheel: {
@@ -21,12 +21,12 @@ function swiperCard() {
         breakpoints: {
           // when window width is >= 640px
           1024: {
-            slidesPerView: 2.5,
+            //slidesPerView: 2.3,
             spaceBetween: 0,
             autoHeight:100,
           },
           750: {
-            slidesPerView: 1.5,
+            //slidesPerView: 1.5,
             spaceBetween: 0,
             autoHeight:100,
           }

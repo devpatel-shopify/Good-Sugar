@@ -10,7 +10,9 @@
             font-size: {{ block.settings.font-size }}px;
             font-family: var({{ block.settings.font_family }});
         }
-        
+        {% comment %} .text-slider--{{ block.id }} {
+        max-width:{{ block.settings.text_max_width }}px;
+        } {% endcomment %}
         @media screen and (max-width:749px) {
             .text-slider--{{ block.id }} {
                 width:{{ block.settings.block_width }}%;
@@ -111,7 +113,12 @@
                         "label": "Heading Font"
                     }
                 ]
-            },            
+            }, 
+            {
+                "type":"number",
+                "id":"text_max_width",
+                "label":"Max Width"
+            },           
             {
                 "type": "header",
                 "content": "For Mobile"
