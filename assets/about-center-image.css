@@ -7,7 +7,13 @@
     padding: 155px 20px;
     background-color: #ECA847;
     overflow-y: auto;
+    border-bottom: var(--custom-border-width) solid var(--custom-border-color);
 }
+.image_text_slider {
+    border-top:var(--custom-border-width) solid var(--custom-border-color);
+    border-bottom:var(--custom-border-width) solid var(--custom-border-color);
+}
+
 .image_text_main {
     display: flex;
     align-items: flex-start;

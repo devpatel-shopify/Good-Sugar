@@ -41,3 +41,48 @@
     font-family: var(--font-heading-family);
     line-height: 1.15;
 }
+.compair_item.item_1 .compair_item_wrapper {
+    position: relative;
+}
+.about_compair_sticker {
+    position: absolute;
+    max-width: 150px;
+    max-height: 300px;
+    top: auto;
+    bottom: -60px;
+    right: 0;
+    height: 100%;
+    width: fit-content;
+}
+.compair_sticker_image img,
+.compair_sticker_image {
+    height: 100%;
+    width: 100%;
+}
+
+@media screen and (max-width:749px) {
+    .compair_item {
+        padding: 26px 29px 42px 20px;
+    }
+    .compair_item_wrapper {
+        --heading-h1-font-size:20px;
+    }
+    .compair_header {
+        line-height: 1.15;
+    }
+    .compair_sub_text {
+        font-size: 18px;
+    }
+    .compair_details_data ul {
+        row-gap: 8px;
+    }
+    .compair_details_data li {
+        font-size: 9px;
+    }
+    .compair_details_data {
+        margin-top: 18px;
+    }
+    .about_compair_sticker {
+        bottom: -25px;
+    }
+}
