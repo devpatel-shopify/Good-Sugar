@@ -49,6 +49,12 @@
     /* min-width: 400px; */
 }
 }
+@media screen and (min-width: 750px) and (max-width: 1024px) {
+    .text_horizonatl_slider {
+        max-width: 70%;
+    }
+} 
+
 @media screen and (max-width:749px) {
     .text_horizonatl_slider_main .swiper-wrapper {
         display: flex;

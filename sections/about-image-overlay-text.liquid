@@ -1,5 +1,11 @@
 {{ 'about-image-overlay-text.css' | asset_url | stylesheet_tag }}
 
+<style>
+    #about-image-overlay-text--{{ section.id }} .text {
+        color:{{ section.settings.text_color }};
+    }
+</style>
+
 <div class="about_image_overlay_text" id="about-image-overlay-text--{{ section.id }}">
     <div class="about_image_overlay_text_wrapper">
       <div class="about_image_overlay_text_main">
@@ -13,7 +19,7 @@
         {% if section.settings.text != blank %}
         <div class="overlay_text_content">
             <div class="overlay_text_content_main">
-                <div>{{ section.settings.text }}</div>
+                <div class="text">{{ section.settings.text }}</div>
             </div>
         </div>
         {% endif %}
@@ -36,6 +42,12 @@
         "type":"text",
         "id":"text",
         "label":"Text"
+      },
+      {
+        "type":"color",
+        "id":"text_color",
+        "label":"Text Color",
+        "default":"#FFFF73"
       }
     ],
     

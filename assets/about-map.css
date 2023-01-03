@@ -71,38 +71,24 @@ width: 100%;
   /* bottom: 0; */
   /* height: 100%; */
   /* width: 100%; */
-  z-index: 3;
 
-}
-.about_map_sticker.item_1 {
-top:-40px;
-left: 30%;
-}
-.about_map_sticker.item_2 {
-  top:40%;
-  left: -30px;
-}
-
-.about_map_sticker.item_3 {
-  top:60%;
-  left: 48%;
 }
 
 .about_map_sticker img {
   height: 100%;
   width: 100%;
 }
-.about_map_sticker.item_1 .map_sticker_container {
+.about_map_sticker.image-type-rectangle .map_sticker_container {
   max-height: 160px;
   max-width: 250px;
   transform: rotate(4deg);
 }
-.about_map_sticker.item_2 .map_sticker_container {
+.about_map_sticker.image-type-ellipse .map_sticker_container {
 width: 240px;
 height: 110px;
 transform: rotate(-10deg);
 }
-.about_map_sticker.item_3 .map_sticker_container {
+.about_map_sticker.image-type-circle .map_sticker_container {
   height: 165px;
   width: 165px;
   transform: rotate(5deg);
@@ -161,15 +147,15 @@ transform: rotate(-10deg);
 }
 
 @media screen and (max-width:749px) {
-  .about_map_sticker.item_1 .map_sticker_container {
+  .about_map_sticker.image-type-rectangle .map_sticker_container {
     width: 100px;
     height: 70px;
   }
-  .about_map_sticker.item_2 .map_sticker_container {
+  .about_map_sticker.image-type-ellipse .map_sticker_container {
     height: 45px;
     width: 100px;
   }
-  .about_map_sticker.item_3 .map_sticker_container {
+  .about_map_sticker.image-type-circle .map_sticker_container {
     height: 70px;
     width: 70px;
   }
@@ -195,6 +181,7 @@ transform: rotate(-10deg);
   .map_container_main,
   .map_location_main {
     width: 50%;
+    min-height: 150px;
   }
   .map_location_main {
     border-left: var(--custom-border-width) solid var(--custom-border-color);
@@ -215,22 +202,30 @@ transform: rotate(-10deg);
   }
   .about_map_sticker.item_2 {
     padding: 20px;
-    top: 0%;
-    left: auto;
-    right: 0;
   }
-  .about_map_sticker.item_1 {
+  .about_map_sticker.image-type-rectangle {
     padding: 20px;
-    top: 35px;
-    left: auto;
-    right: 0;
-    z-index: 4;
+    /* top: 35px; */
+    /* left: auto; */
+    /* right: 0; */
+    /* z-index: 4; */
   }
   .about_map_sticker.item_3 {
     padding: 20px;
+  }
+  .about_map_sticker.image-type-ellipse {
+    top:20px;
     left: auto;
-    right: 15px;
-    top: 85px;
-    z-index: 5;
+    right: 40px;
+  }
+  .about_map_sticker.image-type-rectangle {
+    top:40px;
+    left:auto;
+    right: 25px;
+  }
+  .about_map_sticker.image-type-circle {
+    top: 112px;
+    left: auto;
+    right: 62px;
   }
 }

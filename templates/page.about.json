@@ -10,7 +10,49 @@
     },
     "0439eb05-c8c8-48df-9599-efe411340464": {
       "type": "about-map",
+      "blocks": {
+        "b8b4b409-f6dc-45d4-8d48-324097a0e57e": {
+          "type": "image",
+          "settings": {
+            "image_style": "ellipse",
+            "top": 37,
+            "left": -3,
+            "text": "brand",
+            "top_mob": 5,
+            "left_mob": 65
+          }
+        },
+        "73c933f5-c3fb-455d-8815-e7c3997476ed": {
+          "type": "image",
+          "settings": {
+            "image_style": "rectangle",
+            "top": -15,
+            "left": 40,
+            "text": "ETHOs",
+            "top_mob": 9,
+            "left_mob": 60
+          }
+        },
+        "d5053e4c-c1ce-41e3-98f3-d73bba7b7fe4": {
+          "type": "image",
+          "settings": {
+            "image_style": "circle",
+            "top": 57,
+            "left": 44,
+            "text": "Rewards",
+            "top_mob": 27,
+            "left_mob": 70
+          }
+        }
+      },
+      "block_order": [
+        "b8b4b409-f6dc-45d4-8d48-324097a0e57e",
+        "73c933f5-c3fb-455d-8815-e7c3997476ed",
+        "d5053e4c-c1ce-41e3-98f3-d73bba7b7fe4"
+      ],
       "settings": {
+        "heading": "Truly Pure Juice and Food.",
+        "text": "With goodsugar, you don’t have to compromise between what your taste buds want and what your body needs."
       }
     },
     "023a7ccc-560e-4a9d-85e1-2e3e2679652d": {
@@ -46,7 +88,17 @@
     "f49b88f7-1e2e-4880-8367-dd76675a9f6b": {
       "type": "about-image-overlay-text",
       "settings": {
-        "text": "The biggest disease we’re fighting against is an ecological one: single-use plastic (s.u.p)."
+        "bg_image": "shopify:\/\/shop_images\/iStock-1193095410_1.png",
+        "text": "The biggest disease we’re fighting against is an ecological one: single-use plastic (s.u.p).",
+        "text_color": "#ffff73"
+      }
+    },
+    "24beab2d-87a2-4961-a57a-f20883f39917": {
+      "type": "about-text-image-grid",
+      "settings": {
+        "bg_color": "",
+        "heading_text": "From convenience to blight, the death-cycle of s.u.p starts with your choices and ends back in your body: killing a few birds, biomes, and sea dwellers along the way.",
+        "heading_text_right": "<p>You’ve heard this before, right?...but have you heard of a new business going as far as to banish all s.u.p from its stores?We hadn’t either,  so we’re doing it ourselves.<\/p>"
       }
     }
   },
@@ -59,6 +111,7 @@
     "f25573c4-8c19-4317-92b4-5cc05b3c551a",
     "3eab5b77-e0ba-402d-8f5d-44d9d95f7309",
     "07f486b9-d614-4ae3-b111-f69b04d2cf6c",
-    "f49b88f7-1e2e-4880-8367-dd76675a9f6b"
+    "f49b88f7-1e2e-4880-8367-dd76675a9f6b",
+    "24beab2d-87a2-4961-a57a-f20883f39917"
   ]
 }

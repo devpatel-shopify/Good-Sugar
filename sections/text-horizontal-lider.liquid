@@ -13,6 +13,12 @@
         .text-slider--{{ block.id }} .text {
         max-width:{{ block.settings.text_max_width }}px;
         } 
+
+        @media screen and (max-width:1024px) {
+            .text-slider--{{ block.id }} .text {
+                {% comment %} max-width:70%; {% endcomment %}
+            }            
+        }
         @media screen and (max-width:749px) {
             .text-slider--{{ block.id }} {
                 width:{{ block.settings.block_width }}%;

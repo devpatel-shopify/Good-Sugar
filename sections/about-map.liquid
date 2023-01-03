@@ -1,18 +1,31 @@
 {{ 'about-map.css' | asset_url | stylesheet_tag }}
 
+{% assign count = section.blocks | size %}
+
+<style>
+  {% for block in section.blocks %}
+    @media screen and (min-width:750px) {
+      .map-sticker--{{ block.id }} {
+        top:{{ block.settings.top }}%;
+        left:{{ block.settings.left }}%;
+      }
+    }
+  {% endfor %} 
+</style>
+
 <div class="about_map" id="about-mp--{{ section.id }}">
   <div class="about_map_main" id="about_map_main">
     <div class="about_map_wrapper map--small">
       <div class="map_text_container">
         <div class="map_text_title_box">
           <div class="map_text_title">
-            <h1>Truly Pure Juice and Food.</h1>
+            <h1>{{ section.settings.heading }}</h1>
           </div>
         </div>
         <div class="map_text_subtext_box">
           <div class="map_text_subtext">
             <p>
-              With goodsugar, you don’t have to compromise between what your taste buds want and what your body needs.
+              {{ section.settings.text }}
             </p>
           </div>
         </div>
@@ -46,27 +59,41 @@
         </div>
       </div>
     </div>
-    <div class="about_map_sticker item_1">
+    {% for block in section.blocks %}
+    <div class="about_map_sticker block_{{ forloop.index }} image-type-{{ block.settings.image_style }} map-sticker--{{ block.id }}" style="z-index:calc({{ forloop.index }} + 3);">
       <div class="map_sticker_container">
         <div class="map_sticker_image">
+          {% if block.settings.image_style == 'rectangle' %}
           <img src="https://cdn.shopify.com/s/files/1/0680/9331/3298/files/image_12.png?v=1671192667">
+          {% endif %}
+          {% if block.settings.image_style == 'ellipse' %}
+            <img src="https://cdn.shopify.com/s/files/1/0680/9331/3298/files/image_8.png?v=1671134824">
+            {% endif %}
+            {% if block.settings.image_style == 'circle' %}
+            <img src="https://cdn.shopify.com/s/files/1/0680/9331/3298/files/image_14_1.png?v=1671192975">
+            {% endif %}
         </div>
         <div class="map_sticker_text">
-          <div class="text">ETHOs</div>
+          <div class="text">{{ block.settings.text }}</div>
         </div>
       </div>
     </div>
-    <div class="about_map_sticker item_2">
+  {% endfor %}
+
+    {% comment %} <div class="about_map_sticker item_2">
       <div class="map_sticker_container">
         <div class="map_sticker_image">
+          {% if block.settings.image_style == 'rectangle' %}
           <img src="https://cdn.shopify.com/s/files/1/0680/9331/3298/files/image_8.png?v=1671134824">
+          {% endif %}
         </div>
         <div class="map_sticker_text">
           <div class="text">brand</div>
         </div>
       </div>
-    </div>
-    <div class="about_map_sticker item_3">
+    </div> {% endcomment %}
+
+    {% comment %} <div class="about_map_sticker item_3">
       <div class="map_sticker_container">
         <div class="map_sticker_image">
           <img src="https://cdn.shopify.com/s/files/1/0680/9331/3298/files/image_14_1.png?v=1671192975">
@@ -75,7 +102,8 @@
           <div class="text">Rewards</div>
         </div>
       </div>
-    </div>
+    </div> {% endcomment %}
+
   </div>
 </div>
 
@@ -84,8 +112,76 @@
 {% schema %}
 {
   "name": "About Map",
-  "settings": [],
-
+  "settings": [
+    {
+      "type":"text",
+      "id":"heading",
+      "label":"Heading",
+      "default":"Truly Pure Juice and Food."
+    },
+    {
+      "type":"text",
+      "id":"text",
+      "label":"Text",
+      "default":"With goodsugar, you don’t have to compromise between what your taste buds want and what your body needs."
+    }
+  ],
+  "blocks":[
+    {
+      "type":"image",
+      "name":"Sticker",
+      "settings":[
+        {
+          "type":"select",
+          "id":"image_style",
+          "label":"Image Style",
+          "options":[
+            {
+              "value":"rectangle",
+              "label":"Rectangle"
+            },
+            {
+              "value":"circle",
+              "label":"Circle"
+            },
+            {
+              "value":"ellipse",
+              "label":"Ellipse"
+            }
+          ]
+        },
+        {
+          "type":"number",
+          "id":"top",
+          "label":"Position from Top"
+        },
+        {
+          "type":"number",
+          "id":"left",
+          "label":"Position from Left"
+        },
+        {
+          "type":"text",
+          "id":"text",
+          "label":"Text"
+        }
+        /*{
+          "type":"header",
+          "content":"For Mobile"
+        },
+        {
+          "type":"number",
+          "id":"top_mob",
+          "label":"Position from Top"
+        },
+        {
+          "type":"number",
+          "id":"left_mob",
+          "label":"Position from Left"
+        }*/
+      ]
+    }
+  ],
   "presets": [
     {
       "name": "About Map",

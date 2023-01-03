@@ -668,7 +668,7 @@ main#MainContent {
 
 
 
-/* New Css start */
+/* cart page Css start */
 
 .title-wrapper-with-link .title {
     margin: 0;
@@ -707,4 +707,27 @@ main#MainContent {
 .price--end {
     text-align: right;
     font-family: var(--font-heading-family);
+}
+.cart__items {
+    position: relative;
+    padding-bottom: 3rem;
+    border-bottom: var(--custom-border-width) solid var(--custom-border-color) !important;
+}
+.cart-items th {
+    border-bottom: var(--custom-border-width) solid var(--custom-border-color) !important;
+}
+
+/* Collection css start */
+
+.card-wrapper .full-unstyled-link:hover {
+    text-decoration: none !important;
+}
+.card-wrapper .price__regular {
+    font-family: var(--font-heading-family);
+}
+.price--on-sale .price__sale {
+    font-family: var(--font-heading-family);
+}
+.full-unstyled-link {
+    color: var(--custom-text_color);
 }

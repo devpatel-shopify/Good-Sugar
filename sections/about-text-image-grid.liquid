@@ -1,0 +1,55 @@
+{{ 'about-text-image-grid.css' | asset_url | stylesheet_tag }}
+
+<section class="about-text-image-grid about-text-{{ section.id }}">
+  <div class="text_img_top">
+    <div class="text_img_main">
+      <div class="text_img leftc">
+        <h4>{{ section.settings.heading_text }}</h4>
+      </div>
+      <div class="text_img rightc">
+        <h4>{{ section.settings.heading_text_right }}</h4>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.about-text-{{ section.id }} {
+      background:{{ section.settings.bg_color }};
+  }
+</style>
+
+      
+{% schema %}
+{
+  "name": "About Text Image Grid",
+  "tag": "section",
+  "settings": [
+        {
+            "type":"color_background",
+            "id":"bg_color",
+            "label":"Background Color"
+        },
+        {
+          "type": "text",
+          "id": "heading_text",
+          "label": "Heading"
+        },
+        {
+          "type": "text",
+          "id": "heading_text_right",
+          "label": "Sub Heading"
+        }
+    
+  ],
+  
+  "presets": [
+     {
+       "name": "About Text Image Grid",
+       "settings": {
+          
+        }
+     }
+   ]
+}
+{% endschema %}
