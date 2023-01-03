@@ -6,36 +6,54 @@ h1, h2, h3, h4, h5, h6, span, strong, p, li, ul{
 .about-text-image-grid {
     
 }
-.text_img_top {
+.text_img_grid_top {
     width: 100%;
     padding: 150px 220px 100px 220px;
 }
-.text_img_main {
+.text_img_grid_main {
     display: flex;
     flex-wrap: wrap;
 }
-.text_img.leftc {
+.text_img_grid.leftc {
   width: 100%;
   max-width: 60%;
 }
-.text_img.rightc {
+.text_img_grid.rightc {
   width: 100%;
   max-width: 40%;
 }
-.text_img h4 {
+.text_img_grid h4 {
     font-size: var(--body-font-size);
     color: var(--custom-text_color);
     line-height: 1.12;
     font-family: var(--font-body-family);
 }
-.text_img.leftc h4 {
+.text_img_grid.leftc h4 {
     max-width: 510px;
   font-family: var(--font-heading-family);
 }
-.text_img.rightc h4 {
+.text_img_grid.rightc h4 {
   max-width: 430px;
   font-size: var(--body-font-size);
   color: var(--custom-text_color);
   line-height: 1.12;
   font-family: var(--font-body-family);
+}
+
+
+.text_img_grid_bottom {
+    width: 100%;
+    padding: 150px 220px 100px 220px;
+}
+.text_img_grid_bottom_main {
+    display: flex;
+    flex-wrap: wrap;
+}
+.text_img_grid_bottom.leftcol {
+  width: 100%;
+  max-width: 60%;
+}
+.text_img_grid_bottom.rightcol {
+  width: 100%;
+  max-width: 40%;
 }

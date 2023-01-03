@@ -1,16 +1,26 @@
 {{ 'about-text-image-grid.css' | asset_url | stylesheet_tag }}
 
 <section class="about-text-image-grid about-text-{{ section.id }}">
-  <div class="text_img_top">
-    <div class="text_img_main">
-      <div class="text_img leftc">
+  <div class="text_img_grid_top">
+    <div class="text_img_grid_main">
+      <div class="text_img_grid leftc">
         <h4>{{ section.settings.heading_text }}</h4>
       </div>
-      <div class="text_img rightc">
+      <div class="text_img_grid rightc">
         <h4>{{ section.settings.heading_text_right }}</h4>
       </div>
     </div>
+    <div class="text_img_grid_bottom_main">
+      <div class="text_img_grid_bottom leftcol">
+        <h4>{{ section.settings.bottom_heading }}ghjghjk</h4>
+        <h6>{{ section.settings.bottom_subheading }}ghjkh</h6>
+      </div>
+      <div class="text_img_grid_bottom rightcol">
+        <h4 class="right_ractangle">hjkhj</h4>
+      </div>
+    </div>
   </div>
+    
 </section>
 
 <style>
@@ -39,6 +49,17 @@
           "type": "text",
           "id": "heading_text_right",
           "label": "Sub Heading"
+        },
+
+        {
+          "type": "text",
+          "id": "bottom_heading",
+          "label": "Bottom Heading"
+        },
+        {
+          "type": "text",
+          "id": "bottom_subheading",
+          "label": "Bottom Sub Heading"
         }
     
   ],
