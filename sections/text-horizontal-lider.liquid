@@ -10,15 +10,16 @@
             font-size: {{ block.settings.font-size }}px;
             font-family: var({{ block.settings.font_family }});
         }
-        {% comment %} .text-slider--{{ block.id }} {
+        .text-slider--{{ block.id }} .text {
         max-width:{{ block.settings.text_max_width }}px;
-        } {% endcomment %}
+        } 
         @media screen and (max-width:749px) {
             .text-slider--{{ block.id }} {
                 width:{{ block.settings.block_width }}%;
             } 
             .text-slider--{{ block.id }} .text p  {
-                font-size: {{ block.settings.font-size_mob }}px; 
+                font-size: calc({{ block.settings.font-size_mob }}px + 1vw - 3.75px);
+              
             }
             .text-slider--{{ block.id }} {
                 {%- if block.settings.show_border_top == true -%}

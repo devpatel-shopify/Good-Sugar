@@ -18,6 +18,7 @@
             "text_color": "#5c398d",
             "font-size": 50,
             "font_family": "--font-heading-family",
+            "text_max_width": 750,
             "font-size_mob": 25,
             "block_width": 100,
             "show_border_top": false,
@@ -33,6 +34,7 @@
             "text_color": "#5c398d",
             "font-size": 20,
             "font_family": "--font-heading-family",
+            "text_max_width": 450,
             "font-size_mob": 9,
             "block_width": 50,
             "show_border_top": false,
@@ -48,6 +50,7 @@
             "text_color": "#5c398d",
             "font-size": 20,
             "font_family": "--font-body-family",
+            "text_max_width": 450,
             "font-size_mob": 9,
             "block_width": 50,
             "show_border_top": false,
@@ -63,6 +66,7 @@
             "text_color": "#5c398d",
             "font-size": 20,
             "font_family": "--font-body-family",
+            "text_max_width": 450,
             "font-size_mob": 9,
             "block_width": 100,
             "show_border_top": true,
@@ -87,9 +91,9 @@
         "c8edeed7-1a17-410e-bdac-a67fb72da30d": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/image_28.png",
+            "image": "shopify:\/\/shop_images\/image_28_1.png",
             "title": "blog",
-            "text": "<p>Learn from Marcus<\/p>",
+            "text": "<p>Learn from <br\/>Marcus<\/p>",
             "title_color": "#eca847",
             "text_color": "#ffffff"
           }
@@ -97,9 +101,9 @@
         "f7dae696-d8d3-4759-b2ec-2e198559c542": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/image_27.png",
+            "image": "shopify:\/\/shop_images\/image_27_1.png",
             "title": "library",
-            "text": "<p>Learn from others<\/p>",
+            "text": "<p>Learn from<br\/> others<\/p>",
             "title_color": "#5c398d",
             "text_color": "#000000"
           }
@@ -107,7 +111,7 @@
         "98922060-4799-4846-b99b-decf03aa02a1": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/image_29.png",
+            "image": "shopify:\/\/shop_images\/image_29_1.png",
             "title": "book",
             "text": "<p>get the <br\/>book<\/p>",
             "title_color": "#5c398d",
@@ -157,7 +161,6 @@
         "9b586695-e97b-47c3-a898-55a4263957ec"
       ],
       "settings": {
-        "bg_color": "radial-gradient(rgba(245, 131, 37, 1) 47%, rgba(208, 199, 227, 1) 83%)"
       }
     }
   },
