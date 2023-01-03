@@ -4,46 +4,47 @@
 
 <div class="about_center_image" id="about-center-image--{{ section.id }}">
     <div class="about_center_image_wrapper">
+      {% if section.settings.heading != blank %}
       <div class="heading">
-        <div class="heading_text h1 center">We were meant to eat plants.</div>
+        <div class="heading_text h1 center">{{ section.settings.heading }}</div>
       </div>
+      {% endif %}
+      {% if section.settings.left_text != blank and section.settings.right_text != blank %}
       <div class="image_text_wrapper">
         <div class="image_text_main">
-          <div class="image_text_item item_1">
+          <div class="image_text_item item_1 left_part">
             <div class="text">
-              This isn’t some whackadoo perspective our founder, Marcus Antebi, picked up after years of jumping out of
-              planes and pressing fresh juice – it’s what the unvarnished science consistently shows.
+              {{ section.settings.left_text }}
             </div>
           </div>
           {% comment %} <div class="image_text_item"></div> {% endcomment %}
-          <div class="image_text_item item_2">
+          <div class="image_text_item item_2 right_part">
             <div class="text">
-              He just listened...and learned...and tinkered...and toiled...until finally he created an approach to juicing
-              that didn’t require pasteurization or additives or preservatives: just the pure way nature intended.<br>
-              <br>
-              You can taste it in all of our offerings and how good they make us feel
+              {{ section.settings.right_text }}
             </div>
-            <div class="imagr_text_button">
-              <a class="button_wrapper" href="#">
+            {% if section.settings.btn_bg_image != blank and section.settings.btn_url != blank and section.settings.btn_text != blank %}
+            <div class="image_text_button">
+              <a class="button_wrapper" href="{{ section.settings.btn_url }}">
                 <div class="image">
-                  <img src="https://cdn.shopify.com/s/files/1/0680/9331/3298/files/image_10.png?v=1671191937">
+                  <img src="{{ section.settings.btn_bg_image | img_url: 'master' }}">
                 </div>
                 <div class="btn_text">
-                  Learn More <br>
-                  from Marcus
+                  {{ section.settings.btn_text }}
                 </div>
               </a>
             </div>
+            {% endif %}
           </div>
         </div>
       </div>
+      {% endif %}
       <div class="image_text_slider">
         <div class="image_text_slider_wrapper">
           <div class="swiper image_text_slide_main">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
               <!-- Slides -->
-              <div class="swiper-slide item_1">
+              <div class="swiper-slide item_1 left_part">
                 <div class="slide_item_wrapper">
                   <div class="text h1">
                     Just because they claim “juice” and “pressed” and “health” doesn’t mean they are.
@@ -97,7 +98,36 @@
   "name": "About image with Slider",
   "tag": "section",
   "settings": [
-    
+    {
+      "type":"text",
+      "id":"heading",
+      "label":"Heading"
+    },
+    {
+      "type":"text",
+      "id":"left_text",
+      "label":"Left Side Text"
+    },
+    {
+      "type":"text",
+      "id":"right_text",
+      "label":"right Side Text"
+    },
+    {
+      "type":"image_picker",
+      "id":"btn_bg_image",
+      "label":"Button Background Image"
+    },
+    {
+      "type":"text",
+      "label":"Button Text",
+      "id":"btn_text"
+    },
+    {
+      "type":"url",
+      "id":"btn_url",
+      "label":"Button URL"
+    }
   ],
   
   "presets": [
