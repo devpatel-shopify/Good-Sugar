@@ -1,0 +1,47 @@
+
+{{ 'about-line-content.css' | asset_url | stylesheet_tag }}
+
+
+<div class="about_line_content">
+    <div class="about_line_wrapper">
+      <div class="heading">
+        A diet that’s full of plant-based, nutrient-dense ingredients – and free of animal-based ones – is proven to boost
+        health, support exercise, and (in many cases) reverse the negative side-effects of aging and disease.
+      </div>
+      <div class="about_line_content_box">
+        <div class="about_line_box_text">Oh, and btw we’re kosher, too.
+        That’s a fact, just like these are:      
+        </div>
+        <div class="about_line_box_line">
+          <div class="about_line_box_line_container">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+          <div class="about_line_box_line_text">Hard as it is to live by this ethos, we’ve done our darndest to make it easy, delicious, and fun.</div>
+        </div>
+      </div>
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "About Line Content",
+  "tag": "section",
+  "settings": [
+    
+  ],
+  
+  "presets": [
+     {
+       "name": "About Line Content",
+       "settings": {
+          
+        }
+     }
+   ]
+}
+{% endschema %}

@@ -12,10 +12,46 @@
       "type": "about-map",
       "settings": {
       }
+    },
+    "023a7ccc-560e-4a9d-85e1-2e3e2679652d": {
+      "type": "about-center-image-with-slider",
+      "settings": {
+      }
+    },
+    "4dd2fe52-519d-41f9-83a0-aa45b72f4ecd": {
+      "type": "about-custom-heading",
+      "settings": {
+      }
+    },
+    "58cce4d0-defa-445b-a7e9-f10b408ab85c": {
+      "type": "about-compair",
+      "settings": {
+      }
+    },
+    "f25573c4-8c19-4317-92b4-5cc05b3c551a": {
+      "type": "about-large-image-text",
+      "settings": {
+      }
+    },
+    "3eab5b77-e0ba-402d-8f5d-44d9d95f7309": {
+      "type": "about-text-with-image",
+      "settings": {
+      }
+    },
+    "07f486b9-d614-4ae3-b111-f69b04d2cf6c": {
+      "type": "about-line-content",
+      "settings": {
+      }
     }
   },
   "order": [
     "main",
-    "0439eb05-c8c8-48df-9599-efe411340464"
+    "0439eb05-c8c8-48df-9599-efe411340464",
+    "023a7ccc-560e-4a9d-85e1-2e3e2679652d",
+    "4dd2fe52-519d-41f9-83a0-aa45b72f4ecd",
+    "58cce4d0-defa-445b-a7e9-f10b408ab85c",
+    "f25573c4-8c19-4317-92b4-5cc05b3c551a",
+    "3eab5b77-e0ba-402d-8f5d-44d9d95f7309",
+    "07f486b9-d614-4ae3-b111-f69b04d2cf6c"
   ]
 }

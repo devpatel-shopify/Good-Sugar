@@ -1,0 +1,31 @@
+
+
+{{ 'about-custom-heading.css' | asset_url | stylesheet_tag }}
+
+
+<div class="about_custom_heading">
+    <div class="custom_heading_wrapper">
+      <div class="heading center">
+        <div class="text"><span>so</span><span>how is goodsugar</span><span>purely different:</span></div>
+      </div>
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "About Custom Heading",
+  "tag": "section",
+  "settings": [
+    
+  ],
+  
+  "presets": [
+     {
+       "name": "About Custom Heading",
+       "settings": {
+          
+        }
+     }
+   ]
+}
+{% endschema %}

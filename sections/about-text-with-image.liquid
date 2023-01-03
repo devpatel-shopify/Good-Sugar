@@ -1,0 +1,38 @@
+{{ 'about-text-image.css' | asset_url | stylesheet_tag }}
+
+
+<div class="about_text_image">
+    <div class="about_text_image_wrapper">
+      <div class="about_text_box">
+        <div class="about_text_box_main">
+          <div class="text">Whether to lose weight or gain years, the solution is the same.</div>
+        </div>
+      </div>
+      <div class="about_image_box">
+        <div class="about_image_box_main">
+          <div class="image">
+            <img src="https://cdn.shopify.com/s/files/1/0680/9331/3298/files/image_25_1.png?v=1672648080">
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "About Text With Image",
+  "tag": "section",
+  "settings": [
+    
+  ],
+  
+  "presets": [
+     {
+       "name": "About Text With Image",
+       "settings": {
+          
+        }
+     }
+   ]
+}
+{% endschema %}

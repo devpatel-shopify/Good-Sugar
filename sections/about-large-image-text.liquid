@@ -1,0 +1,46 @@
+
+
+{{ 'about-image-text.css' | asset_url | stylesheet_tag }}
+
+
+<div class="about_image_text">
+    <div class="about_image_text_wrapper">
+      <div class="text center h1">
+        We’re not saying we’re perfect, just gooder than the competition...and challenging you to challenge us to stay
+        that way.
+      </div>
+      <div class="image_main">
+        <div class="image">
+          <img src="https://cdn.shopify.com/s/files/1/0680/9331/3298/files/image_24_1.png?v=1672254504">
+          <div class="sticker_image_main desktop">
+            <div class="sticker_image">
+              <div class="image">
+                <img src="https://cdn.shopify.com/s/files/1/0680/9331/3298/files/image_14_1.png?v=1671192975">
+              </div>
+              <div class="sticker_text">CTA</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% schema %}
+  {
+    "name": "About large Image Text",
+    "tag": "section",
+    "settings": [
+      
+    ],
+    
+    "presets": [
+       {
+         "name": "About large Image Text",
+         "settings": {
+            
+          }
+       }
+     ]
+  }
+  {% endschema %}
+  
