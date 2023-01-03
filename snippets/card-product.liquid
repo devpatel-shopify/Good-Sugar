@@ -228,7 +228,9 @@
                         disabled
                       {% endif %}
                     >
+                      {% if price_bg_image != blank %}
                       <img src="{{ price_bg_image | img_url: 'master' }}">
+                      {% endif %}
                       <div class="card_price">
                         {% render 'price', product: card_product, price_class: '' %}
                       </div>
