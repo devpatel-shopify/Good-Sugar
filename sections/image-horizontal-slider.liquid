@@ -25,10 +25,8 @@
       <div class="swiper-wrapper">
         <!-- Slides -->
         {%- for block in section.blocks -%}
-          <div
-            class="block_{{ forloop.index }} swiper-slide image_slider_wrapper image_slider--{{ block.id }}"
-            class=""
-          >
+          {%- if block.settings.image != blank -%}
+          <div class="block_{{ forloop.index }} swiper-slide image_slider_wrapper image_slider--{{ block.id }}">
             <div class="image_slider_main">
               <div class="image_box">
                 <div class="image">
@@ -47,6 +45,7 @@
               </div>
             </div>
           </div>
+        {%- endif -%}
         {%- endfor -%}
       </div>
       <!-- If we need pagination -->

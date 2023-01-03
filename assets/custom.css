@@ -662,3 +662,15 @@ main#MainContent {
         padding: 5px 0;
     }  
 }
+
+
+
+
+
+
+/* New Css start */
+
+.title-wrapper-with-link .title {
+    margin: 0;
+    color: var(--custom-text_color);
+}

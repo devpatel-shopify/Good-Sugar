@@ -18,7 +18,7 @@
                 width:{{ block.settings.block_width }}%;
             } 
             .text-slider--{{ block.id }} .text p  {
-                font-size: calc({{ block.settings.font-size_mob }}px + 1vw - 3.75px);
+                font-size: calc({{ block.settings.font-size_mob }}vw - 0.75px);
               
             }
             .text-slider--{{ block.id }} {
@@ -44,13 +44,15 @@
         <div class="text_horizonatl_slider_main swiper">
             <div class="swiper-wrapper">
                 {%- for block in section.blocks -%}
+                {%- if block.settings.text != blank -%}
                 <div class="swiper-slide text_horizonatl_slider text-slider--{{ block.id }}">
                     <div class="text_horizontal_slider_box">
                         <div class="main_text_wrapper">
                             <div class="text">{{ block.settings.text }}</div>
                         </div>
                     </div>
-                </div>                
+                </div>    
+                {%- endif -%}            
                 {%- endfor -%}
             </div>
             <!-- If we need pagination -->
@@ -129,7 +131,7 @@
                 "id": "font-size_mob",
                 "min":0,
                 "max":100,
-                "unit": "px",
+                "unit": "vw",
                 "label": "Font size for Mobile",
                 "default": 9
             },
