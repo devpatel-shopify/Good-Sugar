@@ -42,6 +42,12 @@
       "type": "about-line-content",
       "settings": {
       }
+    },
+    "f49b88f7-1e2e-4880-8367-dd76675a9f6b": {
+      "type": "about-image-overlay-text",
+      "settings": {
+        "text": "The biggest disease we’re fighting against is an ecological one: single-use plastic (s.u.p)."
+      }
     }
   },
   "order": [
@@ -52,6 +58,7 @@
     "58cce4d0-defa-445b-a7e9-f10b408ab85c",
     "f25573c4-8c19-4317-92b4-5cc05b3c551a",
     "3eab5b77-e0ba-402d-8f5d-44d9d95f7309",
-    "07f486b9-d614-4ae3-b111-f69b04d2cf6c"
+    "07f486b9-d614-4ae3-b111-f69b04d2cf6c",
+    "f49b88f7-1e2e-4880-8367-dd76675a9f6b"
   ]
 }

@@ -680,13 +680,16 @@ main#MainContent {
     font-family: var(--font-heading-family);
   color: var(--custom-text_color);
 }
+.title-wrapper-with-link a {
+    color: var(--custom-text_color);
+}
 .cart-item__name {
   color: var(--custom-text_color);
   font-family: var(--font-heading-family);
 }
 .underlined-link:hover, .customer a:hover {
-    color: rgb(var(--color-link));
     text-decoration-thickness: .1rem;
+  color: var(--custom-text_color);
 }
 
 .totals > h2 {
@@ -695,4 +698,13 @@ main#MainContent {
     font-family: var(--font-heading-family);
 
 }
-
+.totals__subtotal-value {
+  font-family: var(--font-heading-family);
+}
+.product-option {
+    font-family: var(--font-heading-family);
+}
+.price--end {
+    text-align: right;
+    font-family: var(--font-heading-family);
+}
