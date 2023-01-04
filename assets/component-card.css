@@ -213,7 +213,7 @@
 
 .card__heading a::after {
   bottom: 0;
-  content: "";
+  /* content: ""; */
   left: 0;
   position: absolute;
   right: 0;
@@ -269,8 +269,8 @@
   }
 
   .underline-links-hover:hover a {
-    text-decoration: underline;
-    text-underline-offset: 0.3rem;
+    /* text-decoration: underline; */
+    /* text-underline-offset: 0.3rem; */
   }
 }
 

@@ -3008,6 +3008,51 @@ details-disclosure > details {
 General CSS For Padding 
 
 ----------------------------*/
-.template-collection .collection .price_order_tag {
+/* .template-collection .collection .price_order_tag {
   display: none;
+}
+.template-collection .collection .card-information button {
+  border: none;
+  background-color: transparent;
+}
+.template-collection .collection .price {
+  font-size: 20px;
+} */
+.price_buy_button_general {
+  position: relative;
+  width: fit-content;
+  border: none;
+  background-color:transparent;
+  margin-top: 15px;
+}
+.price_bg_image {
+  height: 140px;
+  width: 200px;
+}
+.price_buy_button_general:hover img {
+  transform: scale(1.2) !important;
+}
+.price_buy_button_general img,
+.price_buy_button_general:hover img  {
+  transition: all 200ms ease;
+}
+.price_buy_button_general .card_price {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.price {
+  font-size: var(--price-font-size);
+  line-height: 1;
+  font-family: var(--font-heading-family);
+}
+.price_order_tag {
+  font-family: var(--nav-font-family);
 }

@@ -166,12 +166,12 @@ margin-top: 12px;
   width: 0;
   font-size: 0px;
 }
+.card__price_main:hover img,
 .card__price_main img {
-  transition: all 1s ease;
+  transition: all 200ms ease;
 }
 .card__price_main:hover img {
   transform: scale(1.2);
-  transition: all 1s ease;
 }
 .product-recommendations .card-information {
   width: auto;
