@@ -109,7 +109,8 @@
         "list_text_left": "<li>What is Lorem Ipsum?<\/li>\n<br>\n<li>What is Lorem Ipsum?<\/li><br>\n<li>What is Lorem Ipsum?<\/li>",
         "heading_right": "badsugar",
         "subheading_right": "(them)",
-        "list_text_right": "<li>What is Lorem Ipsum?<\/li>\n<br>\n<li>What is Lorem Ipsum?<\/li><br>\n<li>What is Lorem Ipsum?<\/li>"
+        "list_text_right": "<li>What is Lorem Ipsum?<\/li>\n<br>\n<li>What is Lorem Ipsum?<\/li><br>\n<li>What is Lorem Ipsum?<\/li>",
+        "image": "shopify:\/\/shop_images\/image_23_1.png"
       }
     },
     "f25573c4-8c19-4317-92b4-5cc05b3c551a": {
@@ -138,11 +139,12 @@
     "24beab2d-87a2-4961-a57a-f20883f39917": {
       "type": "about-text-image-grid",
       "settings": {
-        "bg_color": "",
-        "heading_text": "From convenience to blight, the death-cycle of s.u.p starts with your choices and ends back in your body: killing a few birds, biomes, and sea dwellers along the way.",
-        "heading_text_right": "<p>You’ve heard this before, right?...but have you heard of a new business going as far as to banish all s.u.p from its stores?We hadn’t either,  so we’re doing it ourselves.<\/p>",
-        "bottom_heading": "",
-        "bottom_subheading": ""
+        "bg_color": "linear-gradient(180deg, rgba(249, 238, 67, 1), rgba(255, 255, 255, 1) 100%)",
+        "text_left": "<p><strong>From convenience to blight, the death-cycle of s.u.p starts with your choices and ends back in your body: killing a few birds, biomes, and sea dwellers along the way.<br\/><\/strong><\/p>",
+        "text_right": "<p>You’ve heard this before, right?...but have you heard of a new business going as far as to banish all s.u.p from its stores?<br\/><br\/>We hadn’t either, <br\/>so we’re doing it ourselves.<br\/><\/p>",
+        "heading": "good’ more, <br>get more.",
+        "text": "<p>Drink a lot of our juices? Swear by our superfood smoothies? Hooked on our snacks? Become a goodist.<\/p>",
+        "image": "shopify:\/\/shop_images\/round_image.png"
       }
     }
   },

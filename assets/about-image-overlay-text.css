@@ -30,7 +30,7 @@
     height: 100%;
     width: 100%;
     display: block;
-    min-height: 185px;
+    min-height: 550px;
     object-fit: cover;
 }
 
@@ -42,6 +42,9 @@
     .overlay_text_content_main .text {
         font-size: 20px;
         line-height: 1.15;
+    }
+    .about_image_overlay_text_main img {
+        min-height: 185px;
     }
     .overlay_text_content {
         padding: 20px;

@@ -748,5 +748,29 @@ main#MainContent {
 .customer>h1, .customer__title {
     color: var(--custom-text_color);
 }
+.customer.account h2 {
+  color: var(--custom-text_color);
+}
+.account h1+a {
+    color: var(--custom-text_color);
+}
+.underlined-link, .customer a {
+    color: var(--custom-text_color);
+}
+.addresses h2 {
+    color: var(--custom-text_color);
+}
 
+
+html {
+      position: relative;
+  height: 100%;
+  box-sizing: border-box;
+}
+.template-addresses .footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
 

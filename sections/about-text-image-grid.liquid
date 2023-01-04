@@ -11,16 +11,53 @@
       <div class="about_text_grid_main">
         <div class="text_grid left_part">
           <div class="text_grid_container">
+            {% if section.settings.text_left != blank %}
             <div class="text">{{ section.settings.text_left }}</div>
+            {% endif %}
           </div>
         </div>
         <div class="text_grid right_part">
-        <div class="text_grid_container">
+          <div class="text_grid_container">
+            {% if section.settings.text_right != blank %}
             <div class="text">{{ section.settings.text_right }}</div>
+            {% endif%}
+            {% if section.settings.btn_url != blank and section.settings.btn_text != blank %}
+            <div class="about_text_grid_button">
+              <div class="about_text_grid_button_wrapper">
+                <div class="button_image">
+                  <div class="image">
+                    <img src="https://cdn.shopify.com/s/files/1/0680/9331/3298/files/image_8.png?v=1671134824">
+                  </div>
+                  <a class="button_text" href="{{ section.settings.btn_url }}">{{ section.settings.btn_text }}</a>
+                </div>
+              </div>
+            </div>
+            {% endif %}
           </div>
         </div>
       </div>
     </div>
+    {% if section.settings.heading != blank and section.settings.text != blank %}
+    <div class="about_text_image_grid_box">
+      <div class="about_text_grid_box">
+        <div class="about_text_grid_box_main left_part">
+          <div class="about_text_grid_box_main_wrapper">
+            <div class="heading">{{ section.settings.heading }}</div>
+            <div class="text">{{ section.settings.text }}</div>
+          </div>
+        </div>
+        <div class="about_text_grid_box_main right_part">
+          <div class="image_wrapper">
+            {% if section.settings.image != blank %}
+            <div class="image">
+              <img src="{{ section.settings.image | img_url: 'master' }}" alt="{{ section.settings.image.alt }}">
+            </div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endif %}
 </div>
 
 {% schema %}
@@ -42,6 +79,31 @@
       "type":"richtext",
       "label":"Right Side Text",
       "id":"text_right"
+    },
+    {
+      "type":"text",
+      "id":"heading",
+      "label":"Heading"
+    },
+    {
+      "type":"richtext",
+      "id":"text",
+      "label":"Text"
+    },
+    {
+      "type":"image_picker",
+      "id":"image",
+      "label":"Image"
+    },
+    {
+      "type":"text",
+      "id":"btn_text",
+      "label":"Button Text"
+    },
+    {
+      "type":"url",
+      "id":"btn_url",
+      "label":"Button URl"
     }
   ],  
   "presets": [
