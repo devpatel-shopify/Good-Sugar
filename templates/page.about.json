@@ -17,9 +17,7 @@
             "image_style": "ellipse",
             "top": 37,
             "left": -3,
-            "text": "brand",
-            "top_mob": 5,
-            "left_mob": 65
+            "text": "brand"
           }
         },
         "73c933f5-c3fb-455d-8815-e7c3997476ed": {
@@ -28,9 +26,7 @@
             "image_style": "rectangle",
             "top": -15,
             "left": 40,
-            "text": "ETHOs",
-            "top_mob": 9,
-            "left_mob": 60
+            "text": "ETHOs"
           }
         },
         "d5053e4c-c1ce-41e3-98f3-d73bba7b7fe4": {
@@ -39,9 +35,7 @@
             "image_style": "circle",
             "top": 57,
             "left": 44,
-            "text": "Rewards",
-            "top_mob": 27,
-            "left_mob": 70
+            "text": "Rewards"
           }
         }
       },
@@ -58,6 +52,11 @@
     "023a7ccc-560e-4a9d-85e1-2e3e2679652d": {
       "type": "about-center-image-with-slider",
       "settings": {
+        "heading": "We were meant to eat plants.",
+        "left_text": "",
+        "right_text": "",
+        "btn_text": "",
+        "btn_url": ""
       }
     },
     "4dd2fe52-519d-41f9-83a0-aa45b72f4ecd": {
@@ -98,7 +97,9 @@
       "settings": {
         "bg_color": "",
         "heading_text": "From convenience to blight, the death-cycle of s.u.p starts with your choices and ends back in your body: killing a few birds, biomes, and sea dwellers along the way.",
-        "heading_text_right": "<p>You’ve heard this before, right?...but have you heard of a new business going as far as to banish all s.u.p from its stores?We hadn’t either,  so we’re doing it ourselves.<\/p>"
+        "heading_text_right": "<p>You’ve heard this before, right?...but have you heard of a new business going as far as to banish all s.u.p from its stores?We hadn’t either,  so we’re doing it ourselves.<\/p>",
+        "bottom_heading": "",
+        "bottom_subheading": ""
       }
     }
   },
