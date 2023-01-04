@@ -44,50 +44,62 @@
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
               <!-- Slides -->
-              <div class="swiper-slide item_1 left_part">
+              {% for block in section.blocks %}
+              <div class="swiper-slide item_1">
                 <div class="slide_item_wrapper">
+                  {% if block.settings.text != blank %}
                   <div class="text h1">
-                    Just because they claim “juice” and “pressed” and “health” doesn’t mean they are.
+                    {{ block.settings.text }}
                   </div>
+                  {% else %}
+                  {% if block.settings.image != blank %}
+                  <div class="image">
+                    <img src="{{ block.settings.image | img_url: 'master' }}">
+                  </div>
+                  {% endif %}
+                  {% endif %}
                 </div>
               </div>
-              <div class="swiper-slide item_2">
+              {% endfor %}
+              {% comment %} <div class="swiper-slide item_2">
                 <div class="slide_item_wrapper">
                   <div class="text h1">In fact, as Marcus saw first hand, it likely means they’re not.</div>
                 </div>
-              </div>
-              <div class="swiper-slide item_3">
+              </div> {% endcomment %}
+              {% comment %} <div class="swiper-slide item_3">
                 <div class="slide_item_wrapper">
                   <div class="image">
                     <img src="https://cdn.shopify.com/s/files/1/0680/9331/3298/files/DISGUSTING-JUICE_1_2.png?v=1672132355">
                   </div>
                 </div>
-              </div>
-              <div class="swiper-slide item_4">
+              </div> {% endcomment %}
+              {% comment %} <div class="swiper-slide item_4">
                 <div class="slide_item_wrapper">
                   <div class="image">
                     <img src="https://cdn.shopify.com/s/files/1/0680/9331/3298/files/DISGUSTING-JUICE_1_3.png?v=1672132355">
                   </div>
                 </div>
-              </div>
+              </div> {% endcomment %}
             </div>
             <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
+            <div class="swiper-pagination hidden"></div>
   
             <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev hidden"></div>
+            <div class="swiper-button-next hidden"></div>
   
             <!-- If we need scrollbar -->
-            <div class="swiper-scrollbar"></div>
+            <div class="swiper-scrollbar hidden"></div>
           </div>
         </div>
       </div>
+      {% if section.settings.center_image != blank %}
       <div class="center_image_main">
         <div class="center_image_wrapper">
-          <img src="https://cdn.shopify.com/s/files/1/0680/9331/3298/files/celery_goodsugar_1.png?v=1672134898">
+          <img src="{{ section.settings.center_image | img_url: 'master' }}">
         </div>
       </div>
+      {% endif %}
     </div>
   </div>
 
@@ -105,7 +117,7 @@
     },
     {
       "type":"image_picker",
-      "id":"cener_image",
+      "id":"center_image",
       "label":"Center Image"
     },
     {
@@ -134,7 +146,24 @@
       "label":"Button URL"
     }
   ],
-  
+  "blocks":[
+      {
+        "type":"slide",
+        "name":"Slide",
+        "settings":[
+          {
+            "type":"richtext",
+            "label":"Text",
+            "id":"text"
+          },
+          {
+            "type":"image_picker",
+            "id":"image",
+            "label":"Image"
+          }
+        ]
+      }
+  ],
   "presets": [
      {
        "name": "About Center image with Slider",

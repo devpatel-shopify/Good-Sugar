@@ -1,4 +1,4 @@
-.custom_heading_wrapper span {
+.custom_heading_wrapper .text {
     font-family: var(--nav-font-family);
     font-size: 45px;
     line-height: 1.05;
@@ -10,10 +10,8 @@
     padding: 60px 100px;
 }
 
-.custom_heading_wrapper span:nth-of-type(1) {
-    transform: rotate(-1deg);
-}
-.custom_heading_wrapper span:nth-of-type(2) {
+.custom_heading_wrapper span {
+    
     transform: rotate(-2deg);
 }
 
@@ -22,7 +20,7 @@
 }
 
 @media screen and (max-width:749px) {
-    .custom_heading_wrapper span {
+    .custom_heading_wrapper .text {
         font-size: 18px;
     }
     .custom_heading_wrapper .heading {

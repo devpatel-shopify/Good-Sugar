@@ -731,3 +731,22 @@ main#MainContent {
 .full-unstyled-link {
     color: var(--custom-text_color);
 }
+
+/* login page css start */
+#recover, #login {
+    scroll-margin-top: 20rem;
+    color: var(--custom-text_color);
+    font-family: var(--font-heading-family);
+}
+.login .field+a {
+    color: var(--custom-text_color);
+}
+.login a {
+    color: var(--custom-text_color);
+}
+
+.customer>h1, .customer__title {
+    color: var(--custom-text_color);
+}
+
+

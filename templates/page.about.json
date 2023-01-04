@@ -51,22 +51,65 @@
     },
     "023a7ccc-560e-4a9d-85e1-2e3e2679652d": {
       "type": "about-center-image-with-slider",
+      "blocks": {
+        "3a702532-6e63-4367-9dbd-5055519b33ec": {
+          "type": "slide",
+          "settings": {
+            "text": "<p>Just because they claim “juice” and “pressed” and “health” doesn’t mean they are.<\/p>"
+          }
+        },
+        "4d7badd8-ec5c-4952-83f2-cee20e4291dd": {
+          "type": "slide",
+          "settings": {
+            "text": "<p>In fact, as Marcus saw first hand, it likely means they’re not.<\/p>"
+          }
+        },
+        "c2333641-5319-49f9-9891-0ad1708405a7": {
+          "type": "slide",
+          "settings": {
+            "text": "",
+            "image": "shopify:\/\/shop_images\/DISGUSTING-JUICE_1_2.png"
+          }
+        },
+        "2e776d19-a2b1-42bf-96f2-671c3fcfd130": {
+          "type": "slide",
+          "settings": {
+            "text": "",
+            "image": "shopify:\/\/shop_images\/DISGUSTING-JUICE_1_3.png"
+          }
+        }
+      },
+      "block_order": [
+        "3a702532-6e63-4367-9dbd-5055519b33ec",
+        "4d7badd8-ec5c-4952-83f2-cee20e4291dd",
+        "c2333641-5319-49f9-9891-0ad1708405a7",
+        "2e776d19-a2b1-42bf-96f2-671c3fcfd130"
+      ],
       "settings": {
         "heading": "We were meant to eat plants.",
-        "left_text": "",
-        "right_text": "",
-        "btn_text": "",
-        "btn_url": ""
+        "center_image": "shopify:\/\/shop_images\/celery_goodsugar_1.png",
+        "left_text": "<p>This isn’t some whackadoo perspective our founder, Marcus Antebi, picked up after years of jumping out of planes and pressing fresh juice – it’s what the unvarnished science consistently shows.<br\/><\/p>",
+        "right_text": "<p>He just listened...and learned...and tinkered...and toiled...until finally he created an approach to juicing that didn’t require pasteurization or additives or preservatives: just the pure way nature intended.<br\/><br\/>You can taste it in all of our offerings and how good they make us feel<\/p>",
+        "btn_bg_image": "shopify:\/\/shop_images\/image_10.png",
+        "btn_text": "Learn More <br>from Marcus",
+        "btn_url": "shopify:\/\/collections"
       }
     },
     "4dd2fe52-519d-41f9-83a0-aa45b72f4ecd": {
       "type": "about-custom-heading",
       "settings": {
+        "text": "So,<span> how is goodsugar <\/span>purely different:"
       }
     },
     "58cce4d0-defa-445b-a7e9-f10b408ab85c": {
       "type": "about-compair",
       "settings": {
+        "heading_left": "goodsugar",
+        "subheading_left": "(us)",
+        "list_text_left": "<li>What is Lorem Ipsum?<\/li>\n<br>\n<li>What is Lorem Ipsum?<\/li><br>\n<li>What is Lorem Ipsum?<\/li>",
+        "heading_right": "badsugar",
+        "subheading_right": "(them)",
+        "list_text_right": "<li>What is Lorem Ipsum?<\/li>\n<br>\n<li>What is Lorem Ipsum?<\/li><br>\n<li>What is Lorem Ipsum?<\/li>"
       }
     },
     "f25573c4-8c19-4317-92b4-5cc05b3c551a": {

@@ -2,21 +2,30 @@
 
 {{ 'about-custom-heading.css' | asset_url | stylesheet_tag }}
 
-
+{% if section.settings.text != blank %}
 <div class="about_custom_heading">
     <div class="custom_heading_wrapper">
       <div class="heading center">
-        <div class="text"><span>so</span><span>how is goodsugar</span><span>purely different:</span></div>
+        <div class="text">
+          {% comment %} <span>so</span><span>how is goodsugar</span><span>purely different:</span> {% endcomment %}
+          {{ section.settings.text }}
+        </div>
       </div>
     </div>
 </div>
+{% endif %}
 
 {% schema %}
 {
   "name": "About Custom Heading",
   "tag": "section",
   "settings": [
-    
+    {
+      "type":"textarea",
+      "id":"text",
+      "label":"Text",
+      "info":"Use Span tag for Text Rotate"
+    }
   ],
   
   "presets": [

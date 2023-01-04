@@ -1,50 +1,98 @@
 {{ 'about-compair.css' | asset_url | stylesheet_tag }}
 
-
+{% if section.settings.heading_left != blank and section.settings.heading_right != blank %}
 <div class="about_compair">
     <div class="about_compair_wrapper">
       <div class="about_compair_main">
         <div class="compair_item item_1">
           <div class="compair_item_wrapper">
-            <div class="compair_header h1">goodsugar</div>
-            <div class="compair_sub_text">(us)</div>
+            {% if section.settings.heading_left != blank %}
+            <div class="compair_header h1">{{ section.settings.heading_left }}</div>
+            {% endif %}
+            {% if section.settings.subheading_left != blank %}
+            <div class="compair_sub_text">{{ section.settings.subheading_left }}</div>
+            {% endif %}
+            {% if section.settings.list_text_left != blank %}
             <div class="compair_details_data">
-              <ul>
-                <li>What is Lorem Ipsum?</li>
-                <li>Why do we use it?</li>
-                <li>Where can I get some?</li>
-              </ul>
+              {{ section.settings.list_text_left }}
             </div>
+            {% endif %}
+            {% if section.settings.image != blank %}
             <div class="about_compair_sticker">
               <div class="compair_sticker_image">
-                <img src="https://cdn.shopify.com/s/files/1/0680/9331/3298/files/image_23_1.png?v=1672637701">
+                <img src="{{ section.settings.image | img_url: 'master' }}" alt="{{ section.settings.image.alt }}">
               </div>
             </div>
+            {% endif %}
           </div>
         </div>
         <div class="compair_item item_2">
           <div class="compair_item_wrapper">
-            <div class="compair_header h1">badsugar</div>
-            <div class="compair_sub_text">(them)</div>
-            <div class="compair_details_data">
-              <ul>
-                <li>What is Lorem Ipsum?</li>
-                <li>Why do we use it?</li>
-                <li>Where can I get some?</li>
-              </ul>
-            </div>
+            {% if section.settings.heading_right != blank %}
+            <div class="compair_header h1">{{ section.settings.heading_right }}</div>
+            {% endif %}
+            {% if section.settings.subheading_right != blank %}
+            <div class="compair_sub_text">{{ section.settings.subheading_right }}</div>
+            {% endif %}
+            {% if section.settings.list_text_right != blank %}
+              <div class="compair_details_data">
+                {{ section.settings.list_text_right }}
+              </div>
+            {% endif %}
           </div>
         </div>
       </div>
     </div>
 </div>
-
+{% endif %}
 {% schema %}
 {
   "name": "About Compair",
   "tag": "section",
   "settings": [
-    
+    {
+      "type":"header",
+      "content":"Left Side"
+    },
+    {
+      "type":"text",
+      "id":"heading_left",
+      "label":"Heading"
+    },
+    {
+      "type":"text",
+      "id":"subheading_left",
+      "label":"Subheading"
+    },
+    {
+      "type":"textarea",
+      "id":"list_text_left",
+      "label":"Text List"
+    },
+    {
+      "type":"header",
+      "content":"Right Side"
+    },
+    {
+      "type":"text",
+      "id":"heading_right",
+      "label":"Heading"
+    },
+    {
+      "type":"text",
+      "id":"subheading_right",
+      "label":"Subheading"
+    },
+    {
+      "type":"textarea",
+      "id":"list_text_right",
+      "label":"Text List"
+    },
+    {
+      "type":"image_picker",
+      "id":"image",
+      "label":"Sticker Image"
+    }
   ],
   
   "presets": [
