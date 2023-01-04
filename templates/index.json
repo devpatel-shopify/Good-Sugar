@@ -58,12 +58,85 @@
             "button_label": "Gimme <br> Gimme <br>Gimme",
             "link": "shopify:\/\/products\/demo-product-1"
           }
+        },
+        "8c24614a-2312-48be-b411-58cad5f7b3e3": {
+          "type": "style_1",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/open-mouth-lightning_01.png",
+            "mobile-image": "shopify:\/\/shop_images\/banner-image-mobile.jpg",
+            "local_video": "",
+            "video_url": "",
+            "heading": "It’s Time to Eat the Truth.",
+            "heading_text_alignment": "center",
+            "mobile_heading_text_alignment": "center",
+            "leftsubheading": "The current state of mass health food is certainly not healthful and, with so many additives and preservatives, can barely be called ‘food.’",
+            "left_subheading_text_alignment": "left",
+            "mobile_left_subheading_text_alignment": "center",
+            "left_box_position": "left",
+            "rightsubheading": "The current state of mass health food is certainly not healthful and, with so many additives and preservatives, can barely be called ‘food.’",
+            "right_subheading_text_alignment": "right",
+            "mobile_right_subheading_text_alignment": "center",
+            "right_box_position": "right",
+            "button_label": "Button label",
+            "btn_position": "right",
+            "mobile_btn_position": "right",
+            "buttonbgimage": "shopify:\/\/shop_images\/btn_bg_image.png",
+            "link": "shopify:\/\/collections\/all",
+            "box_align": "middle-center",
+            "image_overlay_opacity": 0
+          }
+        },
+        "319edcf4-06e2-4e14-8e61-4d6d881784ca": {
+          "type": "style_2",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/nemo-43-single-use_recolored_1_1.png",
+            "mobile-image": "shopify:\/\/shop_images\/nemo-43-single-use_recolored_2_1.png",
+            "local_video": "",
+            "video_url": "",
+            "heading_2": "All. Plastic. Ever. Still. Exists.",
+            "leftsubheading_2": "And if that fact alone makes you feel guilty about every single-use bottle of pasteurized lies you’ve consumed, then it should be easy to understand why we use [term for the type] paper packaging instead.",
+            "rightsubheading_2": "Because as the Buddha (never) said: “a good river that flows within bad banks is not very good at all.”",
+            "buttonbgimage": "shopify:\/\/shop_images\/image_14_2_1.png",
+            "button_label": "Help Us <br>Stop <br>Plastic",
+            "link": "shopify:\/\/collections\/all"
+          }
+        },
+        "e0f193f2-637d-440c-8633-c6b5d29dd314": {
+          "type": "style_3",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_32_1_36083846-dfef-4398-8335-b4360c227431.png",
+            "mobile-image": "shopify:\/\/shop_images\/image_34_1.png",
+            "heading_3": "Drink good. Eat good. Be good.",
+            "image_right": "shopify:\/\/shop_images\/open-mouth-lightning_01_3_1.png",
+            "mobile-image_right": "shopify:\/\/shop_images\/nemo-43-single-use_recolored_3_1.png",
+            "text_3": "Take our [Hero Juice], [Hero Food], [Hero Snack] for instance: this is that “I want something better for lunch” trio you didn’t actually get last week at that press-ery, the week before at that bowls spot, or the week before that at the corner deli.<br><br> This time, grab-and-go with a midday meal that’s actually good for you and the planet.",
+            "buttonbgimage": "shopify:\/\/shop_images\/image_14_2_1.png",
+            "button_label": "Button <br>label",
+            "link": "shopify:\/\/collections"
+          }
+        },
+        "b52cf09b-72bd-4e13-b41f-aa3baba1d82d": {
+          "type": "style_2",
+          "disabled": true,
+          "settings": {
+            "local_video": "",
+            "video_url": "",
+            "heading_2": "",
+            "leftsubheading_2": "Tell your brand's story through images",
+            "rightsubheading_2": "Tell your brand's story through images",
+            "button_label": "Button label",
+            "link": ""
+          }
         }
       },
       "block_order": [
         "28ddc718-0e80-4086-b1a6-ff51705412b2",
         "3343447d-49e6-47f8-ae99-7f79b247fe76",
-        "dacdc06a-0ae2-48c4-884b-562c4559ca7c"
+        "dacdc06a-0ae2-48c4-884b-562c4559ca7c",
+        "8c24614a-2312-48be-b411-58cad5f7b3e3",
+        "319edcf4-06e2-4e14-8e61-4d6d881784ca",
+        "e0f193f2-637d-440c-8633-c6b5d29dd314",
+        "b52cf09b-72bd-4e13-b41f-aa3baba1d82d"
       ],
       "settings": {
         "accessibility_info": "Slideshow about our brand",

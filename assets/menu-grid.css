@@ -98,6 +98,9 @@
 .btn_text p {
     margin: 0;
 }
+.sticker_image {
+    transition: transform 1s ease;
+}
 
 .menu-grid_subtitle p {
     font-size: 18px;

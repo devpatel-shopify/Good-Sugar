@@ -143,6 +143,13 @@ transform: scale(1.2);
 .text_grid.right_part .text {
 max-width: 430px;
 }
+.text_grid.right_part .text {
+  z-index: 2;
+  position: relative;
+}
+.text_grid.right_part .text_grid_container {
+  position: relative;
+}
 
 @media screen and (max-width:1600px) {
   .about_text_grid_box_main_wrapper .text,

@@ -777,7 +777,7 @@ body {
   position: relative;
   margin: 0;
   min-height: 100%;
-  padding-bottom: 51px;
+  padding-bottom: 63px;
 }
  #shopify-section-footer {
   position: absolute;
@@ -786,10 +786,35 @@ body {
   left: 0;
 }
 
+@media screen and (max-width: 1499px){
+body {
+    padding-bottom: 51px;
+}
+  
+}
+
 @media screen and (max-width:749px){
   .addresses h2 {
     text-align: left;
     font-size: 25px;
+}
+  li[data-address]>h2 {
+    font-size: 16px !important;
+}
+  .addresses ul p {
+    font-size: 16px;
+}
+  .customer label {
+    font-size: 16px;
+}
+  body {
+    padding-bottom: 47px;
+}
+  
+}
+@media screen and (max-width: 413px){
+body {
+    padding-bottom: 35px;
 }
   
 }

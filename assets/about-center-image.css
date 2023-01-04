@@ -29,6 +29,11 @@
     position: relative;
     display: inline-block;
 }
+
+.button_wrapper:hover img {
+    transform: scale(1.2);
+}
+
 .button_wrapper img,
 .button_wrapper .image {
     height: 100%;

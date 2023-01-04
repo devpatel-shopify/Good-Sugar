@@ -47,3 +47,11 @@ Splitting();
 //const target = document.querySelector('#target');
 //const results = Splitting({ target: target, by: 'lines' });
 
+const layers = Array.from(document.querySelectorAll(".sticker_image"));
+    document.onmousemove = function (e) {
+      layers.map(function (layer, index) {
+        let xAxis = (window.innerWidth / 2 - e.clientX) / 25;
+        let yAxis = (window.innerHeight / 2 - e.clientY) / 25;
+        layer.style.transform = `translate(${xAxis}px, ${yAxis}px)`;
+      });
+    };
