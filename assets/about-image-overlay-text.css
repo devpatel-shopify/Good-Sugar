@@ -37,7 +37,17 @@
 .overlay_text_content_main {
     max-width: 731px;
 }
+@media screen and (max-width:1200px) {
+    .overlay_text_content {
+        padding-left: 150px;
+    }
+}
 
+@media screen and (max-width:1024px) {
+    .overlay_text_content {
+        padding: 100px;
+    }
+}
 @media screen and (max-width:749px) {
     .overlay_text_content_main .text {
         font-size: 20px;

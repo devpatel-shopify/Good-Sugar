@@ -2999,7 +2999,9 @@ details-disclosure > details {
 .template-index #shopify-section-footer {
   background-color: transparent;
 }
-
+#shopify-section-header.shopify-section-header-sticky {
+  z-index: 4;
+}
 
 /* ------------------------
 

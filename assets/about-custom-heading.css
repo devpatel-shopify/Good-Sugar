@@ -19,6 +19,17 @@
     background-color: #ffffff;
 }
 
+@media screen and (max-width:1200px){
+    .custom_heading_wrapper .heading {
+        padding: 60px 150px;
+    }
+}
+@media screen and (max-width:1024px) {
+    .custom_heading_wrapper .heading {
+        padding: 60px 100px;
+    }
+}
+
 @media screen and (max-width:749px) {
     .custom_heading_wrapper .text {
         font-size: 18px;

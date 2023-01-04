@@ -45,6 +45,16 @@
     max-width: 707px;  
 }
 
+@media screen and (max-width:1200px) {
+    .about_line_wrapper {
+        padding-left: 150px;
+    }
+}
+@media screen and (max-width:1024px) {
+    .about_line_wrapper {
+        padding: 100px;
+    }
+}
 @media screen and (max-width:749px) {
     .about_line_wrapper {
         padding: 0;

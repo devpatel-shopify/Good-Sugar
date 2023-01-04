@@ -17,7 +17,7 @@ window.onscroll = function() {
 
 new Swiper('.image_text_slide_main', {
     // Default parameters
-    slidesPerView:1,
+    slidesPerView:"auto",
     spaceBetween: 0,
     mousewheel: true,
     mousewheel: {
@@ -32,7 +32,7 @@ new Swiper('.image_text_slide_main', {
     breakpoints: {
       // when window width is >= 640px
       750: {
-        slidesPerView: 1.8,
+        //slidesPerView: 1.8,
         spaceBetween: 0,
         autoHeight:100,
       }

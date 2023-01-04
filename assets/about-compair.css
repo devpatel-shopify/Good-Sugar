@@ -61,6 +61,16 @@
     width: 100%;
 }
 
+@media screen and (max-width:1200px) {
+    .compair_item {
+        padding: 100px 50px 100px 150px;
+    }
+}
+@media screen and (max-width:1024px) {
+    .compair_item {
+        padding: 100px 20px 100px 100px;
+    }
+}
 @media screen and (max-width:749px) {
     .compair_item {
         padding: 26px 29px 42px 20px;

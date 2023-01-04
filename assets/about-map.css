@@ -71,7 +71,7 @@ width: 100%;
   /* bottom: 0; */
   /* height: 100%; */
   /* width: 100%; */
-
+  z-index: 3;
 }
 
 .about_map_sticker img {
@@ -139,10 +139,17 @@ transform: rotate(-10deg);
     /* margin: 0 auto; */
   }
 }
-
+@media screen and (max-width:1200px) {
+  .map_text_subtext_box, .map_text_title_box {
+    padding: 100px 100px 100px 150px;
+  }
+}
 @media screen and (max-width:1024px) {
   .map_text_subtext_box, .map_text_title_box {
-    padding: 70px;
+    padding:100px 30px 100px 70px;
+  }
+  .map_text_title h1 {
+    --heading-h1-font-size:32px;
   }
 }
 

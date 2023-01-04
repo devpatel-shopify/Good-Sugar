@@ -60,7 +60,7 @@
       </div>
     </div>
     {% for block in section.blocks %}
-    <div class="about_map_sticker block_{{ forloop.index }} image-type-{{ block.settings.image_style }} map-sticker--{{ block.id }}" style="z-index:calc({{ forloop.index }} + 3);">
+    <div class="about_map_sticker block_{{ forloop.index }} image-type-{{ block.settings.image_style }} map-sticker--{{ block.id }}">
       <div class="map_sticker_container">
         <div class="map_sticker_image">
           {% if block.settings.image_style == 'rectangle' %}

@@ -26,7 +26,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px 0;
+    padding: 10px;
 }
 .about_image_box_main .image,
 .about_image_box_main img {
@@ -54,7 +54,16 @@
     height: 100%;
     width: 100%;
 }
-
+@media screen and (max-width:1200px) {
+    .about_text_box {
+        padding-left: 150px;
+    }
+}
+@media screen and (max-width:1024px) {
+    .about_text_box {
+        padding-left: 100px;
+    }
+}
 @media screen and (max-width:749px) {
     .about_text_box_main .text {
         font-size: 20px;
