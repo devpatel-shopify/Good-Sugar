@@ -14,11 +14,12 @@
         max-width:{{ block.settings.text_max_width }}px;
         } 
 
-        @media screen and (max-width:1024px) {
-            .text-slider--{{ block.id }} .text {
-                {% comment %} max-width:70%; {% endcomment %}
-            }            
+        @media screen and (max-width:1150px) {
+            .text-slider--{{ block.id }} .text p {
+                font-size:{{ block.settings.font_size_tab }}px;
+            }
         }
+        
         @media screen and (max-width:749px) {
             .text-slider--{{ block.id }} {
                 width:{{ block.settings.block_width }}%;
@@ -107,7 +108,16 @@
                 "unit": "px",
                 "label": "Font size for Desktop",
                 "default": 16
-            },            
+            },
+            {
+                "type": "range",
+                "id": "font_size_tab",
+                "min":10,
+                "max":110,
+                "unit": "px",
+                "label": "Font size for Tablet",
+                "default": 16
+            },             
             {
                 "type": "select",
                 "id":"font_family",

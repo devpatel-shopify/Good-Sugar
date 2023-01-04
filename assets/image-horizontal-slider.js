@@ -44,7 +44,7 @@ if('.image_horizontal_slider_main_tablet'){
       breakpoints: {
         // when window width is >= 640px
         750: {
-          slidesPerView: 3,
+          slidesPerView: 2.5,
           spaceBetween: 60,
           autoHeight:100,
         }
