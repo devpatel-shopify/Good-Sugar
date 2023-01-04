@@ -53,7 +53,7 @@
             "bg_image": "shopify:\/\/shop_images\/alex-lvrs-JJKEQgcNzS4-unsplash_1.png",
             "border_color": "#ffff73",
             "title": "juices",
-            "title_text_position": "bottom-right",
+            "title_text_position": "middle-left",
             "title_text_alignment": "left",
             "title_text_alignment_mob": "left",
             "title_color": "#f0eb5b",
