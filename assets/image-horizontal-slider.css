@@ -138,8 +138,13 @@
 }
 
 
-@media screen and (max-width:1087px) {
-    
+@media screen and (max-width:1150px) {
+    .image_slider_content .title {
+        font-size: 35px;
+    }
+    .image_slider_content {
+        padding: 62px 40px 67px;
+    }
 }
 
 
