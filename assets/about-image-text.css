@@ -26,6 +26,16 @@
     position: relative;
     max-width: 165px;
     max-height: 165px;
+    cursor: pointer;
+}
+
+.sticker_image:hover img {
+    transform: scale(1.2);
+    
+}
+.sticker_image img,
+.sticker_image:hover img {
+    transition: all 200ms ease;
 }
 .sticker_text {
     position: absolute;
@@ -38,11 +48,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    
+}
+.sticker_text a {
     font-size: 25px;
     font-family: var(--nav-font-family);
     line-height: 1.05;
     text-align: center;
+    text-decoration: none;
+    color: #000000;
 }
+
+
 .about_image_text_wrapper {
     /* position: relative; */
 }
