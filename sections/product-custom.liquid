@@ -535,11 +535,18 @@
                         </h2>
                       </a>
                     </div>
+                    {%- if product.metafields.product_short_info.text != blank -%}
+                    <div class="product_title_attribute">
+                    <div class="left text">{{ product.metafields.product_short_info.text }}</div>
+                    </div>
+                    {%- endif -%}
+                  {% comment %}
                     {%- if block.settings.text != blank -%}
                     <div class="product_title_attribute">
                     <div class="left text">{{ block.settings.text }}</div>
                     </div>
                     {%- endif -%}
+                  {% endcomment %}
                   </div>
                   {%- if block.settings.show_buy_button == true -%}
                     <div class="product_custom_buy_button">

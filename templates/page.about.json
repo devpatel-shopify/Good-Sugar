@@ -24,7 +24,7 @@
           "type": "image",
           "settings": {
             "image_style": "rectangle",
-            "top": -15,
+            "top": -7,
             "left": 40,
             "text": "ETHOs"
           }

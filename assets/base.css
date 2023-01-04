@@ -3008,3 +3008,6 @@ details-disclosure > details {
 General CSS For Padding 
 
 ----------------------------*/
+.template-collection .collection .price_order_tag {
+  display: none;
+}

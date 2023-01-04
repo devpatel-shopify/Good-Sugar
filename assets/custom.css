@@ -768,22 +768,23 @@ main#MainContent {
 
 
 html {
-  height: 100%;
-  box-sizing: border-box;
-  position: relative;
+ position: relative;
+  margin: 0;
+  min-height: 100%;
 }
 
 body {
   position: relative;
   margin: 0;
   min-height: 100%;
+  padding-bottom: 51px;
 }
- /* #shopify-section-footer {
+ #shopify-section-footer {
   position: absolute;
   right: 0;
   bottom: 0;
   left: 0;
-} */
+}
 
 @media screen and (max-width:749px){
   .addresses h2 {
