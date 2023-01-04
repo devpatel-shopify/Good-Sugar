@@ -42,7 +42,7 @@ width: 100%;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding: 100px;
+  padding: 100px 100px 100px 200px;
 }
 .map_text_title_box {
   border-bottom: var(--custom-border-width) solid var(--custom-text_color);  

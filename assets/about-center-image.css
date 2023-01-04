@@ -18,7 +18,7 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    padding: 100px 100px;
+    padding: 100px 100px 100px  200px;
 }
 .image_text_main > div {
     width: calc(100% / 3);

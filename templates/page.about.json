@@ -142,9 +142,11 @@
         "bg_color": "linear-gradient(180deg, rgba(249, 238, 67, 1), rgba(255, 255, 255, 1) 100%)",
         "text_left": "<p><strong>From convenience to blight, the death-cycle of s.u.p starts with your choices and ends back in your body: killing a few birds, biomes, and sea dwellers along the way.<br\/><\/strong><\/p>",
         "text_right": "<p>You’ve heard this before, right?...but have you heard of a new business going as far as to banish all s.u.p from its stores?<br\/><br\/>We hadn’t either, <br\/>so we’re doing it ourselves.<br\/><\/p>",
-        "heading": "good’ more, <br>get more.",
+        "heading": "good’ more, get more.",
         "text": "<p>Drink a lot of our juices? Swear by our superfood smoothies? Hooked on our snacks? Become a goodist.<\/p>",
-        "image": "shopify:\/\/shop_images\/round_image.png"
+        "image": "shopify:\/\/shop_images\/round_image.png",
+        "btn_text": "CTA",
+        "btn_url": "shopify:\/\/pages\/about"
       }
     }
   },

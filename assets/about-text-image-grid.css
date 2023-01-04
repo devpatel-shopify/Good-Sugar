@@ -89,20 +89,21 @@
 }
 .about_text_grid_box_main_wrapper .text,
 .about_text_grid_box_main_wrapper .heading {
-  height: 50%;
+  /* height: 50%; */
 }
 
 .about_text_grid_box_main.right_part {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 50px;
 }
 
 .about_text_grid_button_wrapper .button_image {
   position: relative;
   max-width: 241px;
   max-height: 110px;
-  margin: -60px -30px 0 auto;
+  margin: -60px -33% 0 auto;
   cursor: pointer;
 }
 .about_text_grid_button_wrapper .button_image:hover img {
@@ -138,6 +139,83 @@ transform: scale(1.2);
   font-size: 25px;
   line-height: 1.05;
 }
+.about_text_grid_button,
 .text_grid.right_part .text {
 max-width: 430px;
+}
+
+@media screen and (max-width:1600px) {
+  .about_text_grid_box_main_wrapper .text,
+  .about_text_grid_box_main_wrapper .heading,
+  .about_text_grid_wrapper {
+    padding: 100px 150px;
+  }
+}
+
+@media screen and (max-width:1450px) {
+  .about_text_grid_button_wrapper .button_image {
+    margin: 5px -10% 0 auto;
+  }
+}
+@media screen and (max-width:1024px) {
+  .about_text_grid_box_main_wrapper .text,
+  .about_text_grid_box_main_wrapper .heading,
+  .about_text_grid_wrapper {
+    padding: 100px 70px 100px 100px;
+  }
+  .about_text_grid_main {
+    column-gap: 50px;
+  }
+  .text_grid.left_part {
+    max-width: calc(60% - 50px);
+    width: calc(60% - 50px);
+  }
+  .about_text_grid_button_wrapper img, .about_text_grid_button_wrapper .image,
+  .about_text_grid_button_wrapper .button_image {
+    max-width: 174px;
+    max-height: 75px;
+  }
+}
+@media screen and (max-width:749px) {
+  
+  .about_text_grid_wrapper {
+    padding: 30px 20px;
+  }
+  .about_text_grid_main {
+    flex-direction: column;
+  }
+  .text_grid.right_part,
+  .text_grid.left_part {
+    width: 100%;
+    max-width: 100%;
+  }
+  .text_grid.right_part {
+    margin-top: 10px;
+  }
+  .text_grid_container p {
+    font-size: 9px;
+  }
+  .about_text_grid_button_wrapper .button_image {
+    max-width: 100px;
+    max-height: 45px;
+    margin: -20px 20% 0 auto;
+  }
+  .about_text_grid_button_wrapper a {
+    font-size: 11px;
+  }
+  .about_text_grid_box_main_wrapper .heading {
+    font-size: 25px;
+    min-height: 100px;
+  } 
+  .about_text_grid_box_main_wrapper p {
+    font-size: 9px;
+  }
+  .about_text_grid_box_main_wrapper .text {
+    min-height: 100px;
+  }
+  .about_text_grid_box_main.right_part,
+  .about_text_grid_box_main_wrapper .heading,
+  .about_text_grid_box_main_wrapper .text {
+    padding: 20px;
+  }
 }

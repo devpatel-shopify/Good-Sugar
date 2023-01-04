@@ -48,15 +48,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    
-}
-.sticker_text a {
     font-size: 25px;
     font-family: var(--nav-font-family);
     line-height: 1.05;
     text-align: center;
     text-decoration: none;
     color: #000000;
+    
+}
+.sticker_text a {
+    
 }
 
 
