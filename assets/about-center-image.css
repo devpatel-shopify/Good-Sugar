@@ -33,7 +33,10 @@
 .button_wrapper:hover img {
     transform: scale(1.2);
 }
-
+.button_wrapper img,
+.button_wrapper:hover img {
+    transition: all 200ms ease;
+}
 .button_wrapper img,
 .button_wrapper .image {
     height: 100%;
