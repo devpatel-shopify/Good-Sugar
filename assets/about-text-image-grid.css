@@ -1,86 +1,22 @@
-*{box-sizing: border-box;}
-h1, h2, h3, h4, h5, h6, span, strong, p, li, ul{
-	padding: 0;
-	margin: 0;
+.text_grid_container p {
+  padding: 0;
+  margin: 0;
 }
-.about-text-image-grid {
-    
-}
-.text_img_grid_top {
-    width: 100%;
-    padding: 150px 220px 100px 220px;
-}
-.text_img_grid_main {
-    display: flex;
-    flex-wrap: wrap;
-}
-.text_img_grid.leftc {
-  width: 100%;
-  max-width: 60%;
-}
-.text_img_grid.rightc {
-  width: 100%;
-  max-width: 40%;
-}
-.text_img_grid h4 {
-    font-size: var(--body-font-size);
-    color: var(--custom-text_color);
-    line-height: 1.12;
-    font-family: var(--font-body-family);
-}
-.text_img_grid.leftc h4 {
-    max-width: 510px;
-  font-family: var(--font-heading-family);
-}
-.text_img_grid.rightc h4 {
-  max-width: 430px;
-  font-size: var(--body-font-size);
-  color: var(--custom-text_color);
-  line-height: 1.12;
-  font-family: var(--font-body-family);
+.about_text_grid_main {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 
-
-.text_img_grid_bottom_main {
-    border-top: var(--custom-border-width) solid var(--custom-border-color);
-    border-bottom: var(--custom-border-width) solid var(--custom-border-color);
-      margin-top: 120px;
-}
-.text_img_grid_bottom_main {
-    display: flex;
-    flex-wrap: wrap;
-}
-.text_img_grid_bottom.leftcol {
-  width: 100%;
-  max-width: 60%;
-}
-.text_img_grid_bottom.rightcol {
-  width: 100%;
-  max-width: 40%;
-  border-left: var(--custom-border-width) solid var(--custom-border-color);
-  position: relative;
+.text_grid.left_part {
+  max-width: 506px;
+  width: 60%;
 }
 
-.right_ractangle {
-    display: block !important;
-    width: 407px;
-    height: 407px;
-    background: #D9D9D9;
-    border-radius: 100%;
-    margin: 167px 0 157px 150px;
+.text_grid.right_part {
+  width: 40%;
 }
-.heading_bottom h4 {
-    font-family: var(--font-heading-family);
-    font-size: 50px;
-    color: var(--custom-text_color);
-    text-transform: lowercase;
-    margin: 89px 0;
-}
-.smal_heading_bottom h6 {
-    font-weight: 800;
-    font-size: 20px;
-    line-height: 115%;
-    text-transform: lowercase;
-    color: var(--custom-text_color);
-    margin: 144px 0;
+
+.about_text_grid_wrapper {
+  padding: 100px 200px 100px 200px;
 }

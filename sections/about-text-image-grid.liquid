@@ -1,73 +1,49 @@
 {{ 'about-text-image-grid.css' | asset_url | stylesheet_tag }}
 
-<section class="about-text-image-grid about-text-{{ section.id }}">
-  <div class="text_img_grid_top">
-    <div class="text_img_grid_main">
-      <div class="text_img_grid leftc">
-        <h4>{{ section.settings.heading_text }}</h4>
-      </div>
-      <div class="text_img_grid rightc">
-        <h4>{{ section.settings.heading_text_right }}</h4>
-      </div>
-    </div>
-    <div class="text_img_grid_bottom_main">
-      <div class="text_img_grid_bottom leftcol">
-        <div class="heading_bottom">
-          <h4>{{ section.settings.bottom_heading }}ghjghjk</h4>
-        </div>
-        <div class="smal_heading_bottom">
-          <h6>{{ section.settings.bottom_subheading }}ghjkh</h6>
-        </div>
-      </div>
-      <div class="text_img_grid_bottom rightcol">
-        <h4 class="right_ractangle"></h4>
-      </div>
-    </div>
-  </div>
-    
-</section>
-
 <style>
-.about-text-{{ section.id }} {
-      background:{{ section.settings.bg_color }};
-  }
-</style>
+  .about-text-{{ section.id }} {
+        background:{{ section.settings.bg_color }};
+    }
+  </style>
+  
+<div class="about-text-image-grid about-text-{{ section.id }}">
+    <div class="about_text_grid_wrapper">
+      <div class="about_text_grid_main">
+        <div class="text_grid left_part">
+          <div class="text_grid_container">
+            <div class="text">{{ section.settings.text_left }}</div>
+          </div>
+        </div>
+        <div class="text_grid right_part">
+        <div class="text_grid_container">
+            <div class="text">{{ section.settings.text_right }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
 
-      
 {% schema %}
 {
   "name": "About Text Image Grid",
   "tag": "section",
   "settings": [
-        {
-            "type":"color_background",
-            "id":"bg_color",
-            "label":"Background Color"
-        },
-        {
-          "type": "text",
-          "id": "heading_text",
-          "label": "Heading"
-        },
-        {
-          "type": "text",
-          "id": "heading_text_right",
-          "label": "Sub Heading"
-        },
-
-        {
-          "type": "text",
-          "id": "bottom_heading",
-          "label": "Bottom Heading"
-        },
-        {
-          "type": "text",
-          "id": "bottom_subheading",
-          "label": "Bottom Sub Heading"
-        }
-    
-  ],
-  
+    {
+      "type":"color_background",
+      "id":"bg_color",
+      "label":"Background Color"
+    },
+    {
+      "type":"richtext",
+      "label":"Left Side Text",
+      "id":"text_left"
+    },
+    {
+      "type":"richtext",
+      "label":"Right Side Text",
+      "id":"text_right"
+    }
+  ],  
   "presets": [
      {
        "name": "About Text Image Grid",
