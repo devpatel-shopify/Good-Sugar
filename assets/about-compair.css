@@ -40,6 +40,7 @@
     color: var(--custom-text_color);
     font-family: var(--font-heading-family);
     line-height: 1.15;
+    display: block;
 }
 .compair_item.item_1 .compair_item_wrapper {
     position: relative;

@@ -17,7 +17,17 @@ new Swiper('.image_horizontal_slider_main', {
     breakpoints: {
       // when window width is >= 640px
       750: {
-        slidesPerView: 4,
+        slidesPerView: 3,
+        spaceBetween: 60,
+        autoHeight:100,
+      },
+      990: {
+        slidesPerView: 3.5,
+        spaceBetween: 60,
+        autoHeight:100,
+      },
+      1550: {
+        slidesPerView: 3.5,
         spaceBetween: 60,
         autoHeight:100,
       }
