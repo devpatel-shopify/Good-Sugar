@@ -97,16 +97,19 @@
     .about_image_text .text {
         padding-top: 26px;
         padding-left: 20px;
-        max-width: 60%;
+        
         --heading-h1-font-size:20px;
         line-height: 1.15;
         padding-bottom: 33px;
         position: relative;
         z-index: 2;
     }
+    .about_image_text .h1 {
+        max-width: 191px;
+    }
     .about_image_text_wrapper {
         position: relative;
-        min-height: 300px;
+        min-height: 272px;
     }
     .about_image_text .image_main {
         position: absolute;

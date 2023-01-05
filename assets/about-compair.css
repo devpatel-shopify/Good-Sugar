@@ -82,7 +82,7 @@
 }
 @media screen and (max-width:749px) {
     .compair_item {
-        padding: 26px 29px 42px 20px;
+        padding: 26px 29px 50px 20px;
     }
     .compair_item_wrapper {
         --heading-h1-font-size:20px;

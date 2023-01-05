@@ -161,6 +161,9 @@ transform: rotate(-10deg);
 }
 
 @media screen and (max-width:749px) {
+  .map_text_title h1 {
+    --heading-h1-font-size:25px;
+  }
   .about_map_sticker.image-type-rectangle .map_sticker_container {
     width: 100px;
     height: 70px;
@@ -195,10 +198,15 @@ transform: rotate(-10deg);
   .map_container_main,
   .map_location_main {
     width: 50%;
-    min-height: 150px;
+    min-height: 189px;
+  }
+  #googleMap iframe {
+    min-height: 189px;
   }
   .map_location_main {
     border-left: var(--custom-border-width) solid var(--custom-border-color);
+    display: flex;
+    align-items: center;
   }
   .map_location_text {
     font-size: var(--body-font-size);
@@ -213,6 +221,7 @@ transform: rotate(-10deg);
   #googleMap,
   .map_container_main {
     height: 100%;
+    min-width: 196px;
   }
   .about_map_sticker.item_2 {
     padding: 20px;
@@ -230,16 +239,16 @@ transform: rotate(-10deg);
   .about_map_sticker.image-type-ellipse {
     top:20px;
     left: auto;
-    right: 40px;
+    right: 20px;
   }
   .about_map_sticker.image-type-rectangle {
     top:40px;
     left:auto;
-    right: 25px;
+    right: 0px;
   }
   .about_map_sticker.image-type-circle {
-    top: 112px;
+    top: 115px;
     left: auto;
-    right: 62px;
+    right: 35px;
   }
 }

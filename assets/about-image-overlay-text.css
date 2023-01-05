@@ -7,6 +7,7 @@
 }
 .about_image_overlay_text_main {
     position: relative;
+    border-top: var(--custom-border-width) solid var(--custom-border-color);
     
 }
 .overlay_text_content {
@@ -21,6 +22,8 @@
     align-items: center;
     justify-content: flex-start;
     padding: 130px 100px 127px 220px;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 16.84%, rgba(0, 0, 0, 0) 75.07%);
+    
 }
 .about_image_overlay_text_main .image {
     height: 100%;
