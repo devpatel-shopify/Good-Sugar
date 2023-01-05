@@ -18,7 +18,7 @@
     padding-left: 200px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
     padding-right: 100px;
 }
 .about_image_box {
@@ -46,7 +46,7 @@
 }
 .about_text_box_main {
     max-width: 731px;
-    margin: 0 auto;
+    /* margin: 0 auto; */
 
 }
 .about_image_box_main {

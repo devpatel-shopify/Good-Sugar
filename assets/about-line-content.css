@@ -23,6 +23,7 @@
 }
 .about_line_box_text {
     width: 30%;
+    max-width: 340px;
 }
 .about_line_box_line {
     width: 70%;
