@@ -1,14 +1,13 @@
 .about_image_text .text {
-    color: #FFFF73;
-    max-width: 880px;
+    
     padding-top: 135px;
     padding-left: 220px;
-    text-align: left;
-    text-transform: lowercase;
 }
-
-.about_image_text {
-    background: linear-gradient(83deg, rgba(210, 200, 219, 1), rgba(255, 204, 75, 1) 100%);
+.about_image_text .h1 {
+    color: #FFFF73;    
+    text-transform: lowercase;
+    max-width: 880px;
+    line-height: 1.15;
 }
 
 .about_image_text img {

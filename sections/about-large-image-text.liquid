@@ -2,12 +2,17 @@
 
 {{ 'about-image-text.css' | asset_url | stylesheet_tag }}
 
-
-<div class="about_image_text">
+<style>
+  #about-large-image-text--{{ section.id }} {
+  {% comment %} background:{{ section.settings.bg_color }}; {% endcomment %}
+  background: radial-gradient(53.71% 70.37% at 50% 87.2%, #F58325 0%, #D0C7E3 100%);
+  }
+</style>
+<div class="about_image_text" id="about-large-image-text--{{ section.id }}">
     <div class="about_image_text_wrapper">
-      <div class="text center h1">
-        We’re not saying we’re perfect, just gooder than the competition...and challenging you to challenge us to stay
-        that way.
+      <div class="text">
+        <div class="left h1">We’re not saying we’re perfect, just gooder than the competition...and challenging you to challenge us to stay
+        that way.</div>
       </div>
       <div class="image_main">
         <div class="image">
@@ -30,7 +35,11 @@
     "name": "About Large Image Text",
     "tag": "section",
     "settings": [
-      
+      /*{
+        "type":"color_background",
+        "id":"bg_color",
+        "label":"Background Color"
+      }*/
     ],
     
     "presets": [
