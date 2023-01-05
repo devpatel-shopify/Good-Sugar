@@ -10,6 +10,18 @@ header-drawer {
 	display: block;
 }
 
+.lowercase {
+	text-transform: lowercase;
+	
+}
+.uppercase {
+	text-transform: uppercase;
+	
+}
+.capitalize {
+	text-transform: capitalize;
+}
+
 body:not(.template-index, .page-menu) .header {
 	background-image: url("https://cdn.shopify.com/s/files/1/0680/9331/3298/files/main-bg.png?v=1670477655") !important;
 	background-repeat: repeat !important;

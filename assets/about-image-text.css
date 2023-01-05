@@ -4,6 +4,7 @@
     padding-top: 135px;
     padding-left: 220px;
     text-align: left;
+    text-transform: lowercase;
 }
 
 .about_image_text {

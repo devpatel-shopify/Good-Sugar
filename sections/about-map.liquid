@@ -11,6 +11,10 @@
       }
     }
   {% endfor %} 
+
+  #about-mp--{{ section.id }} .about_map_wrapper {
+    background:{{ section.settings.bg_color }};
+  }
 </style>
 
 <div class="about_map" id="about-mp--{{ section.id }}">
@@ -19,7 +23,7 @@
       <div class="map_text_container">
         <div class="map_text_title_box">
           <div class="map_text_title">
-            <h1>{{ section.settings.heading }}</h1>
+            <h1 class="lowercase">{{ section.settings.heading }}</h1>
           </div>
         </div>
         <div class="map_text_subtext_box">
@@ -113,6 +117,11 @@
 {
   "name": "About Map",
   "settings": [
+    {
+      "type":"color_background",
+      "id":"bg_color",
+      "label":"Background Color"
+    },
     {
       "type":"text",
       "id":"heading",

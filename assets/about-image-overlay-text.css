@@ -3,6 +3,7 @@
     font-family: var(--font-heading-family);
     /* color: #FFFF73; */
     line-height: 1.05;
+    text-transform: lowercase;
 }
 .about_image_overlay_text_main {
     position: relative;

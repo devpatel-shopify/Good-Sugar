@@ -16,7 +16,7 @@
           "settings": {
             "image_style": "ellipse",
             "top": 37,
-            "left": -3,
+            "left": -2,
             "text": "brand"
           }
         },
@@ -24,7 +24,7 @@
           "type": "image",
           "settings": {
             "image_style": "rectangle",
-            "top": -7,
+            "top": -5,
             "left": 40,
             "text": "ETHOs"
           }
@@ -34,7 +34,7 @@
           "settings": {
             "image_style": "circle",
             "top": 57,
-            "left": 44,
+            "left": 48,
             "text": "Rewards"
           }
         }
@@ -45,6 +45,7 @@
         "d5053e4c-c1ce-41e3-98f3-d73bba7b7fe4"
       ],
       "settings": {
+        "bg_color": "linear-gradient(86deg, rgba(209, 199, 223, 1) 14%, rgba(245, 234, 100, 1) 47%)",
         "heading": "Truly Pure Juice and Food.",
         "text": "With goodsugar, you don’t have to compromise between what your taste buds want and what your body needs."
       }
@@ -86,12 +87,13 @@
         "2e776d19-a2b1-42bf-96f2-671c3fcfd130"
       ],
       "settings": {
+        "slider_bg": "linear-gradient(97deg, rgba(247, 237, 93, 1), rgba(209, 199, 223, 1) 100%)",
         "heading": "We were meant to eat plants.",
         "center_image": "shopify:\/\/shop_images\/celery_goodsugar_1.png",
         "left_text": "<p>This isn’t some whackadoo perspective our founder, Marcus Antebi, picked up after years of jumping out of planes and pressing fresh juice – it’s what the unvarnished science consistently shows.<br\/><\/p>",
         "right_text": "<p>He just listened...and learned...and tinkered...and toiled...until finally he created an approach to juicing that didn’t require pasteurization or additives or preservatives: just the pure way nature intended.<br\/><br\/>You can taste it in all of our offerings and how good they make us feel<\/p>",
         "btn_bg_image": "shopify:\/\/shop_images\/image_10.png",
-        "btn_text": "Learn More <br>from Marcus",
+        "btn_text": "<p>Learn More<br\/>from Marcus<\/p>",
         "btn_url": "shopify:\/\/collections"
       }
     },

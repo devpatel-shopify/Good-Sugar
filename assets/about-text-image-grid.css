@@ -3,6 +3,7 @@
   margin: 0;
   color: var(--custom-text_color);
   font-size: 20px;  
+  text-transform: lowercase;
 }
 .about_text_grid_main {
   display: flex;
@@ -60,6 +61,7 @@
   max-width: 447px;
   font-family: var(--font-heading-family);
   font-size: 20px;
+  text-transform: lowercase;
 }
 
 .image_wrapper img {
