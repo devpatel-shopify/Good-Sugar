@@ -15,6 +15,7 @@
 .about_line_content_box {
     margin-top: 40px;
     display: flex;
+    column-gap: 40px;
 }
 .about_line_box_text {
     font-size: 20px;
