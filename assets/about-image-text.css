@@ -1,7 +1,7 @@
 .about_image_text .text {
     
     padding-top: 135px;
-    padding-left: 220px;
+    padding-left: 200px;
 }
 .about_image_text .h1 {
     color: #FFFF73;    
@@ -90,7 +90,7 @@
 @media screen and (max-width:1024px) {
     .about_image_text .text {
         padding-top: 100px;
-        padding-left: 100px;
+        padding-left: 70px;
     }
 }
 @media screen and (max-width:749px) {
