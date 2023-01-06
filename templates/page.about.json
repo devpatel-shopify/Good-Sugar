@@ -10,40 +10,6 @@
     },
     "0439eb05-c8c8-48df-9599-efe411340464": {
       "type": "about-map",
-      "blocks": {
-        "b8b4b409-f6dc-45d4-8d48-324097a0e57e": {
-          "type": "image",
-          "settings": {
-            "image_style": "ellipse",
-            "top": 37,
-            "left": -2,
-            "text": "brand"
-          }
-        },
-        "73c933f5-c3fb-455d-8815-e7c3997476ed": {
-          "type": "image",
-          "settings": {
-            "image_style": "rectangle",
-            "top": -5,
-            "left": 40,
-            "text": "ETHOs"
-          }
-        },
-        "d5053e4c-c1ce-41e3-98f3-d73bba7b7fe4": {
-          "type": "image",
-          "settings": {
-            "image_style": "circle",
-            "top": 57,
-            "left": 53,
-            "text": "Rewards"
-          }
-        }
-      },
-      "block_order": [
-        "b8b4b409-f6dc-45d4-8d48-324097a0e57e",
-        "73c933f5-c3fb-455d-8815-e7c3997476ed",
-        "d5053e4c-c1ce-41e3-98f3-d73bba7b7fe4"
-      ],
       "settings": {
         "heading": "Truly Pure Juice and Food.",
         "text": "With goodsugar, you don’t have to compromise between what your taste buds want and what your body needs."
@@ -140,10 +106,10 @@
     "24beab2d-87a2-4961-a57a-f20883f39917": {
       "type": "about-text-image-grid",
       "settings": {
-        "bg_color": "radial-gradient(at top,#F9EE58 15%,#fff 52%,#fff)",
+        "bg_color": "radial-gradient(rgba(249, 238, 88, 1) 15%, rgba(255, 255, 255, 1) 52%, rgba(255, 255, 255, 1) 100%)",
         "text_left": "<p><strong>From convenience to blight, the death-cycle of s.u.p starts with your choices and ends back in your body: killing a few birds, biomes, and sea dwellers along the way.<br\/><\/strong><\/p>",
         "text_right": "<p>You’ve heard this before, right?...but have you heard of a new business going as far as to banish all s.u.p from its stores?<br\/><br\/>We hadn’t either, <br\/>so we’re doing it ourselves.<br\/><\/p>",
-        "heading": "good’ more, get more.",
+        "heading": "good’ more,<br> get more.",
         "text": "<p>Drink a lot of our juices? Swear by our superfood smoothies? Hooked on our snacks? Become a goodist.<\/p>",
         "image": "shopify:\/\/shop_images\/round_image.png",
         "btn_text": "CTA",
