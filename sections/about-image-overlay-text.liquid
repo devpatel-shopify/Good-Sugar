@@ -10,11 +10,17 @@
     <div class="about_image_overlay_text_wrapper">
       <div class="about_image_overlay_text_main">
         <div class="image">
-            {%- if section.settings.bg_image != blank -%}
-          <img src="{{ section.settings.bg_image | img_url: 'master' }}" alt="{{ section.settings.bg_image.alt }}">
+          {%- if section.settings.bg_image -%}
+            {%- assign height = section.settings.bg_image.width | divided_by: section.settings.bg_image.aspect_ratio | round -%}
+            {{ section.settings.bg_image | image_url: width: 3840 | image_tag:
+              loading: 'lazy',
+              height: height,
+              sizes: "100vw",
+              widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+            }}
           {%- else -%}
-          {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
-            {%- endif -%}
+            {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
+          {%- endif -%}
         </div>
         {% if section.settings.text != blank %}
         <div class="overlay_text_content">

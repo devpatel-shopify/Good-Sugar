@@ -11,7 +11,7 @@
     
 }
 .overlay_text_content {
-    position: absolute;
+    position: relative;
     top: 0;
     bottom: 0;
     left: 0;
@@ -28,13 +28,14 @@
 .about_image_overlay_text_main .image {
     height: 100%;
     width: 100%;
+    position: absolute;
 }
 
 .about_image_overlay_text_main img {
     height: 100%;
     width: 100%;
     display: block;
-    min-height: 550px;
+    /* min-height: 550px; */
     object-fit: cover;
 }
 
@@ -58,7 +59,7 @@
         line-height: 1.15;
     }
     .about_image_overlay_text_main img {
-        min-height: 185px;
+        /* min-height: 185px; */
     }
     .overlay_text_content {
         padding: 20px;
