@@ -445,6 +445,9 @@
         slideShadows: true,
     },
     on: {
+      {% comment %} beforeInit: ()=>{
+        document.querySelector(".loading_main").classList.remove("hidden");
+      }, {% endcomment %}
         init(e){
             for (let r = 0; r < e.slides.length; r += 1) {
               const t = e.slides[r],
@@ -452,6 +455,9 @@
                     i = Math.abs(o);
                 t.style.opacity = i > 2.5 ? 0 : 1;
             }
+        },
+        afterInit: function(){
+          
         },
         progress(e){
             for (let r = 0; r < e.slides.length; r += 1) {

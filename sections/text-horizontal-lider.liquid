@@ -46,7 +46,7 @@
     {%- endfor -%}    
 </style>
 
-<div class="text_horizontal_slider" id="text-herizontal-slider--{{ section.id }}">
+<div class="text_horizontal_slider js-animated-section-{{ section.id }}" id="text-herizontal-slider--{{ section.id }}">
     <div class="text_horizontal_slider_wrapper">
         <div class="text_horizonatl_slider_main swiper">
             <div class="swiper-wrapper">
@@ -74,8 +74,54 @@
         </div>        
     <div>
 </div>
+<script>
+(function(){
+    function loadGsapFunction(){
+        window.gsap.registerPlugin(ScrollTrigger);
+        gsap.utils.toArray(".js-animated-section-{{- section.id -}}").forEach((section) => {
+            console.log(section);
+            const cards = section.querySelector(".swiper-wrapper");
+            const totalWidth = Array.from(section.querySelectorAll(".swiper-slide")).reduce((acc, element) => {
+                return acc = acc + element.offsetWidth;
+            }, 0);
+            window.gsap.to(cards, {
+                x: () => {
+                    return -cards.scrollWidth + cards.offsetWidth;
+                },
+                ease: "none",
+                scrollTrigger: {
+                    markers: false,
+                    trigger: "#MainContent",
+                    endTrigger: ".shopify-section",
+                    start: () => `-${document.querySelector(".header-wrapper").clientHeight}px top`,
+                    end: () => `+=${totalWidth / 2}`,
+                    scrub: true,
+                    pin: true,
+                    invalidateOnRefresh: true,
+                    anticipatePin: 1,
+                    pinType: "fixed"
+                }
+            });
+        });
 
-<script type="module" src="{{ 'text-horizontal-lider.js' | asset_url }}"></script>
+    }
+
+
+    let gsapInterval = setInterval(function(){
+        if(window.gsapLoaded != undefined){
+            clearInterval(gsapInterval);
+            if(window.innerWidth > 749){
+                loadGsapFunction();
+            }
+        }
+    });
+
+    
+})();
+
+
+</script>
+{% comment %} <script type="module" src="{{ 'text-horizontal-lider.js' | asset_url }}"></script> {% endcomment %}
 
 {% schema %}
 {
