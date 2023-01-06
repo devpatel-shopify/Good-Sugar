@@ -42,6 +42,12 @@
 .overlay_text_content_main {
     max-width: 731px;
 }
+
+@media screen and (min-width:750px) {
+    .overlay_text_content {
+        min-height: 725px;
+    }
+}
 @media screen and (max-width:1200px) {
     .overlay_text_content {
         padding-left: 150px;

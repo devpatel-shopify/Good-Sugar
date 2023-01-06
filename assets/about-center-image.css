@@ -94,6 +94,8 @@
 }
 .slide_item_wrapper {
     height: 100%;
+    display: flex;
+    align-items: center;
 }
 .image_text_slider_wrapper .swiper-wrapper  {
 align-items: center;
@@ -142,7 +144,7 @@ align-items: center;
 }
 .center_image_main {
     position: absolute;
-    top:12%;
+    top:12.3%;
     left: 0;
     right: 0;
     bottom: 30%;
@@ -233,5 +235,8 @@ max-width: 432px;
     .button_wrapper {
         max-width: 100px;
         max-height: 58px;
+    }
+    .slide_item_wrapper img {
+        max-height: 189px;
     }
 }

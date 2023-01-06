@@ -33,7 +33,7 @@
 }
 .line {
     width: 100%;
-    height:3px;
+    height:var(--custom-border-width);
     background-color: var(--custom-border-color);    
     display: block !important;
     margin-top: 40px;

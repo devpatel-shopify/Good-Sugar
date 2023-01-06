@@ -55,6 +55,7 @@ width: 100%;
   flex-wrap: wrap;
   align-items: flex-start;
   height: 100%;
+  background: linear-gradient(270deg, #F5EA64 7.56%, #D1C7DF 87.35%);
 }
 
 .map_text_subtext p {
@@ -197,6 +198,7 @@ transform: rotate(-10deg);
   .map_container {
     display: flex;
     align-items: center;
+    background: linear-gradient(270deg, #F5EA64 7.56%, #D1C7DF 87.35%);
   }
   .map_container_main,
   .map_location_main {
@@ -210,6 +212,7 @@ transform: rotate(-10deg);
     border-left: var(--custom-border-width) solid var(--custom-border-color);
     display: flex;
     align-items: center;
+    
   }
   .map_location_text {
     font-size: var(--body-font-size);

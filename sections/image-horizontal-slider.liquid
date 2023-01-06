@@ -20,14 +20,11 @@
 {% assign count = section.blocks | size %}
 
 <div class="image_horizontal_slider" id="image-horizontal-slider--{{ section.id }}">
-  <div class="small-hide medium-hide image_horizontal_slider_wrapper">
-    <div class=" swiper image_horizontal_main {% if count > 4 %} image_horizontal_slider_main {% else %} image_horizontal_no_slider_main {% endif %}">
-      <!-- Additional required wrapper -->
-      <div class="swiper-wrapper">
-        <!-- Slides -->
+  <div class="image_horizontal_slider_wrapper">
+    <div class="image_horizontal_main">
         {%- for block in section.blocks -%}
           {%- if block.settings.image != blank -%}
-          <div class="block_{{ forloop.index }} swiper-slide image_slider_wrapper image_slider--{{ block.id }}">
+          <div class="block_{{ forloop.index }} image_slider_wrapper image_slider--{{ block.id }}">
             <div class="image_slider_main">
               <div class="image_box">
                 <div class="image">
@@ -46,22 +43,12 @@
               </div>
             </div>
           </div>
-        {%- endif -%}
+          {%- endif -%}
         {%- endfor -%}
-      </div>
-      <!-- If we need pagination -->
-      <div class="swiper-pagination"></div>
-
-      <!-- If we need navigation buttons -->
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
-
-      <!-- If we need scrollbar -->
-      <div class="swiper-scrollbar"></div>
     </div>
   </div>
 
-  <div class="small-hide large-up-hide image_horizontal_slider_wrapper tablet_view">
+  {% comment %} <div class="small-hide large-up-hide image_horizontal_slider_wrapper tablet_view">
     <div class="swiper image_horizontal_main {% if count > 2 %} image_horizontal_slider_main_tablet {% else %} image_horizontal_no_slider_main_tablet {% endif %}">
       <!-- Additional required wrapper -->
       <div class="swiper-wrapper">
@@ -143,10 +130,10 @@
       <!-- If we need scrollbar -->
       <div class="swiper-scrollbar"></div>
     </div>
-  </div>
+  </div> {% endcomment %}
 </div>
 
-<script type="module" src="{{ 'image-horizontal-slider.js' | asset_url }}"></script>
+{% comment %} <script type="module" src="{{ 'image-horizontal-slider.js' | asset_url }}"></script> {% endcomment %}
 
 
 {% schema %}

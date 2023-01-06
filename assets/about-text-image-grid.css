@@ -190,7 +190,7 @@ max-width: 430px;
 @media screen and (max-width:1024px) {
   .about_text_grid_box_main_wrapper .text,
   .about_text_grid_box_main_wrapper .heading {
-    padding: 100px 70px 100px 70px;
+    padding: 100px 35px 100px 70px;
   }
   .about_text_grid_main {
     column-gap: 50px;
@@ -230,7 +230,7 @@ max-width: 430px;
   .about_text_grid_button_wrapper .button_image {
     max-width: 100px;
     max-height: 45px;
-    margin: -20px 31% 0 auto;
+    margin: -20px 23% 0 auto;
   }
   .about_text_grid_button_wrapper a {
     font-size: 11px;
@@ -250,5 +250,9 @@ max-width: 430px;
   .about_text_grid_box_main_wrapper .heading,
   .about_text_grid_box_main_wrapper .text {
     padding: 20px;
+  }
+  .about_text_grid_button, .text_grid.right_part .text,
+  .text_grid.left_part .text {
+    max-width: 300px;
   }
 }

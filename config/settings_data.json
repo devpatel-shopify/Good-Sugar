@@ -1,5 +1,7 @@
 {
   "current": {
+    "logo": "shopify:\/\/shop_images\/Web_site_main_logo.png",
+    "logo_width": 250,
     "custom_theme": true,
     "custom_heading_font": "Hiragino Sans bold",
     "custom_body_font": "Hiragino Sans",

@@ -34,7 +34,7 @@
           "settings": {
             "image_style": "circle",
             "top": 57,
-            "left": 48,
+            "left": 53,
             "text": "Rewards"
           }
         }
@@ -45,7 +45,6 @@
         "d5053e4c-c1ce-41e3-98f3-d73bba7b7fe4"
       ],
       "settings": {
-        "bg_color": "linear-gradient(86deg, rgba(209, 199, 223, 1) 31%, rgba(245, 234, 100, 1) 59%)",
         "heading": "Truly Pure Juice and Food.",
         "text": "With goodsugar, you don’t have to compromise between what your taste buds want and what your body needs."
       }
@@ -141,14 +140,50 @@
     "24beab2d-87a2-4961-a57a-f20883f39917": {
       "type": "about-text-image-grid",
       "settings": {
-        "bg_color": "radial-gradient(at top,#F9EE43,#fff,#fff)",
+        "bg_color": "radial-gradient(at top,#F9EE58 15%,#fff 52%,#fff)",
         "text_left": "<p><strong>From convenience to blight, the death-cycle of s.u.p starts with your choices and ends back in your body: killing a few birds, biomes, and sea dwellers along the way.<br\/><\/strong><\/p>",
         "text_right": "<p>You’ve heard this before, right?...but have you heard of a new business going as far as to banish all s.u.p from its stores?<br\/><br\/>We hadn’t either, <br\/>so we’re doing it ourselves.<br\/><\/p>",
-        "heading": "good’ more,<br> get more.",
+        "heading": "good’ more, get more.",
         "text": "<p>Drink a lot of our juices? Swear by our superfood smoothies? Hooked on our snacks? Become a goodist.<\/p>",
         "image": "shopify:\/\/shop_images\/round_image.png",
         "btn_text": "CTA",
         "btn_url": "shopify:\/\/pages\/about"
+      }
+    },
+    "9740a699-e485-4ef6-b500-99b03776fa9f": {
+      "type": "slideshow",
+      "disabled": true,
+      "blocks": {
+        "template--17323286298898__9740a699-e485-4ef6-b500-99b03776fa9f-167298868121e4ed3b-0": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/iStock-1193095410_1.png",
+            "heading": "The biggest disease we’re fighting against is an ecological one: single-use plastic (s.u.p). The biggest disease we’re fighting against is an ecological one: single-use plastic (s.u.p). The biggest disease we’re fighting against is an ecological one: single-use plastic (s.u.p).",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "template--17323286298898__9740a699-e485-4ef6-b500-99b03776fa9f-167298868121e4ed3b-0"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "small",
+        "slider_visual": "counter",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "show_text_below": false,
+        "accessibility_info": "Slideshow about our brand"
       }
     }
   },
@@ -162,6 +197,7 @@
     "3eab5b77-e0ba-402d-8f5d-44d9d95f7309",
     "07f486b9-d614-4ae3-b111-f69b04d2cf6c",
     "f49b88f7-1e2e-4880-8367-dd76675a9f6b",
-    "24beab2d-87a2-4961-a57a-f20883f39917"
+    "24beab2d-87a2-4961-a57a-f20883f39917",
+    "9740a699-e485-4ef6-b500-99b03776fa9f"
   ]
 }
