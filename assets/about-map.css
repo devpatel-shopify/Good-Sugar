@@ -82,7 +82,18 @@ width: 100%;
   width: 100%;
   display: block;
 }
-
+.about_map_sticker.image-type-rectangle {
+  top: -37px;
+  left: 42%;
+}
+.about_map_sticker.image-type-ellipse {
+  top: 37.5%;
+  left: -15px;
+}
+.about_map_sticker.image-type-circle {
+  top:55%;
+  left: 55%;
+}
 /* .about_map_sticker.image-type-rectangle .map_sticker_image,
 .about_map_sticker.image-type-rectangle img, */
 .about_map_sticker.image-type-rectangle .map_sticker_container {
