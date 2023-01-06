@@ -519,6 +519,35 @@
     </head>
   
     <body class="template-{{ template.name }} page-{{ page.handle }}">
+      <div class="loading_main">
+        <section class="section-wrapper" data-type="horizontal">
+          <div class="section__cards">
+            <div class="section__card-inner">
+              <a href="{{ routes.root_url }}" class="loading_main_logo">
+                {%- if settings.logo != blank -%}
+                  {%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
+                  {%- assign logo_height = settings.logo_width | divided_by: settings.logo.aspect_ratio -%}
+                  {{ settings.logo | image_url: width: 500 | image_tag:
+                    class: 'main_logo',
+                    widths: '50, 100, 150, 200, 250, 300, 400, 500',
+                    height: logo_height,
+                    width: settings.logo_width,
+                    alt: logo_alt
+                  }}
+                {%- else -%}
+                  <span class="h2">{{ shop.name }}</span>
+                {%- endif -%}
+              </a>             
+            </div>
+            {% comment %} <div class="section__card-inner">
+              <h1 class="section__title">Section 3b</h1>
+            </div>
+            <div class="section__card-inner">
+              <h1 class="section__title">Section 3c</h1>
+            </div> {% endcomment %}
+          </div>
+        </section>
+      </div>
       <a class="skip-to-content-link button visually-hidden" href="#MainContent">
         {{ "accessibility.skip_to_text" | t }}
       </a>
