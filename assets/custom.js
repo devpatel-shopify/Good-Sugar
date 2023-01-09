@@ -11,10 +11,10 @@
         if (document.querySelector(".loading_main")) {
             const mainLoaderTimeline = gsap.timeline();
             const loader = document.querySelector(".section__card-inner .loading_main_logo");
-            mainLoaderTimeline.from(loader, 1.8, {
+            mainLoaderTimeline.from(loader, 0.9, {
                 opacity: 1,
             });
-            mainLoaderTimeline.from(loader, 1.8, {
+            mainLoaderTimeline.from(loader, 0.9, {
                 y: 100,
                 ease: "power4.out",
                 // delay: 1,
