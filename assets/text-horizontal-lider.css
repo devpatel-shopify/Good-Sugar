@@ -1,14 +1,15 @@
 .text_horizontal_slider {
     width: 100%;
-   /* height: 100%; */
+    /* height: 100%; */
 }
+
 .text_horizonatl_slider_main {
     border-top: var(--custom-border-width) solid var(--custom-border-color);
     border-bottom: var(--custom-border-width) solid var(--custom-border-color);
 }
 
-.text_horizonatl_slider {    
-    height: 100%;
+.text_horizonatl_slider {
+    height: initial;
     width: fit-content;
 }
 
@@ -18,48 +19,55 @@
     padding: 0;
     line-height: 1.2;
 }
+
 .text_horizontal_slider_box p strong {
     /* font-size: 50px; */
     /* line-height: 1.2; */
 }
+
 @media screen and (min-width:750px) {
+
     .text_horizonatl_slider.swiper-slide-next,
-.text_horizonatl_slider.swiper-slide-active {
-    /* border-right: var(--custom-border-width) solid #5C398D; */
-}
-.text_horizonatl_slider {
-    border-right: var(--custom-border-width) solid var(--custom-border-color);
+    .text_horizonatl_slider.swiper-slide-active {
+        /* border-right: var(--custom-border-width) solid #5C398D; */
+    }
+
+    .text_horizonatl_slider {
+        border-right: var(--custom-border-width) solid var(--custom-border-color);
+    }
+
+    .text_horizonatl_slider:last-child {
+        border-right: none;
+    }
+
+    .text_horizontal_slider .swiper-autoheight,
+    .text_horizontal_slider .swiper-autoheight .swiper-slide {
+        height: 100%;
+    }
+
+    .text_horizontal_slider_box {
+        padding: 110px 80px 90px 110px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* width: 100%; */
+        /* min-width: 400px; */
+    }
 }
 
-.text_horizonatl_slider:last-child {
-    border-right: none;
-}
-
-.text_horizontal_slider .swiper-autoheight,
-.text_horizontal_slider .swiper-autoheight .swiper-slide {
-    height: 100%;
-}
-.text_horizontal_slider_box {
-    padding: 110px 80px 90px 110px;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* width: 100%; */
-    /* min-width: 400px; */
-}
-}
 @media screen and (min-width: 750px) and (max-width: 1024px) {
     .text_horizonatl_slider {
         max-width: 70%;
     }
-} 
+}
 
 @media screen and (max-width:749px) {
     .text_horizonatl_slider_main .swiper-wrapper {
         display: flex;
         flex-wrap: wrap;
     }
+
     .text_horizonatl_slider {
         padding: 25px 20px;
     }
