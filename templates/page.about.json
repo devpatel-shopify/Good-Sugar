@@ -93,9 +93,9 @@
     "f25573c4-8c19-4317-92b4-5cc05b3c551a": {
       "type": "about-large-image-text",
       "settings": {
-        "bg_color": "radial-gradient(rgba(245, 131, 37, 1), rgba(208, 199, 227, 1) 100%)",
+        "bg_color": "radial-gradient(53.71% 70.37% at 50% 87.2%, #F58325 0%, #D0C7E3 100%)",
         "text_title": "<p>We're not saying we're perfect, just gooder than the competition...and challenging you to challenge us to staythat way.<\/p>",
-        "background_image": "shopify:\/\/shop_images\/image_24_1.jpg",
+        "background_image": "shopify:\/\/shop_images\/image_24_1.png",
         "sticker_image": "shopify:\/\/shop_images\/image_14_2_1.png",
         "sticker_text": "CTA",
         "sticker_url": "shopify:\/\/collections\/frontpage"

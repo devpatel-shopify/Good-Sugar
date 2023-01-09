@@ -172,7 +172,7 @@ justify-content: space-between;
 
 @media screen and (min-width:1025px) {
     .style_1.slide_item_2 {
-        width: 50%;
+        width: max-content;
     }
     .style_1.slide_item_4,
     .style_1.slide_item_3 {

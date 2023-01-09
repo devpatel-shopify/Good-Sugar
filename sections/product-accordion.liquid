@@ -34,11 +34,13 @@
                 padding-bottom: {{ 1 | divided_by: metaImage[0].width.aspect_ratio | times: 100 }}%;
               }
             </style> {% endcomment %}
-            <div class="image js-image media--square media" for="item--{{ forloop.index0 }}" {% if forloop.index > 0 %}style="display:none"{% endif %}>
+            <div class="image js-image " for="item--{{ forloop.index0 }}" {% if forloop.index > 0 %}style="display:none"{% endif %}>
+            <div class="media--square media">
               <img src="{{ metaImage[0].original_src }}" alt="{{ block.settings.image.alt }}" image-index="{{ forloop.index0 }}"
               width="{{ metaImage[0].width }}"
               height="{{ metaImage[0].width }}"
               >
+              </div>   
             </div>
           {% endfor %}
           {% endif %}  
