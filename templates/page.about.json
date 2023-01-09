@@ -12,7 +12,7 @@
       "type": "about-map",
       "settings": {
         "heading": "Truly Pure Juice and Food.",
-        "text": "With goodsugar, you don’t have to compromise between what your taste buds want and what your body needs."
+        "text": "With goodsugar, you don't have to compromise between what your taste buds want and what your body needs."
       }
     },
     "023a7ccc-560e-4a9d-85e1-2e3e2679652d": {
@@ -21,13 +21,13 @@
         "3a702532-6e63-4367-9dbd-5055519b33ec": {
           "type": "slide",
           "settings": {
-            "text": "<p>Just because they claim “juice” and “pressed” and “health” doesn’t mean they are.<\/p>"
+            "text": "<p>Just because they claim “juice” and “pressed” and “health” doesn't mean they are.<\/p>"
           }
         },
         "4d7badd8-ec5c-4952-83f2-cee20e4291dd": {
           "type": "slide",
           "settings": {
-            "text": "<p>In fact, as Marcus saw first hand, it likely means they’re not.<\/p>"
+            "text": "<p>In fact, as Marcus saw first hand, it likely means they're not.<\/p>"
           }
         },
         "c2333641-5319-49f9-9891-0ad1708405a7": {
@@ -55,8 +55,8 @@
         "slider_bg": "linear-gradient(97deg, rgba(247, 237, 93, 1), rgba(209, 199, 223, 1) 100%)",
         "heading": "We were meant to eat plants.",
         "center_image": "shopify:\/\/shop_images\/celery_goodsugar_1.png",
-        "left_text": "<p>This isn’t some whackadoo perspective our founder, Marcus Antebi, picked up after years of jumping out of planes and pressing fresh juice – it’s what the unvarnished science consistently shows.<br\/><\/p>",
-        "right_text": "<p>He just listened...and learned...and tinkered...and toiled...until finally he created an approach to juicing that didn’t require pasteurization or additives or preservatives: just the pure way nature intended.<br\/><br\/>You can taste it in all of our offerings and how good they make us feel<\/p>",
+        "left_text": "<p>This isn't some whackadoo perspective our founder, Marcus Antebi, picked up after years of jumping out of planes and pressing fresh juice - it's what the unvarnished science consistently shows.<br\/><\/p>",
+        "right_text": "<p>He just listened...and learned...and tinkered...and toiled...until finally he created an approach to juicing that didn't require pasteurization or additives or preservatives: just the pure way nature intended.<br\/><br\/>You can taste it in all of our offerings and how good they make us feel<\/p>",
         "btn_bg_image": "shopify:\/\/shop_images\/image_10.png",
         "btn_text": "<p>Learn More<br\/>from Marcus<\/p>",
         "btn_url": "shopify:\/\/collections"
@@ -84,7 +84,7 @@
       "type": "about-large-image-text",
       "settings": {
         "bg_color": "radial-gradient(rgba(245, 131, 37, 1), rgba(208, 199, 227, 1) 100%)",
-        "text_title": "<p>We’re not saying we’re perfect, just gooder than the competition...and challenging you to challenge us to stay that way.</p>",
+        "text_title": "<p>We're not saying we're perfect, just gooder than the competition...and challenging you to challenge us to staythat way.</p>",
         "background_image": "shopify:\/\/shop_images\/image_24_1.jpg",
         "sticker_image": "shopify:\/\/shop_images\/image_14_2_1.png",
         "sticker_text": "CTA",
@@ -101,16 +101,16 @@
     "07f486b9-d614-4ae3-b111-f69b04d2cf6c": {
       "type": "about-line-content",
       "settings": {
-        "title": "<p>A diet that’s full of plant-based, nutrient-dense ingredients – and free of animal-based ones – is proven to boost health, support exercise, and (in many cases) reverse the negative side-effects of aging and disease.</p>",
-        "subtitle": "<p>Oh, and btw we’re kosher, too.        That’s a fact, just like these are:</p>",
-        "bottom_text": "<p>Hard as it is to live by this ethos, we’ve done our darndest to make it easy, delicious, and fun.</p>"
+        "title": "<p>A diet that's full of plant-based, nutrient-dense ingredients - and free of animal-based ones - is proven to boost health, support exercise, and (in many cases) reverse the negative side-effects of aging and disease.</p>",
+        "subtitle": "<p>Oh, and btw we're kosher, too.That's a fact, just like these are:</p>",
+        "bottom_text": "<p>Hard as it is to live by this ethos, we've done our darndest to make it easy, delicious, and fun.</p>"
       }
     },
     "f49b88f7-1e2e-4880-8367-dd76675a9f6b": {
       "type": "about-image-overlay-text",
       "settings": {
         "bg_image": "shopify:\/\/shop_images\/iStock-1193095410_1.png",
-        "text": "The biggest disease we’re fighting against is an ecological one: single-use plastic (s.u.p).",
+        "text": "The biggest disease we're fighting against is an ecological one: single-use plastic (s.u.p).",
         "text_color": "#ffff73"
       }
     },
@@ -119,8 +119,8 @@
       "settings": {
         "bg_color": "radial-gradient(rgba(249, 238, 88, 1) 15%, rgba(255, 255, 255, 1) 80%, rgba(255, 255, 255, 1) 100%)",
         "text_left": "<p><strong>From convenience to blight, the death-cycle of s.u.p starts with your choices and ends back in your body: killing a few birds, biomes, and sea dwellers along the way.<br\/><\/strong><\/p>",
-        "text_right": "<p>You’ve heard this before, right?...but have you heard of a new business going as far as to banish all s.u.p from its stores?<br\/><br\/>We hadn’t either, <br\/>so we’re doing it ourselves.<br\/><\/p>",
-        "heading": "good’ more, get more.",
+        "text_right": "<p>You've heard this before, right?...but have you heard of a new business going as far as to banish all s.u.p from its stores?<br\/><br\/>We hadn't either, <br\/>so we're doing it ourselves.<br\/><\/p>",
+        "heading": "good' more, get more.",
         "text": "<p>Drink a lot of our juices? Swear by our superfood smoothies? Hooked on our snacks? Become a goodist.<\/p>",
         "image": "shopify:\/\/shop_images\/round_image.png",
         "btn_text": "CTA",
@@ -135,7 +135,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/iStock-1193095410_1.png",
-            "heading": "The biggest disease we’re fighting against is an ecological one: single-use plastic (s.u.p). The biggest disease we’re fighting against is an ecological one: single-use plastic (s.u.p). The biggest disease we’re fighting against is an ecological one: single-use plastic (s.u.p).",
+            "heading": "The biggest disease we're fighting against is an ecological one: single-use plastic (s.u.p). The biggest disease we're fighting against is an ecological one: single-use plastic (s.u.p). The biggest disease we're fighting against is an ecological one: single-use plastic (s.u.p).",
             "heading_size": "h1",
             "subheading": "",
             "button_label": "",
