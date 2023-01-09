@@ -195,6 +195,7 @@ justify-content: space-between;
     .slide_item_wrapper .text,
     .image_text_main {
         padding-left: 70px;
+        padding-bottom: 70px;
     }
     .image_text_slider_wrapper .swiper-wrapper {
         padding-left: 0px;
@@ -221,6 +222,12 @@ justify-content: space-between;
     }
     .style_2 .text p, .slide_item_wrapper .text p {
         font-size: 40px;
+    }
+    .about_center_image .heading {
+        padding: 130px 20px;
+    }
+    .image_text_button {
+        margin-top: 60px;
     }
 }
 @media screen and (max-width:749px) {
