@@ -84,7 +84,7 @@
       "type": "about-large-image-text",
       "settings": {
         "bg_color": "radial-gradient(rgba(245, 131, 37, 1), rgba(208, 199, 227, 1) 100%)",
-        "text_title": "We’re not saying we’re perfect, just gooder than the competition...and challenging you to challenge us to stay that way.",
+        "text_title": "<p>We’re not saying we’re perfect, just gooder than the competition...and challenging you to challenge us to stay that way.</p>",
         "background_image": "shopify:\/\/shop_images\/image_24_1.jpg",
         "sticker_image": "shopify:\/\/shop_images\/image_14_2_1.png",
         "sticker_text": "CTA",
@@ -94,16 +94,16 @@
     "3eab5b77-e0ba-402d-8f5d-44d9d95f7309": {
       "type": "about-text-with-image",
       "settings": {
-        "text_title": "Whether to lose weight or gain years, the solution is the same.",
+        "text_title": "<p>Whether to lose weight or gain years, the solution is the same.</p>",
         "section_image": "shopify:\/\/shop_images\/image_25_1.png"
       }
     },
     "07f486b9-d614-4ae3-b111-f69b04d2cf6c": {
       "type": "about-line-content",
       "settings": {
-        "title": "A diet that’s full of plant-based, nutrient-dense ingredients – and free of animal-based ones – is proven to boost health, support exercise, and (in many cases) reverse the negative side-effects of aging and disease.",
-        "subtitle": "Oh, and btw we’re kosher, too.        That’s a fact, just like these are:  ",
-        "bottom_text": "Hard as it is to live by this ethos, we’ve done our darndest to make it easy, delicious, and fun."
+        "title": "<p>A diet that’s full of plant-based, nutrient-dense ingredients – and free of animal-based ones – is proven to boost health, support exercise, and (in many cases) reverse the negative side-effects of aging and disease.</p>",
+        "subtitle": "<p>Oh, and btw we’re kosher, too.        That’s a fact, just like these are:</p>",
+        "bottom_text": "<p>Hard as it is to live by this ethos, we’ve done our darndest to make it easy, delicious, and fun.</p>"
       }
     },
     "f49b88f7-1e2e-4880-8367-dd76675a9f6b": {
