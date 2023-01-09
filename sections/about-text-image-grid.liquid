@@ -49,9 +49,11 @@
         <div class="about_text_grid_box_main right_part">
           <div class="image_wrapper">
             {% if section.settings.image != blank %}
-            <div class="image">
+            
+              <div class="media--square media">
               <img src="{{ section.settings.image | img_url: 'master' }}" alt="{{ section.settings.image.alt }}">
-            </div>
+              </div>
+            
             {% endif %}
           </div>
         </div>

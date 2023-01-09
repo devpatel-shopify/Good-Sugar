@@ -1,9 +1,10 @@
-.about_line_content .heading {
+.about_line_content .heading p {
     max-width: 665px;
     color: var(--custom-text_color);
     font-size: 20px;
     font-family: var(--font-heading-family);
     text-transform: lowercase;
+    margin: 0 ;
 }
 .about_line_content {
     background-color: #ffffff;
@@ -17,10 +18,11 @@
     display: flex;
     column-gap: 40px;
 }
-.about_line_box_text {
+.about_line_box_text p {
     font-size: 20px;
     color: var(--custom-text_color);
     text-transform: lowercase;
+    margin: 0 ;
 }
 .about_line_box_text {
     width: 30%;
@@ -71,7 +73,7 @@
     .about_line_box_text {
         width: 100%;
     }
-    .about_line_content .heading {
+    .about_line_content .heading p {
         padding: 25px 20px 0px 20px;
         font-size: 9px;
         max-width: 300px;
@@ -80,7 +82,7 @@
         margin-top: 10px;
         /* padding: 0 20px; */
     }
-    .about_line_box_text {
+    .about_line_box_text p {
         font-size: 9px; 
     }
     .about_line_box_text {

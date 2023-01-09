@@ -76,6 +76,8 @@
   height: 100%;
   width: 100%;
   display: block;
+  background: transparent;
+  border-radius: 100%;
 }
 
 .about_text_grid_box_main_wrapper .text {
@@ -85,10 +87,18 @@
   padding: 140px 100px 140px 200px;
 }
 
+.image_wrapper .media  {
+  background: transparent;
+}
 .image_wrapper {
   max-width: 407px;
-  max-height: 407px;
+  /* height: 100%; */
+  width: 100%;
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
 }
+
 .about_text_image_grid_box {
   border-top: var(--custom-border-width) solid var(--custom-border-color);
   border-bottom: var(--custom-border-width) solid var(--custom-border-color);
