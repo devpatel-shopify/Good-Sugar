@@ -4,29 +4,36 @@
 
 <style>
   #about-large-image-text--{{ section.id }} {
-  {% comment %} background:{{ section.settings.bg_color }}; {% endcomment %}
-  background: radial-gradient(53.71% 70.37% at 50% 87.2%, #F58325 0%, #D0C7E3 100%);
+  background:{{ section.settings.bg_color }};
+  {% comment %} background: radial-gradient(53.71% 70.37% at 50% 87.2%, #F58325 0%, #D0C7E3 100%); {% endcomment %}
   }
 </style>
 <div class="about_image_text" id="about-large-image-text--{{ section.id }}">
     <div class="about_image_text_wrapper">
-      <div class="text">
-        <div class="left h1">We’re not saying we’re perfect, just gooder than the competition...and challenging you to challenge us to stay
-        that way.</div>
-      </div>
-      <div class="image_main">
-        <div class="image">
-          <img src="https://cdn.shopify.com/s/files/1/0680/9331/3298/files/image_24_1.png?v=1672254504">
-          <div class="sticker_image_main desktop">
-            <div class="sticker_image">
-              <div class="image">
-                <img src="https://cdn.shopify.com/s/files/1/0680/9331/3298/files/image_14_1.png?v=1671192975">
-              </div>
-              <a class="sticker_text" href="https://good-sugar-dev.myshopify.com/pages/about">CTA</a>
-            </div>
-          </div>
+      {%- if section.settings.text_title != blank -%}
+        <div class="text">
+          <div class="left h1">{{- section.settings.text_title -}}</div>
         </div>
-      </div>
+      {%- endif -%}
+      {%- if section.settings.background_image != blank or section.settings.sticker_image != blank -%}
+        <div class="image_main">
+          {%- if section.settings.background_image != blank -%}
+            <div class="image">
+              <img src="{{- section.settings.background_image | image_url -}}">
+              <div class="sticker_image_main desktop">
+                <div class="sticker_image">
+                  {%- if section.settings.sticker_image != blank -%}
+                    <div class="image">
+                      <img src="{{- section.settings.sticker_image | image_url -}}">
+                    </div>
+                  {%- endif -%}
+                  {%- if section.settings.sticker_text != blank -%}<a class="sticker_text" href="{{- section.settings.sticker_url -}}">{{- section.settings.sticker_text -}}</a>{%- endif -%}
+                </div>
+              </div>
+            </div>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
     </div>
   </div>
 
@@ -35,11 +42,36 @@
     "name": "About Large Image Text",
     "tag": "section",
     "settings": [
-      /*{
+      {
         "type":"color_background",
         "id":"bg_color",
         "label":"Background Color"
-      }*/
+      },
+      {
+        "type":"richtext",
+        "id":"text_title",
+        "label":"Image Text"
+      },
+      {
+        "type":"image_picker",
+        "id":"background_image",
+        "label":"Background image"
+      },
+      {
+        "type":"image_picker",
+        "id":"sticker_image",
+        "label":"Sticker image"
+      },
+      {
+        "type":"text",
+        "id":"sticker_text",
+        "label":"Sticker Text"
+      },
+      {
+        "type":"url",
+        "id":"sticker_url",
+        "label":"Sticker url"
+      }
     ],
     
     "presets": [

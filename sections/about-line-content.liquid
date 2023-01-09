@@ -1,39 +1,62 @@
 
 {{ 'about-line-content.css' | asset_url | stylesheet_tag }}
 
-
-<div class="about_line_content">
-    <div class="about_line_wrapper">
-      <div class="heading">
-        A diet that’s full of plant-based, nutrient-dense ingredients – and free of animal-based ones – is proven to boost
-        health, support exercise, and (in many cases) reverse the negative side-effects of aging and disease.
-      </div>
-      <div class="about_line_content_box">
-        <div class="about_line_box_text">Oh, and btw we’re kosher, too.
-        <br><br>
-        That’s a fact, just like these are:      
-        </div>
-        <div class="about_line_box_line">
-          <div class="about_line_box_line_container">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
+{%- if section.settings.title != blank or section.settings.subtitle != blank or section.settings.bottom_text != blank-%}
+  <div class="about_line_content">
+      <div class="about_line_wrapper">
+        {%- if section.settings.title != blank -%}
+          <div class="heading">
+          {{- section.settings.title -}}
           </div>
-          <div class="about_line_box_line_text">Hard as it is to live by this ethos, we’ve done our darndest to make it easy, delicious, and fun.</div>
+        {%- endif -%}
+        <div class="about_line_content_box">
+          {%- if section.settings.subtitle != blank -%}
+            <div class="about_line_box_text">
+              {{- section.settings.subtitle -}}     
+            </div>
+          {%- endif -%}
+          {%- if section.settings.title != blank or section.settings.subtitle != blank or section.settings.bottom_text != blank-%}
+            <div class="about_line_box_line">
+              <div class="about_line_box_line_container">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+              </div>
+              {%- if section.settings.bottom_text != blank -%}
+                <div class="about_line_box_line_text">
+                  {{- section.settings.bottom_text -}}
+                </div>
+              {%- endif -%}
+            </div>
+          {%- endif -%}
         </div>
       </div>
-    </div>
-</div>
+  </div>
+{%- endif -%}
 
 {% schema %}
 {
   "name": "About Line Content",
   "tag": "section",
   "settings": [
-    
+    {
+      "type":"richtext",
+      "id":"title",
+      "label":"Title"
+    },
+    {
+      "type":"richtext",
+      "id":"subtitle",
+      "label":"Subtitle Text"
+    },
+    {
+      "type":"richtext",
+      "id":"bottom_text",
+      "label":"Bottom Text"
+    }
   ],
   
   "presets": [

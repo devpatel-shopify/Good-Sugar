@@ -83,16 +83,27 @@
     "f25573c4-8c19-4317-92b4-5cc05b3c551a": {
       "type": "about-large-image-text",
       "settings": {
+        "bg_color": "radial-gradient(rgba(245, 131, 37, 1), rgba(208, 199, 227, 1) 100%)",
+        "text_title": "We’re not saying we’re perfect, just gooder than the competition...and challenging you to challenge us to stay that way.",
+        "background_image": "shopify:\/\/shop_images\/image_24_1.jpg",
+        "sticker_image": "shopify:\/\/shop_images\/image_14_2_1.png",
+        "sticker_text": "CTA",
+        "sticker_url": "shopify:\/\/collections\/frontpage"
       }
     },
     "3eab5b77-e0ba-402d-8f5d-44d9d95f7309": {
       "type": "about-text-with-image",
       "settings": {
+        "text_title": "Whether to lose weight or gain years, the solution is the same.",
+        "section_image": "shopify:\/\/shop_images\/image_25_1.png"
       }
     },
     "07f486b9-d614-4ae3-b111-f69b04d2cf6c": {
       "type": "about-line-content",
       "settings": {
+        "title": "A diet that’s full of plant-based, nutrient-dense ingredients – and free of animal-based ones – is proven to boost health, support exercise, and (in many cases) reverse the negative side-effects of aging and disease.",
+        "subtitle": "Oh, and btw we’re kosher, too.        That’s a fact, just like these are:  ",
+        "bottom_text": "Hard as it is to live by this ethos, we’ve done our darndest to make it easy, delicious, and fun."
       }
     },
     "f49b88f7-1e2e-4880-8367-dd76675a9f6b": {
@@ -106,10 +117,10 @@
     "24beab2d-87a2-4961-a57a-f20883f39917": {
       "type": "about-text-image-grid",
       "settings": {
-        "bg_color": "radial-gradient(at top,#F9EE58 15%,#fff 80%,#fff)",
+        "bg_color": "radial-gradient(rgba(249, 238, 88, 1) 15%, rgba(255, 255, 255, 1) 80%, rgba(255, 255, 255, 1) 100%)",
         "text_left": "<p><strong>From convenience to blight, the death-cycle of s.u.p starts with your choices and ends back in your body: killing a few birds, biomes, and sea dwellers along the way.<br\/><\/strong><\/p>",
         "text_right": "<p>You’ve heard this before, right?...but have you heard of a new business going as far as to banish all s.u.p from its stores?<br\/><br\/>We hadn’t either, <br\/>so we’re doing it ourselves.<br\/><\/p>",
-        "heading": "good’ more,<br> get more.",
+        "heading": "good’ more, get more.",
         "text": "<p>Drink a lot of our juices? Swear by our superfood smoothies? Hooked on our snacks? Become a goodist.<\/p>",
         "image": "shopify:\/\/shop_images\/round_image.png",
         "btn_text": "CTA",

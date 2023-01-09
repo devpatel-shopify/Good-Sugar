@@ -1,28 +1,47 @@
 {{ 'about-text-image.css' | asset_url | stylesheet_tag }}
 
-
+{%- if section.settings.text_title or section.settings.section_image -%}
 <div class="about_text_image">
     <div class="about_text_image_wrapper">
-      <div class="about_text_box">
-        <div class="about_text_box_main">
-          <div class="text">Whether to lose weight or gain years, the solution is the same.</div>
+      {%- if section.settings.text_title -%}
+        <div class="about_text_box">
+          {%- if section.settings.text_title -%}
+            <div class="about_text_box_main">
+              <div class="text">{{- section.settings.text_title -}}</div>
+            </div>
+          {%- endif -%}
         </div>
-      </div>
-      <div class="about_image_box">
-        <div class="about_image_box_main">
-          <div class="image">
-            <img src="https://cdn.shopify.com/s/files/1/0680/9331/3298/files/image_25_1.png?v=1672648080">
+      {%- endif -%}
+      {%- if section.settings.section_image -%}
+        <div class="about_image_box">
+          <div class="about_image_box_main">
+            {%- if section.settings.section_image -%}
+              <div class="image">
+                <img src="{{- section.settings.section_image | image_url -}}">
+              </div>
+            {%- endif -%}
           </div>
         </div>
-      </div>
+      {%- endif -%}
     </div>
 </div>
+{%- endif -%}
 
 {% schema %}
 {
   "name": "About Text With Image",
   "tag": "section",
   "settings": [
+    {
+      "type":"richtext",
+      "id":"text_title",
+      "label":"Right Text"
+    },
+    {
+      "type":"image_picker",
+      "id":"section_image",
+      "label":"Image"
+    }
     
   ],
   
