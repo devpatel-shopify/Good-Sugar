@@ -17,6 +17,7 @@
   {% endif %}
 </style>
 
+
 <div class="product_accordion {{ section.settings.add_class }}" id="product_accordion--{{ section.id }}">
   <div class="{% if section.settings.full_width == false %} page-width {% endif %} ">
     <div class="product_accordion_wrapper">
@@ -28,8 +29,16 @@
           {% assign productMetaAccordions = product.metafields.accordion.image %}    
           {% if productMetaAccordionsSize > 1 %}
           {% for metaImage in productMetaAccordions %}
-            <div class="image js-image " for="item--{{ forloop.index0 }}" {% if forloop.index > 0 %}style="display:none"{% endif %}>
-              <img src="{{ metaImage[0].original_src }}" alt="{{ block.settings.image.alt }}" image-index="{{ forloop.index0 }}">
+            {% comment %} <style>
+              #product_accordion--{{ section.id }} .image {
+                padding-bottom: {{ 1 | divided_by: metaImage[0].width.aspect_ratio | times: 100 }}%;
+              }
+            </style> {% endcomment %}
+            <div class="image js-image media--square media" for="item--{{ forloop.index0 }}" {% if forloop.index > 0 %}style="display:none"{% endif %}>
+              <img src="{{ metaImage[0].original_src }}" alt="{{ block.settings.image.alt }}" image-index="{{ forloop.index0 }}"
+              width="{{ metaImage[0].width }}"
+              height="{{ metaImage[0].width }}"
+              >
             </div>
           {% endfor %}
           {% endif %}  
@@ -51,13 +60,20 @@
                     </div>
                   </summary>
                   <div class="accordion_content_main">
-                    {% if productMetaAccordions != blank %}                     
-                      <div class="image large-up-hide medium-hide" for="item--{{ block.id }}">
+                    {% if productMetaAccordions != blank %}
+                    
+                      <div class="image large-up-hide medium-hide " for="item--{{ block.id }}">
+                        <div class="media media--square">
                         <img
                           src="{{ productMetaAccordions[forloop.index0][0].original_src }}"
                           alt="{{ block.settings.image.alt }}"
-                         image-index="{{ forloop.index0 }}">
+                         image-index="{{ forloop.index0 }}"
+                         width="{{ productMetaAccordions[forloop.index0][0].width }}"
+                         height="{{ productMetaAccordions[forloop.index0][0].width }}"
+                        >
+                        </div>
                       </div>
+                    
                     {% endif %}
                     {% if MeteContent != blank -%}
                       <div class="accordian_content">{{ MeteContent[forloop.index0] }}</div>
