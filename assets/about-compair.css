@@ -85,6 +85,9 @@
     .compair_sub_text {
         font-size: 40px;
     }
+    .about_compair_sticker {
+        max-height: 200px;
+    }
 }
 @media screen and (max-width:749px) {
     .compair_header {
