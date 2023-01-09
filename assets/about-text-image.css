@@ -67,6 +67,9 @@
     .about_text_box {
         padding-left: 70px;
     }
+    .about_text_box_main .text p {
+        font-size: 40px;
+    }
 }
 @media screen and (max-width:749px) {
     .about_text_box_main .text p {

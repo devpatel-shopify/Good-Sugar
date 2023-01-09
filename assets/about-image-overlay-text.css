@@ -58,6 +58,9 @@
     .overlay_text_content {
         padding-left: 70px;
     }
+    .overlay_text_content_main .text {
+        font-size: 40px;
+    }
 }
 @media screen and (max-width:749px) {
     .overlay_text_content_main .text {

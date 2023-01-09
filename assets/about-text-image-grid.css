@@ -217,6 +217,9 @@ max-width: 430px;
   .about_text_grid_wrapper {
     padding-left: 70px;
   }
+  .about_text_grid_box_main_wrapper .heading {
+    font-size: 40px;
+  }
 }
 @media screen and (max-width:749px) {
   

@@ -12,6 +12,7 @@
     color: #FFFF73;    
     text-transform: lowercase;
     line-height: 1.15;
+    font-size: 50px;
 }
 .about_image_text img {
     height: 100%;
@@ -95,6 +96,9 @@
         padding-top: 100px;
         padding-left: 70px;
     }
+    .about_image_text .h1 p {
+        font-size: 40px;
+    }
 }
 @media screen and (max-width:749px) {
     .about_image_text .text {
@@ -155,5 +159,8 @@
         display: flex;
         height: 100%;
         justify-content: center;
+    }
+    .about_image_text .h1 p {
+        font-size: 20px;
     }
 }

@@ -4,6 +4,13 @@
 }
 .main_logo {
 	height: 100%;
+  width: 400px;
+}
+
+@media screen and (max-width:430px) {
+  .main_logo {
+    width: 275px;
+  }
 }
 .loading_main_logo {
 	display: block;

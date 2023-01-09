@@ -193,6 +193,24 @@ transform: rotate(-10deg);
     top:55%;
     left: 48%;
   }
+  .about_map_sticker.image-type-rectangle .map_sticker_container {
+    height: 120px;
+    width: 180px;
+  }
+  .about_map_sticker.image-type-ellipse .map_sticker_container {
+    height: 80px;
+    width: 200px;
+  }
+  .about_map_sticker.image-type-circle .map_sticker_container {
+    height: 130px;
+    width: 130px;
+  }
+  .about_map_sticker.image-type-rectangle {
+    left: 38%;
+  }
+  .about_map_sticker.image-type-ellipse {
+    top: 43%;
+  }
 }
 
 @media screen and (max-width:900px) {
@@ -205,7 +223,7 @@ transform: rotate(-10deg);
 @media screen and (max-width:900px) {
   .about_map_sticker.image-type-circle {
     top:55%;
-    left: 43%;
+    left: 48%;
   }
 }
 
