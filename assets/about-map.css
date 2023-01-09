@@ -191,7 +191,7 @@ transform: rotate(-10deg);
   }
   .about_map_sticker.image-type-circle {
     top:55%;
-    left: 48%;
+    left: 51%;
   }
   .about_map_sticker.image-type-rectangle .map_sticker_container {
     height: 120px;
@@ -213,17 +213,12 @@ transform: rotate(-10deg);
   }
 }
 
-@media screen and (max-width:900px) {
-  .about_map_sticker.image-type-circle {
-    top:55%;
-    left: 46%;
-  }
-}
+
 
 @media screen and (max-width:900px) {
   .about_map_sticker.image-type-circle {
     top:55%;
-    left: 48%;
+    left: 49%;
   }
 }
 
