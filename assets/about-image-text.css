@@ -4,12 +4,15 @@
     padding-left: 200px;
 }
 .about_image_text .h1 {
+
+    max-width: 880px;
+
+}
+.about_image_text .h1 p {
     color: #FFFF73;    
     text-transform: lowercase;
-    max-width: 880px;
     line-height: 1.15;
 }
-
 .about_image_text img {
     height: 100%;
     width: 100%;

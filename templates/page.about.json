@@ -18,27 +18,36 @@
     "023a7ccc-560e-4a9d-85e1-2e3e2679652d": {
       "type": "about-center-image-with-slider",
       "blocks": {
-        "3a702532-6e63-4367-9dbd-5055519b33ec": {
-          "type": "slide",
+        "e5737233-ed4e-4bab-adc3-d2c8d8d255b0": {
+          "type": "style_1",
           "settings": {
-            "text": "<p>Just because they claim “juice” and “pressed” and “health” doesn't mean they are.<\/p>"
+            "text": "<p>Just because they claim “juice” and “pressed” and “health” doesn’t mean they are.<\/p>"
           }
         },
-        "4d7badd8-ec5c-4952-83f2-cee20e4291dd": {
-          "type": "slide",
+        "469286d1-913c-4a78-8c19-47e74ee71294": {
+          "type": "style_2",
+          "disabled": true,
           "settings": {
-            "text": "<p>In fact, as Marcus saw first hand, it likely means they're not.<\/p>"
+            "text_2": "<p>In fact, as Marcus saw first hand, it likely means they’re not.<\/p>",
+            "image_1": "shopify:\/\/shop_images\/DISGUSTING-JUICE_1_2.png",
+            "image_2": "shopify:\/\/shop_images\/DISGUSTING-JUICE_1_3.png"
           }
         },
-        "c2333641-5319-49f9-9891-0ad1708405a7": {
-          "type": "slide",
+        "19b74642-fa43-4133-9e72-4ff58871b06f": {
+          "type": "style_1",
+          "settings": {
+            "text": "<p>In fact, as Marcus saw first hand, it likely means they’re not.<\/p>"
+          }
+        },
+        "e01c16fc-bd9c-4c5d-b356-85ffe1a4b311": {
+          "type": "style_1",
           "settings": {
             "text": "",
             "image": "shopify:\/\/shop_images\/DISGUSTING-JUICE_1_2.png"
           }
         },
-        "2e776d19-a2b1-42bf-96f2-671c3fcfd130": {
-          "type": "slide",
+        "000747c9-6943-4b4f-9e73-28bef5d2d779": {
+          "type": "style_1",
           "settings": {
             "text": "",
             "image": "shopify:\/\/shop_images\/DISGUSTING-JUICE_1_3.png"
@@ -46,10 +55,11 @@
         }
       },
       "block_order": [
-        "3a702532-6e63-4367-9dbd-5055519b33ec",
-        "4d7badd8-ec5c-4952-83f2-cee20e4291dd",
-        "c2333641-5319-49f9-9891-0ad1708405a7",
-        "2e776d19-a2b1-42bf-96f2-671c3fcfd130"
+        "e5737233-ed4e-4bab-adc3-d2c8d8d255b0",
+        "469286d1-913c-4a78-8c19-47e74ee71294",
+        "19b74642-fa43-4133-9e72-4ff58871b06f",
+        "e01c16fc-bd9c-4c5d-b356-85ffe1a4b311",
+        "000747c9-6943-4b4f-9e73-28bef5d2d779"
       ],
       "settings": {
         "slider_bg": "linear-gradient(97deg, rgba(247, 237, 93, 1), rgba(209, 199, 223, 1) 100%)",
@@ -84,7 +94,7 @@
       "type": "about-large-image-text",
       "settings": {
         "bg_color": "radial-gradient(rgba(245, 131, 37, 1), rgba(208, 199, 227, 1) 100%)",
-        "text_title": "<p>We're not saying we're perfect, just gooder than the competition...and challenging you to challenge us to staythat way.</p>",
+        "text_title": "<p>We're not saying we're perfect, just gooder than the competition...and challenging you to challenge us to staythat way.<\/p>",
         "background_image": "shopify:\/\/shop_images\/image_24_1.jpg",
         "sticker_image": "shopify:\/\/shop_images\/image_14_2_1.png",
         "sticker_text": "CTA",
@@ -94,16 +104,16 @@
     "3eab5b77-e0ba-402d-8f5d-44d9d95f7309": {
       "type": "about-text-with-image",
       "settings": {
-        "text_title": "<p>Whether to lose weight or gain years, the solution is the same.</p>",
+        "text_title": "<p>Whether to lose weight or gain years, the solution is the same.<\/p>",
         "section_image": "shopify:\/\/shop_images\/image_25_1.png"
       }
     },
     "07f486b9-d614-4ae3-b111-f69b04d2cf6c": {
       "type": "about-line-content",
       "settings": {
-        "title": "<p>A diet that's full of plant-based, nutrient-dense ingredients - and free of animal-based ones - is proven to boost health, support exercise, and (in many cases) reverse the negative side-effects of aging and disease.</p>",
-        "subtitle": "<p>Oh, and btw we're kosher, too.That's a fact, just like these are:</p>",
-        "bottom_text": "<p>Hard as it is to live by this ethos, we've done our darndest to make it easy, delicious, and fun.</p>"
+        "title": "<p>A diet that's full of plant-based, nutrient-dense ingredients - and free of animal-based ones - is proven to boost health, support exercise, and (in many cases) reverse the negative side-effects of aging and disease.<\/p>",
+        "subtitle": "<p>Oh, and btw we're kosher, too.That's a fact, just like these are:<\/p>",
+        "bottom_text": "<p>Hard as it is to live by this ethos, we've done our darndest to make it easy, delicious, and fun.<\/p>"
       }
     },
     "f49b88f7-1e2e-4880-8367-dd76675a9f6b": {

@@ -50,7 +50,8 @@
             <div class="swiper-wrapper">
               <!-- Slides -->
               {% for block in section.blocks %}
-              <div class="swiper-slide item_1">
+              {% if block.type == "style_1" %}
+              <div class="swiper-slide style_1 slide_item_{{ forloop.index }}">
                 <div class="slide_item_wrapper">
                   {% if block.settings.text != blank %}
                   <div class="text h1">
@@ -65,6 +66,24 @@
                   {% endif %}
                 </div>
               </div>
+              {% endif %}
+              {% if block.type == "style_2" %}
+                <div class="swiper-slide style_2">
+                  <div class="slide_item_wrapper">
+                    <div class="slider_style_2_text">
+                      <div class="text h1">{{ block.settings.text_2 }}</div>
+                    </div>
+                    <div class="slider_style_2_image_wrapper">
+                      <div class="image_1 image">
+                        <img src="{{ block.settings.image_1 | img_url: 'master'}}">
+                      </div>
+                      <div class="image_2 image">
+                        <img src="{{ block.settings.image_2 | img_url: 'master'}}">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              {% endif %} 
               {% endfor %}
               {% comment %} <div class="swiper-slide item_2">
                 <div class="slide_item_wrapper">
@@ -158,8 +177,8 @@
   ],
   "blocks":[
       {
-        "type":"slide",
-        "name":"Slide",
+        "type":"style_1",
+        "name":"Slide Style 1",
         "settings":[
           {
             "type":"richtext",
@@ -170,6 +189,27 @@
             "type":"image_picker",
             "id":"image",
             "label":"Image"
+          }
+        ]
+      },
+      {
+        "type":"style_2",
+        "name":"Slide Style 2",
+        "settings":[
+          {
+            "type":"richtext",
+            "id":"text_2",
+            "label":"Text"
+          },
+          {
+            "type":"image_picker",
+            "id":"image_1",
+            "label":"Image 1"
+          },
+          {
+            "type":"image_picker",
+            "id":"image_2",
+            "label":"Image 2"
           }
         ]
       }
