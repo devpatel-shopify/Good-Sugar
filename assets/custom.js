@@ -5,6 +5,7 @@
             window.gsapLoaded = true;
             clearInterval(gsapInterval);
             initLoader();
+            AboutMapAnimation();
         }
     });
     function initLoader() {
@@ -42,6 +43,38 @@
             mainLoaderTimeline.to(loader, 1.8, {
                 opacity: 1,
             })
+        }
+    }
+
+
+    function AboutMapAnimation() {
+        console.log("Making map pinned!...")
+        if (document.querySelector(".map_container")) {
+            const u = document.querySelector(".about_map");
+            const mapContainer = document.querySelector(".map_container");
+            const mapTextContainer = document.querySelector(".map_text_container");
+            gsap.registerPlugin("ScrollTrigger");
+
+            const mapTimeline = gsap.timeline({ marker: true, scrollTrigger: { end: "bottom bottom", invalidateOnRefresh: !0, pin: u, scrub: !0, start: "top top", trigger: mapContainer } });
+            mapTimeline.fromTo(mapTextContainer, 1.8, {
+                ease: "none",
+                width: "62%",
+                duration: 1,
+            }, {
+                width: "0",
+                duration: 1,
+            });
+
+            mapTimeline.fromTo(mapContainer, 2.8, {
+                width: "38%",
+                ease: "none"
+            }, {
+                duration: 5,
+                ease: "none",
+                width: "100%",
+                duration: 5
+            });
+
         }
     }
 
