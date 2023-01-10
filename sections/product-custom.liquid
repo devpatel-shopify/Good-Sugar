@@ -804,23 +804,32 @@
                   </div>
                   {%- if block.settings.show_buy_button == true -%}
                     <div class="product_custom_buy_button">
-                      <div
-                        class="no-js-hidden product_buy_btn"
-                        id="price-{{ section.id }}"
-                        role="status"
-                        {{ block.shopify_attributes }}>
-                        <product-form class="product-form">
+                      <div class="no-js-hidden product_buy_btn" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
+                        <div class="product-form__buttons">
+                          <a href="{{- product.metafields.add_to_cart.link | default: 'javascript:void(0);'  -}}" name="add" class="product_buy_button">
+                            {% comment %} <span>{{- product.metafields.add_to_cart_button.text | default: "Order now" -}}</span> {% endcomment %}
+                            <div class="btn_bg">
+                              <img loading="lazy" src="{{ block.settings.bg_image | img_url: 'master' }}">
+                            </div>
+                            <div class="product_custom_price">
+                              {%- render 'price', fromCustom: product.metafields.add_to_cart.label -%}
+                            </div>
+                            <div class="loading-overlay__spinner hidden">
+                              <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                                <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                              </svg>
+                            </div>
+                          </a>
+                        </div>
+                        {% comment %} <product-form class="product-form">
                           {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
-                            <input
-                              type="hidden"
-                              name="id"
-                              value="{{ product.selected_or_first_available_variant.id }}">
+                            <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
                             <div class="product-form__buttons">
                               <button type="submit"
                                 name="add"
                                 class="product_buy_button"
                                 {% if product.selected_or_first_available_variant.available == false %}disabled{% endif %}>
-                                {%- comment -%}
+                            
                                 <span>
                                 {%- if product.selected_or_first_available_variant.available -%}
                                 {{ 'products.product.add_to_cart' | t }}
@@ -828,9 +837,9 @@
                                 {{ 'products.product.sold_out' | t }}
                                 {%- endif -%}
                                 </span>
-                              {%- endcomment -%}
+                              
                                 <div class="btn_bg">
-                                  <img src="{{ block.settings.bg_image | img_url: 'master' }}">
+                                  <img loading="lazy" src="{{ block.settings.bg_image | img_url: 'master' }}">
                                 </div>
                                 <div class="product_custom_price">
                                   {%- render 'price' -%}
@@ -855,7 +864,7 @@
                               {%- endif -%}
                             </div>
                           {%- endform -%}
-                        </product-form>
+                        </product-form> {% endcomment %}
                       </div>
                     </div>
                     {%- endif -%}
@@ -867,7 +876,7 @@
               
 
               {%- when 'buy_buttons' -%}
-                <div class="product_custom_block product_buy_button_main product_buy_button_main--{{ bloc.id }}">
+                <div class="product_custom_block product_buy_button_main product_buy_button_main--{{ block.id }}">
                 {%- render 'buy-buttons', block: block, product: product, product_form_id: product_form_id, show_pickup_availability: true -%}            
                 </div>
 
