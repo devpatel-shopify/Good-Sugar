@@ -20,6 +20,7 @@ new Swiper('.image_text_slide_main', {
     slidesPerView:"auto",
     spaceBetween: 0,
     mousewheel: true,
+    autoHeight:100,
     mousewheel: {
       forceToAxis: false,
       releaseOnEdges: true,
@@ -33,7 +34,7 @@ new Swiper('.image_text_slide_main', {
       // when window width is >= 640px
       750: {
         //slidesPerView: 1.8,
-        spaceBetween: 0,
+        //spaceBetween: 0,
         autoHeight:100,
       }
     }
