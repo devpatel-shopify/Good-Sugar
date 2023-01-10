@@ -143,11 +143,6 @@
 
 .main_slider_wrapper {
     position: relative;
-    /* border: 3px solid #000000; */
-    outline: 3px solid #000000;
-    /* overflow-x: hidden; */
-    /* z-index: 11; */
-    /* overflow: hidden; */
     border: 3px solid #000000;
 }
 
@@ -663,7 +658,7 @@ text-transform: lowercase;
     }
 
     .main_slider_wrapper {
-        outline: 2px solid #000000;
+        
         border: 2px solid #000000;
     }
     .gs_style_3 .heading,
