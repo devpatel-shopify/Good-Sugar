@@ -487,8 +487,11 @@ main#MainContent {
 		background: url(mobile-menu-bg.png) no-repeat;
 		background-position: 100% -39px;
 		background-size: cover;
+		height: calc(100vh - var(--footer-height)) !important;
 	}
-
+	.overflow-hidden-tablet .about_map_sticker {
+		z-index: 0;
+	}
 	.header__icons {
 		position: relative;
 		z-index: 9;

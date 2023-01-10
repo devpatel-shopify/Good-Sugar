@@ -50,6 +50,7 @@
     border: 3px solid rgb(var(--gs-black-color));
     /* box-shadow: 0px 0px 5px rgba(0,0,0,.3); */
     opacity: 0;
+    overflow: hidden;
 }
 
 .swiper-carousel .swiper-slide.swiper-slide-visible {
@@ -147,6 +148,7 @@
     /* overflow-x: hidden; */
     /* z-index: 11; */
     /* overflow: hidden; */
+    border: 3px solid #000000;
 }
 
 .main_slider_content_box {
@@ -660,6 +662,7 @@ text-transform: lowercase;
 
     .main_slider_wrapper {
         outline: 2px solid #000000;
+        border: 2px solid #000000;
     }
     .gs_style_3 .heading,
     .gs_style_2 .main_slider_header {
