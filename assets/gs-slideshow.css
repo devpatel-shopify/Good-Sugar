@@ -430,7 +430,9 @@ line-height: 1.2;
 color: #FFFF73;
 text-transform: lowercase;
 }
-
+.gs_style_3 .btn {
+    display: block;
+}
 .gs_style_3 .btn_text {
     font-size: 25px;
     line-height: 1.05;
@@ -742,13 +744,40 @@ text-transform: lowercase;
     }
 }
 
+@media screen and (max-height:700px) {
+    .gs_style_3 .heading, .gs_style_2 .main_slider_header {
+        font-size: 30px;
+    }
+    .gs_style_3 .text, .gs_style_2 .subheader {
+        font-size: 10px;
+    }
+    .gs_style_3 .main_slider_content {
+        padding: 20px;
+    }
+    .gs_style_3 .btn_text, .gs_style_2 .btn_text {
+        font-size: 12px;
+    }
+    .gs_style_3 .main_slider_button img, .gs_style_3 .btn, .gs_style_2 .main_slider_button .btn {
+        height: 75px;
+        width: 75px;
+    }
+    .gs_style_1 .main_slider_button {
+        margin-top: -70px;
+    }
+    .gs_style_1 .main_slider_content {
+        padding: 20px 15px;
+    }
+    .gs_style_1 .main_slider_subheader {
+        margin-top: 0;
+    }
+}
 @media screen and (max-height:600px) {
     .main_slider_subheader {
         margin-top: 20px;
     }
 
     .gs_style_1 .main_slider_header {
-        font-size: 50px;
+        font-size: 35px;
     }
 
     .gs_style_1 .main_slider_subheader .subheader {
