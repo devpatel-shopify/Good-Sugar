@@ -5,7 +5,7 @@
             window.gsapLoaded = true;
             clearInterval(gsapInterval);
             initLoader();
-            AboutMapAnimation();
+            //AboutMapAnimation();
         }
     });
     function initLoader() {
