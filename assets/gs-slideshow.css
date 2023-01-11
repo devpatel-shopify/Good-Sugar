@@ -39,7 +39,7 @@
     /* width: calc(100% - 6px); */
     width: 100%;
     /* height: calc(87.5vh - var(--header-height) - var(--footer-height)); */
-    height: calc(var(--viewport-height) - var(--header-height) - var(--footer-height) - 115px);
+    height: calc(var(--viewport-height) - var(--header-height) - var(--footer-height) - 125px);
     border-radius: 0;
     background: #000000;
     /* max-width:calc(100% - (var(--page-padding) * 2)); */
@@ -54,6 +54,11 @@
     overflow: hidden;
 }
 
+@media screen and (max-width: 750px){
+ .swiper-carousel .swiper-slide  {
+    height: calc(var(--viewport-height) - var(--header-height) - var(--footer-height) - 115px);
+  }
+}
 .swiper-carousel .swiper-slide.swiper-slide-visible {
     opacity: 1;
 }
