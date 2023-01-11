@@ -1,6 +1,6 @@
 .gs-slideshow-section {
     width: 100%;
-    height: calc(var(--viewport-height) - var(--header-height) - var(--footer-height) - 0px);
+    height: calc(var(--viewport-height) - var(--header-height) - var(--footer-height) - 10px);
     display: flex;
     justify-content: center;
     align-items: center;
