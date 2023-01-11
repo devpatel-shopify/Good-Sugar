@@ -90,6 +90,7 @@
 .product_buy_button {
     position: relative;
     cursor: pointer;
+    display: block;
 }
 .product_custom_price {
     position: absolute;
