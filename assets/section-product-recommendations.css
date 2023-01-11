@@ -142,6 +142,10 @@ color: var(--custom-text_color);
 margin-top: 20px;
 }
 
+.card--standard.card--text:not(.card--horizontal) > .card__content .card__heading {
+  display: block;
+}
+
 .product-recommendations .card__description p,
 .product-recommendations .card__description strong {
   font-family: var(--font-body-family);

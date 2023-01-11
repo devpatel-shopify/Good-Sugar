@@ -7,10 +7,17 @@
 }
 
 .product--no-media {
-  max-width: 57rem;
+  /* max-width: 57rem; */
+  max-width: 100%;
   margin: 0 auto;
 }
-
+.product--no-media .product__media-wrapper {
+  display: none;
+}
+.product--no-media .product__info-wrapper {
+  width: 100% !important;
+  max-width: 100% !important;
+}
 .product__media-wrapper {
   padding-left: 0;
 }

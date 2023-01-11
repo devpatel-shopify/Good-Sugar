@@ -49,10 +49,12 @@
         class="card__inner {% if settings.card_style == 'standard' %}color-{{ settings.card_color_scheme }} gradient{% endif %}{% if card_product.featured_media or settings.card_style == 'standard' %} ratio{% endif %}"
         style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
       >
-        {%- if card_product.featured_media -%}
+        
+        {%- if card_product.featured_media != blank -%}
           <div class="card__media">
             <div class="media media--transparent media--hover-effect">
               {% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
+             
               <img
                 srcset="
                   {%- if card_product.featured_media.width >= 165 -%}{{ card_product.featured_media | image_url: width: 165 }} 165w,{%- endif -%}
@@ -73,6 +75,7 @@
                 width="{{ card_product.featured_media.width }}"
                 height="{{ card_product.featured_media.height }}"
               >
+                
               {% comment %}theme-check-enable ImgLazyLoading{% endcomment %}
 
               {%- if card_product.media[1] != null and show_secondary_image -%}
@@ -97,8 +100,11 @@
               {%- endif -%}
             </div>
           </div>
+          {% else %}
+          <div class="card__media">{{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}</div>                   
         {%- endif -%}
-        <div class="card__content">
+
+        <div class="card__content hidden">
           <div class="card__information">
             <h3
               class="card__heading"
@@ -251,7 +257,7 @@
                           {% comment %} {% if price_bg_image != blank %}
                           <img src="{{ price_bg_image | img_url: 'master' }}">
                           {% endif %} {% endcomment %}
-                          <img src="https://cdn.shopify.com/s/files/1/0680/9331/3298/files/image_8.png?v=1671134824" class="price_bg_image">
+                          <img src="https://cdn.shopify.com/s/files/1/0680/9331/3298/files/price_button_bg.png?v=1670389637" class="price_bg_image">
                           <div class="card_price">
                             {% render 'price', product: card_product, price_class: '' %}
                           </div>
