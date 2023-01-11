@@ -210,7 +210,7 @@
                       <img src="https://cdn.shopify.com/s/files/1/0680/9331/3298/files/image_8.png?v=1671134824" class="price_bg_image">
                     </div>
                     <div class="product_custom_price">
-                      {%- render 'price', fromCustom: card_product.metafields.add_to_cart.label -%}
+                      {%- render 'price', product: card_product, fromCustom: card_product.metafields.add_to_cart.label -%}
                     </div>
                     <div class="loading-overlay__spinner hidden">
                       <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
