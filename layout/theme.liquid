@@ -510,8 +510,8 @@
         if (Shopify.designMode) {
           document.documentElement.classList.add('shopify-design-mode');
         }
-        document.documentElement.style.setProperty("--viewport-height", window.visualViewport.height + "px");
-        document.documentElement.style.setProperty("--viewport-width", window.visualViewport.width + "px");
+        document.documentElement.style.setProperty("--viewport-height", window.visualViewport.height);
+        document.documentElement.style.setProperty("--viewport-width", window.visualViewport.width);
       </script>
 
       <link rel="preload" as="font" href="{{ 'Hiragino_Sans.woff2' | asset_url }}" type="font/woff2" crossorigin>
