@@ -137,7 +137,7 @@ color: var(--custom-text_color);
 }
 
 .product-recommendations .card__description {
-margin-top: 12px;
+margin-top: 20px;
 }
 
 .product-recommendations .card__description p,
@@ -185,7 +185,7 @@ margin-top: 12px;
 }
 
 .product-recommendations .card__information {
-  padding-top: 55px;
+  padding-top: 50px;
 }
 
 .product-recommendations .card-information > *:not(.visually-hidden:first-child) + *:not(.rating) {

@@ -61,7 +61,7 @@ function productRecommendationsSwiper() {
     swiper.destroy();
     init = false;
   }
-  window.setGridHeight('.product-recommendations .card__heading');
+  window.setGridHeight('.card__title_description');
 }
 // productRecommendationsSwiper();
 window.addEventListener("resize", productRecommendationsSwiper);
