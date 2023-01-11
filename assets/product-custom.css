@@ -64,6 +64,16 @@
     width: 210px;
     height: 140px;
 }
+
+.product_page_slider_image {
+    /* position: sticky; */
+    /* top: 0; */
+}
+.product__media-gallery {
+    position: sticky;
+    top: var(--header-height);
+    margin-bottom: -3px;
+}
 @media screen and (max-width:1080px) {
     .btn_bg {
         width: 170px;
