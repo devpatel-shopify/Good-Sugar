@@ -13,8 +13,8 @@
     "heading_h4_tab": 35,
     "heading_h1_mob": 25,
     "heading_h4_mob": 16,
-    "disable_store_add_to_cart_functionality": true,
-    "hide_show_price": true,
+    "disable_store_add_to_cart_functionality": false,
+    "hide_show_price": false,
     "favicon": "shopify:\/\/shop_images\/favicon.jpg",
     "currency_code_enabled": false,
     "sections": {

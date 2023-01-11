@@ -7,7 +7,7 @@
           "type": "title",
           "settings": {
             "title_color": "#5c398d",
-            "bg_image": "shopify:\/\/shop_images\/image_8.png",
+            "bg_image": "shopify:\/\/shop_images\/price_button_bg.png",
             "show_buy_button": true,
             "text": "<p>attribute 1 • attribute 2<\/p>",
             "show_border_top": false,
