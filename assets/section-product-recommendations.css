@@ -60,7 +60,7 @@
     --heading-h4-font-size:28px;
   }
   .product-recommendations .grid__item1 {
-    padding: 65px 15px 10px;
+    padding: 65px 20px 60px 20px;
   }   
 } 
 
@@ -130,12 +130,14 @@ color: var(--custom-text_color);
 .card__price_main {
   position: relative;
   width: 200px;
-  height: 140px;
+  /* height: 140px; */
   z-index: 2;
   cursor: pointer;
   margin-top: 35px;
 }
-
+.product-recommendations .card__information {
+  grid-row-start:1;
+}
 .product-recommendations .card__description {
 margin-top: 20px;
 }
