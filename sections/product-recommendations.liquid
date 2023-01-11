@@ -24,7 +24,7 @@
       <h2 class="product-recommendations__heading center {{ section.settings.heading_size }}">{{ section.settings.heading | escape }}</h2>
       <div class="">
       <ul class="product_recommendations_slider swiper grid product-grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down" role="list">
-        <div class="swiper-wrapper">
+        <div class="swiper-wrapper" data-equal>
         {% for recommendation in recommendations.products %}
           <li class="swiper-slide grid__item1">
             {% render 'card-product',
