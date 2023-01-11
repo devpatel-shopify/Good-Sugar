@@ -205,7 +205,6 @@
               {%- if settings.disable_store_add_to_cart_functionality -%}
                 {%- if card_product.metafields.add_to_cart.link != blank and card_product.metafields.add_to_cart.label != blank -%}
                   <a href="{{- card_product.metafields.add_to_cart.link | default: 'javascript:void(0);'  -}}" name="add" class="product_buy_button">
-                    {% comment %} <span>{{- product.metafields.add_to_cart_button.text | default: "Order now" -}}</span> {% endcomment %}
                     <div class="btn_bg">
                       <img src="https://cdn.shopify.com/s/files/1/0680/9331/3298/files/image_8.png?v=1671134824" class="price_bg_image">
                     </div>

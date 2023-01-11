@@ -821,7 +821,6 @@
                           <div class="product-form__buttons">
                             {%- if product.metafields.add_to_cart.link != blank and product.metafields.add_to_cart.label != blank -%}
                               <a href="{{- product.metafields.add_to_cart.link | default: 'javascript:void(0);'  -}}" name="add" class="product_buy_button">
-                                {% comment %} <span>{{- product.metafields.add_to_cart_button.text | default: "Order now" -}}</span> {% endcomment %}
                                 <div class="btn_bg">
                                   <img loading="lazy" src="{{ block.settings.bg_image | img_url: 'master' }}">
                                 </div>
@@ -845,14 +844,6 @@
                                   name="add"
                                   class="product_buy_button"
                                   {% if product.selected_or_first_available_variant.available == false %}disabled{% endif %}>
-                              
-                                  <span>
-                                  {%- if product.selected_or_first_available_variant.available -%}
-                                  {{ 'products.product.add_to_cart' | t }}
-                                  {%- else -%}
-                                  {{ 'products.product.sold_out' | t }}
-                                  {%- endif -%}
-                                  </span>
                                 
                                   <div class="btn_bg">
                                     <img loading="lazy" src="{{ block.settings.bg_image | img_url: 'master' }}">
