@@ -70,6 +70,10 @@ display: none;
     color: #5C398D;
 }
 .accordion_main details {
+    border-top: 2px solid #f58325;
+
+}
+.accordion_main:first-child details {
     border-top: 3px solid #f58325;
 
 }
@@ -189,6 +193,7 @@ display: none;
     .product_accordion_main.right_item {
         padding: 32px 20px 30px 20px;
     }
+    .accordion_main:first-child details,
     .accordion_main details {
         border-top: 1px solid #f58325;
     }

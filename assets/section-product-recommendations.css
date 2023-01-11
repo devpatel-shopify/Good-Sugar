@@ -39,7 +39,7 @@
   margin: 0 auto;
 }
 .product-recommendations .grid__item1 {
-  padding: 130px 30px 20px;
+  padding: 130px 20px 110px 20px;
 }
 .product-recommendations .grid__item1 {
   /* border-right: var(--custom-border-width) solid var(--custom-border-color); */
@@ -175,7 +175,7 @@ margin-top: 20px;
 }
 .product-recommendations .card-information {
   width: auto;
-  margin-top: 30px;
+  margin-top: 40px;
 }
 .product-recommendations .swiper-autoheight,
 .product-recommendations .swiper-autoheight .swiper-slide {
@@ -204,7 +204,7 @@ margin-top: 20px;
     height: 70px;
   }
   .product-recommendations .grid__item1 {
-    padding: 20px 20px;
+    padding: 22px 20px 24px 20px;
   }
   .product-recommendations .card-information {
     margin-top: 15px;
