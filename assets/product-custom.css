@@ -69,11 +69,7 @@
     /* position: sticky; */
     /* top: 0; */
 }
-.product__media-gallery {
-    position: sticky;
-    top: var(--header-height);
-    margin-bottom: -3px;
-}
+
 @media screen and (max-width:1080px) {
     .btn_bg {
         width: 170px;
@@ -262,6 +258,11 @@
 @media screen and (min-width:750px) {
     .product_custom .product__column-sticky > * {
         width: 100%;        
+    }
+    .product__media-gallery {
+        position: sticky;
+        top: var(--header-height);
+        margin-bottom: -3px;
     }
 .product_custom_buy_button .product_buy_btn {
     display: flex;
