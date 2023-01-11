@@ -1025,43 +1025,49 @@
             {%- endif -%}
 
             {%- when 'true_false_icons' -%}
+            {% assign full_of = product.metafields.full_of.text %}
+            {% assign free_of = product.metafields.accentuate.text %}
+            {% if full_of != blank or free_of != blank %}
               <div class="product_custom_block  true_false_icons true_false_icons--{{ block.id }}">
                 <div class="true_false_icons_wrapper">
-                  <div class="left_item">
-                    <div class="item_title">full of</div>
-                    <div class="item_list_wrapper">
-                      <ul>
-                        {% assign full_of = product.metafields.full_of.text %}
-                        {% for value in full_of %}
-                          <li>
-                            <div class="item_list">
-                              {% render 'icon-true' %}
-                              <span class="item_text">{{ value }}</span>
-                            </div>
-                          </li>
-                        {% endfor %}
-                      </ul>
+                  {% if full_of != blank %}
+                    <div class="left_item">
+                      <div class="item_title">full of</div>
+                      <div class="item_list_wrapper">
+                        <ul>
+                          {% for value in full_of %}
+                            <li>
+                              <div class="item_list">
+                                {% render 'icon-true' %}
+                                <span class="item_text">{{ value }}</span>
+                              </div>
+                            </li>
+                          {% endfor %}
+                        </ul>
+                      </div>
                     </div>
-                  </div>
-                  <div class="right_item">
-                    <div class="item_title">free of</div>
-                    <div class="item_list_wrapper">
-                      <ul>
-                        {% assign free_of = product.metafields.accentuate.text %}
-                        {% for value in free_of %}
-                          <li>
-                            <div class="item_list">
-                              {% render 'icon-false' %}
-                              <span class="item_text">{{ value }}</span>
-                            </div>
-                          </li>
-                        {% endfor %}
-                      </ul>
+                  {% endif %}
+                  {% if free_of != blank %}
+                    <div class="right_item">
+                      <div class="item_title">free of</div>
+                      <div class="item_list_wrapper">
+                        <ul>
+                          
+                          {% for value in free_of %}
+                            <li>
+                              <div class="item_list">
+                                {% render 'icon-false' %}
+                                <span class="item_text">{{ value }}</span>
+                              </div>
+                            </li>
+                          {% endfor %}
+                        </ul>
+                      </div>
                     </div>
-                  </div>
+                  {% endif %}
                 </div>
               </div>               
-
+            {%- endif -%}
             {%- when 'sku' -%}
             <p
               class="product_custom_block product__sku--{{ block.id }} product__sku no-js-hidden{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.sku.size == 0 %} visibility-hidden{% endif %}"
