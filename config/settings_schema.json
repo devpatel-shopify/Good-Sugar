@@ -8,16 +8,16 @@
     "theme_support_url": "https:\/\/support.shopify.com\/"
   },
   {
-    "name":"Logo",
-    "settings":[
+    "name": "Logo",
+    "settings": [
       {
         "type": "header",
         "content": "Logo"
       },
       {
-        "type":"image_picker",
-        "id":"logo",
-        "label":"Logo"
+        "type": "image_picker",
+        "id": "logo",
+        "label": "Logo"
       },
       {
         "type": "range",
@@ -57,16 +57,16 @@
         "default": "#000"
       },
       {
-        "type":"color",
-        "id":"custom_text_color",
-        "label":"Custom Text",
-        "default":"#5c398d"
+        "type": "color",
+        "id": "custom_text_color",
+        "label": "Custom Text",
+        "default": "#5c398d"
       },
       {
-        "type":"color",
-        "id":"custom_button_border_color",
-        "label":"Custom Border",
-        "default":"#5c398d"
+        "type": "color",
+        "id": "custom_button_border_color",
+        "label": "Custom Border",
+        "default": "#5c398d"
       },
       {
         "type": "header",
@@ -1065,6 +1065,23 @@
         "unit": "px",
         "label": "t:settings_schema.global.settings.blur.label",
         "default": 0
+      }
+    ]
+  },
+  {
+    "name": "Custom functionality",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "disable_store_add_to_cart_functionality",
+        "label": "Disable entire store add to cart functionality",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "hide_show_price",
+        "label": "Hide price from entire store",
+        "default": true
       }
     ]
   },

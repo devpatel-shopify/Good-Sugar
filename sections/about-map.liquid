@@ -5,15 +5,15 @@
 <style>
   {% for block in section.blocks %}
     @media screen and (min-width:750px) {
-      .map-sticker--{{ block.id }} {
-        top:{{ block.settings.top }}%;
-        left:{{ block.settings.left }}%;
+      .map-sticker--{{ block.id }}{
+        top: {{ block.settings.top }}%;
+        left: {{ block.settings.left }}%;
       }
     }
-  {% endfor %} 
+  {% endfor %}
 
-  #about-mp--{{ section.id }} .about_map_wrapper {
-    background:{{ section.settings.bg_color }};
+  #about-mp--{{ section.id }}.about_map_wrapper {
+    background: {{ section.settings.bg_color }};
   }
 </style>
 
@@ -41,21 +41,18 @@
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d231165.01643523705!2d55.257013706835956!3d25.137266885774498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f43348a67e24b%3A0xff45e502e1ceb7e2!2sBurj%20Khalifa!5e0!3m2!1sen!2sin!4v1672733805482!5m2!1sen!2sin"
               allowfullscreen=""
               loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
         <div class="map_location_main large-up-hide">
           <div class="map_location_text">
-            <span
-              >We’re closer to you than you are to buying your own professional-grade blender.
+            <span>We’re closer to you than you are to buying your own professional-grade blender.
               <br>
               <br>
               69th St & 3rd Ave, New York, NY 10021
               <br>
               <br>
-              hours:</span
-            >
+              hours:</span>
             <br>
             Mon-fri 8am-7pm<br>
             sat-sun 8am-5pm
@@ -63,55 +60,31 @@
         </div>
       </div>
     </div>
-    
+
     <div class="about_map_sticker block_{{ forloop.index }} image-type-ellipse map-sticker--{{ block.id }}">
       <div class="map_sticker_container">
         <div class="map_sticker_image">
-          <img src="https://cdn.shopify.com/s/files/1/0680/9331/3298/files/image_8.png?v=1671134824">  
+          <img src="https://cdn.shopify.com/s/files/1/0680/9331/3298/files/image_8.png?v=1671134824">
         </div>
         <div class="map_sticker_text">
           <div class="text">brand</div>
         </div>
       </div>
     </div>
-    
+
     <div class="about_map_sticker block_{{ forloop.index }} image-type-rectangle map-sticker--{{ block.id }}">
       <div class="map_sticker_container">
-        <div class="map_sticker_image">          
-          <img src="https://cdn.shopify.com/s/files/1/0680/9331/3298/files/image_12.png?v=1671192667">          
+        <div class="map_sticker_image">
+          <img src="https://cdn.shopify.com/s/files/1/0680/9331/3298/files/image_12.png?v=1671192667">
         </div>
         <div class="map_sticker_text">
           <div class="text">ETHOs</div>
         </div>
       </div>
     </div>
-    
-    
+
+
     <div class="about_map_sticker block_{{ forloop.index }} image-type-circle map-sticker--{{ block.id }}">
-      <div class="map_sticker_container">
-        <div class="map_sticker_image">
-            <img src="https://cdn.shopify.com/s/files/1/0680/9331/3298/files/image_14_1.png?v=1671192975">
-        </div>
-        <div class="map_sticker_text">
-          <div class="text">Rewards</div>
-        </div>
-      </div>
-    </div>
-
-    {% comment %} <div class="about_map_sticker item_2">
-      <div class="map_sticker_container">
-        <div class="map_sticker_image">
-          {% if block.settings.image_style == 'rectangle' %}
-          <img src="https://cdn.shopify.com/s/files/1/0680/9331/3298/files/image_8.png?v=1671134824">
-          {% endif %}
-        </div>
-        <div class="map_sticker_text">
-          <div class="text">brand</div>
-        </div>
-      </div>
-    </div> {% endcomment %}
-
-    {% comment %} <div class="about_map_sticker item_3">
       <div class="map_sticker_container">
         <div class="map_sticker_image">
           <img src="https://cdn.shopify.com/s/files/1/0680/9331/3298/files/image_14_1.png?v=1671192975">
@@ -120,40 +93,56 @@
           <div class="text">Rewards</div>
         </div>
       </div>
+    </div>
+
+    {% comment %} <div class="about_map_sticker item_2">
+    <div class="map_sticker_container">
+    <div class="map_sticker_image">
+    {% if block.settings.image_style == 'rectangle' %}
+    <img src="https://cdn.shopify.com/s/files/1/0680/9331/3298/files/image_8.png?v=1671134824">
+    {% endif %}
+    </div>
+    <div class="map_sticker_text">
+    <div class="text">brand</div>
+    </div>
+    </div>
     </div> {% endcomment %}
 
-  </div>
+    {% comment %} <div class="about_map_sticker item_3">
+    <div class="map_sticker_container">
+    <div class="map_sticker_image">
+    <img src="https://cdn.shopify.com/s/files/1/0680/9331/3298/files/image_14_1.png?v=1671192975">
+    </div>
+    <div class="map_sticker_text">
+    <div class="text">Rewards</div>
+    </div>
+    </div>
+    </div> {% endcomment %}</div>
 </div>
 
 <script src="{{ 'about-map.js' | asset_url }}" defer="defer"></script>
 
 {% schema %}
-{
-  "name": "About Map",
-  "settings": [
-    /*{
-      "type":"color_background",
-      "id":"bg_color",
-      "label":"Background Color"
-    },*/
-    {
-      "type":"text",
-      "id":"heading",
-      "label":"Heading",
-      "default":"Truly Pure Juice and Food."
-    },
-    {
-      "type":"text",
-      "id":"text",
-      "label":"Text",
-      "default":"With goodsugar, you don’t have to compromise between what your taste buds want and what your body needs."
-    }
-  ],
-  "presets": [
-    {
-      "name": "About Map",
-      "settings": {}
-    }
-  ]
-}
+  {
+    "name": "About Map",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading",
+        "default": "Truly Pure Juice and Food."
+      }, {
+        "type": "text",
+        "id": "text",
+        "label": "Text",
+        "default": "With goodsugar, you don’t have to compromise between what your taste buds want and what your body needs."
+      }
+    ],
+    "presets": [
+      {
+        "name": "About Map",
+        "settings": {}
+      }
+    ]
+  }
 {% endschema %}

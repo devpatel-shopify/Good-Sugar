@@ -1,18 +1,18 @@
 {{ 'image-horizontal-slider.css' | asset_url | stylesheet_tag }}
 
 {% comment %} <style>
-  #image-horizontal-slider--{{ section.id }}{
-    background: {{ section.settings.bg_color }};
-  }
-</style> {% endcomment %}
-
-<style>
+#image-horizontal-slider--{{ section.id }}{
+background: {{ section.settings.bg_color }};
+}
+</style> {% endcomment %}<style>
   {%- for block in section.blocks -%}
-    .image_slider--{{ block.id }} .title {
-      color: {{ block.settings.title_color }};
+    .image_slider--{{ block.id }}.title {
+      color: {{ block.settings.title_color }}
+      ;
     }
-    .image_slider--{{ block.id }} .text p {
-      color: {{ block.settings.text_color }};
+    .image_slider--{{ block.id }}.text p {
+      color: {{ block.settings.text_color }}
+      ;
     }
   {%- endfor -%}
 </style>
@@ -22,8 +22,8 @@
 <div class="image_horizontal_slider" id="image-horizontal-slider--{{ section.id }}">
   <div class="image_horizontal_slider_wrapper">
     <div class="image_horizontal_main">
-        {%- for block in section.blocks -%}
-          {%- if block.settings.image != blank -%}
+      {%- for block in section.blocks -%}
+        {%- if block.settings.image != blank -%}
           <div class="block_{{ forloop.index }} image_slider_wrapper image_slider--{{ block.id }}">
             <div class="image_slider_main">
               <div class="image_box">
@@ -43,152 +43,145 @@
               </div>
             </div>
           </div>
-          {%- endif -%}
-        {%- endfor -%}
+        {%- endif -%}
+      {%- endfor -%}
     </div>
   </div>
 
   {% comment %} <div class="small-hide large-up-hide image_horizontal_slider_wrapper tablet_view">
-    <div class="swiper image_horizontal_main {% if count > 2 %} image_horizontal_slider_main_tablet {% else %} image_horizontal_no_slider_main_tablet {% endif %}">
-      <!-- Additional required wrapper -->
-      <div class="swiper-wrapper">
-        <!-- Slides -->
-        {%- for block in section.blocks -%}
-          <div
-            class="block_{{ forloop.index }} swiper-slide image_slider_wrapper image_slider--{{ block.id }}"
-            class=""
-          >
-            <div class="image_slider_main">
-              <div class="image_box">
-                <div class="image">
-                  <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.image.alt }}">
-                </div>
-              </div>
-              <div class="image_slider_content">
-                {%- if block.settings.title != blank -%}
-                  <div class="title left">
-                    {{ block.settings.title }}
-                  </div>
-                {%- endif -%}
-                {%- if block.settings.text -%}
-                  <div class="text center">{{ block.settings.text }}</div>
-                {%- endif -%}
-              </div>
-            </div>
-          </div>
-        {%- endfor -%}
-      </div>
-      <!-- If we need pagination -->
-      <div class="swiper-pagination"></div>
+  <div class="swiper image_horizontal_main {% if count > 2 %} image_horizontal_slider_main_tablet {% else %} image_horizontal_no_slider_main_tablet {% endif %}">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+  <!-- Slides -->
+  {%- for block in section.blocks -%}
+  <div
+  class="block_{{ forloop.index }} swiper-slide image_slider_wrapper image_slider--{{ block.id }}"
+  class=""
+  >
+  <div class="image_slider_main">
+  <div class="image_box">
+  <div class="image">
+  <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.image.alt }}">
+  </div>
+  </div>
+  <div class="image_slider_content">
+  {%- if block.settings.title != blank -%}
+  <div class="title left">
+  {{ block.settings.title }}
+  </div>
+  {%- endif -%}
+  {%- if block.settings.text -%}
+  <div class="text center">{{ block.settings.text }}</div>
+  {%- endif -%}
+  </div>
+  </div>
+  </div>
+  {%- endfor -%}
+  </div>
+  <!-- If we need pagination -->
+  <div class="swiper-pagination"></div>
 
-      <!-- If we need navigation buttons -->
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
+  <!-- If we need navigation buttons -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
 
-      <!-- If we need scrollbar -->
-      <div class="swiper-scrollbar"></div>
-    </div>
+  <!-- If we need scrollbar -->
+  <div class="swiper-scrollbar"></div>
+  </div>
   </div>
 
   <div class="medium-hide large-up-hide image_horizontal_slider_wrapper">
-    <div class="swiper image_horizontal_main {% if count > 2 %} image_horizontal_slider_main_mobile {% else %} image_horizontal_no_slider_main_mobile {% endif %}">
-      <!-- Additional required wrapper -->
-      <div class="swiper-wrapper">
-        <!-- Slides -->
-        {%- for block in section.blocks -%}
-          <div
-            class="block_{{ forloop.index }} swiper-slide image_slider_wrapper image_slider--{{ block.id }}"
-            class=""
-          >
-            <div class="image_slider_main">
-              <div class="image_box">
-                <div class="image">
-                  <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.image.alt }}">
-                </div>
-              </div>
-              <div class="image_slider_content">
-                {%- if block.settings.title != blank -%}
-                  <div class="title left">
-                    {{ block.settings.title }}
-                  </div>
-                {%- endif -%}
-                {%- if block.settings.text -%}
-                  <div class="text center">{{ block.settings.text }}</div>
-                {%- endif -%}
-              </div>
-            </div>
-          </div>
-        {%- endfor -%}
-      </div>
-      <!-- If we need pagination -->
-      <div class="swiper-pagination"></div>
+  <div class="swiper image_horizontal_main {% if count > 2 %} image_horizontal_slider_main_mobile {% else %} image_horizontal_no_slider_main_mobile {% endif %}">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+  <!-- Slides -->
+  {%- for block in section.blocks -%}
+  <div
+  class="block_{{ forloop.index }} swiper-slide image_slider_wrapper image_slider--{{ block.id }}"
+  class=""
+  >
+  <div class="image_slider_main">
+  <div class="image_box">
+  <div class="image">
+  <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.image.alt }}">
+  </div>
+  </div>
+  <div class="image_slider_content">
+  {%- if block.settings.title != blank -%}
+  <div class="title left">
+  {{ block.settings.title }}
+  </div>
+  {%- endif -%}
+  {%- if block.settings.text -%}
+  <div class="text center">{{ block.settings.text }}</div>
+  {%- endif -%}
+  </div>
+  </div>
+  </div>
+  {%- endfor -%}
+  </div>
+  <!-- If we need pagination -->
+  <div class="swiper-pagination"></div>
 
-      <!-- If we need navigation buttons -->
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
+  <!-- If we need navigation buttons -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
 
-      <!-- If we need scrollbar -->
-      <div class="swiper-scrollbar"></div>
-    </div>
-  </div> {% endcomment %}
-</div>
+  <!-- If we need scrollbar -->
+  <div class="swiper-scrollbar"></div>
+  </div>
+  </div> {% endcomment %}</div>
 
 {% comment %} <script type="module" src="{{ 'image-horizontal-slider.js' | asset_url }}"></script> {% endcomment %}
 
 
 {% schema %}
-{
-  "name": "Image Horizontal Slider",
-  "tag": "section",
-  "settings": [
-    /*{
-      "type": "color_background",
-      "id": "bg_color",
-      "label": "Background Color"
-    }*/
-  ],
-  "blocks": [
-    {
-      "type": "image",
-      "name": "Image Slider",
-      "settings": [
-        {
-          "type": "image_picker",
-          "id": "image",
-          "label": "Image"
-        },
-        {
-          "type": "text",
-          "id": "title",
-          "label": "Title"
-        },
-        {
-          "type": "richtext",
-          "id": "text",
-          "label": "Text"
-        },
-        {
-          "type": "header",
-          "content": "Color Settings"
-        }, {
-          "type": "color",
-          "id": "title_color",
-          "label": "Title",
-          "default": "#000000"
-        }, {
-          "type": "color",
-          "id": "text_color",
-          "label": "Text",
-          "default": "#000000"
-        }
-      ]
-    }
-  ],
-  "presets": [
-    {
-      "name": "Image Horizontal Slider",
-      "settings": {}
-    }
-  ]
-}
+  {
+    "name": "Image Horizontal Slider",
+    "tag": "section",
+    "settings": [],
+    "blocks": [
+      {
+        "type": "image",
+        "name": "Image Slider",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+          },
+          {
+            "type": "richtext",
+            "id": "text",
+            "label": "Text"
+          },
+          {
+            "type": "header",
+            "content": "Color Settings"
+          }, {
+            "type": "color",
+            "id": "title_color",
+            "label": "Title",
+            "default": "#000000"
+          }, {
+            "type": "color",
+            "id": "text_color",
+            "label": "Text",
+            "default": "#000000"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Image Horizontal Slider",
+        "settings": {}
+      }
+    ]
+  }
 {% endschema %}

@@ -146,7 +146,7 @@
       "type": "product-recommendations",
       "settings": {
         "show_full_width": true,
-        "heading": "You may also like",
+        "heading": "Goes great with",
         "heading_size": "h1",
         "products_to_show": 5,
         "color_scheme": "background-1",

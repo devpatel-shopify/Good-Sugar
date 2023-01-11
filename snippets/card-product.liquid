@@ -202,60 +202,79 @@
               </p>
             {%- endif -%}
             <div class="card__price_main">
-              {%- assign product_form_id = 'quick-add-' | append: section_id | append: card_product.id -%}
-              {%- if card_product.variants.size == 1 -%}
-                <product-form>
-                  {%- form 'product',
-                    card_product,
-                    id: product_form_id,
-                    class: 'form',
-                    novalidate: 'novalidate',
-                    data-type: 'add-to-cart-form'
-                  -%}
-                    <input
-                      type="hidden"
-                      name="id"
-                      value="{{ card_product.selected_or_first_available_variant.id }}"
-                      disabled
-                    >
-                    <button
-                      id="{{ product_form_id }}-submit"
-                      type="submit"
-                      name="add"
-                      class="11 price_buy_button_general quick-add__submit button1 card__bg_image_main button--full-width button--secondary{% if horizontal_quick_add %} card--horizontal__quick-add{% endif %}"
-                      aria-haspopup="dialog"
-                      aria-labelledby="{{ product_form_id }}-submit title-{{ section_id }}-{{ card_product.id }}"
-                      aria-live="polite"
-                      data-sold-out-message="true"
-                      {% if card_product.selected_or_first_available_variant.available == false %}
-                        disabled
-                      {% endif %}
-                    >
-                      {% comment %} {% if price_bg_image != blank %}
-                      <img src="{{ price_bg_image | img_url: 'master' }}">
-                      {% endif %} {% endcomment %}
+              {%- if settings.disable_store_add_to_cart_functionality -%}
+                {%- if card_product.metafields.add_to_cart.link != blank and card_product.metafields.add_to_cart.label != blank -%}
+                  <a href="{{- card_product.metafields.add_to_cart.link | default: 'javascript:void(0);'  -}}" name="add" class="product_buy_button">
+                    {% comment %} <span>{{- product.metafields.add_to_cart_button.text | default: "Order now" -}}</span> {% endcomment %}
+                    <div class="btn_bg">
                       <img src="https://cdn.shopify.com/s/files/1/0680/9331/3298/files/image_8.png?v=1671134824" class="price_bg_image">
-                      <div class="card_price">
-                        {% render 'price', product: card_product, price_class: '' %}
-                      </div>
-                      {%- if horizontal_quick_add -%}
-                        <span class="icon-wrap">{% render 'icon-plus' %}</span>
-                      {%- endif -%}
-                      <div class="loading-overlay__spinner hidden">
-                        <svg
-                          aria-hidden="true"
-                          focusable="false"
-                          class="spinner"
-                          viewBox="0 0 66 66"
-                          xmlns="http://www.w3.org/2000/svg"
+                    </div>
+                    <div class="product_custom_price">
+                      {%- render 'price', fromCustom: card_product.metafields.add_to_cart.label -%}
+                    </div>
+                    <div class="loading-overlay__spinner hidden">
+                      <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                        <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                      </svg>
+                    </div>
+                  </a>
+                {%- endif -%}
+                {%- else -%}
+                  {%- assign product_form_id = 'quick-add-' | append: section_id | append: card_product.id -%}
+                  {%- if card_product.variants.size == 1 -%}
+                    <product-form>
+                      {%- form 'product',
+                        card_product,
+                        id: product_form_id,
+                        class: 'form',
+                        novalidate: 'novalidate',
+                        data-type: 'add-to-cart-form'
+                      -%}
+                        <input
+                          type="hidden"
+                          name="id"
+                          value="{{ card_product.selected_or_first_available_variant.id }}"
+                          disabled
                         >
-                          <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
-                        </svg>
-                      </div>
-                    </button>
-                  {%- endform -%}
-                </product-form>
-              {% endif %}
+                        <button
+                          id="{{ product_form_id }}-submit"
+                          type="submit"
+                          name="add"
+                          class="11 price_buy_button_general quick-add__submit button1 card__bg_image_main button--full-width button--secondary{% if horizontal_quick_add %} card--horizontal__quick-add{% endif %}"
+                          aria-haspopup="dialog"
+                          aria-labelledby="{{ product_form_id }}-submit title-{{ section_id }}-{{ card_product.id }}"
+                          aria-live="polite"
+                          data-sold-out-message="true"
+                          {% if card_product.selected_or_first_available_variant.available == false %}
+                            disabled
+                          {% endif %}
+                        >
+                          {% comment %} {% if price_bg_image != blank %}
+                          <img src="{{ price_bg_image | img_url: 'master' }}">
+                          {% endif %} {% endcomment %}
+                          <img src="https://cdn.shopify.com/s/files/1/0680/9331/3298/files/image_8.png?v=1671134824" class="price_bg_image">
+                          <div class="card_price">
+                            {% render 'price', product: card_product, price_class: '' %}
+                          </div>
+                          {%- if horizontal_quick_add -%}
+                            <span class="icon-wrap">{% render 'icon-plus' %}</span>
+                          {%- endif -%}
+                          <div class="loading-overlay__spinner hidden">
+                            <svg
+                              aria-hidden="true"
+                              focusable="false"
+                              class="spinner"
+                              viewBox="0 0 66 66"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                            </svg>
+                          </div>
+                        </button>
+                      {%- endform -%}
+                    </product-form>
+                  {% endif %}
+              {%- endif -%}
             </div>
           </div>
         </div>

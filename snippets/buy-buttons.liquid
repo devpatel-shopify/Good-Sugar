@@ -40,6 +40,7 @@
           value="{{ product.selected_or_first_available_variant.id }}"
           disabled
         >
+        {%- if settings.disable_store_add_to_cart_functionality == false -%}
         <div class="product-form__buttons">
           <button
             type="submit"
@@ -71,6 +72,7 @@
           {%- if block.settings.show_dynamic_checkout -%}
             {{ form | payment_button }}
           {%- endif -%}
+        {%- endif -%}
         </div>
       {%- endform -%}
     </product-form>
