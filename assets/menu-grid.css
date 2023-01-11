@@ -1,8 +1,10 @@
 .menu-grid {
-    width: 100%;
-    height: calc(100vh - var(--header-height) - var(--footer-height) - 1px);
+    /* width: 100%; */
+    /* height: calc(100vh - var(--header-height) - var(--footer-height) - 1px); */
     /* height: calc(100vh - var(--header-height) - 0px); */
     display: flex;
+    height: calc(var(--viewport-height) - var(--header-height) - var(--footer-height));
+    width: calc(var(--viewport-width));
     justify-content: center;
     align-items: center;
     /* border-top: 3px solid #5C398D; */
