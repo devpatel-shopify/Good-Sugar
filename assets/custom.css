@@ -524,7 +524,7 @@ main#MainContent {
 		border: 2px solid #000000;
 	}
 	.header-right .header-cart {
-		font-size: 18px;
+		font-size: 16px;
 	}
 }
 
@@ -564,7 +564,7 @@ main#MainContent {
 	}
 
 	.header-right .header-cart {
-		font-size: 18px;
+		font-size: 16px;
 		/* line-height: 19px; */
 	}
 
