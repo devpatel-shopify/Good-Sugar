@@ -50,6 +50,9 @@
     transform: rotate(-1deg);
     max-width: 707px;  
 }
+.about_line_box_line_text p {
+    margin: 0;
+}
 
 @media screen and (max-width:1200px) {
     .about_line_wrapper {

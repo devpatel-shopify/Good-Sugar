@@ -1,10 +1,4 @@
 {{ 'about-text-image-grid.css' | asset_url | stylesheet_tag }}
-
-<style>
-  .about-text-{{ section.id }} {
-        background:{{ section.settings.bg_color }};
-    }
-  </style>
   
 <div class="about-text-image-grid about-text-{{ section.id }}">
     <div class="about_text_grid_wrapper">
@@ -37,12 +31,12 @@
         </div>
       </div>
     </div>
-    {% if section.settings.heading != blank and section.settings.text != blank %}
+    {% if section.settings.heading_1 != blank and section.settings.text != blank %}
     <div class="about_text_image_grid_box">
       <div class="about_text_grid_box">
         <div class="about_text_grid_box_main left_part">
           <div class="about_text_grid_box_main_wrapper">
-            <div class="heading">{{ section.settings.heading }}</div>
+            <div class="heading">{{ section.settings.heading_1 }}</div>
             <div class="text">{{ section.settings.text }}</div>
           </div>
         </div>
@@ -68,11 +62,6 @@
   "tag": "section",
   "settings": [
     {
-      "type":"color_background",
-      "id":"bg_color",
-      "label":"Background Color"
-    },
-    {
       "type":"richtext",
       "label":"Left Side Text",
       "id":"text_left"
@@ -83,8 +72,8 @@
       "id":"text_right"
     },
     {
-      "type":"text",
-      "id":"heading",
+      "type":"richtext",
+      "id":"heading_1",
       "label":"Heading"
     },
     {
