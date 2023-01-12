@@ -33,8 +33,18 @@
 @media screen and (max-width:749px) {
     .custom_heading_wrapper .text {
         font-size: 18px;
+        padding: 0;
     }
     .custom_heading_wrapper .heading {
         padding: 15px 20px;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .custom_heading_wrapper .text {
+        font-size: 15px;
+    }
+    .custom_heading_wrapper .heading {
+        padding: 15px 10px;
     }
 }

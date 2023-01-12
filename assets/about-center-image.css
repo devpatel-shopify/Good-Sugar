@@ -307,5 +307,8 @@ width: calc(100% - 800px);
     }
     .style_1.slide_item_2 {
         width: 300px;
+    }
+    .image_text_item .text p {
+        font-size: 9px;
     }  
 }
