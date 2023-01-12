@@ -671,6 +671,12 @@ main#MainContent {
 .page-resources #MainContent {
 	background: radial-gradient(53.71% 70.37% at 50% 87.2%, #F58325 0%, #D0C7E3 100%);
 }
+@media screen and (max-width:749px) {
+	.page-resources #MainContent {
+		background: radial-gradient(53.71% 70.37% at 50% 104.2%, #F58325 0%, #D0C7E3 100%);
+	}	
+}
+
 @media screen and (max-height:500px) {
     .footer-grid {
         padding: 10px 0;
