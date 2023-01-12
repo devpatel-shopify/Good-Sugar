@@ -82,7 +82,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    column-gap: 64px;
+    column-gap: 35px;
     flex-direction: row;
     flex-wrap: nowrap;
     overflow-y: hidden;
