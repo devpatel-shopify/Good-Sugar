@@ -87,7 +87,7 @@ body:not(.template-index, .page-menu) .header {
 }
 
 .search_model .search-input {
-	font-size: 16px;
+	font-size: 16px !important;
 	color: #000;
 	font-family: 'Hiragino Sans';
 	line-height: normal;
@@ -517,11 +517,14 @@ main#MainContent {
 
 @media screen and (max-width:749px) {
 	.header-wrapper .header {
-		padding: 35px 0px 25px;
+		padding: 35px 0px 15px;
 	}
 
 	.search_model .search-input {
 		border: 2px solid #000000;
+	}
+	.header-right .header-cart {
+		font-size: 18px;
 	}
 }
 
@@ -561,8 +564,8 @@ main#MainContent {
 	}
 
 	.header-right .header-cart {
-		font-size: 17px;
-		line-height: 19px;
+		font-size: 18px;
+		/* line-height: 19px; */
 	}
 
 	.header__icon .icon.icon-close {
@@ -606,7 +609,7 @@ main#MainContent {
 	}
 
 	.header-wrapper .header {
-		padding: 35px 0px 25px;
+		padding: 35px 0px 15px;
 	}
 }
 

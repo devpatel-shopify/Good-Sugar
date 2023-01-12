@@ -56,7 +56,7 @@
 
 @media screen and (max-width: 750px){
  .swiper-carousel .swiper-slide  {
-    height: calc(var(--viewport-height) - var(--header-height) - var(--footer-height) - 115px);
+    height: calc(var(--viewport-height) - var(--header-height) - var(--footer-height) - 100px);
   }
 }
 .swiper-carousel .swiper-slide.swiper-slide-visible {
