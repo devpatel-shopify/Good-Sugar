@@ -118,7 +118,7 @@ window.setGridHeight = (selector) =>{
       });
     })
   
- //   console.log('setGridHeight');
+   console.log('setGridHeight');
 
   }
   
