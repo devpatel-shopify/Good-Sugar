@@ -855,7 +855,7 @@ body {
 	width: auto;
 	color: var(--gradient-base-accent-1);
 	opacity: 1;
-	margin-top: 4px;
+	margin-top: 6px;
 	margin-left: 5px;
 }
 .card__price_main a {
