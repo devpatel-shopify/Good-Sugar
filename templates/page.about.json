@@ -93,9 +93,9 @@
     "f25573c4-8c19-4317-92b4-5cc05b3c551a": {
       "type": "about-large-image-text",
       "settings": {
-        "bg_color": "radial-gradient(53.71% 70.37% at 50% 87.2%, #F58325 0%, #D0C7E3 100%)",
+        "bg_color": "radial-gradient(rgba(245, 131, 37, 1), rgba(208, 199, 227, 1) 100%)",
         "text_title": "<p>We're not saying we're perfect, just gooder than the competition...and challenging you to challenge us to staythat way.<\/p>",
-        "background_image": "shopify:\/\/shop_images\/image_24_1_536cee63-3bf0-4538-b4a4-560aa8490018.png",
+        "background_image": "shopify:\/\/shop_images\/5f3d1d171e9262f7fd70312cb363e34c859c549e.png",
         "sticker_image": "shopify:\/\/shop_images\/image_14_2_1.png",
         "sticker_text": "CTA",
         "sticker_url": "shopify:\/\/collections\/frontpage"
@@ -129,6 +129,7 @@
       "settings": {
         "text_left": "<p><strong>From convenience to blight, the death-cycle of s.u.p starts with your choices and ends back in your body: killing a few birds, biomes, and sea dwellers along the way.<br\/><\/strong><\/p>",
         "text_right": "<p>You've heard this before, right?...but have you heard of a new business going as far as to banish all s.u.p from its stores?<br\/><br\/>We hadn't either, <br\/>so we're doing it ourselves.<br\/><\/p>",
+        "heading_1": "",
         "text": "<p>Drink a lot of our juices? Swear by our superfood smoothies? Hooked on our snacks? Become a goodist.<\/p>",
         "image": "shopify:\/\/shop_images\/round_image.png",
         "btn_text": "CTA",
