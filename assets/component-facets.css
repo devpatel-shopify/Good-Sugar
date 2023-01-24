@@ -133,8 +133,8 @@
 
 .mobile-facets__sort .select__select:focus-visible {
   /* outline: 0.2rem solid rgba(var(--color-foreground), 0.5); */
-  outline-offset: 0.3rem;
-  box-shadow: 0 0 0 0.3rem rgb(var(--color-background)),
+  outline-offset: 1px;
+  box-shadow: 0 0 0 1px rgb(var(--color-background)),
     0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
 }
 
@@ -926,6 +926,7 @@ input.mobile-facets__checkbox {
   width: auto;
   align-items: center;
   min-width: 160px;
+  margin-right: 2px;
 }
 
 .no-js .mobile-facets__sort .select {
@@ -942,10 +943,10 @@ input.mobile-facets__checkbox {
   border-radius: 0;
   box-shadow: none;
   filter: none;
-  margin-left: 0.5rem;
+  /* margin-left: 0.5rem;
   margin-right: 0.5rem;
   padding-left: 0.5rem;
-  padding-right: 1.5rem;
+  padding-right: 1.5rem; */
 }
 
 .product-count {
