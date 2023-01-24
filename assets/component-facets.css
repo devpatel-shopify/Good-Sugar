@@ -79,6 +79,7 @@
 
 .facet-filters__field .select {
   width: auto;
+  min-width: 190px;
 }
 
 .facet-filters__field .select:after,
@@ -924,6 +925,7 @@ input.mobile-facets__checkbox {
 .mobile-facets__sort .select {
   width: auto;
   align-items: center;
+  min-width: 160px;
 }
 
 .no-js .mobile-facets__sort .select {
