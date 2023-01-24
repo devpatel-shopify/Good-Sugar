@@ -910,6 +910,17 @@ transform: scale(1.2);
 .template-collection .header-wrapper {
 border-bottom: var(--custom-border-width) solid var(--custom-border-color);
 }
+
+.facet-filters.sorting .icon-arrow-down {
+	margin-left: -17px;
+}
+.facet-filters__field .select__select {
+	border: 1px solid rgba(0, 0, 0, 0.25);
+	padding: 5px 10px;
+}
+.facet-filters__field .select {
+	align-items: center;
+}
 @media screen and (max-width:749px) {
 	.card__price_main a, .card__price_main a .btn_bg, .card__price_main a .btn_bg img {
 	max-width: 120px;
