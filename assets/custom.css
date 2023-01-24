@@ -893,7 +893,7 @@ transform: scale(1.2);
 }
 
 .product-grid-container {
-	--grid-desktop-horizontal-spacing:20px;
+	--grid-desktop-horizontal-spacing:30px;
 	--grid-desktop-vertical-spacing:20px;
 	--grid-mobile-horizontal-spacing:10px;
 	--grid-mobile-vertical-spacing:10px;
@@ -905,6 +905,10 @@ transform: scale(1.2);
 	width: 100%;
 	max-width: 210px;
 	max-height: 140px;	
+}
+.collection-hero,
+.template-collection .header-wrapper {
+border-bottom: var(--custom-border-width) solid var(--custom-border-color);
 }
 @media screen and (max-width:749px) {
 	.card__price_main a, .card__price_main a .btn_bg, .card__price_main a .btn_bg img {
