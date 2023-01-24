@@ -1821,7 +1821,7 @@ details[open] > .share-button__fallback {
   font-style: var(--font-body-style);
   font-weight: var(--font-body-weight);
   font-size: 1.2rem;
-  color: rgba(var(--color-foreground), 0.75);
+  color: rgba(var(--color-foreground), 1);
 }
 
 .field:hover.field:after,
@@ -3119,4 +3119,5 @@ General CSS For Padding
 }
 .price_order_tag {
   font-family: var(--nav-font-family);
+  color: #000;
 }

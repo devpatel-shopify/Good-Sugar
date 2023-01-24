@@ -134,7 +134,7 @@
                             >
                           {%- endif -%}
                         </span>
-                        {% render 'icon-caret' %}
+                        {% render 'icon-arrow-down' %}
                       </div>
                     </summary>
                     <div
@@ -320,7 +320,7 @@
                     <summary class="facets__summary caption-large focus-offset">
                       <div>
                         <span>{{ filter.label | escape }}</span>
-                        {% render 'icon-caret' %}
+                        {% render 'icon-arrow-down' %}
                       </div>
                     </summary>
                     <div
@@ -486,7 +486,7 @@
                       </option>
                     {%- endfor -%}
                   </select>
-                  {% render 'icon-caret' %}
+                  {% render 'icon-arrow-down' %}
                 </div>
               </div>
 
@@ -497,7 +497,7 @@
               </noscript>
             </div>
           {%- endif -%}
-          <div class="product-count light" role="status">
+          <div class="product-count light hidden" role="status">
             <h2 class="product-count__text text-body">
               <span id="ProductCountDesktop">
                 {%- if results.results_count -%}
@@ -623,7 +623,7 @@
                     {{ 'products.facets.filter_button' | t }}
                   {%- endif -%}
                 </h2>
-                <p class="mobile-facets__count">
+                <p class="mobile-facets__count hidden">
                   {%- if results.results_count -%}
                     {{ 'templates.search.results_with_count' | t: terms: results.terms, count: results.results_count }}
                   {%- elsif results.products_count == results.all_products_count -%}
@@ -650,8 +650,8 @@
                         <summary class="mobile-facets__summary focus-inset">
                           <div>
                             <span>{{ filter.label | escape }}</span>
-                            <span class="mobile-facets__arrow no-js-hidden">{% render 'icon-arrow' %}</span>
-                            <noscript>{% render 'icon-caret' %}</noscript>
+                            <span class="mobile-facets__arrow no-js-hidden">{% render 'icon-arrow-down' %}</span>
+                            <noscript>{% render 'icon-arrow-down' %}</noscript>
                           </div>
                         </summary>
                         <div
@@ -663,7 +663,7 @@
                             aria-expanded="true"
                             type="button"
                           >
-                            {% render 'icon-arrow' %}
+                            {% render 'icon-arrow-down' %}
                             {{ filter.label | escape }}
                           </button>
                           <ul class="mobile-facets__list list-unstyled" role="list">
@@ -756,8 +756,8 @@
                         <summary class="mobile-facets__summary focus-inset">
                           <div>
                             <span>{{ filter.label | escape }}</span>
-                            <span class="mobile-facets__arrow no-js-hidden">{% render 'icon-arrow' %}</span>
-                            <noscript>{% render 'icon-caret' %}</noscript>
+                            <span class="mobile-facets__arrow no-js-hidden">{% render 'icon-arrow-down' %}</span>
+                            <noscript>{% render 'icon-arrow-down' %}</noscript>
                           </div>
                         </summary>
                         <div
@@ -769,7 +769,7 @@
                             aria-expanded="true"
                             type="button"
                           >
-                            {% render 'icon-arrow' %}
+                            {% render 'icon-arrow-down' %}
                             {{ filter.label | escape }}
                           </button>
 
@@ -887,7 +887,7 @@
                             </option>
                           {%- endfor -%}
                         </select>
-                        {% render 'icon-caret' %}
+                        {% render 'icon-arrow-down' %}
                       </div>
                     </div>
                   </div>
@@ -1022,7 +1022,7 @@
     </facet-filters-form>
   {%- endif -%}
   <div
-    class="product-count light{% if filter_type == 'vertical' or filter_type == 'horizontal' %} medium-hide large-up-hide{% endif %}"
+    class="product-count light hidden {% if filter_type == 'vertical' or filter_type == 'horizontal' %} medium-hide large-up-hide{% endif %}"
     role="status"
   >
     <h2 class="product-count__text text-body">
