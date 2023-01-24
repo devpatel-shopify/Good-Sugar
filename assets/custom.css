@@ -927,3 +927,8 @@ border-bottom: var(--custom-border-width) solid var(--custom-border-color);
 	max-height: 70px;
 	}
 }
+@media screen and (min-width: 750px) and (max-width: 1400px) {
+    .product_custom_price .price {
+        --price-font-size:20px;
+    }
+}
