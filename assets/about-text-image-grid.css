@@ -134,7 +134,7 @@ transform: scale(1.2);
 }
 .about_text_grid_button_wrapper img,
 .about_text_grid_button_wrapper .button_image:hover img {
-  transition: all 200ms ease;
+  /* transition: all 200ms ease; */
 }
 
 .about_text_grid_button_wrapper img,

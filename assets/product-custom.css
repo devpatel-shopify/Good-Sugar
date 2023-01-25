@@ -120,12 +120,7 @@
     margin: 0;
     display: flex;
 }
-.product_buy_button:hover .btn_bg,
-.product_buy_button,
-.btn_bg,
-.product_buy_button img {
-    transition: all .2s ease;
-}
+
 .product_buy_button:hover .btn_bg { 
     transform: scale(1.2);
 }
@@ -221,6 +216,7 @@
 .product_custom_price .price {
     font-size: var(--price-font-size);
 }
+
 @media screen and (min-width: 750px) and (max-width: 1400px) {
     .product_custom_price .price {
         --price-font-size:20px;

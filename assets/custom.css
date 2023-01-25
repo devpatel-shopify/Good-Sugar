@@ -361,7 +361,7 @@ div#menu-drawer:after {
 	font-weight: 400;
 	position: relative;
 }
-
+/* 
 .footer-grid .footer-menu .footer-block__details-content li a:after {
 	content: "";
 	display: inline-block;
@@ -372,7 +372,7 @@ div#menu-drawer:after {
 	top: 55%;
 	right: -12px;
 	transform: translateY(-50%);
-}
+} */
 
 .footer-grid .footer-menu .footer-block__details-content li:last-child a:after {
 	display: none;
@@ -886,10 +886,27 @@ width: 100%;
 transform: scale(1.2);
 
 }
+.card__price_main:hover img,
+.card__price_main img,
+.menu-grid_btn_wrapper img,
+.menu-grid_btn_wrapper:hover img,
+.menu-grid_btn_wrapper,
+.about_text_grid_button_wrapper img,
+.about_text_grid_button_wrapper .button_image:hover img ,
+.sticker_image img,
+.sticker_image:hover img,
+.button_wrapper img,
+.button_wrapper:hover img,
+.price_buy_button_general img,
+.price_buy_button_general:hover img, 
+.main_slider_button .btn:hover img,
+.main_slider_button img,
+.main_slider_button .btn,
+.product_buy_button:hover .btn_bg, .product_buy_button, .btn_bg, .product_buy_button img,
 .card__price_main a img,
 .card__price_main a .btn_bg,
 .card__price_main a:hover .btn_bg {
-	transition: all .2s ease;
+	transition: all 100ms ease;
 }
 
 .product-grid-container {
@@ -931,4 +948,19 @@ border-bottom: var(--custom-border-width) solid var(--custom-border-color);
     .product_custom_price .price {
         --price-font-size:20px;
     }
+}
+
+.footer-block__details-content .link::before {
+	content: "";
+    position: absolute;
+    top: auto;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: rebeccapurple;
+	transition: width .3s;
+}
+.footer-block__details-content .link:hover::before {
+	width: 100%;
+	transition: width .3s;
 }

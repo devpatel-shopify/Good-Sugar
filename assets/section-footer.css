@@ -425,8 +425,8 @@ noscript .localization-selector.link {
   .footer-block__details-content .list-menu__item--link:hover,
   .copyright__content a:hover {
     color: rgb(var(--color-foreground));
-    text-decoration: underline;
-    text-underline-offset: 0.3rem;
+    /* text-decoration: underline; */
+    /* text-underline-offset: 0.3rem; */
   }
 
   .footer-block__details-content .list-menu__item--active:hover {

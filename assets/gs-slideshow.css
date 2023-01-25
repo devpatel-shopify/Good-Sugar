@@ -162,8 +162,6 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    /* overflow-x: hidden; */
-    /* z-index: 10; */
 }
 
 .gs_style_1 .main_slider_header {
@@ -220,7 +218,7 @@
     font-family: 'Bangers';
     font-size: 25px;
     line-height: 1;
-    /* letter-spacing: 0; */
+
 }
 
 .gs_style_2 .subheader {
@@ -232,8 +230,6 @@
 }
 
 .gs_style_1 .subheader.item_2 {
-    /* float: right; */
-    /* text-align: right; */
     margin: 0 0 0 auto;
 }
 
@@ -244,45 +240,9 @@
     max-width: 160rem;
 }
 
-/* .main_slider_button .btn {
-    background-color: transparent;
-    
-    background-repeat: no-repeat;
-    background-size: 80%;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 95%;
-    width: 95%;
-    background-position: center;
-    transition: background-size .8s ease-in;
-}
-.main_slider_button .btn:hover {
-    background-size: 100%;
-    
-}
-.main_slider_button {
-    text-align: right;
-    margin-top: -40px;
-    float: right;
-}
-.btn_text {
-    padding: 50px;
-    display: block;
-    font-family: var(--font-body-family);
-    font-size: 15px;
-    color: #F9EE43;
-    transform: rotate(-10deg);
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    white-space: nowrap;
-} */
 
 .gs_style_1 .main_slider_button {
-    /* float: right; */
+
     margin-top: -40px;
     display: flex;
     align-items: center;
@@ -291,16 +251,6 @@
 .main_slider_button img {
     height: 100%;
     width: 100%;
-    /* max-height: 150px; */
-    /* max-width: 150px; */
-    /* transition: all .5s ease; */
-
-}
-
-.main_slider_button .btn:hover img,
-.main_slider_button img,
-.main_slider_button .btn {
-    transition: all 200ms ease;
 }
 
 .main_slider_button .btn {
@@ -578,7 +528,7 @@ text-transform: lowercase;
         font-size: 37px;
     }
     .gs_style_3 .text {
-        font-size: 18px;
+        font-size: 17px;
     }
     .gs_style_3 .btn_text {
         font-size: 18px;
@@ -624,8 +574,6 @@ text-transform: lowercase;
     }
 
     .main_slider_button img {
-        /* max-width: 90px; */
-        /* max-height: 90px; */
         display: inline-block;
         object-fit: cover;
     }
@@ -742,6 +690,19 @@ text-transform: lowercase;
     }
     .gs_style_2 .subheader {
         font-size: 12px;
+    }
+}
+
+@media screen and (max-height:800px) {
+    .gs_style_3 .text {
+        font-size: 11px;
+    }
+    .gs_style_2 .main_slider_header {
+        font-size: 30px;
+    }
+    .gs_style_2 .btn_text,
+    .gs_style_2 .subheader {
+        font-size: 11px;
     }
 }
 
