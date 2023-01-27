@@ -16,6 +16,7 @@
         "show_secondary_image": false,
         "show_vendor": false,
         "show_rating": false,
+        "show_price_bg_image": false,
         "enable_quick_add": false,
         "enable_filtering": true,
         "filter_type": "horizontal",

@@ -3096,10 +3096,7 @@ General CSS For Padding
 .price_buy_button_general:hover img {
   transform: scale(1.2) !important;
 }
-.price_buy_button_general img,
-.price_buy_button_general:hover img  {
-  transition: all 200ms ease;
-}
+
 .price_buy_button_general .card_price {
   position: absolute;
   top: 0;

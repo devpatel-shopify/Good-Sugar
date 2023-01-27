@@ -1,5 +1,6 @@
 {
   "current": {
+    "price_bg_sticker": "shopify:\/\/shop_images\/price_button_bg.png",
     "logo": "shopify:\/\/shop_images\/Web_site_main_logo.png",
     "logo_width": 250,
     "custom_theme": true,

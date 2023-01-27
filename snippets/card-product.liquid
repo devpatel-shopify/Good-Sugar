@@ -217,9 +217,13 @@
               {%- if settings.disable_store_add_to_cart_functionality -%}
                 {%- if card_product.metafields.add_to_cart.link != blank and card_product.metafields.add_to_cart.label != blank -%}
                   <a href="{{- card_product.metafields.add_to_cart.link | default: 'javascript:void(0);'  -}}" name="add" class="product_buy_button">
+                    {% if show_price_bg_image %}
+                    {% if settings.price_bg_sticker != blank %}
                     <div class="btn_bg">
-                      <img src="https://cdn.shopify.com/s/files/1/0680/9331/3298/files/price_button_bg.png?v=1670389637" class="price_bg_image">
+                      <img src="{{ settings.price_bg_sticker | img_url:'master' }}" class="price_bg_image">
                     </div>
+                    {% endif %}
+                    {% endif %}
                     <div class="product_custom_price">
                       {%- render 'price', product: card_product, fromCustom: card_product.metafields.add_to_cart.label -%}
                     </div>

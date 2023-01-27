@@ -174,7 +174,7 @@ margin-top: 20px;
 }
 .card__price_main:hover img,
 .card__price_main img {
-  transition: all 200ms ease;
+  /* transition: all 200ms ease; */
 }
 .card__price_main:hover img {
   transform: scale(1.2);

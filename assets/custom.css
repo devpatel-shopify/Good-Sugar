@@ -964,3 +964,7 @@ border-bottom: var(--custom-border-width) solid var(--custom-border-color);
 	width: 100%;
 	transition: width .3s;
 }
+.card__price_main a > div:first-child {
+	position: relative;
+	display: block;
+}
