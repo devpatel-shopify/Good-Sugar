@@ -861,7 +861,7 @@ body {
 .card__price_main a {
 	display: block;
 	position: relative;
-	margin: 20px 0;
+	margin: 20px 0 5px 0;
 }
 @media screen and (max-width:749px) {
   .card__price_main a {
