@@ -97,7 +97,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/image-28.png",
             "title": "blog",
-            "text": "<p>Learn from <br\/>Marcus<\/p>",
+            "text": "<p>learn from <br\/>marcus<\/p>",
             "title_color": "#eca847",
             "text_color": "#ffffff"
           }
@@ -107,7 +107,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/image-27.png",
             "title": "library",
-            "text": "<p>Learn from<br\/> others<\/p>",
+            "text": "<p>learn from<br\/> others<\/p>",
             "title_color": "#5c398d",
             "text_color": "#000000"
           }
