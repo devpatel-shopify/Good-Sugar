@@ -120,4 +120,4 @@ window.setGridHeight = (selector) =>{
   
    console.log('setGridHeight');
   }
-  window.setGridHeight('.card__title_description');
+  
