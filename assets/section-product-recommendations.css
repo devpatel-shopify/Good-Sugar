@@ -93,6 +93,7 @@ color: var(--custom-text_color);
   justify-content: center;
   position: relative;
   padding: 0;
+  cursor: pointer;
 }
 @media screen and (min-width: 750px) and (max-width: 1080px) {
   .card__bg_image_main {

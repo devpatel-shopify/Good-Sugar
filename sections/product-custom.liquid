@@ -821,11 +821,12 @@
                           <div class="product-form__buttons">
                             {%- if product.metafields.add_to_cart.link != blank and product.metafields.add_to_cart.label != blank -%}
                               <a href="{{- product.metafields.add_to_cart.link | default: 'javascript:void(0);'  -}}" name="add" class="product_buy_button">
-                                <div class="btn_bg">
-                                  <img loading="lazy" src="{{ block.settings.bg_image | img_url: 'master' }}">
-                                </div>
+                                
                                 <div class="product_custom_price">
                                   {%- render 'price', fromCustom: product.metafields.add_to_cart.label -%}
+                                </div>
+                                <div class="btn_bg">
+                                  <img loading="lazy" src="{{ block.settings.bg_image | img_url: 'master' }}">
                                 </div>
                                 <div class="loading-overlay__spinner hidden">
                                   <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">

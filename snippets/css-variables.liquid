@@ -246,17 +246,20 @@
 
 
     --custom-border-width:2px;
+    
   }
   @media screen and (min-width: 750px) {
     :root{
       --page-padding: 3rem;
       --background-drawer: url({{ 'bg-drawer.png' | asset_url }}) no-repeat bottom / cover;
       --custom-border-width:3px;
+      --product-image-small-size:50%;
     }
   }
   @media screen and (min-width: 1300px) {
     :root{
       --page-padding: 7rem;
+      --product-image-small-size:43%;
     }
   }
   *,

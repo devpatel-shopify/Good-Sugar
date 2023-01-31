@@ -67,7 +67,7 @@
     justify-content: center;
     cursor: pointer;    
 }
-.menu-grid_btn_wrapper:hover img {
+.menu-grid_btn_wrapper img:hover  {
     transform: scale(1.2);
     /* transition: all .8s ease-in; */
 }
@@ -80,25 +80,21 @@
 }
 .btn_text {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
+    top: 50%;
+    left: 50%;    
+    /* padding: 20px; */
     font-size: 25px;
+    transform: translateX(-50%) translateY(-50%);
     font-family: var(--nav-font-family);
     font-weight: 400;
     line-height: 1;
     text-align: center;
+    z-index: 1;
 }
 
 .btn_text p {
     margin: 0;
+    white-space: nowrap;
 }
 .sticker_image {
     transition: transform 1s ease;

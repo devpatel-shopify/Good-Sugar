@@ -7,7 +7,7 @@
     --delay: 0ms;
     -webkit-animation: slide-in var(--duration) cubic-bezier(0.1, 0, 0.1, 1) both;
             animation: slide-in var(--duration) cubic-bezier(0.1, 0, 0.1, 1) both;
-            animation-delay: 800ms;
+            animation-delay: 500ms;
    /* -webkit-animation-delay: calc(var(--delay) + (100ms * var(--char-index)));
             animation-delay: calc(var(--delay) + (100ms * var(--char-index)));*/
   }
@@ -48,10 +48,10 @@
 .swiper-slide-active .menu-grid_sticker {
   opacity: 0;
   animation: fadeInUp 1s ease-in-out 0s forwards;
-  animation-delay: 1500ms; 
+  animation-delay: 900ms; 
 }
 .swiper-slide-active .menu-grid_btn_wrapper {
  opacity: 0;
  animation: fadeInUp 1s ease-in-out 0s forwards;
- animation-delay: 1100ms;
+ animation-delay: 700ms;
 }

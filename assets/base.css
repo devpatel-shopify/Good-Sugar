@@ -763,7 +763,7 @@ h6:empty {
 }
 
 a:not([href]) {
-  cursor: not-allowed;
+  /* cursor: not-allowed; */
 }
 
 .circle-divider::after {
@@ -3093,21 +3093,23 @@ General CSS For Padding
   height: 140px;
   width: 200px;
 }
-.price_buy_button_general:hover img {
+.price_buy_button_general img:hover  {
   transform: scale(1.2) !important;
 }
-
+.price_buy_button_general .card_price:hover + img {
+  transform: scale(1);
+}
 .price_buy_button_general .card_price {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  right: auto;
+  bottom: auto;
+  display: block;
+  height: auto;
+  width: fit-content;
+  transform: translateX(-50%) translateY(-50%);
 }
 .price {
   font-size: var(--price-font-size);
@@ -3117,4 +3119,22 @@ General CSS For Padding
 .price_order_tag {
   font-family: var(--nav-font-family);
   color: #000;
+  white-space: nowrap;
+}
+p a {
+  /* width: calc(100%); */
+  background-image: linear-gradient(transparent calc(100% - 2px), currentColor 2px);
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  transition: background-size 1s;
+}
+p a:hover {
+  background-size: 100% 100%;
+}
+
+.footer-menu a,
+.cart a, 
+.main_slider_button a {
+  background-image: none;
+  background-size: auto;
 }

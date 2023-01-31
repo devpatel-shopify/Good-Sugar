@@ -9,7 +9,7 @@
 
 .product_accordion_wrapper {
 display: grid;
-grid-template-columns: calc(43% - 6px / 2) calc(57% + 3px);
+grid-template-columns: calc(var(--product-image-small-size) - 6px / 2) calc(100% - var(--product-image-small-size) + 3px);
 }
 
 .product_accordion img {
@@ -113,8 +113,8 @@ display: none;
 
 @media screen and (min-width:750px) {
     .accordian_content {
-        margin-bottom: 20px;
-        /* margin-top: 30px;     */
+        margin-bottom: 35px;
+        margin-top: 20px;    
     }
     .product_accordion_main_wrapper {
         max-width: 730px;
@@ -166,7 +166,7 @@ display: none;
 }
 @media screen and (max-width:989px) {
     .product_accordion_wrapper {
-        grid-template-columns: calc(43% - 3px) 57%;
+        grid-template-columns: calc(var(--product-image-small-size) - 3px) calc(100% - var(--product-image-small-size));
     }
 }
 

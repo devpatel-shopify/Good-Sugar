@@ -24,6 +24,15 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+  {% if section.settings.show_price_bg_image == false %}
+    .section-{{ section.id }}-padding .collection .product_custom_price {
+      position: relative;
+      display: block;
+      transform: none;
+      top:0;
+      left:0;
+    }
+  {% endif %}
 {%- endstyle -%}
 
 <div class="section-{{ section.id }}-padding">
