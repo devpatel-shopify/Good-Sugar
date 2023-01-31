@@ -349,12 +349,11 @@ transform: rotate(-10deg);
     align-items: center;
     justify-content: center;
 }
-.gs_style_3 .main_slider_button {
-    position: absolute;
-    top: auto;
-    left: auto;
-    bottom: 10px;
-    right: 7%;
+.gs_style_3 .main_slider_item.item_right .main_slider_content {
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: column;
+
 }
 .gs_style_3 .main_slider_content {
     position: absolute;
@@ -663,6 +662,7 @@ text-transform: lowercase;
         position: unset;
     }
     .gs_style_3 .main_slider_button {
+        position: absolute;
         bottom: 0;
         right: 0;
         left: 0;
@@ -697,7 +697,7 @@ text-transform: lowercase;
     }
 }
 
-@media screen and (max-height:800px) {
+@media screen and (max-width:900px) and (max-height:800px) {
     .gs_style_3 .text {
         font-size: 11px;
     }
