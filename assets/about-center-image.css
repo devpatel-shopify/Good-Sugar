@@ -33,7 +33,7 @@
     transform: rotate(-2deg);
 }
 
-.button_wrapper:hover img {
+.button_wrapper .image:hover img {
     transform: scale(1.2);
 }
  
@@ -47,17 +47,11 @@
 }
 .btn_text {
     position: absolute;
-    top: 0;
-    left: 0;
-    right:0;
-    bottom: 0;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    top: 50%;
+    left: 50%;
     text-align: center;
-    /* font-size: var(--price-font-size); */    
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 1;    
 }
 .btn_text p {
     margin: 0;
@@ -65,6 +59,7 @@
     font-family: var(--nav-font-family);
     color: #000000;
     font-size: 25px;
+    white-space: nowrap;
 }
 .image_text_button {
     margin-top: 80px;

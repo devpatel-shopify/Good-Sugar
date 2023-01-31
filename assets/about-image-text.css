@@ -32,32 +32,24 @@
     max-height: 165px;
     cursor: pointer;
 }
-
-.sticker_image:hover img {
+.sticker_image .image img:hover,
+.sticker_image img:hover  {
     transform: scale(1.2);
     
 }
-.sticker_image img,
-.sticker_image:hover img {
-    /* transition: all 200ms ease; */
-}
+
 .sticker_text {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    top: 50%;
+    left: 50%;
     font-size: 25px;
     font-family: var(--nav-font-family);
     line-height: 1.05;
     text-align: center;
     text-decoration: none;
     color: #000000;
+    z-index: 1;
+    transform: translateX(-50%) translateY(-50%);
     
 }
 .sticker_text a {
@@ -109,7 +101,7 @@
         line-height: 1.15;
         padding-bottom: 33px;
         position: relative;
-        z-index: 2;
+        z-index: 1;
     }
     .about_image_text .h1 {
         max-width: 191px;
@@ -139,10 +131,10 @@
     .sticker_image {
         max-width: 70px;
         max-height: 70px;
+        transform: rotate(-9deg);
     }
     .sticker_text {
         font-size: 11px;
-        transform: rotate(-9deg);
     }
     .sticker_image .image {
         max-width: 100%;

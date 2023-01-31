@@ -129,7 +129,7 @@
   margin: -60px -33% 0 auto;
   cursor: pointer;
 }
-.about_text_grid_button_wrapper .button_image:hover img {
+.about_text_grid_button_wrapper .button_image img:hover {
 transform: scale(1.2);
 }
 .about_text_grid_button_wrapper img,
@@ -144,15 +144,10 @@ transform: scale(1.2);
 }
 .about_text_grid_button_wrapper .button_text {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  transform: translateX(-50%) translateY(-50%);
 }
 
 .about_text_grid_button_wrapper a {

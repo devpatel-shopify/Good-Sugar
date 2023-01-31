@@ -138,7 +138,7 @@
                   <div class="main_slider_button desktop-btn-position--{{ block.settings.btn_position }} mobile-btn-position--{{ block.settings.mobile_btn_position }}">
                     <a href="{{ block.settings.link }}" class="btn btn_bg--{{ block.id }}">
                       <span class="btn_text">{{ block.settings.button_label }}</span>
-                      <img src="{{ block.settings.buttonbgimage | img_url: 'master' }}" alt="Slider Button">                      
+                      <img src="{{ block.settings.buttonbgimage | img_url: 'master' }}" alt="Slider Button" class="animation">                      
                     </a>
                   </div>
                 {% endif %}
@@ -241,9 +241,9 @@
                 </div>
 
                 <div class="main_slider_button medium-hide large-up-hide">
-                  <a href="{{ block.settings.link }}" class="btn btn_bg--{{ block.id }}">
+                  <a href="{{ block.settings.link }}" class="btn btn_bg--{{ block.id }} animation">
                     <span class="btn_text">{{ block.settings.button_label }}</span>
-                    <img src="{{ block.settings.buttonbgimage | img_url: 'master' }}" alt="Slider Button">                    
+                    <img src="{{ block.settings.buttonbgimage | img_url: 'master' }}" alt="Slider Button" class="animation">                    
                   </a>
                 </div>
 
@@ -254,9 +254,9 @@
                     </div>
                   {% endif %}
                   <div class="main_slider_button small-hide">
-                    <a href="{{ block.settings.link }}" class="btn btn_bg--{{ block.id }}">
+                    <a href="{{ block.settings.link }}" class="btn btn_bg--{{ block.id }} animation">
                       <span class="btn_text">{{ block.settings.button_label }}</span>
-                      <img src="{{ block.settings.buttonbgimage | img_url: 'master' }}" alt="Slider Button">                      
+                      <img src="{{ block.settings.buttonbgimage | img_url: 'master' }}" alt="Slider Button" class="animation">                      
                     </a>
                   </div>
                   {% if block.settings.rightsubheading_2 != blank %}
@@ -380,9 +380,9 @@
               </div>
             </div>
             <div class="main_slider_button">
-              <a href="{{ block.settings.link }}" class="btn btn_bg--{{ block.id }}">
+              <a href="{{ block.settings.link }}" class="btn btn_bg--{{ block.id }} animation">
                 <span class="btn_text">{{ block.settings.button_label }}</span>
-                <img src="{{ block.settings.buttonbgimage | img_url: 'master' }}" alt="Slider Button">                
+                <img src="{{ block.settings.buttonbgimage | img_url: 'master' }}" alt="Slider Button" class="animation">                
               </a>
             </div>
           </div>

@@ -913,6 +913,12 @@ width: 100%;
 transform: scale(1.2);
 
 }
+.about_text_grid_button_wrapper .button_image img:hover,
+.sticker_image img:hover,
+.button_wrapper .image:hover img,
+.animation, 
+.main_slider_button img:hover,
+.main_slider_button img,
 .card__price_main:hover img,
 .card__price_main img,
 .menu-grid_btn_wrapper img,

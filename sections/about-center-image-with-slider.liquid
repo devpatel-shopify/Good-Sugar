@@ -30,12 +30,12 @@
             {% if section.settings.btn_bg_image != blank and section.settings.btn_url != blank and section.settings.btn_text != blank %}
             <div class="image_text_button">
               <a class="button_wrapper" href="{{ section.settings.btn_url }}">
-                <div class="image">
-                  <img src="{{ section.settings.btn_bg_image | img_url: 'master' }}">
-                </div>
                 <div class="btn_text">
                   {{ section.settings.btn_text }}
                 </div>
+                <div class="image">
+                  <img src="{{ section.settings.btn_bg_image | img_url: 'master' }}">
+                </div>                
               </a>
             </div>
             {% endif %}
