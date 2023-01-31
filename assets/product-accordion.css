@@ -114,7 +114,7 @@ display: none;
 @media screen and (min-width:750px) {
     .accordian_content {
         margin-bottom: 35px;
-        margin-top: 20px;    
+        margin-top: 10px;    
     }
     .product_accordion_main_wrapper {
         max-width: 730px;
