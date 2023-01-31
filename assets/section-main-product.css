@@ -1470,3 +1470,22 @@ a.product__text {
  {
   min-width: 100%;
 }
+
+.media_model_slider .product-media-modal__dialog {
+  height: 100%;
+}
+
+.media_model_slider .product-media-modal__content {
+  padding: 20px;
+  height: 100%;
+}
+.media_model_slider .product-media-modal__content > * {
+  height: 100%;
+  width: 100%;
+}
+.media_model_slider .product-media-modal__dialog .global-media-settings--no-shadow {
+  height: 100%;
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}

@@ -3121,6 +3121,9 @@ General CSS For Padding
   color: #000;
   white-space: nowrap;
 }
+a {
+  text-decoration: none;
+}
 p a {
   /* width: calc(100%); */
   background-image: linear-gradient(transparent calc(100% - 2px), currentColor 2px);

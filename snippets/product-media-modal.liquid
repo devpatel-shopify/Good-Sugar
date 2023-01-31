@@ -9,7 +9,7 @@
   {% render 'product-media-modal' %}
 {% endcomment %}
 
-<product-modal id="ProductModal-{{ section.id }}" class="product-media-modal media-modal">
+<product-modal id="ProductModal-{{ section.id }}" class="product-media-modal media-modal media_model_slider">
   <div
     class="product-media-modal__dialog"
     role="dialog"
@@ -32,13 +32,47 @@
       aria-label="{{ 'products.modal.label' | t }}"
       tabindex="0"
     >
-      {%- liquid
-        if product.selected_or_first_available_variant.featured_media != null
-          assign media = product.selected_or_first_available_variant.featured_media
-          render 'product-media', media: media, loop: section.settings.enable_video_looping, variant_image: section.settings.hide_variants
-        endif
-      -%}
+      
+      <div class="swiper product_model_slider">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          {%- liquid
+            if product.selected_or_first_available_variant.featured_media != null
+              assign media = product.selected_or_first_available_variant.featured_media
+              render 'product-media', media: media, loop: section.settings.enable_video_looping, variant_image: section.settings.hide_variants
+            endif
+          -%}
+          
+          {%- for media in product.media -%}
+          <div class="swiper-slide">
+            {%- liquid
+              if section.settings.hide_variants and variant_images contains media.src or variant_images contains media.id
+                assign variant_image = true
+              else
+                assign variant_image = false
+              endif
+    
+              unless media.id == product.selected_or_first_available_variant.featured_media.id
+                render 'product-media', media: media, loop: section.settings.enable_video_looping, variant_image: variant_image
+              endunless
+            -%}
+          </div>
+        {%- endfor -%} 
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination hidden"></div>
+      
+        <!-- If we need navigation buttons -->
+        <div class="swiper--prev hidden"></div>
+        <div class="swiper--next hidden"></div>
+      
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar hidden"></div>
+      </div>
+      
 
+      {% comment %} 
       {%- for media in product.media -%}
         {%- liquid
           if section.settings.hide_variants and variant_images contains media.src or variant_images contains media.id
@@ -51,7 +85,10 @@
             render 'product-media', media: media, loop: section.settings.enable_video_looping, variant_image: variant_image
           endunless
         -%}
-      {%- endfor -%}
+      {%- endfor -%} 
+    {% endcomment %}
     </div>
   </div>
 </product-modal>
+
+<script src="{{ 'product-model-slider.js' | asset_url }}" defer="defer"></script>
