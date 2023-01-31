@@ -69,7 +69,7 @@
         "right_text": "<p>He just listened...and learned...and tinkered...and toiled...until finally he created an approach to juicing that didn't require pasteurization or additives or preservatives: just the pure way nature intended.<br\/><br\/>You can taste it in all of our offerings and how good they make us feel<\/p>",
         "btn_bg_image": "shopify:\/\/shop_images\/image_10.png",
         "btn_text": "<p>learn more<br\/>from marcus<\/p>",
-        "btn_url": "shopify:\/\/collections"
+        "btn_url": "shopify:\/\/blogs\/news"
       }
     },
     "4dd2fe52-519d-41f9-83a0-aa45b72f4ecd": {
@@ -97,7 +97,7 @@
         "text_title": "<p>We're not saying we're perfect, just gooder than the competition...and challenging you to challenge us to staythat way.<\/p>",
         "background_image": "shopify:\/\/shop_images\/image_24_1_536cee63-3bf0-4538-b4a4-560aa8490018.png",
         "sticker_image": "shopify:\/\/shop_images\/image_14_2_1.png",
-        "sticker_text": "CTA",
+        "sticker_text": "F*ck Plastic",
         "sticker_url": "shopify:\/\/collections\/frontpage"
       }
     },
@@ -132,8 +132,8 @@
         "heading_1": "",
         "text": "<p>Drink a lot of our juices? Swear by our superfood smoothies? Hooked on our snacks? Become a goodist.<\/p>",
         "image": "shopify:\/\/shop_images\/round_image.png",
-        "btn_text": "CTA",
-        "btn_url": "shopify:\/\/pages\/about"
+        "btn_text": "Knowledge is Power",
+        "btn_url": "https:\/\/www.google.com\/url?q=https:\/\/www.ilovegoodsugar.com\/pages\/all-articles&sa=D&source=editors&ust=1675184451274448&usg=AOvVaw1_Qp70OInDSyJRBLRTTd_3"
       }
     }
   },
