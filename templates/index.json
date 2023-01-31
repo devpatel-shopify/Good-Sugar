@@ -25,7 +25,7 @@
             "btn_position": "right",
             "mobile_btn_position": "center",
             "buttonbgimage": "shopify:\/\/shop_images\/btn_bg_image.png",
-            "link": "shopify:\/\/products\/demo-product-1",
+            "link": "shopify:\/\/pages\/resources",
             "box_align": "middle-center",
             "image_overlay_opacity": 0
           }
@@ -42,7 +42,7 @@
             "rightsubheading_2": "Because as the Buddha (never) said: “a good river that flows within bad banks is not very good at all.”",
             "buttonbgimage": "shopify:\/\/shop_images\/image_14_2_1.png",
             "button_label": "Help Us<br> Stop <br>Plastic",
-            "link": "shopify:\/\/products\/demo-product-1"
+            "link": "shopify:\/\/pages\/about"
           }
         },
         "dacdc06a-0ae2-48c4-884b-562c4559ca7c": {
@@ -56,7 +56,7 @@
             "text_3": "Take our [Hero Juice], [Hero Food], [Hero Snack] for instance: this is that “I want something better for lunch” trio you didn’t actually get last week at that press-ery, the week before at that bowls spot, or the week before that at the corner deli.<br><br>  This time, grab-and-go with a midday meal that’s actually good for you and the planet.",
             "buttonbgimage": "shopify:\/\/shop_images\/image_14_2_1.png",
             "button_label": "Gimme <br> Gimme <br>Gimme",
-            "link": "shopify:\/\/products\/demo-product-1"
+            "link": "shopify:\/\/pages\/menu"
           }
         },
         "8c24614a-2312-48be-b411-58cad5f7b3e3": {
@@ -81,7 +81,7 @@
             "btn_position": "right",
             "mobile_btn_position": "right",
             "buttonbgimage": "shopify:\/\/shop_images\/btn_bg_image.png",
-            "link": "shopify:\/\/collections\/all",
+            "link": "shopify:\/\/pages\/resources",
             "box_align": "middle-center",
             "image_overlay_opacity": 0
           }
@@ -98,7 +98,7 @@
             "rightsubheading_2": "Because as the Buddha (never) said: “a good river that flows within bad banks is not very good at all.”",
             "buttonbgimage": "shopify:\/\/shop_images\/image_14_2_1.png",
             "button_label": "Help Us <br>Stop <br>Plastic",
-            "link": "shopify:\/\/collections\/all"
+            "link": "shopify:\/\/pages\/about"
           }
         },
         "e0f193f2-637d-440c-8633-c6b5d29dd314": {
@@ -112,7 +112,7 @@
             "text_3": "Take our [Hero Juice], [Hero Food], [Hero Snack] for instance: this is that “I want something better for lunch” trio you didn’t actually get last week at that press-ery, the week before at that bowls spot, or the week before that at the corner deli.<br><br> This time, grab-and-go with a midday meal that’s actually good for you and the planet.",
             "buttonbgimage": "shopify:\/\/shop_images\/image_14_2_1.png",
             "button_label": "Button <br>label",
-            "link": "shopify:\/\/collections"
+            "link": "shopify:\/\/pages\/menu"
           }
         },
         "b52cf09b-72bd-4e13-b41f-aa3baba1d82d": {
