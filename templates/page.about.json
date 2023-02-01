@@ -41,6 +41,7 @@
         },
         "19b74642-fa43-4133-9e72-4ff58871b06f": {
           "type": "style_1",
+          "disabled": true,
           "settings": {
             "text": "<p>In fact, as Marcus saw first hand, it likely means they’re not.<\/p>"
           }
