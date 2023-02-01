@@ -31,7 +31,7 @@
         "2db8630c-5227-407b-9ba1-bc835702efbc": {
           "type": "text",
           "settings": {
-            "text": "<p>Sure, we sell juices and smoothies and vegan stuff that taste like non-vegan stuff, but we’re actual in it for one simple reason: that you live a healthier life.<br\/><\/p>",
+            "text": "<p>Sure, we sell juices and smoothies and vegan stuff that tastes like non-vegan stuff, but we’re actually in it for one simple reason: that you live a healthier life. <\/p>",
             "text_color": "#5c398d",
             "font-size": 20,
             "font_size_tab": 20,
@@ -48,7 +48,7 @@
         "0c40241f-4a50-42de-949a-91599207cde4": {
           "type": "text",
           "settings": {
-            "text": "<p>It took a nice-looking website and some clever wordplay to get you her. but it’ll take real smarts for you to keep this way of living up.<\/p>",
+            "text": "<p>It took a nice-looking website and some clever wordplay to get you here…but it’ll take real smarts for you to keep up with this way of living. <\/p>",
             "text_color": "#5c398d",
             "font-size": 20,
             "font_size_tab": 20,
@@ -65,7 +65,7 @@
         "7e87669d-882d-4155-b0c8-273e25a0b8c4": {
           "type": "text",
           "settings": {
-            "text": "<p>We know because we’ve read all the misclaims and junk science out there, which is why we continue to put these resources together.<\/p>",
+            "text": "<p>We know because we’ve read all the misclaims and junk science out there, which is why we continue to put these resources together. <\/p>",
             "text_color": "#5c398d",
             "font-size": 20,
             "font_size_tab": 20,
