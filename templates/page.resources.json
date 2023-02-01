@@ -97,7 +97,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/image-28.png",
             "title": "blog",
-            "text": "<p><a href=\"\/blogs\/news\/his-blog\" title=\"His blog\">learn from <br\/>marcus<\/a><\/p>",
+            "text": "<p><a href=\"https:\/\/www.ilovegoodsugar.com\/blogs\/self-help-tips\" target=\"_blank\" title=\"https:\/\/www.ilovegoodsugar.com\/blogs\/self-help-tips\">learn from <br\/>marcus<\/a><\/p>",
             "title_color": "#eca847",
             "text_color": "#ffffff"
           }
@@ -107,7 +107,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/image-27.png",
             "title": "library",
-            "text": "<p><a href=\"\/blogs\/news\/his-library\" title=\"His library\">learn from<br\/> others<\/a><\/p>",
+            "text": "<p><a href=\"https:\/\/www.ilovegoodsugar.com\/pages\/all-articles\" target=\"_blank\" title=\"https:\/\/www.ilovegoodsugar.com\/pages\/all-articles\">learn from<br\/> others<\/a><\/p>",
             "title_color": "#5c398d",
             "text_color": "#000000"
           }
@@ -117,7 +117,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/image-29.png",
             "title": "book",
-            "text": "<p><a href=\"\/blogs\/news\/his-books-ecomm\" title=\"His book's ecomm\">get the <br\/>book<\/a><\/p>",
+            "text": "<p><a href=\"https:\/\/www.ilovegoodsugar.com\/products\/the-goodsugar-diet-printed-book\" target=\"_blank\" title=\"https:\/\/www.ilovegoodsugar.com\/products\/the-goodsugar-diet-printed-book\">get the <br\/>book<\/a><\/p>",
             "title_color": "#5c398d",
             "text_color": "#000000"
           }
