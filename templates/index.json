@@ -59,6 +59,20 @@
             "subheader_text_color": "#ffffff"
           }
         },
+        "e0f193f2-637d-440c-8633-c6b5d29dd314": {
+          "type": "style_3",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_32_1_36083846-dfef-4398-8335-b4360c227431.png",
+            "mobile-image": "shopify:\/\/shop_images\/image_34_1.png",
+            "heading_3": "Too good to be true?",
+            "image_right": "shopify:\/\/shop_images\/open-mouth-lightning_01_3_1.png",
+            "mobile-image_right": "shopify:\/\/shop_images\/nemo-43-single-use_recolored_3_1.png",
+            "text_3": "We get it – with a product this pure there’s got to be some catch – so we’re willing to put our money where your mouth is to prove that we’re not bs’ing:<br><br>All you have to do is",
+            "buttonbgimage": "shopify:\/\/shop_images\/image_14_2_1.png",
+            "button_label": "Prove Us <br>Wrong",
+            "link": "shopify:\/\/pages\/menu"
+          }
+        },
         "dacdc06a-0ae2-48c4-884b-562c4559ca7c": {
           "type": "style_3",
           "settings": {
@@ -103,20 +117,6 @@
             "link": "shopify:\/\/pages\/about"
           }
         },
-        "e0f193f2-637d-440c-8633-c6b5d29dd314": {
-          "type": "style_3",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/image_32_1_36083846-dfef-4398-8335-b4360c227431.png",
-            "mobile-image": "shopify:\/\/shop_images\/image_34_1.png",
-            "heading_3": "Drink good. Eat good. Be good.",
-            "image_right": "shopify:\/\/shop_images\/open-mouth-lightning_01_3_1.png",
-            "mobile-image_right": "shopify:\/\/shop_images\/nemo-43-single-use_recolored_3_1.png",
-            "text_3": "Take our [Hero Juice], [Hero Food], [Hero Snack] for instance: this is that “I want something better for lunch” trio you didn’t actually get last week at that press-ery, the week before at that bowls spot, or the week before that at the corner deli.<br><br> This time, grab-and-go with a midday meal that’s actually good for you and the planet.",
-            "buttonbgimage": "shopify:\/\/shop_images\/image_14_2_1.png",
-            "button_label": "Button <br>label",
-            "link": "shopify:\/\/pages\/menu"
-          }
-        },
         "b52cf09b-72bd-4e13-b41f-aa3baba1d82d": {
           "type": "style_2",
           "disabled": true,
@@ -134,10 +134,10 @@
       "block_order": [
         "8c24614a-2312-48be-b411-58cad5f7b3e3",
         "28ddc718-0e80-4086-b1a6-ff51705412b2",
+        "e0f193f2-637d-440c-8633-c6b5d29dd314",
         "dacdc06a-0ae2-48c4-884b-562c4559ca7c",
         "3343447d-49e6-47f8-ae99-7f79b247fe76",
         "319edcf4-06e2-4e14-8e61-4d6d881784ca",
-        "e0f193f2-637d-440c-8633-c6b5d29dd314",
         "b52cf09b-72bd-4e13-b41f-aa3baba1d82d"
       ],
       "settings": {
