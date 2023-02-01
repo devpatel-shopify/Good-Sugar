@@ -66,6 +66,9 @@ width: 100%;
   text-transform: lowercase;
   font-family: var(--font-heading-family);
 }
+.map_sticker_image img:hover {
+  transform: scale(1.2);
+}
 .about_map_sticker {
   position: absolute;
   /* top:0; */
@@ -110,6 +113,7 @@ transform: rotate(-10deg);
   height: 165px;
   width: 165px;
   transform: rotate(5deg);
+  
 }
 
 .map_sticker_text .text {
@@ -120,18 +124,14 @@ transform: rotate(-10deg);
 }
 .map_sticker_container {
   position: relative;
+  cursor: pointer;
 }
 .map_sticker_text {
   position: absolute;
-  top:0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  top:50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 1;
 }
 .map_text_subtext {
   max-width: 450px;
@@ -295,7 +295,7 @@ transform: rotate(-10deg);
     padding: 20px;
   }
   .about_map_sticker.image-type-rectangle {
-    padding: 20px;
+    padding-right: 20px;
     /* top: 35px; */
     /* left: auto; */
     /* right: 0; */
@@ -310,7 +310,7 @@ transform: rotate(-10deg);
     right: 20px;
   }
   .about_map_sticker.image-type-rectangle {
-    top:40px;
+    top:60px;
     left:auto;
     right: 0px;
   }

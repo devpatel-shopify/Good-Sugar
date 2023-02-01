@@ -737,6 +737,14 @@ text-transform: lowercase;
         margin-top: 0;
     }
 }
+@media screen and (min-width:100px) and (max-height:700px) {
+    .gs_style_3 .text, .gs_style_2 .subheader {
+        font-size: 14px;
+    }
+    .gs_style_3 .heading, .gs_style_2 .main_slider_header {
+        font-size: 45px;
+    }
+}
 @media screen and (max-height:600px) {
     .main_slider_subheader {
         margin-top: 20px;

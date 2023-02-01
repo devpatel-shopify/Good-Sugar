@@ -913,6 +913,8 @@ width: 100%;
 transform: scale(1.2);
 
 }
+.map_sticker_image, .about_map_sticker img,
+.map_sticker_image img:hover,
 .about_text_grid_button_wrapper .button_image img:hover,
 .sticker_image img:hover,
 .button_wrapper .image:hover img,

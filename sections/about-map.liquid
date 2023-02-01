@@ -60,64 +60,49 @@
         </div>
       </div>
     </div>
-
+    {% if section.settings.ellipse_text != blank and section.settings.ellipse_link != blank %}
     <div class="about_map_sticker block_{{ forloop.index }} image-type-ellipse map-sticker--{{ block.id }}">
-      <div class="map_sticker_container">
-        <div class="map_sticker_image">
-          <img src="https://cdn.shopify.com/s/files/1/0680/9331/3298/files/image_8.png?v=1671134824">
+      <a href="{{ section.settings.ellipse_link }}">
+        <div class="map_sticker_container">
+          <div class="map_sticker_text">
+            <div class="text">{{ section.settings.ellipse_text }}</div>
+          </div>
+          <div class="map_sticker_image">
+            <img src="https://cdn.shopify.com/s/files/1/0680/9331/3298/files/image_8.png?v=1671134824">
+          </div>        
         </div>
-        <div class="map_sticker_text">
-          <div class="text">brand</div>
-        </div>
-      </div>
+      </a>
     </div>
-
-    <div class="about_map_sticker block_{{ forloop.index }} image-type-rectangle map-sticker--{{ block.id }}">
-      <div class="map_sticker_container">
-        <div class="map_sticker_image">
-          <img src="https://cdn.shopify.com/s/files/1/0680/9331/3298/files/image_12.png?v=1671192667">
-        </div>
-        <div class="map_sticker_text">
-          <div class="text">ETHOs</div>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="about_map_sticker block_{{ forloop.index }} image-type-circle map-sticker--{{ block.id }}">
-      <div class="map_sticker_container">
-        <div class="map_sticker_image">
-          <img src="https://cdn.shopify.com/s/files/1/0680/9331/3298/files/image_14_1.png?v=1671192975">
-        </div>
-        <div class="map_sticker_text">
-          <div class="text">Rewards</div>
-        </div>
-      </div>
-    </div>
-
-    {% comment %} <div class="about_map_sticker item_2">
-    <div class="map_sticker_container">
-    <div class="map_sticker_image">
-    {% if block.settings.image_style == 'rectangle' %}
-    <img src="https://cdn.shopify.com/s/files/1/0680/9331/3298/files/image_8.png?v=1671134824">
     {% endif %}
+    {% if section.settings.rectangle_text != blank and section.settings.rectangle_link != blank %}
+    <div class="about_map_sticker block_{{ forloop.index }} image-type-rectangle map-sticker--{{ block.id }}">
+      <a href="{{ section.settings.rectangle_link }}">
+        <div class="map_sticker_container">
+          <div class="map_sticker_text">
+            <div class="text">{{ section.settings.rectangle_text }}</div>
+          </div>
+          <div class="map_sticker_image">
+            <img src="https://cdn.shopify.com/s/files/1/0680/9331/3298/files/image_12.png?v=1671192667">
+          </div>        
+        </div>
+      </a>
     </div>
-    <div class="map_sticker_text">
-    <div class="text">brand</div>
+    {% endif %}
+    {% if section.settings.circle_text != blank and section.settings.circle_link != blank %}
+    <div class="about_map_sticker block_{{ forloop.index }} image-type-circle map-sticker--{{ block.id }}">
+      <a href="{{ section.settings.circle_link }}">
+        <div class="map_sticker_container">
+          <div class="map_sticker_text">
+            <div class="text">{{ section.settings.circle_text }}</div>
+          </div>
+          <div class="map_sticker_image">
+            <img src="https://cdn.shopify.com/s/files/1/0680/9331/3298/files/image_14_1.png?v=1671192975">
+          </div>        
+        </div>
+      </a>
     </div>
-    </div>
-    </div> {% endcomment %}
-
-    {% comment %} <div class="about_map_sticker item_3">
-    <div class="map_sticker_container">
-    <div class="map_sticker_image">
-    <img src="https://cdn.shopify.com/s/files/1/0680/9331/3298/files/image_14_1.png?v=1671192975">
-    </div>
-    <div class="map_sticker_text">
-    <div class="text">Rewards</div>
-    </div>
-    </div>
-    </div> {% endcomment %}</div>
+    {% endif %}
+  </div>
 </div>
 
 <script src="{{ 'about-map.js' | asset_url }}" defer="defer"></script>
@@ -131,12 +116,48 @@
         "id": "heading",
         "label": "Heading",
         "default": "Truly Pure Juice and Food."
-      }, {
+      }, 
+      {
         "type": "text",
         "id": "text",
         "label": "Text",
         "default": "With goodsugar, you don’t have to compromise between what your taste buds want and what your body needs."
+      },
+      {
+        "type":"header",
+        "content":"Button Link And Text"
+      },
+      {
+        "type":"text",
+        "id":"ellipse_text",
+        "label":"Ellipse Text"
+      },
+      {
+        "type":"url",
+        "id":"ellipse_link",
+        "label":"Ellipse Link"
+      },
+      {
+        "type":"text",
+        "id":"rectangle_text",
+        "label":"Rectangle Text"
+      },
+      {
+        "type":"url",
+        "id":"rectangle_link",
+        "label":"Rectangle Link"
+      },
+      {
+        "type":"text",
+        "id":"circle_text",
+        "label":"Circle Text"
+      },
+      {
+        "type":"url",
+        "id":"circle_link",
+        "label":"Circle Link"
       }
+      
     ],
     "presets": [
       {
