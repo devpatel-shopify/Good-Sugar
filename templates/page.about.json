@@ -134,12 +134,12 @@
     "24beab2d-87a2-4961-a57a-f20883f39917": {
       "type": "about-text-image-grid",
       "settings": {
-        "text_left": "<p><strong>From convenience to blight, the death-cycle of s.u.p starts with your choices and ends back in your body: killing a few birds, biomes, and sea dwellers along the way.<br\/><\/strong><\/p>",
-        "text_right": "<p>You've heard this before, right?...but have you heard of a new business going as far as to banish all s.u.p from its stores?<br\/><br\/>We hadn't either, <br\/>so we're doing it ourselves.<br\/><\/p>",
+        "text_left": "<p><strong>From convenience to blight, the death-cycle of s.u.p starts with your choices and ends back in your body: killing a few birds, biomes, and sea dwellers along the way. <br\/><\/strong><\/p>",
+        "text_right": "<p>You’ve heard this before, right?...but have you heard of a new business going as far as to banish all s.u.p from its stores? <br\/><br\/>We hadn’t either, so we’re doing it ourselves. <\/p>",
         "heading_1": "",
-        "text": "<p>Drink a lot of our juices? Swear by our superfood smoothies? Hooked on our snacks? Become a goodist.<\/p>",
+        "text": "",
         "image": "shopify:\/\/shop_images\/round_image.png",
-        "btn_text": "Knowledge is Power",
+        "btn_text": "That’s what s.u.p.",
         "btn_url": "shopify:\/\/blogs\/news\/his-library"
       }
     }
