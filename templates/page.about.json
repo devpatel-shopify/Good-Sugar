@@ -82,7 +82,7 @@
     "4dd2fe52-519d-41f9-83a0-aa45b72f4ecd": {
       "type": "about-custom-heading",
       "settings": {
-        "text": "so,<span> how is goodsugar <\/span>purely different:"
+        "text": "goodsugar is purely different:"
       }
     },
     "58cce4d0-defa-445b-a7e9-f10b408ab85c": {
@@ -90,10 +90,10 @@
       "settings": {
         "heading_left": "goodsugar",
         "subheading_left": "(us)",
-        "list_text_left": "<li>What is Lorem Ipsum?<\/li>\n<br>\n<li>What is Lorem Ipsum?<\/li><br>\n<li>What is Lorem Ipsum?<\/li>",
+        "list_text_left": "<li>Unpasteurized, unadulterated, unambiguous<\/li>\n<br>\n<li>All about easy, delicious vitality<\/li><br>\n<li>Serious about quality (and little else)<\/li>",
         "heading_right": "badsugar",
         "subheading_right": "(them)",
-        "list_text_right": "<li>What is Lorem Ipsum?<\/li>\n<br>\n<li>What is Lorem Ipsum?<\/li><br>\n<li>What is Lorem Ipsum?<\/li>",
+        "list_text_right": "<li>You’d be better off drinking from a toilet<\/li>\n<br>\n<li>All about pumping profits<\/li><br>\n<li>Serious about stakeholders (and little else) <\/li>",
         "image": "shopify:\/\/shop_images\/image_23_1.png"
       }
     },
