@@ -6,6 +6,16 @@
 <script type="module" src="{{ 'swiper-bundle.min.js' | asset_url }}"></script>
 <script type="module" src="{{ 'swiper-bundle.esm.browser.min.js' | asset_url }}"></script>
 
+{% style %}
+{%- for block in section.blocks -%}
+  {%- if block.type == 'style_1' -%}
+    #Slide-{{ section.id }}-{{ forloop.index }} .main_slider_subheader .subheader {
+      color:{{ block.settings.subheader_text_color }};
+    }
+  {%- endif -%}
+{%- endfor -%}
+{% endstyle %}
+
 <!-- Slider main container -->
 {% assign speed = section.settings.speed %}
 
@@ -778,6 +788,12 @@
             "unit": "%",
             "label": "t:sections.gs-slideshow.blocks.slide.settings.image_overlay_opacity.label",
             "default": 0
+          },
+          {
+            "type":"color",
+            "id":"subheader_text_color",
+            "label":"Subheader Text Color",
+            "default":"#000000"
           }
         ]
       }, {
