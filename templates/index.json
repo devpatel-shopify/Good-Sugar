@@ -3,6 +3,34 @@
     "e2dfb2e9-ee76-4736-a4e8-c80bcd44b659": {
       "type": "gs-slideshow",
       "blocks": {
+        "8c24614a-2312-48be-b411-58cad5f7b3e3": {
+          "type": "style_1",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/open-mouth-lightning_01.png",
+            "mobile-image": "shopify:\/\/shop_images\/banner-image-mobile.jpg",
+            "local_video": "",
+            "video_url": "",
+            "heading": "All the good, none of the bad.",
+            "heading_text_alignment": "center",
+            "mobile_heading_text_alignment": "center",
+            "leftsubheading": "Whether you’re gulping a juice, sipping a shot, savoring a smoothie, slurping a soup, snacking on a salad, or taking down a treat, everything we make is, well, good:\n• Organic + Fresh\n• Plant-based\n• Unpasteurized\n• Nutrient-dense\n• Single-use-plastics-free",
+            "left_subheading_text_alignment": "left",
+            "mobile_left_subheading_text_alignment": "center",
+            "left_box_position": "left",
+            "rightsubheading": "So why eat another bowl of garbage when you’re not a raccoon?",
+            "right_subheading_text_alignment": "right",
+            "mobile_right_subheading_text_alignment": "center",
+            "right_box_position": "right",
+            "button_label": "Get the Goods",
+            "btn_position": "right",
+            "mobile_btn_position": "right",
+            "buttonbgimage": "shopify:\/\/shop_images\/btn_bg_image.png",
+            "link": "shopify:\/\/pages\/resources",
+            "box_align": "middle-center",
+            "image_overlay_opacity": 0,
+            "subheader_text_color": "#000000"
+          }
+        },
         "28ddc718-0e80-4086-b1a6-ff51705412b2": {
           "type": "style_1",
           "settings": {
@@ -13,7 +41,7 @@
             "heading": "It’s Time to Eat the Truth.",
             "heading_text_alignment": "center",
             "mobile_heading_text_alignment": "center",
-            "leftsubheading": "The current state of mass health food is certainly not healthful and, with so many additives and preservatives, can barely be called ‘food.’",
+            "leftsubheading": "The current state of mass health food is certainly not healthful and – with so many additives and preservatives – can barely be called ‘food.’",
             "left_subheading_text_alignment": "left",
             "mobile_left_subheading_text_alignment": "left",
             "left_box_position": "left",
@@ -21,7 +49,7 @@
             "right_subheading_text_alignment": "right",
             "mobile_right_subheading_text_alignment": "left",
             "right_box_position": "right",
-            "button_label": "learn more, <br>choose better",
+            "button_label": "Learn More, <br>Choose Better",
             "btn_position": "right",
             "mobile_btn_position": "center",
             "buttonbgimage": "shopify:\/\/shop_images\/btn_bg_image.png",
@@ -58,34 +86,6 @@
             "buttonbgimage": "shopify:\/\/shop_images\/image_14_2_1.png",
             "button_label": "Gimme <br> Gimme <br>Gimme",
             "link": "shopify:\/\/pages\/menu"
-          }
-        },
-        "8c24614a-2312-48be-b411-58cad5f7b3e3": {
-          "type": "style_1",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/open-mouth-lightning_01.png",
-            "mobile-image": "shopify:\/\/shop_images\/banner-image-mobile.jpg",
-            "local_video": "",
-            "video_url": "",
-            "heading": "All the good, none of the bad.",
-            "heading_text_alignment": "center",
-            "mobile_heading_text_alignment": "center",
-            "leftsubheading": "Whether you’re gulping a juice, sipping a shot, savoring a smoothie, slurping a soup, snacking on a salad, or taking down a treat, everything we make is, well, good:\n• Organic + Fresh\n• Plant-based\n• Unpasteurized\n• Nutrient-dense\n• Single-use-plastics-free",
-            "left_subheading_text_alignment": "left",
-            "mobile_left_subheading_text_alignment": "center",
-            "left_box_position": "left",
-            "rightsubheading": "So why eat another bowl of garbage when you’re not a raccoon?",
-            "right_subheading_text_alignment": "right",
-            "mobile_right_subheading_text_alignment": "center",
-            "right_box_position": "right",
-            "button_label": "Get the Goods",
-            "btn_position": "right",
-            "mobile_btn_position": "right",
-            "buttonbgimage": "shopify:\/\/shop_images\/btn_bg_image.png",
-            "link": "shopify:\/\/pages\/resources",
-            "box_align": "middle-center",
-            "image_overlay_opacity": 0,
-            "subheader_text_color": "#000000"
           }
         },
         "319edcf4-06e2-4e14-8e61-4d6d881784ca": {
@@ -132,10 +132,10 @@
         }
       },
       "block_order": [
+        "8c24614a-2312-48be-b411-58cad5f7b3e3",
         "28ddc718-0e80-4086-b1a6-ff51705412b2",
         "3343447d-49e6-47f8-ae99-7f79b247fe76",
         "dacdc06a-0ae2-48c4-884b-562c4559ca7c",
-        "8c24614a-2312-48be-b411-58cad5f7b3e3",
         "319edcf4-06e2-4e14-8e61-4d6d881784ca",
         "e0f193f2-637d-440c-8633-c6b5d29dd314",
         "b52cf09b-72bd-4e13-b41f-aa3baba1d82d"
