@@ -62,7 +62,7 @@
     </div>
     {% if section.settings.ellipse_text != blank and section.settings.ellipse_link != blank %}
     <div class="about_map_sticker block_{{ forloop.index }} image-type-ellipse map-sticker--{{ block.id }}">
-      <a href="{{ section.settings.ellipse_link }}">
+      <a data-click-to-jump-link data-href="{{section.settings.ellipse_link}}" href="javascript:void(0)">
         <div class="map_sticker_container">
           <div class="map_sticker_text">
             <div class="text">{{ section.settings.ellipse_text }}</div>
@@ -76,7 +76,7 @@
     {% endif %}
     {% if section.settings.rectangle_text != blank and section.settings.rectangle_link != blank %}
     <div class="about_map_sticker block_{{ forloop.index }} image-type-rectangle map-sticker--{{ block.id }}">
-      <a href="{{ section.settings.rectangle_link }}">
+      <a data-click-to-jump-link data-href="{{section.settings.rectangle_link}}" href="javascript:void(0)">
         <div class="map_sticker_container">
           <div class="map_sticker_text">
             <div class="text">{{ section.settings.rectangle_text }}</div>
@@ -90,7 +90,7 @@
     {% endif %}
     {% if section.settings.circle_text != blank and section.settings.circle_link != blank %}
     <div class="about_map_sticker block_{{ forloop.index }} image-type-circle map-sticker--{{ block.id }}">
-      <a href="{{ section.settings.circle_link }}">
+      <a data-click-to-jump-link data-href="{{section.settings.circle_link}}" href="javascript:void(0)">
         <div class="map_sticker_container">
           <div class="map_sticker_text">
             <div class="text">{{ section.settings.circle_text }}</div>
@@ -104,7 +104,28 @@
     {% endif %}
   </div>
 </div>
+<script>
+// scrolling js   
+const internalLinks = document.querySelectorAll('a[data-click-to-jump-link]');
 
+internalLinks.forEach((link) => {
+  link.addEventListener('click', function(e) {
+    console.log("e",e.currentTarget)
+    e.preventDefault();
+    if(e.currentTarget.getAttribute("data-href") == ""){
+      return;
+    }
+    let targetOffset = document.querySelector(`${e.currentTarget.getAttribute("data-href")}`).offsetTop;
+    console.log(targetOffset)
+    let headerOffset = document.querySelector('#shopify-section-header').offsetHeight;
+    console.log(headerOffset)
+    window.scroll({
+      top:  (targetOffset - headerOffset),
+      behavior: 'smooth'
+    })
+  })
+})
+</script>
 <script src="{{ 'about-map.js' | asset_url }}" defer="defer"></script>
 
 {% schema %}
