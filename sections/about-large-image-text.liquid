@@ -22,7 +22,7 @@
               <img src="{{- section.settings.background_image | image_url -}}">
               <div class="sticker_image_main desktop">
                 <div class="sticker_image">
-                  {%- if section.settings.sticker_text != blank -%}<a class="sticker_text" href="{{- section.settings.sticker_url -}}">{{- section.settings.sticker_text -}}</a>{%- endif -%}
+                  {%- if section.settings.sticker_text != blank -%}<a class="sticker_text" data-click-to-jump-link data-href="{{- section.settings.sticker_url -}}" href="javascript:void(0)" href="">{{- section.settings.sticker_text -}}</a>{%- endif -%}
                   {%- if section.settings.sticker_image != blank -%}
                     <div class="image">
                       <img src="{{- section.settings.sticker_image | image_url -}}">
