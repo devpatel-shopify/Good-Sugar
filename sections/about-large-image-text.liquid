@@ -38,6 +38,29 @@
     </div>
   </div>
 
+<script>
+// scrolling js   
+const internalLinks = document.querySelectorAll('a[data-click-to-jump-link]');
+
+internalLinks.forEach((link) => {
+link.addEventListener('click', function(e) {
+  console.log("e",e.currentTarget)
+  e.preventDefault();
+  if(e.currentTarget.getAttribute("data-href") == ""){
+    return;
+  }
+  let targetOffset = document.querySelector(`${e.currentTarget.getAttribute("data-href")}`).offsetTop;
+  console.log(targetOffset)
+  let headerOffset = document.querySelector('#shopify-section-header').offsetHeight;
+  console.log(headerOffset)
+  window.scroll({
+    top:  (targetOffset - headerOffset),
+    behavior: 'smooth'
+  })
+})
+})
+</script>
+
   {% schema %}
   {
     "name": "About Large Image Text",
