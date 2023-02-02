@@ -12,6 +12,36 @@
     #Slide-{{ section.id }}-{{ forloop.index }} .main_slider_subheader .subheader {
       color:{{ block.settings.subheader_text_color }};
     }
+    #Slide-{{ section.id }}-{{ forloop.index }} .main_slider_header {
+      -webkit-text-fill-color: {{ block.settings.header_text_color }};
+      -webkit-text-stroke-color: {{ block.settings.header_text_stroke_color }};
+      color: {{ block.settings.header_text_color }};
+    }
+    #Slide-{{ section.id }}-{{ forloop.index }} .btn_text {
+      color:{{ block.settings.btn_text_color }};
+    }
+  {%- endif -%}
+  {%- if block.type == 'style_2' -%}
+    #Slide-{{ section.id }}-{{ forloop.index }} .main_slider_header {
+      color: {{ block.settings.header_text_color }};
+    }
+    #Slide-{{ section.id }}-{{ forloop.index }} .subheader {
+      color:{{ block.settings.subheader_text_color }};
+    }
+    #Slide-{{ section.id }}-{{ forloop.index }} .btn_text {
+      color:{{ block.settings.btn_text_color }};
+    }
+  {%- endif -%}
+  {%- if block.type == 'style_3' -%}
+    #Slide-{{ section.id }}-{{ forloop.index }} .text {
+      color: {{ block.settings.subheader_text_color }};
+    }
+    #Slide-{{ section.id }}-{{ forloop.index }} .btn_text {
+      color:{{ block.settings.btn_text_color }};
+    }
+    #Slide-{{ section.id }}-{{ forloop.index }} .heading {
+      color:{{ block.settings.header_text_color }};
+    }
   {%- endif -%}
 {%- endfor -%}
 {% endstyle %}
@@ -264,10 +294,14 @@
                     </div>
                   {% endif %}
                   <div class="main_slider_button small-hide">
-                    <a href="{{ block.settings.link }}" class="btn btn_bg--{{ block.id }} animation">
+                    <div class="btn btn_bg--{{ block.id }}">
+                      <a href="{{ block.settings.link }}" >
                       <span class="btn_text">{{ block.settings.button_label }}</span>
-                      <img src="{{ block.settings.buttonbgimage | img_url: 'master' }}" alt="Slider Button" class="animation">                      
-                    </a>
+                      </a>
+                      <a href="{{ block.settings.link }}">
+                      <img src="{{ block.settings.buttonbgimage | img_url: 'master' }}" alt="Slider Button" class="">
+                      </a>                      
+                    </div>
                   </div>
                   {% if block.settings.rightsubheading_2 != blank %}
                     <div class="subheader item_2 desktop-{{ block.settings.right_subheading_text_alignment }} desktop-box-position--{{ block.settings.right_box_position }}">
@@ -794,6 +828,24 @@
             "id":"subheader_text_color",
             "label":"Subheader Text Color",
             "default":"#000000"
+          },
+          {
+            "type":"color",
+            "id":"header_text_color",
+            "label":"Header Text Color",
+            "default":"#000000"
+          },
+          {
+            "type":"color",
+            "id":"header_text_stroke_color",
+            "label":"Header Text Stroke Color",
+            "default":"#D1C8E3"
+          },
+          {
+            "type":"color",
+            "id":"btn_text_color",
+            "label":"Button Text Color",
+            "default":"#F9EE43"
           }
         ]
       }, {
@@ -858,6 +910,24 @@
             "type": "url",
             "id": "link",
             "label": "t:sections.gs-slideshow.blocks.slide.settings.link.label"
+          },
+          {
+            "type":"color",
+            "id":"header_text_color",
+            "label":"Heading Text Color",
+            "default":"#ffffff"
+          },
+          {
+            "type":"color",
+            "id":"subheader_text_color",
+            "label":"Subheading Text Color",
+            "default":"#ffffff"
+          },
+          {
+            "type":"color",
+            "id":"btn_text_color",
+            "label":"Button Text Color",
+            "default":"#000000"
           }
         ]
       }, {
@@ -915,6 +985,24 @@
             "type": "url",
             "id": "link",
             "label": "t:sections.gs-slideshow.blocks.slide.settings.link.label"
+          },
+          {
+            "type":"color",
+            "id":"header_text_color",
+            "label":"Heading Text Color",
+            "default":"#000000"
+          },
+          {
+            "type":"color",
+            "id":"subheader_text_color",
+            "label":"Subheading Text Color",
+            "default":"#FFFF73"
+          },
+          {
+            "type":"color",
+            "id":"btn_text_color",
+            "label":"Button Text Color",
+            "default":"#000000"
           }
         ]
       }

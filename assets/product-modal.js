@@ -1,5 +1,5 @@
 if (!customElements.get('product-modal')) {
-  customElements.define('product-modal', class ProductModal extends ModalDialog {
+  customElements.define('product-modal', class ProductModal extends ProductModalDialog {
     constructor() {
       super();
     }

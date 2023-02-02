@@ -1487,5 +1487,26 @@ a.product__text {
   height: 100%;
   width: 100%;
   display: block;
-  object-fit: cover;
+  object-fit: contain;
+}
+.product_model_slider .swiper-arrow {
+  position: absolute;
+  top: 45%;
+  z-index: 2;
+  cursor: pointer;
+}
+.product_model_slider .swiper--next {
+right: 10px;
+}
+.product_model_slider .swiper--prev {
+  left: 10px;
+  transform: rotate(180deg);
+}
+.product_model_slider .swiper-button-disabled {
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+.product_model_slider .swiper-arrow svg {
+  color: var(--custom-border-color);
 }

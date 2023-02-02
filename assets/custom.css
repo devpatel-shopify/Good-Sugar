@@ -941,7 +941,11 @@ transform: scale(1.2);
 .card__price_main a img,
 .card__price_main a .btn_bg,
 .card__price_main a:hover .btn_bg {
-	transition: all 100ms ease;
+	transition: all 250ms ease;
+}
+
+.main_slider_button img:hover {
+    transform: scale(1.5);
 }
 
 .product-grid-container {

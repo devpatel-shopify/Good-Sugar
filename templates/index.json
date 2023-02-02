@@ -28,7 +28,10 @@
             "link": "shopify:\/\/pages\/resources",
             "box_align": "middle-center",
             "image_overlay_opacity": 0,
-            "subheader_text_color": "#000000"
+            "subheader_text_color": "#000000",
+            "header_text_color": "#000000",
+            "header_text_stroke_color": "#D1C8E3",
+            "btn_text_color": "#F9EE43"
           }
         },
         "28ddc718-0e80-4086-b1a6-ff51705412b2": {
@@ -56,7 +59,10 @@
             "link": "shopify:\/\/pages\/resources",
             "box_align": "middle-center",
             "image_overlay_opacity": 0,
-            "subheader_text_color": "#ffffff"
+            "subheader_text_color": "#ffffff",
+            "header_text_color": "#000000",
+            "header_text_stroke_color": "#D1C8E3",
+            "btn_text_color": "#F9EE43"
           }
         },
         "e0f193f2-637d-440c-8633-c6b5d29dd314": {
@@ -70,7 +76,10 @@
             "text_3": "We get it – with a product this pure there’s got to be some catch – so we’re willing to put our money where your mouth is to prove that we’re not bs’ing:<br><br>All you have to do is",
             "buttonbgimage": "shopify:\/\/shop_images\/image_14_2_1.png",
             "button_label": "Prove Us <br>Wrong",
-            "link": "shopify:\/\/pages\/menu"
+            "link": "shopify:\/\/pages\/menu",
+            "header_text_color": "#000000",
+            "subheader_text_color": "#FFFF73",
+            "btn_text_color": "#000000"
           }
         },
         "dacdc06a-0ae2-48c4-884b-562c4559ca7c": {
@@ -82,9 +91,12 @@
             "image_right": "shopify:\/\/shop_images\/open-mouth-lightning_01_3_1.png",
             "mobile-image_right": "shopify:\/\/shop_images\/nemo-43-single-use_recolored_3_1.png",
             "text_3": "Take our Labor of Love juice,  21greens Salad, and world-renowned Gladiator Cookie for instance: this is that “I want something better for lunch” trio you didn’t actually get last week at that press-ery, the week before at that bowls spot, or the week before that at the corner deli. <br><br> This time, grab-and-go with a midday meal that’s actually good for you and the planet.",
-            "buttonbgimage": "shopify:\/\/shop_images\/image_14_2_1.png",
+            "buttonbgimage": "shopify:\/\/shop_images\/btn_bg_image.png",
             "button_label": "Gimme <br> Gimme <br>Gimme",
-            "link": "shopify:\/\/pages\/menu"
+            "link": "shopify:\/\/pages\/menu",
+            "header_text_color": "#000000",
+            "subheader_text_color": "#FFFF73",
+            "btn_text_color": "#ffff55"
           }
         },
         "3343447d-49e6-47f8-ae99-7f79b247fe76": {
@@ -99,7 +111,10 @@
             "rightsubheading_2": "Because as the Buddha (never) said: “a good river that flows within bad banks is not very good at all.”",
             "buttonbgimage": "shopify:\/\/shop_images\/image_14_2_1.png",
             "button_label": "Help Us<br> Stop <br>Plastic",
-            "link": "shopify:\/\/pages\/about"
+            "link": "shopify:\/\/pages\/about",
+            "header_text_color": "#ffffff",
+            "subheader_text_color": "#ffffff",
+            "btn_text_color": "#000000"
           }
         },
         "319edcf4-06e2-4e14-8e61-4d6d881784ca": {
@@ -114,7 +129,10 @@
             "rightsubheading_2": "",
             "buttonbgimage": "shopify:\/\/shop_images\/image_14_2_1.png",
             "button_label": "Let’s Be <br>the Best of <br>Cleanse.",
-            "link": "shopify:\/\/pages\/about"
+            "link": "shopify:\/\/pages\/about",
+            "header_text_color": "#ffffff",
+            "subheader_text_color": "#ffffff",
+            "btn_text_color": "#000000"
           }
         },
         "b52cf09b-72bd-4e13-b41f-aa3baba1d82d": {
@@ -127,7 +145,10 @@
             "leftsubheading_2": "Tell your brand's story through images",
             "rightsubheading_2": "Tell your brand's story through images",
             "button_label": "Button label",
-            "link": ""
+            "link": "",
+            "header_text_color": "#ffffff",
+            "subheader_text_color": "#ffffff",
+            "btn_text_color": "#000000"
           }
         }
       },

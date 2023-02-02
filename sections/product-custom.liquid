@@ -820,7 +820,7 @@
                         {%- unless settings.disable_store_add_to_cart_functionality == false -%}
                           <div class="product-form__buttons">
                             {%- if product.metafields.add_to_cart.link != blank and product.metafields.add_to_cart.label != blank -%}
-                              <a href="{{- product.metafields.add_to_cart.link | default: 'javascript:void(0);'  -}}" name="add" class="product_buy_button">
+                              <a href="{{- product.metafields.add_to_cart.link | default: 'javascript:void(0);'  -}}" name="add" class="product_buy_button" target="_blank">
                                 
                                 <div class="product_custom_price">
                                   {%- render 'price', fromCustom: product.metafields.add_to_cart.label -%}

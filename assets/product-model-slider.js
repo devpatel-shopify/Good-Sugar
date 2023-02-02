@@ -1,4 +1,3 @@
-
 new Swiper(".product_model_slider", {
     slidesPerView: 1,
     loop: false,
@@ -11,7 +10,7 @@ new Swiper(".product_model_slider", {
     // },
     breakpoints: {
     750: {
-      slidesPerView: 1,
+      slidesPerView: 2,
     //   autoplay: {
     //   delay: 10000,
     // },

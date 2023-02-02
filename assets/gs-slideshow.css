@@ -293,10 +293,6 @@ transform: rotate(-10deg);
     line-height: 1.05;    
     text-transform: uppercase;
 }
-.main_slider_button  img:hover {
-    transform: scale(1.2);
-    /* transition: all .5s ease; */
-}
 
 .main_slider_wrapper .video {
     height: 100%;
@@ -494,12 +490,14 @@ text-transform: lowercase;
     .gs_style_3 .heading {
         font-size: 60px;
     }
+    .gs_style_2 .btn_text,
     .gs_style_2 .subheader {
         font-size: 21px;
     }
 }
 
 @media screen and (max-width:1200px) {
+    .gs_style_2 .btn_text,
     .gs_style_1 .main_slider_subheader .subheader {
         font-size: 20px;
     }
