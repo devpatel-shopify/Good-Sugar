@@ -1,4 +1,7 @@
 /* Color custom properties */
+input, textarea, button, select, a, .information-sticky-overlay, div, span, summary {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
 .scroll-lock {
   overflow: hidden;
 }
