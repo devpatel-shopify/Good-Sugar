@@ -179,7 +179,7 @@
 }
 
 .gs_style_2 .main_slider_header {
-    font-size: 91px;
+    font-size: 70px;
     color: #ffffff;
     line-height: 1.05;
     text-transform: lowercase;
@@ -187,7 +187,7 @@
 
 @media screen and (max-width:1600px) {
     .gs_style_2 .main_slider_header {
-        font-size: 75px;
+        font-size: 60px;
     }
 }
 
@@ -198,18 +198,18 @@
 }
 @media screen and (max-width:1200px) {
     .gs_style_2 .main_slider_header {
-        font-size: 50px;
+        font-size: 40px;
     }
 }
 @media screen and (max-width:1000px) {
     .gs_style_2 .main_slider_header {
-        font-size: 45px;
+        font-size: 35px;
     }
 }
 
 @media screen and (max-width:900px) {
     .gs_style_2 .main_slider_header {
-        font-size: 38px;
+        font-size: 28px;
     }
 }
 .gs_style_1 .main_slider_subheader .subheader {
@@ -618,7 +618,7 @@ text-transform: lowercase;
     }
     .gs_style_3 .heading,
     .gs_style_2 .main_slider_header {
-        font-size: 35px;
+        font-size: 25px;
     }
     .gs_style_3 .btn_text,
     .gs_style_2 .btn_text {
@@ -677,7 +677,7 @@ text-transform: lowercase;
 
 @media screen and (max-height:700px) and (max-width:375px) {
     .gs_style_2 .main_slider_header {
-        font-size: 30px;
+        font-size: 20px;
     }
     .gs_style_2 .btn_text {
         font-size: 12px;
@@ -700,7 +700,7 @@ text-transform: lowercase;
         font-size: 11px;
     }
     .gs_style_2 .main_slider_header {
-        font-size: 30px;
+        font-size: 20px;
     }
     .gs_style_2 .btn_text,
     .gs_style_2 .subheader {
@@ -710,7 +710,7 @@ text-transform: lowercase;
 
 @media screen and (max-height:700px) {
     .gs_style_3 .heading, .gs_style_2 .main_slider_header {
-        font-size: 27px;
+        font-size: 17px;
     }
     .gs_style_3 .text, .gs_style_2 .subheader {
         font-size: 10px;
@@ -740,7 +740,7 @@ text-transform: lowercase;
         font-size: 14px;
     }
     .gs_style_3 .heading, .gs_style_2 .main_slider_header {
-        font-size: 45px;
+        font-size: 35px;
     }
 }
 @media screen and (max-height:600px) {

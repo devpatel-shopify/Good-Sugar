@@ -33,43 +33,62 @@
       tabindex="0"
     >
       
-      <div class="swiper product_model_slider">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-          <!-- Slides -->
-          {%- liquid
-            if product.selected_or_first_available_variant.featured_media != null
-              assign media = product.selected_or_first_available_variant.featured_media
-              render 'product-media', media: media, loop: section.settings.enable_video_looping, variant_image: section.settings.hide_variants
-            endif
-          -%}
-          
-          {%- for media in product.media -%}
-          <div class="swiper-slide">
-            {%- liquid
-              if section.settings.hide_variants and variant_images contains media.src or variant_images contains media.id
-                assign variant_image = true
-              else
-                assign variant_image = false
-              endif
-    
-              unless media.id == product.selected_or_first_available_variant.featured_media.id
-                render 'product-media', media: media, loop: section.settings.enable_video_looping, variant_image: variant_image
-              endunless
-            -%}
-          </div>
-        {%- endfor -%} 
-        </div>
-        <!-- If we need pagination -->
-        <div class="swiper-pagination hidden"></div>
+ {%- if product.media.size > 1 -%}
+  <div class="swiper product_model_slider">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      {%- liquid
+        if product.selected_or_first_available_variant.featured_media != null
+          assign media = product.selected_or_first_available_variant.featured_media
+          render 'product-media', media: media, loop: section.settings.enable_video_looping, variant_image: section.settings.hide_variants
+        endif
+      -%}
       
-        <!-- If we need navigation buttons -->
-        <div class="swiper--prev swiper-arrow">{% render 'slider-arrow' %}</div>
-        <div class="swiper--next swiper-arrow">{% render 'slider-arrow' %}</div>
-      
-        <!-- If we need scrollbar -->
-        <div class="swiper-scrollbar hidden"></div>
+      {%- for media in product.media -%}            
+      <div class="swiper-slide">
+        {%- liquid
+          if section.settings.hide_variants and variant_images contains media.src or variant_images contains media.id
+            assign variant_image = true
+          else
+            assign variant_image = false
+          endif
+
+          unless media.id == product.selected_or_first_available_variant.featured_media.id
+            render 'product-media', media: media, loop: section.settings.enable_video_looping, variant_image: variant_image
+          endunless
+        -%} 
       </div>
+      {%- endfor -%} 
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination hidden"></div>
+  
+    <!-- If we need navigation buttons -->
+    <div class="swiper--prev swiper-arrow">{% render 'slider-arrow' %}</div>
+    <div class="swiper--next swiper-arrow">{% render 'slider-arrow' %}</div>
+  
+    <!-- If we need scrollbar -->
+    <div class="swiper-scrollbar hidden"></div>
+  </div>
+  {%- else -%}
+  {%- for media in product.media -%}
+    {%- liquid
+      if section.settings.hide_variants and variant_images contains media.src or variant_images contains media.id
+        assign variant_image = true
+      else
+        assign variant_image = false
+      endif
+
+      unless media.id == product.selected_or_first_available_variant.featured_media.id
+        render 'product-media', media: media, loop: section.settings.enable_video_looping, variant_image: variant_image
+      endunless
+    -%}
+  {%- endfor -%} 
+ {%- endif -%}
+
+
+      
       
 
       {% comment %} 
@@ -91,4 +110,39 @@
   </div>
 </product-modal>
 
-<script src="{{ 'product-model-slider.js' | asset_url }}" defer="defer"></script>
+{% comment %} <script src="{{ 'product-model-slider.js' | asset_url }}" defer="defer"></script> {% endcomment %}
+
+<script>
+  new Swiper(".product_model_slider", {
+    slidesPerView: 1,
+    loop: false,
+    spaceBetween:0,
+    autoHeight: false,
+    //grabCursor: true,
+    centeredSlides: false,
+    // autoplay: {
+    //   delay: 2000,
+    // },
+    breakpoints: {
+    750: {
+      slidesPerView: 2,
+    //   autoplay: {
+    //   delay: 10000,
+    // },
+    },
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+      type: 'bullets',
+    },
+    renderBullet: function (index, className) {
+      return `<span class="outer-dot swiper-pagination-bullet"><span class="inner-dot"></span></span>`;
+    },
+    navigation: {
+      nextEl: ".swiper--next",
+      prevEl: ".swiper--prev",
+    },
+    
+  });
+</script>

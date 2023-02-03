@@ -38,6 +38,9 @@
     border-radius: 0;
 }
 
+.product_page_slider_image .product__media-item {
+    display: block;
+}
 .product_page_slider_image .gradient {
     background: transparent;
 }
@@ -263,6 +266,8 @@
         position: sticky;
         top: var(--header-height);
         margin-bottom: -3px;
+        position: -webkit-sticky;
+        display: block;
     }
 .product_custom_buy_button .product_buy_btn {
     display: flex;
@@ -402,8 +407,8 @@
         border-bottom: var(--custom-border-width) solid var(--custom-border-color);
     }
     .btn_bg {
-        width: 110px;
-        height: 70px;
+        width: 125px;
+        height: 85px;
     }
     .product-title_wrapper {
         gap: 25px;

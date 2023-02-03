@@ -3,8 +3,8 @@ new Swiper(".product_model_slider", {
     loop: false,
     spaceBetween:0,
     autoHeight: false,
-    //grabCursor: true,
-    //centeredSlides: true,
+    grabCursor: true,
+    centeredSlides: false,
     // autoplay: {
     //   delay: 2000,
     // },

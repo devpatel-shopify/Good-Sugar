@@ -127,7 +127,7 @@
       "type": "about-image-overlay-text",
       "settings": {
         "bg_image": "shopify:\/\/shop_images\/iStock-1193095410_1.png",
-        "text": "The biggest disease were fighting against is an ecological one: single-use plastic (s.u.p ).",
+        "text": "The biggest disease were fighting against is an ecological one: single-use plastic (s.u.p).",
         "text_color": "#ffff73"
       }
     },
@@ -139,7 +139,7 @@
         "heading_1": "",
         "text": "",
         "image": "shopify:\/\/shop_images\/round_image.png",
-        "btn_text": "That’s what s.u.p.",
+        "btn_text": "That’s <br>what<nr> s.u.p.<\/nr>",
         "btn_url": "shopify:\/\/blogs\/news\/his-library"
       }
     },

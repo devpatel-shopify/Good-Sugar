@@ -2243,7 +2243,7 @@ input[type='checkbox'] {
 }
 
 .media-modal {
-  cursor: zoom-out;
+  cursor: pointer;
 }
 
 .media-modal .deferred-media {
