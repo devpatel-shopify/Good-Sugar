@@ -40,7 +40,7 @@
 
 .product_page_slider_image .product__media-item {
     display: block;
-  margin-bottom:-3px;
+/*   margin-bottom:-3px; */
 }
 .product_page_slider_image .gradient {
     background: transparent;
