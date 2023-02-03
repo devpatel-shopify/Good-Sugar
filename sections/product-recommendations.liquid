@@ -16,6 +16,13 @@
     }
   }
   {% endcomment %}
+  .section-{{ section.id }}-padding .collection .product_custom_price {
+      position: relative;
+      display: block;
+      transform: none;
+      top:0;
+      left:0;
+    }
 {%- endstyle -%}
 
 {%- assign customProductRecommendations = product.metafields.custom_recommendations.custom_product_recommendations.value -%}
