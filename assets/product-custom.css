@@ -454,3 +454,9 @@
         padding: 24px 20px;
     }
 }
+
+
+.product_page_slider_image *{
+  outline:none !important;
+  box-shadow:none !important;
+}
