@@ -38,6 +38,11 @@
         "default": 100,
         "unit": "t:sections.header.settings.logo_width.unit",
         "label": "t:sections.header.settings.logo_width.label"
+      },
+      {
+        "type":"text",
+        "id":"loading_text",
+        "label":"Loading Text"
       }
     ]
   },

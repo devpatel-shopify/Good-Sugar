@@ -115,6 +115,14 @@
         "section_image": "shopify:\/\/shop_images\/image_25_1.png"
       }
     },
+    "26b383ee-8fea-4f15-ba3c-0dda23031084": {
+      "type": "about-text-with-image",
+      "disabled": true,
+      "settings": {
+        "text_title": "<p>Drink a lot of our juices? Swear by our superfood smoothies? Hooked on our snacks? Become a card-carrying goodsugar Discount Program loyalist. <\/p>",
+        "section_image": "shopify:\/\/shop_images\/image_25_1.png"
+      }
+    },
     "07f486b9-d614-4ae3-b111-f69b04d2cf6c": {
       "type": "about-line-content",
       "settings": {
@@ -142,14 +150,6 @@
         "btn_text": "That’s <br>what<nr> s.u.p.<\/nr>",
         "btn_url": "shopify:\/\/blogs\/news\/his-library"
       }
-    },
-    "4b77c4f0-15fa-48cb-b859-d53ffe8ba48e": {
-      "type": "about-text-with-image",
-      "disabled": true,
-      "settings": {
-        "text_title": "",
-        "section_image": "shopify:\/\/shop_images\/image_25_1.png"
-      }
     }
   },
   "order": [
@@ -160,9 +160,9 @@
     "58cce4d0-defa-445b-a7e9-f10b408ab85c",
     "f25573c4-8c19-4317-92b4-5cc05b3c551a",
     "3eab5b77-e0ba-402d-8f5d-44d9d95f7309",
+    "26b383ee-8fea-4f15-ba3c-0dda23031084",
     "07f486b9-d614-4ae3-b111-f69b04d2cf6c",
     "f49b88f7-1e2e-4880-8367-dd76675a9f6b",
-    "24beab2d-87a2-4961-a57a-f20883f39917",
-    "4b77c4f0-15fa-48cb-b859-d53ffe8ba48e"
+    "24beab2d-87a2-4961-a57a-f20883f39917"
   ]
 }

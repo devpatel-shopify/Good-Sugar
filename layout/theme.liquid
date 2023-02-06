@@ -548,7 +548,11 @@
                     alt: logo_alt
                   }}
                 {%- else -%}
+                {% if settings.loading_text != blank %}
+                  <span class="h2">{{ settings.loading_text }}</span>
+                  {% else %}
                   <span class="h2">{{ shop.name }}</span>
+                {% endif %}
                 {%- endif -%}
               </a>             
             </div>

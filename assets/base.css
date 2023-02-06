@@ -29,7 +29,9 @@ input, textarea, button, select, a, .information-sticky-overlay, div, span, summ
 	z-index: 10;
   transition: transform 1s ease;
   }
-  
+  .loading_main .h2 {
+    text-transform: lowercase;
+  }
   .loading_main .section__cards {
     width: 100vw;
     display: flex;
