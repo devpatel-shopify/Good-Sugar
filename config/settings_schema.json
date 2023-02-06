@@ -40,9 +40,9 @@
         "label": "t:sections.header.settings.logo_width.label"
       },
       {
-        "type":"text",
-        "id":"loading_text",
-        "label":"Loading Text"
+        "type": "text",
+        "id": "loading_text",
+        "label": "Loading Text"
       }
     ]
   },
