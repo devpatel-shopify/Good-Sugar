@@ -158,7 +158,7 @@ body.overflow-hidden-tablet {
 	/* letter-spacing: 0; */
 	margin: 0 0 -5px;
 	display: inline-block;
-	text-transform: lowercase;
+	text-transform: capitalize;
 }
 
 .header-right .cart {
