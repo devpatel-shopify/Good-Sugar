@@ -51,10 +51,14 @@
     max-height: 300px;
     top: auto;
     bottom: -60px;
-    right: 0;
+    right: -60px;
     height: 100%;
     width: fit-content;
 }
+.compair_item.item_1 .compair_details_data {
+    padding-right: 60px;
+}
+
 .compair_sticker_image img,
 .compair_sticker_image {
     height: 100%;
@@ -74,6 +78,12 @@
     .compair_item {
         padding: 100px 50px 100px 150px;
     }
+    .about_compair_sticker {
+        right: -25px;
+    }
+    .compair_item.item_1 .compair_details_data {
+        padding-right: 80px;
+    }
 }
 @media screen and (max-width:1024px) {
     .compair_item {
@@ -87,6 +97,9 @@
     }
     .about_compair_sticker {
         max-height: 200px;
+    }
+    .about_compair_sticker {
+        right: 0;
     }
 }
 @media screen and (max-width:749px) {
@@ -116,5 +129,20 @@
     }
     .about_compair_sticker {
         bottom: -25px;
+    }
+    .compair_item.item_1 .compair_details_data {
+        padding-right: 60px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .about_compair_sticker {
+        max-height: 150px;
+    }
+    .about_compair_sticker {
+        right: -15px;
+    }
+    .compair_item.item_1 .compair_details_data {
+        padding-right: 40px;
     }
 }
