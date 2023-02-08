@@ -15,6 +15,19 @@
   #about-mp--{{ section.id }}.about_map_wrapper {
     background: {{ section.settings.bg_color }};
   }
+  @media screen and (max-width:749px) {
+  {% if section.settings.map_addresh_text != blank %}
+  .map_container_main, .map_location_main {
+    width: 50%;
+    min-height: 189px;
+  }
+  {% else %}
+  .map_container_main, .map_location_main {
+    width: 100%;
+    min-height: 189px;
+  }
+  {% endif%}
+  }
 </style>
 
 <div class="about_map" id="about-mp--{{ section.id }}">
@@ -41,154 +54,155 @@
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d231165.01643523705!2d55.257013706835956!3d25.137266885774498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f43348a67e24b%3A0xff45e502e1ceb7e2!2sBurj%20Khalifa!5e0!3m2!1sen!2sin!4v1672733805482!5m2!1sen!2sin"
               allowfullscreen=""
               loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"></iframe>
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
           </div>
         </div>
-        <div class="map_location_main large-up-hide">
+        {% if section.settings.map_addresh_text != blank %}
+        <div class="map_location_main large-up-hide medium-hide">
           <div class="map_location_text">
-            <span>Were closer to you than you are to buying your own professional-grade blender. 
-              <br>
-              <br>
-              Still got questions after reading through all that nonsense…reach out directly:
-              <a href="mailto:help@ilovegoodsugar.com">help@ilovegoodsugar.com</a>
-              <br>
-              <br>
-              69th St & 3rd Ave, New York, NY 10021
-              <br>
-              <br>
-              hours:</span>
-            <br>
-            Mon-fri 8am-7pm<br>
-            sat-sun 8am-5pm
+            {{ section.settings.map_addresh_text }}
           </div>
         </div>
+        {% endif %}
       </div>
     </div>
     {% if section.settings.ellipse_text != blank and section.settings.ellipse_link != blank %}
-    <div class="about_map_sticker block_{{ forloop.index }} image-type-ellipse map-sticker--{{ block.id }}">
-      <a data-click-to-jump-link data-href="{{section.settings.ellipse_link}}" href="javascript:void(0)">
-        <div class="map_sticker_container">
-          <div class="map_sticker_text">
-            <div class="text">{{ section.settings.ellipse_text }}</div>
+      <div class="about_map_sticker block_{{ forloop.index }} image-type-ellipse map-sticker--{{ block.id }}">
+        <a data-click-to-jump-link data-href="{{section.settings.ellipse_link}}" href="javascript:void(0)">
+          <div class="map_sticker_container">
+            <div class="map_sticker_text">
+              <div class="text">{{ section.settings.ellipse_text }}</div>
+            </div>
+            <div class="map_sticker_image">
+              <img src="https://cdn.shopify.com/s/files/1/0680/9331/3298/files/image_8.png?v=1671134824">
+            </div>
           </div>
-          <div class="map_sticker_image">
-            <img src="https://cdn.shopify.com/s/files/1/0680/9331/3298/files/image_8.png?v=1671134824">
-          </div>        
-        </div>
-      </a>
-    </div>
+        </a>
+      </div>
     {% endif %}
     {% if section.settings.rectangle_text != blank and section.settings.rectangle_link != blank %}
-    <div class="about_map_sticker block_{{ forloop.index }} image-type-rectangle map-sticker--{{ block.id }}">
-      <a data-click-to-jump-link data-href="{{section.settings.rectangle_link}}" href="javascript:void(0)">
-        <div class="map_sticker_container">
-          <div class="map_sticker_text">
-            <div class="text">{{ section.settings.rectangle_text }}</div>
+      <div class="about_map_sticker block_{{ forloop.index }} image-type-rectangle map-sticker--{{ block.id }}">
+        <a data-click-to-jump-link data-href="{{section.settings.rectangle_link}}" href="javascript:void(0)">
+          <div class="map_sticker_container">
+            <div class="map_sticker_text">
+              <div class="text">{{ section.settings.rectangle_text }}</div>
+            </div>
+            <div class="map_sticker_image">
+              <img src="https://cdn.shopify.com/s/files/1/0680/9331/3298/files/image_12.png?v=1671192667">
+            </div>
           </div>
-          <div class="map_sticker_image">
-            <img src="https://cdn.shopify.com/s/files/1/0680/9331/3298/files/image_12.png?v=1671192667">
-          </div>        
-        </div>
-      </a>
-    </div>
+        </a>
+      </div>
     {% endif %}
     {% if section.settings.circle_text != blank and section.settings.circle_link != blank %}
-    <div class="about_map_sticker block_{{ forloop.index }} image-type-circle map-sticker--{{ block.id }}">
-      <a data-click-to-jump-link data-href="{{section.settings.circle_link}}" href="javascript:void(0)">
-        <div class="map_sticker_container">
-          <div class="map_sticker_text">
-            <div class="text">{{ section.settings.circle_text }}</div>
+      <div class="about_map_sticker block_{{ forloop.index }} image-type-circle map-sticker--{{ block.id }}">
+        <a data-click-to-jump-link data-href="{{section.settings.circle_link}}" href="javascript:void(0)">
+          <div class="map_sticker_container">
+            <div class="map_sticker_text">
+              <div class="text">{{ section.settings.circle_text }}</div>
+            </div>
+            <div class="map_sticker_image">
+              <img src="https://cdn.shopify.com/s/files/1/0680/9331/3298/files/image_14_1.png?v=1671192975">
+            </div>
           </div>
-          <div class="map_sticker_image">
-            <img src="https://cdn.shopify.com/s/files/1/0680/9331/3298/files/image_14_1.png?v=1671192975">
-          </div>        
-        </div>
-      </a>
-    </div>
+        </a>
+      </div>
     {% endif %}
   </div>
+  {% if section.settings.map_addresh_text != blank %}
+  <div class="about_map_content small-hide">
+    <div class="text">
+      {{ section.settings.map_addresh_text }}
+    </div>
+  </div>
+  {% endif %}
 </div>
 <script>
-// scrolling js   
-const internalLinks = document.querySelectorAll('a[data-click-to-jump-link]');
+  // scrolling js
+  const internalLinks = document.querySelectorAll('a[data-click-to-jump-link]');
 
-internalLinks.forEach((link) => {
-  link.addEventListener('click', function(e) {
-    console.log("e",e.currentTarget)
-    e.preventDefault();
-    if(e.currentTarget.getAttribute("data-href") == ""){
-      return;
-    }
-    let targetOffset = document.querySelector(`${e.currentTarget.getAttribute("data-href")}`).offsetTop;
-    console.log(targetOffset)
-    let headerOffset = document.querySelector('#shopify-section-header').offsetHeight;
-    console.log(headerOffset)
-    window.scroll({
-      top:  (targetOffset - headerOffset),
-      behavior: 'smooth'
-    })
-  })
-})
+  internalLinks.forEach((link) => {
+    link.addEventListener('click', function (e) {
+      console.log('e', e.currentTarget);
+      e.preventDefault();
+      if (e.currentTarget.getAttribute('data-href') == '') {
+        return;
+      }
+      let targetOffset = document.querySelector(`${e.currentTarget.getAttribute('data-href')}`).offsetTop;
+      console.log(targetOffset);
+      let headerOffset = document.querySelector('#shopify-section-header').offsetHeight;
+      console.log(headerOffset);
+      window.scroll({
+        top: targetOffset - headerOffset,
+        behavior: 'smooth',
+      });
+    });
+  });
 </script>
 <script src="{{ 'about-map.js' | asset_url }}" defer="defer"></script>
 
 {% schema %}
-  {
-    "name": "About Map",
-    "settings": [
-      {
-        "type": "text",
-        "id": "heading",
-        "label": "Heading",
-        "default": "Truly Pure Juice and Food."
-      }, 
-      {
-        "type": "text",
-        "id": "text",
-        "label": "Text",
-        "default": "With goodsugar, you don’t have to compromise between what your taste buds want and what your body needs."
-      },
-      {
-        "type":"header",
-        "content":"Button Link And Text"
-      },
-      {
-        "type":"text",
-        "id":"ellipse_text",
-        "label":"Ellipse Text"
-      },
-      {
-        "type":"url",
-        "id":"ellipse_link",
-        "label":"Ellipse Link"
-      },
-      {
-        "type":"text",
-        "id":"rectangle_text",
-        "label":"Rectangle Text"
-      },
-      {
-        "type":"url",
-        "id":"rectangle_link",
-        "label":"Rectangle Link"
-      },
-      {
-        "type":"text",
-        "id":"circle_text",
-        "label":"Circle Text"
-      },
-      {
-        "type":"url",
-        "id":"circle_link",
-        "label":"Circle Link"
-      }
-      
-    ],
-    "presets": [
-      {
-        "name": "About Map",
-        "settings": {}
-      }
-    ]
-  }
+{
+  "name": "About Map",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Truly Pure Juice and Food."
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Text",
+      "default": "With goodsugar, you don’t have to compromise between what your taste buds want and what your body needs."
+    },
+    {
+      "type":"richtext",
+      "id":"map_addresh_text",
+      "label":"Map Text"
+    },
+    {
+      "type": "header",
+      "content": "Button Link And Text"
+    },
+    {
+      "type": "text",
+      "id": "ellipse_text",
+      "label": "Ellipse Text"
+    },
+    {
+      "type": "url",
+      "id": "ellipse_link",
+      "label": "Ellipse Link"
+    },
+    {
+      "type": "text",
+      "id": "rectangle_text",
+      "label": "Rectangle Text"
+    },
+    {
+      "type": "url",
+      "id": "rectangle_link",
+      "label": "Rectangle Link"
+    },
+    {
+      "type": "text",
+      "id": "circle_text",
+      "label": "Circle Text"
+    },
+    {
+      "type": "url",
+      "id": "circle_link",
+      "label": "Circle Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "About Map",
+      "settings": {}
+    }
+  ]
+}
 {% endschema %}
