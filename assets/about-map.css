@@ -280,7 +280,7 @@ transform: rotate(-10deg);
     font-size: var(--body-font-size);
     line-height: 1.1;
     color: var(--custom-text_color);
-    padding: 40px 20px 30px 30px;
+    padding: 40px 10px 30px 20px;
   }
   .map_location_text span {
     font-family: var(--font-heading-family);
