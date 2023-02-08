@@ -285,6 +285,7 @@ transform: rotate(-10deg);
   .map_location_text span {
     font-family: var(--font-heading-family);
     color: var(--custom-text_color);
+    word-break: break-word;
   }
   .map_container_main {
     height:inherit;
