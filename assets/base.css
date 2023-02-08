@@ -49,6 +49,7 @@ input, textarea, button, select, a, .information-sticky-overlay, div, span, summ
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align:center;
   }
   
   .loading_main .section__card-inner a {
