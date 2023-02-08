@@ -291,7 +291,6 @@ transform: rotate(-10deg);
   }
   #googleMap {
     height: 100%;
-    min-width: 196px;
   }
   .about_map_sticker.item_2 {
     padding: 20px;
