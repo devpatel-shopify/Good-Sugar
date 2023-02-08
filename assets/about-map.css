@@ -286,8 +286,10 @@ transform: rotate(-10deg);
     font-family: var(--font-heading-family);
     color: var(--custom-text_color);
   }
-  #googleMap,
   .map_container_main {
+    height:inherit;
+  }
+  #googleMap {
     height: 100%;
     min-width: 196px;
   }
