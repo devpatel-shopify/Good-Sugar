@@ -259,7 +259,7 @@ transform: rotate(-10deg);
   }
   .map_container {
     display: flex;
-    align-items: center;
+    align-items: stretch;
     background: linear-gradient(270deg, #F5EA64 7.56%, #D1C7DF 87.35%);
   }
   .map_container_main,
