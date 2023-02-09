@@ -69,5 +69,8 @@ font-weight: 700;
   .loyalty_module_box .text {
     margin-top:15px;
   }
+  .loyalty_module_box .text ul {
+    padding-inline-start: 15px;
+  }
 }
 
