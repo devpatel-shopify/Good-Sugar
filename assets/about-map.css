@@ -152,6 +152,11 @@ transform: rotate(-10deg);
   text-decoration: underline;
   text-underline-offset: 3px;
 }
+
+.about_map_content p a:hover {
+      background-size: 0;
+}
+
 .about_map_content span {
   color: var(--custom-text_color);
 }
