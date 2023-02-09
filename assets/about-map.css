@@ -249,7 +249,7 @@ transform: rotate(-10deg);
     top: 43%;
   }
   .about_map_content .text {
-    max-width: 85%;
+     padding: 50px 70px;
   }
 }
 
