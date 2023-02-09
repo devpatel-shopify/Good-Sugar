@@ -13,6 +13,7 @@
       "settings": {
         "heading": "Pure Juice and Food.",
         "text": "With goodsugar, you don’t have to compromise between what your taste buds want and what your body needs.",
+        "map_addresh_text": "<p>Were closer to you than you are to buying your own professional-grade blender. <\/p><p>Still got questions after reading through all that nonsense…reach out directly: <a href=\"\/pages\/contact\" target=\"_blank\" title=\"Contact\">help@ilovegoodsugar.com<\/a> <br\/><br\/>69th St & 3rd Ave, <br\/>New York, NY 10021<br\/><br\/>hours:<br\/>Mon-fri 8am-7pm<br\/>sat-sun 8am-5pm<br\/><br\/><\/p>",
         "ellipse_text": "brand",
         "ellipse_link": "#shopify-section-template--17287921533202__4dd2fe52-519d-41f9-83a0-aa45b72f4ecd",
         "rectangle_text": "ETHOs",
@@ -115,6 +116,19 @@
         "section_image": "shopify:\/\/shop_images\/image_25_1.png"
       }
     },
+    "1b3ee30e-9a0e-4e95-b188-3be977bf9066": {
+      "type": "about-loyalty-module",
+      "settings": {
+        "heading": "good’ more, get more. ",
+        "subheading": "Drink a lot of our juices? Swear by our superfood smoothies? Get with the goodsugar Discount Program.",
+        "btn_text": "",
+        "btn_link": "",
+        "title_1": "Is this a QAnon thing?” you ask…well not exactly\/at all:",
+        "text_1": "<ul><li>When you spend $100 with us you get $7 towards future goodies<\/li><li>Earn rewards points with every purchase in-store or online (not Grubhub or Seamless)<\/li><li>Points expire 90 days after you earn them<\/li><\/ul>",
+        "title_2": "Here’s how to get involved:",
+        "text_2": "<ul><li>Sign up today to start earning<\/li><li>Check your points status any time<\/li><\/ul>"
+      }
+    },
     "26b383ee-8fea-4f15-ba3c-0dda23031084": {
       "type": "about-text-with-image",
       "disabled": true,
@@ -160,6 +174,7 @@
     "58cce4d0-defa-445b-a7e9-f10b408ab85c",
     "f25573c4-8c19-4317-92b4-5cc05b3c551a",
     "3eab5b77-e0ba-402d-8f5d-44d9d95f7309",
+    "1b3ee30e-9a0e-4e95-b188-3be977bf9066",
     "26b383ee-8fea-4f15-ba3c-0dda23031084",
     "07f486b9-d614-4ae3-b111-f69b04d2cf6c",
     "f49b88f7-1e2e-4880-8367-dd76675a9f6b",

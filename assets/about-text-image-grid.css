@@ -182,7 +182,7 @@ max-width: 430px;
 
 @media screen and (max-width:1450px) {
   .about_text_grid_button_wrapper .button_image {
-    margin: 5px -10% 0 auto;
+    margin: -4px -30% 0 auto;
   }
 }
 
@@ -210,8 +210,8 @@ max-width: 430px;
   }
   .about_text_grid_button_wrapper img, .about_text_grid_button_wrapper .image,
   .about_text_grid_button_wrapper .button_image {
-    max-width: 174px;
-    max-height: 75px;
+    /* max-width: 174px; */
+    /* max-height: 75px; */
   }
   .about_text_grid_wrapper {
     padding-left: 70px;
@@ -242,7 +242,7 @@ max-width: 430px;
   .about_text_grid_button_wrapper .button_image {
     max-width: 100px;
     max-height: 45px;
-    margin: -20px 23% 0 auto;
+    margin: -11px 1% 0 auto;
   }
   .about_text_grid_button_wrapper a {
     font-size: 11px;

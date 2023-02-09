@@ -1,26 +1,32 @@
 {{ 'about-loyalty-module.css' | asset_url | stylesheet_tag }}
 
+<style>
+  #about-loyalty-module--{{ section.id }} {
+    
+  }
+</style>
+
 <div class="about_loyalty_module" id="about-loyalty-module--{{ section.id }}">
   <div class="about_loyalty_module_container">
     {% if section.settings.heading != blank %}
-      <div class="main_heading">
-        <div class="heading">{{ section.settings.heading }}</div>
+      <div class="main_heading center">
+        <div class="heading h1">{{ section.settings.heading }}</div>
       </div>
     {% endif %}
     {% if section.settings.subheading != blank %}
-      <div class="main_subheading">
+      <div class="main_subheading center">
         <div class="subheading">{{ section.settings.subheading }}</div>
       </div>
     {% endif %}
     <div class="loyalty_module_box">
         {% if section.settings.title_1 != blank and section.settings.text_1 != blank %}
-        <div class="loyalty_module_content left">
+        <div class="loyalty_module_content left_box">
             <div class="title">{{ section.settings.title_1 }}</div>
             <div class="text">{{ section.settings.text_1 }}</div>
         </div>
         {% endif %}
         {% if section.settings.title_2 != blank and section.settings.text_2 != blank %}
-        <div class="loyalty_module_content right">
+        <div class="loyalty_module_content right_box">
             <div class="title">{{ section.settings.title_2 }}</div>
             <div class="text">{{ section.settings.text_2 }}</div>
         </div>
