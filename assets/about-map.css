@@ -150,9 +150,9 @@ transform: rotate(-10deg);
 .about_map_content p a {
   color:var(--custom-text_color);
   text-decoration: underline;
-  text-underline-offset: 3px;
+  text-underline-offset: 6px;
 }
-
+.map_location_text p a:hover,
 .about_map_content p a:hover {
       background-size: 0;
 }
