@@ -216,7 +216,7 @@ transform: rotate(-10deg);
     left: 50%;
   }
   .about_map_content .text {
-    max-width: 75%;
+     padding: 50px 150px;
   }
 }
 @media screen and (max-width:1024px) {
