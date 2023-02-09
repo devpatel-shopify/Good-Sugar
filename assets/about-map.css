@@ -299,9 +299,9 @@ transform: rotate(-10deg);
     border-bottom: var(--custom-border-width) solid var(--custom-border-color);
   }
   .map_container {
-    display: flex;
+        display: flex;
     align-items: stretch;
-    background: linear-gradient(270deg, #F5EA64 7.56%, #D1C7DF 87.35%);
+    background: linear-gradient(270deg,#F5EA64 1.56%,#D1C7DF 91.35%);
   }
   .map_container_main,
   .map_location_main {
