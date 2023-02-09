@@ -67,5 +67,8 @@ font-weight: 700;
     .loyalty_module_box {
         gap: 20px;
     }
+  .loyalty_module_box .text {
+    margin-top:15px;
+  }
 }
 
