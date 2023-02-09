@@ -18,7 +18,7 @@
         <div class="subheading">{{ section.settings.subheading }}</div>
       </div>
     {% endif %}
-    <div class="loyalty_module_box">
+    <div class="loyalty_module_box" data-equal>
         {% if section.settings.title_1 != blank and section.settings.text_1 != blank %}
         <div class="loyalty_module_content left_box">
             <div class="title">{{ section.settings.title_1 }}</div>
@@ -39,6 +39,10 @@
     {% endif %}
   </div>
 </div>
+
+{% javascript %}
+    window.setGridHeight('.loyalty_module_box .title');
+{%  endjavascript %}
 
 {% schema %}
 {
