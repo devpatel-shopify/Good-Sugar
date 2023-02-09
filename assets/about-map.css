@@ -161,7 +161,6 @@ transform: rotate(-10deg);
   line-height: 1.1;
   font-size: calc(var(--body-font-size) + 2px);
   text-transform: lowercase;
-  font-family: var(--font-heading-family);
 }
 .about_map_content.small-hide {
   background: linear-gradient(233deg, #F6D42B 7.56%, #D9D9D9 87.35%);
