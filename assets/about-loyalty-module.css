@@ -22,7 +22,6 @@ font-weight: 700;
     color: var(--custom-text_color);
     line-height: 1.1;
     font-size: calc(var(--body-font-size) + 2px);
-    text-transform: lowercase;
     font-family: var(--font-heading-family);
 }
 .about_loyalty_module_container {
