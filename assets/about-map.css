@@ -141,9 +141,8 @@ transform: rotate(-10deg);
 }
 .about_map_content .text {
   margin: 0 auto;
-  max-width: 73%;
-  padding: 50px 0;
-  
+  padding: 50px 200px;
+  width1:100%;
   
 }
 .map_location_text p a,
