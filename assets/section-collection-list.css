@@ -10,6 +10,9 @@
   border-top:var(--custom-border-width) solid var(--custom-border-color);
   border-bottom:var(--custom-border-width) solid var(--custom-border-color);
 }
+.main_collction_list_header {
+  margin-bottom:3rem;
+}
 @media screen and (max-width: 749px) {
   .collection-list:not(.slider) {
     padding-left: 0;
