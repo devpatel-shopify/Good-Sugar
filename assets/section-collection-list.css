@@ -6,7 +6,10 @@
 .collection-list-title {
   margin: 0;
 }
-
+.main_collction_list_header {
+  border-top:1px solid #000;
+  border-bottom:1px solid #000;
+}
 @media screen and (max-width: 749px) {
   .collection-list:not(.slider) {
     padding-left: 0;
