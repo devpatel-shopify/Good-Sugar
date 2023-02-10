@@ -81,5 +81,9 @@ font-weight: 700;
   .loyalty_module_box .text ul {
     padding-inline-start: 15px;
   }
+  .about_loyalty_module .sticker_image {  
+    max-width: 100px;
+    max-height: 45px;
+}
 }
 
