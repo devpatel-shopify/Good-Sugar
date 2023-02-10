@@ -2,7 +2,7 @@
 {{ 'about-line-content.css' | asset_url | stylesheet_tag }}
 
 {%- if section.settings.title != blank or section.settings.subtitle != blank or section.settings.bottom_text != blank-%}
-  <div class="about_line_content">
+  <div class="about_line_content" id="about_line_content">
       <div class="about_line_wrapper">
         {%- if section.settings.title != blank -%}
           <div class="heading">
