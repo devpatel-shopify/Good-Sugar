@@ -2,7 +2,7 @@
 
 <style>
   #about-loyalty-module--{{ section.id }} {
-    
+
   }
 </style>
 
@@ -19,31 +19,40 @@
       </div>
     {% endif %}
     <div class="loyalty_module_box" data-equal>
-        {% if section.settings.title_1 != blank and section.settings.text_1 != blank %}
+      {% if section.settings.title_1 != blank and section.settings.text_1 != blank %}
         <div class="loyalty_module_content left_box">
-            <div class="title">{{ section.settings.title_1 }}</div>
-            <div class="text">{{ section.settings.text_1 }}</div>
+          <div class="title">{{ section.settings.title_1 }}</div>
+          <div class="text">{{ section.settings.text_1 }}</div>
         </div>
-        {% endif %}
-        {% if section.settings.title_2 != blank and section.settings.text_2 != blank %}
+      {% endif %}
+      {% if section.settings.title_2 != blank and section.settings.text_2 != blank %}
         <div class="loyalty_module_content right_box">
-            <div class="title">{{ section.settings.title_2 }}</div>
-            <div class="text">{{ section.settings.text_2 }}</div>
+          <div class="title">{{ section.settings.title_2 }}</div>
+          <div class="text">{{ section.settings.text_2 }}</div>
         </div>
-        {% endif%}
+      {% endif %}
     </div>
     {% if section.settings.btn_link != blank and section.settings.btn_text != blank %}
-    <div class="loyalty_module_button">
-        <a class="btn" href="{{ section.settings.btn_link }}">{{ section.settings.btn_text }}</a>
-    </div>
+      <div class="loyalty_module_button">
+        <div class="sticker_image">
+          <a
+            class="sticker_text"
+            href="{{ section.settings.btn_link }}"
+          >
+            {{- section.settings.btn_text -}}
+          </a>
+          <div class="image">
+            <img src="//cdn.shopify.com/s/files/1/0680/9331/3298/files/image_14_2_1.png?v=1672304014">
+          </div>
+        </div>
+      </div>
     {% endif %}
   </div>
 </div>
 
 {% javascript %}
-  
-    window.setGridHeight('.loyalty_module_box .title');
-{%  endjavascript %}
+  window.setGridHeight('.loyalty_module_box .title');
+{% endjavascript %}
 
 {% schema %}
 {
@@ -51,52 +60,52 @@
   "tag": "section",
   "settings": [
     {
-        "type":"text",
-        "id":"heading",
-        "label":"Heading"
+      "type": "text",
+      "id": "heading",
+      "label": "Heading"
     },
     {
-        "type":"text",
-        "id":"subheading",
-        "label":"Subheading"
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading"
     },
     {
-        "type":"text",
-        "id":"btn_text",
-        "label":"Button Text"
+      "type": "text",
+      "id": "btn_text",
+      "label": "Button Text"
     },
     {
-        "type":"url",
-        "id":"btn_link",
-        "label":"Button Link"
+      "type": "url",
+      "id": "btn_link",
+      "label": "Button Link"
     },
     {
-        "type":"header",
-        "content":"Left Side Box"
+      "type": "header",
+      "content": "Left Side Box"
     },
     {
-        "type":"text",
-        "label":"Title",
-        "id":"title_1"
+      "type": "text",
+      "label": "Title",
+      "id": "title_1"
     },
     {
-        "type":"richtext",
-        "id":"text_1",
-        "label":"Text"
+      "type": "richtext",
+      "id": "text_1",
+      "label": "Text"
     },
     {
-        "type":"header",
-        "content":"Right Side Box"
+      "type": "header",
+      "content": "Right Side Box"
     },
     {
-        "type":"text",
-        "label":"Title",
-        "id":"title_2"
+      "type": "text",
+      "label": "Title",
+      "id": "title_2"
     },
     {
-        "type":"richtext",
-        "id":"text_2",
-        "label":"Text"
+      "type": "richtext",
+      "id": "text_2",
+      "label": "Text"
     }
   ],
 

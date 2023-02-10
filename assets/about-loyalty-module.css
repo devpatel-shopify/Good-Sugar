@@ -41,6 +41,12 @@ font-weight: 700;
 .loyalty_module_box .text ul {
     padding-inline-start: 20px;
 }
+.sticker_image img {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
 @media screen and (max-width: 1200px) {
     .about_loyalty_module_container {
         padding: 100px 150px;

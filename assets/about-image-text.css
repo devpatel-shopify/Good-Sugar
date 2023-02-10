@@ -128,10 +128,13 @@
     max-height: 70%;
     height: 100%;
     }
+    .about_image_text .sticker_image {
+        transform: rotate(-9deg);
+    }
     .sticker_image {
         max-width: 70px;
         max-height: 70px;
-        transform: rotate(-9deg);
+        
     }
     .sticker_text {
         font-size: 11px;
