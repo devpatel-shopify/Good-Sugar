@@ -279,7 +279,7 @@ transform: rotate(-10deg);
 }
 .gs_style_1 .btn_text {
     color: #F9EE43;    
-    font-family: var(--font-body-family);
+    font-family: var(--nav-font-family);
     line-height: 1.2;
     font-weight: bold;
     white-space: nowrap;
