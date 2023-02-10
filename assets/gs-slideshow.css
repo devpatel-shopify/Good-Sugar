@@ -281,7 +281,7 @@ transform: rotate(-10deg);
     color: #F9EE43;    
     font-family: var(--nav-font-family);
     line-height: 1.2;
-    font-weight: bold;
+    font-weight: 400;
     white-space: nowrap;
     font-size:16px;
 }
