@@ -746,6 +746,7 @@ text-transform: lowercase;
         font-size: 35px;
     }
 }
+
 @media screen and (max-height:600px) {
     .main_slider_subheader {
         margin-top: 20px;
