@@ -49,20 +49,27 @@
       </div>
       <div class="map_container">
         <div class="map_container_main">
-          {%if section.settings.iframeLink != blank%}
-          <div id="googleMap">
-            {{ section.settings.iframeLink }}
-          </div>
-            {%else%}
-            <img src="{{ section.settings.image_with_text_image | img_url: 'master' }}" alt="{{ section.settings.image_with_text_image.alt | default:'image' }}">
-            {%endif%}
+          {% if section.settings.image_with_text_image != blank %}
+            <div class="map_image">
+              <img
+                src="{{ section.settings.image_with_text_image | img_url: 'master' }}"
+                alt="{{ section.settings.image_with_text_image.alt | default:'image' }}"
+                height="{{ section.settings.image_with_text_image.height }}"
+                width="{{ section.settings.image_with_text_image.width }}"
+              >
+            </div>
+          {% else %}
+            <div id="googleMap">
+              {{ section.settings.iframeLink }}
+            </div>
+          {% endif %}
         </div>
         {% if section.settings.map_addresh_text != blank %}
-        <div class="map_location_main large-up-hide medium-hide">
-          <div class="map_location_text">
-            {{ section.settings.map_addresh_text }}
+          <div class="map_location_main large-up-hide medium-hide">
+            <div class="map_location_text">
+              {{ section.settings.map_addresh_text }}
+            </div>
           </div>
-        </div>
         {% endif %}
       </div>
     </div>
@@ -110,11 +117,11 @@
     {% endif %}
   </div>
   {% if section.settings.map_addresh_text != blank %}
-  <div class="about_map_content small-hide">
-    <div class="text">
-      {{ section.settings.map_addresh_text }}
+    <div class="about_map_content small-hide">
+      <div class="text">
+        {{ section.settings.map_addresh_text }}
+      </div>
     </div>
-  </div>
   {% endif %}
 </div>
 <script>
@@ -158,9 +165,9 @@
       "default": "With goodsugar, you don’t have to compromise between what your taste buds want and what your body needs."
     },
     {
-      "type":"richtext",
-      "id":"map_addresh_text",
-      "label":"Map Text"
+      "type": "richtext",
+      "id": "map_addresh_text",
+      "label": "Map Text"
     },
     {
       "type": "header",
@@ -176,7 +183,7 @@
       "type": "image_picker",
       "id": "image_with_text_image",
       "label": "Image"
-    },    
+    },
     {
       "type": "header",
       "content": "Button Link And Text"
