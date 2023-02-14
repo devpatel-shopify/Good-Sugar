@@ -24,14 +24,14 @@
             "button_label": "Get the Goods",
             "btn_position": "right",
             "mobile_btn_position": "right",
-            "buttonbgimage": "shopify:\/\/shop_images\/btn_bg_image.png",
+            "buttonbgimage": "shopify:\/\/shop_images\/btn_bg_image_1.png",
             "link": "shopify:\/\/pages\/resources",
             "box_align": "middle-center",
             "image_overlay_opacity": 0,
             "subheader_text_color": "#000000",
             "header_text_color": "#000000",
-            "header_text_stroke_color": "#D1C8E3",
-            "btn_text_color": "#F9EE43"
+            "header_text_stroke_color": "#d1c8e3",
+            "btn_text_color": "#f9ee43"
           }
         },
         "28ddc718-0e80-4086-b1a6-ff51705412b2": {
@@ -61,8 +61,8 @@
             "image_overlay_opacity": 0,
             "subheader_text_color": "#ffffff",
             "header_text_color": "#000000",
-            "header_text_stroke_color": "#D1C8E3",
-            "btn_text_color": "#F9EE43"
+            "header_text_stroke_color": "#d1c8e3",
+            "btn_text_color": "#f9ee43"
           }
         },
         "e0f193f2-637d-440c-8633-c6b5d29dd314": {
@@ -78,7 +78,7 @@
             "button_label": "Prove Us <br>Wrong",
             "link": "shopify:\/\/pages\/menu",
             "header_text_color": "#000000",
-            "subheader_text_color": "#FFFF73",
+            "subheader_text_color": "#ffff73",
             "btn_text_color": "#000000"
           }
         },
@@ -95,7 +95,7 @@
             "button_label": "Gimme <br> Gimme <br>Gimme",
             "link": "shopify:\/\/pages\/menu",
             "header_text_color": "#000000",
-            "subheader_text_color": "#FFFF73",
+            "subheader_text_color": "#ffff73",
             "btn_text_color": "#ffff55"
           }
         },
