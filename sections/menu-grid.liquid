@@ -105,7 +105,7 @@
                 <div class="menu-grid_box_item item_right">
                   {%- if block.settings.btn_bg != blank and block.settings.btn_text_11 != blank and block.settings.btn_link != blank -%}
                     <div class="menu-grid_btn_box">
-                      <a href="{{ block.settings.btn_link }}" class="menu-grid_btn_wrapper">
+                      <a href="{{ block.settings.btn_link }}" class="menu-grid_btn_wrapper" target="_blank">
                         <div class="btn_text">{{ block.settings.btn_text_11 }}</div>
                         <img
                           src="{{ block.settings.btn_bg | img_url: 'master' }}"
