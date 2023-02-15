@@ -174,12 +174,23 @@
     }
     .image_horizontal_main {
         column-gap: 30px;
-        padding: 0 15px;
+        padding: 0px 0 0 15px;
         justify-content: flex-start;
     }
     .image_slider_wrapper {
         min-width: 175px;
     }
+    .image_horizontal_main::after {
+        content: "1";
+        position: relative;
+        width: 1px;
+        height: 100%;
+        display: block;
+        min-width: 1px;
+        opacity: 0;
+        margin-left: -10px;
+    }
+
 }
 
 @media screen and (max-width:375px) {
