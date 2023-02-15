@@ -5,8 +5,21 @@ class PredictiveSearch extends HTMLElement {
     this.input = this.querySelector('input[type="search"]');
     this.predictiveSearchResults = this.querySelector('[data-predictive-search]');
     this.isOpen = false;
-
+    this.buildData();
     this.setupEventListeners();
+  }
+
+  async buildData() {
+    let _this = this;
+    if (!document.querySelector("#search_results")) {
+      console.error("JSON for search is missing, predictive search won't be able to function");
+      return;
+    }
+    this.searchData = JSON.parse(document.querySelector("#search_results").innerText);
+    this.searchData.search_terms = this.searchData.results.map((t => { let r = t.search_terms.split(","); return r = r.reduce(((t, r) => t.concat(r.trim().replace(" ", "-").toLowerCase())), []), r })).flat();
+    this.searchData.search_terms = Array.from(new Set(this.searchData.search_terms));
+    this.searchData.products = this.searchData.results.map((t => { let r = []; return t.products.length > 0 && (r = t.products, r = r.map((t => `products/${t}`))), r })).flat();
+    this.searchData.products = Array.from(new Set(this.searchData.products));
   }
 
   setupEventListeners() {
@@ -27,14 +40,17 @@ class PredictiveSearch extends HTMLElement {
   }
 
   onChange() {
+    this.debounceTime = false;
     const searchTerm = this.getQuery();
 
     if (!searchTerm.length) {
       this.close(true);
       return;
     }
-
-    this.getSearchResults(searchTerm);
+    if (this.debounceTime) clearTimeout(this.debounceTime);
+    let _this = this;
+    setTimeout(() => _this.getSearchResults(searchTerm), 750);
+    // this.getSearchResults(searchTerm);
   }
 
   onFormSubmit(event) {
@@ -119,34 +135,50 @@ class PredictiveSearch extends HTMLElement {
     if (selectedProduct) selectedProduct.click();
   }
 
-  getSearchResults(searchTerm) {
+  async getSearchResults(searchTerm) {
+    let searchResults = { "products": [], "articles": [] };
+    let frag = document.createDocumentFragment(), fetchedContent = document.createElement('div');
+    async function _buildProductItems(e) { let t = e.map((e => fetch(`${window.Shopify.routes.root}products/${e}?view=search_item`).then((e => e.text())))), r = await Promise.all(t); frag.appendChild(fetchedContent); for (let e of r) { let t = document.createElement("div"); t.innerHTML = e, t.querySelector(".search-item-wrapper") && (fetchedContent.innerHTML += t.querySelector(".search-item-wrapper").innerHTML) } }
+    async function _buildArticleItems(e) { for (let i of e) fetchedContent.innerHTML += `<li id="predictive-search-option-" class="predictive-search__list-item" role="option" aria-selected="false"><a href="${i.link}" class="predictive-search__item predictive-search__item--link link link--text" tabindex="-1"><img class="predictive-search__image"  src="//cdn.shopify.com/s/files/1/0680/9331/3298/products/gs_temp-product_01_Desktop_35cb8729-15a9-4bcf-990e-79a456410c79.png?v=1675187158&width=150"  alt="${i.title}"  width="50"  height="44.063647490820074"><div class="predictive-search__item-content"><h3 class="predictive-search__item-heading h5">${i.title}</h3> </div></a></li>` }
+    if (!document.querySelector("#search_results")) {
+      return;
+    }
+
+
     const queryKey = searchTerm.replace(" ", "-").toLowerCase();
-    this.setLiveRegionLoadingState();
+    // this.setLiveRegionLoadingState();
 
     if (this.cachedResults[queryKey]) {
       this.renderSearchResults(this.cachedResults[queryKey]);
       return;
     }
+    if (this.searchData["search_terms"].indexOf(queryKey) > -1) {
+      this.searchData.results.map((({ search_terms: s, products: e, articles: r }) => { s.replaceAll(" ", "-").toLowerCase().trim().indexOf(queryKey) > -1 && e && (searchResults.products.push(...e), r && searchResults.articles.push(...r)) }));
+      await _buildProductItems(searchResults.products);
+      await _buildArticleItems(searchResults.articles);
+      fetchedContent.innerHTML += `<li id="predictive-search-option-search-keywords" class="predictive-search__list-item" role="option"><button class="predictive-search__item predictive-search__item--term link link--text h5 animate-arrow" tabindex="-1">${window.searchStrings.searchFor.replace("{{ terms }}", queryKey)}<svg viewBox="0 0 14 10" fill="none" aria-hidden="true" focusable="false" class="icon icon-arrow" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.537.808a.5.5 0 01.817-.162l4 4a.5.5 0 010 .708l-4 4a.5.5 0 11-.708-.708L11.793 5.5H1a.5.5 0 010-1h10.793L8.646 1.354a.5.5 0 01-.109-.546z" fill="currentColor"></path></svg></button></li> `;
+      this.cachedResults[queryKey] = `<ul id="predictive-search-results-list" class="predictive-search__results-list list-unstyled" role="listbox" aria-labelledby="predictive-search-products">${fetchedContent.innerHTML}</ul>`;
+      this.renderSearchResults(`<ul id="predictive-search-results-list" class="predictive-search__results-list list-unstyled" role="listbox" aria-labelledby="predictive-search-products">${fetchedContent.innerHTML}</ul>`);
+    }
+    // fetch(`${routes.predictive_search_url}?q=${encodeURIComponent(searchTerm)}&${encodeURIComponent('resources[type]')}=product&${encodeURIComponent('resources[limit]')}=4&section_id=predictive-search`)
+    //   .then((response) => {
+    //     if (!response.ok) {
+    //       var error = new Error(response.status);
+    //       this.close();
+    //       throw error;
+    //     }
 
-    fetch(`${routes.predictive_search_url}?q=${encodeURIComponent(searchTerm)}&${encodeURIComponent('resources[type]')}=product&${encodeURIComponent('resources[limit]')}=4&section_id=predictive-search`)
-      .then((response) => {
-        if (!response.ok) {
-          var error = new Error(response.status);
-          this.close();
-          throw error;
-        }
-
-        return response.text();
-      })
-      .then((text) => {
-        const resultsMarkup = new DOMParser().parseFromString(text, 'text/html').querySelector('#shopify-section-predictive-search').innerHTML;
-        this.cachedResults[queryKey] = resultsMarkup;
-        this.renderSearchResults(resultsMarkup);
-      })
-      .catch((error) => {
-        this.close();
-        throw error;
-      });
+    //     return response.text();
+    //   })
+    //   .then((text) => {
+    //     const resultsMarkup = new DOMParser().parseFromString(text, 'text/html').querySelector('#shopify-section-predictive-search').innerHTML;
+    //     this.cachedResults[queryKey] = resultsMarkup;
+    //     this.renderSearchResults(resultsMarkup);
+    //   })
+    //   .catch((error) => {
+    //     this.close();
+    //     throw error;
+    //   });
   }
 
   setLiveRegionLoadingState() {
@@ -170,7 +202,7 @@ class PredictiveSearch extends HTMLElement {
     this.predictiveSearchResults.innerHTML = resultsMarkup;
     this.setAttribute('results', true);
 
-    this.setLiveRegionResults();
+    // this.setLiveRegionResults();
     this.open();
   }
 
