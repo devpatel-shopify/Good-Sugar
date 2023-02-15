@@ -704,11 +704,20 @@ text-transform: lowercase;
         font-size: 11px;
     }
     .gs_style_2 .main_slider_header {
-        font-size: 20px;
+        font-size: 30px;
     }
     .gs_style_2 .btn_text,
     .gs_style_2 .subheader {
         font-size: 11px;
+    }
+    .gs_style_1 .main_slider_header {
+        font-size: 40px;
+    }
+    .gs_style_3 .text {
+        font-size: 12px;
+    }
+    .gs_style_3 .heading {
+        font-size: 27px;
     }
 }
 
@@ -726,8 +735,8 @@ text-transform: lowercase;
         font-size: 12px;
     }
     .gs_style_3 .main_slider_button img, .gs_style_3 .btn, .gs_style_2 .main_slider_button .btn {
-        height: 75px;
-        width: 75px;
+        height: 90px;
+        width: 90px;
     }
     .gs_style_1 .main_slider_button {
         margin-top: -20px;
@@ -738,13 +747,29 @@ text-transform: lowercase;
     .gs_style_1 .main_slider_subheader {
         margin-top: 0;
     }
+    .gs_style_1 .main_slider_button img, .gs_style_1 .main_slider_button .btn {
+        max-width: 110px;
+        max-height: 110px;
+    }
+    .gs_style_2 .main_slider_content {
+        width: 98%;
+    }
 }
 @media screen and (min-width:100px) and (max-height:700px) {
-    .gs_style_3 .text, .gs_style_2 .subheader {
-        font-size: 14px;
+    .gs_style_2 .subheader {
+        font-size: 12px;
     }
-    .gs_style_3 .heading, .gs_style_2 .main_slider_header {
+    .gs_style_3 .text {
+        font-size: 11px;
+    }
+    .gs_style_3 .heading {
         font-size: 35px;
+    }
+    .gs_style_2 .main_slider_header {
+        font-size: 28px;
+    }
+    .gs_style_3 .main_slider_button {
+        margin-top: -9px;
     }
 }
 

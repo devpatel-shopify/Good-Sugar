@@ -59,7 +59,7 @@ input, textarea, button, select, a, .information-sticky-overlay, div, span, summ
   .loading_main_logo {
     position: absolute;
     font-size: 3rem;
-    line-height: 4.2rem;
+    line-height: 1;
 }
 .loading_main .section-wrapper {
 	display: flex;

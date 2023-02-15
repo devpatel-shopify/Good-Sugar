@@ -128,7 +128,8 @@
         margin-top: 18px;
     }
     .about_compair_sticker {
-        bottom: -25px;
+        bottom: -10px;
+        max-width: 70px;
     }
     .compair_item.item_1 .compair_details_data {
         padding-right: 60px;
@@ -137,7 +138,8 @@
 
 @media screen and (max-width:500px) {
     .about_compair_sticker {
-        max-height: 150px;
+        max-height: 100px;
+        max-width: 45px;
     }
     .about_compair_sticker {
         right: -15px;

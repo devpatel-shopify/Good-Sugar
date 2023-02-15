@@ -295,7 +295,7 @@ transform: rotate(-10deg);
     font-size: 11px;
   }
   .map_text_subtext_box, .map_text_title_box {
-    padding: 20px;
+    padding: 25px 20px;
   }
   .map_text_title {
     max-width: 220px;
@@ -361,14 +361,14 @@ transform: rotate(-10deg);
     right: 20px;
   }
   .about_map_sticker.image-type-rectangle {
-    top:60px;
+    top:64px;
     left:auto;
     right: 0px;
   }
   .about_map_sticker.image-type-circle {
-    top: 115px;
+    top: 127px;
     left: auto;
-    right: 31px;
+    right: 33px;
   }
   .map_location_text p, .about_map_content .text p {
     font-size: var(--body-font-size);
