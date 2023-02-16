@@ -585,8 +585,8 @@ text-transform: lowercase;
 
     .gs_style_1 .main_slider_button img,
     .gs_style_1 .main_slider_button .btn {
-        max-width: 140px;
-        max-height: 140px;
+        max-width: 100px;
+        max-height: 100px;
         display: block;
     }
 
