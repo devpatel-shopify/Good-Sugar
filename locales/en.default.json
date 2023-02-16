@@ -206,7 +206,7 @@
       },
       "results_with_count_and_term": {
         "one": "{{ count }} result found for “{{ terms }}”",
-        "other": "{{ count }} results found for “{{ terms }}”"
+        "other": "Results found for “{{ terms }}”"
       },
       "title": "Search results",
       "search_for": "Search for “{{ terms }}”"
