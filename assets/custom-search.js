@@ -12,9 +12,10 @@
             this.resultsText = this.container.querySelector(".result-found");
             this.emptyText = this.container.querySelector(".result-empty");
             console.log("Custom Search");
-
+            this.setQuery();
             this.buildData();
             this.init();
+
         }
 
         async buildData() {
@@ -25,13 +26,13 @@
             this.searchData.products = Array.from(new Set(this.searchData.products));
         }
 
-        getQuery() {
+        setQuery() {
             let currentURL = new URL(window.location.href), searchParams = new URLSearchParams(currentURL.search);
-            return searchParams.get("q");
+            this.originalQuery = searchParams.get("q");
+            this.query = searchParams.get("q").replaceAll(" ", "-").toLowerCase().trim();
         }
 
         init() {
-            this.query = this.getQuery();
             this.getSearchResults(this.query);
         }
 
@@ -53,24 +54,7 @@
             fragContent.setAttribute("class", "content");
             frag.appendChild(fragContent);
             for (let i of e) {
-                // fragContent.innerHTML += `<li id="predictive-search-option-" class="predictive-search__list-item" role="option" aria-selected="false"><a href="${i.link}" class="predictive-search__item predictive-search__item--link link link--text" tabindex="-1"><img class="predictive-search__image"  src="//cdn.shopify.com/s/files/1/0680/9331/3298/products/gs_temp-product_01_Desktop_35cb8729-15a9-4bcf-990e-79a456410c79.png?v=1675187158&width=150"  alt="${i.title}"  width="50"  height="44.063647490820074"><div class="predictive-search__item-content"><h3 class="predictive-search__item-heading h5">${i.title}</h3> </div></a></li>`;
-                fragContent.innerHTML += `
-                <li class="grid__item">
-                    <div class="card article-card card--standard article-card__image--medium card--text ratio" style="--ratio-percent: 100%;">
-                        <div class="card__inner  color-background-2 gradient" style="--ratio-percent: 100%;">
-                            <div class="card__content center">
-                                <div class="card__information">
-                                    <h3 class="card__heading h4">
-                                        <a href="${i.link}" class="article-link full-unstyled-link">
-                                            ${i.title}
-                                        </a>
-                                    </h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                `
+                fragContent.innerHTML += `<li class="grid__item"><div class="card article-card card--standard article-card__image--medium card--text ratio" style="--ratio-percent: 100%;"><div class="card__inner  color-background-2 gradient" style="--ratio-percent: 100%;"><div class="card__content center"><div class="card__information"><h3 class="card__heading h4"><a href="${i.link}" class="article-link full-unstyled-link">${i.title}</a></h3></div></div></div></div></li>`;
             }
             return frag;
         }
@@ -83,7 +67,6 @@
             this.resultsContainer.classList.remove("hidden");
         }
         hideResults() {
-            // this.resultsText.innerHTML = `${window.searchStrings.searchResultFound.replace("{{ terms }}", query)}`;
             this.resultsText.classList.add("hidden");
             this.emptyText.classList.remove("hidden");
             this.emptyContainer.classList.remove("hidden");
@@ -93,16 +76,16 @@
             let searchResults = { "products": [], "articles": [] };
             if (this.searchData["search_terms"].indexOf(queryKey) > -1) {
                 this.searchData.results.map((({ search_terms: s, products: e, articles: r }) => { s.replaceAll(" ", "-").toLowerCase().trim().indexOf(queryKey) > -1 && e && (searchResults.products.push(...e), r && searchResults.articles.push(...r)) }));
-                let searchCount = searchResults.products.length + searchResults.articles.length;
-                document.title = `Search: ${searchCount} result found for "${this.query} - Good Sugar"`;
-                let productsContent = await this.buildProducts(searchResults.products);
-                let articlesContent = await this.buildArticles(searchResults.articles);
-                console.log(productsContent);
-                console.log(articlesContent);
+                let productsArray = Array.from(new Set(searchResults.products)), articlesArray = Array.from(new Set(searchResults.articles));
+                let searchCount = productsArray.length + articlesArray.length;
+                document.title = `Search: ${searchCount} results found for "${this.query} - Good Sugar"`;
+
+
+                let productsContent = await this.buildProducts(productsArray);
+                let articlesContent = await this.buildArticles(articlesArray);
                 this.resultsContainer.insertAdjacentHTML("beforeend", productsContent.querySelector(".content").innerHTML);
                 this.resultsContainer.insertAdjacentHTML("beforeend", articlesContent.querySelector(".content").innerHTML);
-                this.showResults(queryKey);
-                // = `${productsContent.innerHTML} ${articlesContent.innerHTML}`;
+                this.showResults(this.originalQuery);
             } else {
                 this.hideResults()
             }
