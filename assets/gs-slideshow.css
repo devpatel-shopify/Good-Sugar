@@ -735,8 +735,8 @@ text-transform: lowercase;
         font-size: 12px;
     }
     .gs_style_3 .main_slider_button img, .gs_style_3 .btn, .gs_style_2 .main_slider_button .btn {
-        height: 90px;
-        width: 90px;
+/*         height: 90px; */
+/*         width: 90px; */
     }
     .gs_style_1 .main_slider_button {
         margin-top: -20px;
