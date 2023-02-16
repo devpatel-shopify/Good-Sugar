@@ -630,8 +630,8 @@ text-transform: lowercase;
     }
     .gs_style_3 .main_slider_button img, .gs_style_3 .btn,
     .gs_style_2 .main_slider_button .btn {
-        height: 100px;
-        width: 100px;
+        height: 110px;
+        width: 110px;
     }
     .gs_style_2 .main_slider_button {
         display: flex;
