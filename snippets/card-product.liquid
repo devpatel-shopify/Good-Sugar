@@ -213,7 +213,7 @@
                 </span>
               </p>
             {%- endif -%}
-            <div class="card__price_main {% if show_price_bg_image == true %}  no_price_bg_img {% endif %} ">
+            <div class="card__price_main {% if show_price_bg_image == false %}  no_price_bg_img {% endif %} ">
               {%- if settings.disable_store_add_to_cart_functionality -%}
                 {%- if card_product.metafields.add_to_cart.link != blank and card_product.metafields.add_to_cart.label != blank -%}
                   <a href="{{- card_product.metafields.add_to_cart.link | default: 'javascript:void(0);'  -}}" name="add" class="product_buy_button" target="_blank">                    
