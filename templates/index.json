@@ -54,7 +54,7 @@
             "right_box_position": "right",
             "button_label": "Learn More, <br>Choose Better",
             "btn_position": "right",
-            "mobile_btn_position": "center",
+            "mobile_btn_position": "right",
             "buttonbgimage": "shopify:\/\/shop_images\/btn_bg_image_1.png",
             "link": "shopify:\/\/pages\/resources",
             "box_align": "middle-center",
