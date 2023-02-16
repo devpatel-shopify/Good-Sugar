@@ -863,6 +863,16 @@ body {
 	position: relative;
 	margin: 20px 0 5px 0;
 }
+.card__price_main.no_price_bg_img a {
+  position: unset;  
+}
+.no_price_bg_img .product_custom_price {
+      position: unset;
+    top: 0;
+    left: 0;
+    transform: translate(0);
+    z-index: 1;
+}
 @media screen and (max-width:749px) {
   .card__price_main a {
     margin:10px 0 5px 0;
