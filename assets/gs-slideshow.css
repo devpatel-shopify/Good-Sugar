@@ -687,8 +687,8 @@ text-transform: lowercase;
         font-size: 12px;
     }
     .gs_style_2 .main_slider_button .btn {
-        height: 80px;
-        width: 80px;
+/*         height: 80px; */
+/*         width: 80px; */
     }
     .gs_style_2 .main_slider_button {
         margin-top: -18px;
