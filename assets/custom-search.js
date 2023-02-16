@@ -21,7 +21,7 @@
         async buildData() {
             this.searchData = JSON.parse(document.querySelector("#search_results").innerText);
             this.searchData.search_terms = this.searchData.results.map((t => { let r = t.search_terms.split(","); return r = r.reduce(((t, r) => t.concat(r.trim().replace(" ", "-").toLowerCase())), []), r })).flat();
-            this.searchData.search_terms = Array.from(new Set(this.searchData.search_terms));
+            this.searchData.search_terms = (Array.from(new Set(this.searchData.search_terms))).toString();
             this.searchData.products = this.searchData.results.map((t => { let r = []; return t.products.length > 0 && (r = t.products, r = r.map((t => `products/${t}`))), r })).flat();
             this.searchData.products = Array.from(new Set(this.searchData.products));
         }
