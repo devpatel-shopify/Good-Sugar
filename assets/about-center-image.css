@@ -1,13 +1,13 @@
 .about_center_image .heading_text {
     color: var(--custom-text_color);
     line-height: 1.05;
-    white-space: nowrap;
+    
     text-transform: lowercase;
 }
 .about_center_image .heading {
     padding: 155px 20px;
     background-color: #ECA847;
-    overflow-y: auto;
+    
     border-bottom: var(--custom-border-width) solid var(--custom-border-color);
 }
 .image_text_slider {
