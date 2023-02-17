@@ -180,7 +180,11 @@ transform: rotate(-10deg);
   display: block;
   object-fit: cover;
 }
-
+.mobile .about_map_wrapper,
+.mobile .image_text_slide_main {
+width: 100%;
+overflow: auto;
+}
 @media screen and (min-width:750px) {
   .about_map_wrapper {
     display: flex;
@@ -304,6 +308,10 @@ backdrop-filter: blur(2px);
   }
   .about_map_content .text {
      padding: 50px 70px;
+  }
+  .map--small .map_text_container {
+    width: 75vw;
+    min-width: 75vw;
   }
 }
 
@@ -432,4 +440,10 @@ backdrop-filter: blur(2px);
 
 .map_text_container {
   position: relative;
+}
+
+@media screen and (max-width:375px) {
+  .map_text_title h1 {
+    --heading-h1-font-size:20px;
+  }
 }

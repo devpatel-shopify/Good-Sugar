@@ -22,7 +22,11 @@
               <img src="{{- section.settings.background_image | image_url -}}">
               <div class="sticker_image_main desktop">
                 <div class="sticker_image">
-                  {%- if section.settings.sticker_text != blank -%}<a class="sticker_text" data-click-to-jump-link data-href="{{- section.settings.sticker_url -}}" href="javascript:void(0)" href="">{{- section.settings.sticker_text -}}</a>{%- endif -%}
+                  {%- if section.settings.sticker_text != blank -%}
+                    <a class="jumping-link sticker_text"  data-href="{{- section.settings.sticker_url -}}" href="javascript:void(0)">
+                    {{- section.settings.sticker_text -}}
+                    </a>
+                    {%- endif -%}
                   {%- if section.settings.sticker_image != blank -%}
                     <div class="image">
                       <img src="{{- section.settings.sticker_image | image_url -}}">
@@ -40,25 +44,37 @@
 
 <script>
 // scrolling js   
-const abnoutinternalLinks = document.querySelectorAll('a[data-click-to-jump-link]');
+  const abnoutinternalLinks = document.querySelectorAll('.jumping-link');
+  function handleLinkClick(e) {
+    console.log("e",e.currentTarget)
+    e.preventDefault();
+    if(e.currentTarget.getAttribute("data-href") == ""){
+      return;
+    }
+    let targetOffset = document.querySelector(`${e.currentTarget.getAttribute("data-href")}`).offsetTop;
+    console.log(targetOffset)
+    let headerOffset = document.querySelector('#shopify-section-header').offsetHeight;
 
-abnoutinternalLinks.forEach((link) => {
-link.addEventListener('click', function(e) {
-  console.log("e",e.currentTarget)
-  e.preventDefault();
-  if(e.currentTarget.getAttribute("data-href") == ""){
-    return;
+    if(!document.querySelector("html").classList.contains("mobile")){
+        let height = 0;
+        document.querySelectorAll(".about_slide").forEach((element, index) => { 
+          index < 2 ? height+=element.clientWidth  : "";
+        });
+        let scrollDistance = ((targetOffset + headerOffset) + (height - window.innerWidth - 55));
+        console.log(headerOffset)
+        window.scroll({
+          top:  scrollDistance,
+          behavior: 'smooth'
+        })
+        //gsap.to(window, {duration: .5, delay: .5, scrollTo: {y : `${e.currentTarget.getAttribute('data-href')}`, offsetY: -312 }, ease: 'Power1.easeInOut'})
+        // gsap.to(window, {duration: .5, delay: .5, scrollTo: {y : `${e.currentTarget.getAttribute('data-href')}`, offsetY: height }, ease: 'Power1.easeInOut'})
+      }
+    
+    
   }
-  let targetOffset = document.querySelector(`${e.currentTarget.getAttribute("data-href")}`).offsetTop;
-  console.log(targetOffset)
-  let headerOffset = document.querySelector('#shopify-section-header').offsetHeight;
-  console.log(headerOffset)
-  window.scroll({
-    top:  (targetOffset - headerOffset),
-    behavior: 'smooth'
+  abnoutinternalLinks.forEach((link) => {
+    link.addEventListener('click', handleLinkClick.bind(this), true);
   })
-})
-})
 </script>
 
   {% schema %}
@@ -66,11 +82,6 @@ link.addEventListener('click', function(e) {
     "name": "About Large Image Text",
     "tag": "section",
     "settings": [
-      {
-        "type":"color_background",
-        "id":"bg_color",
-        "label":"Background Color"
-      },
       {
         "type":"richtext",
         "id":"text_title",

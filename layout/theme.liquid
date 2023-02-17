@@ -6,15 +6,12 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="theme-color" content="">
     <link rel="canonical" href="{{ canonical_url }}">
-    <link
-    rel="preconnect"
-      href="https://cdn.shopify.com"
-      crossorigin>
+    <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
     {% comment %} <link  rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.3.1/swiper-bundle.css"/> {% endcomment %}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.3.1/swiper-bundle.min.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css">
+    {% comment %} <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css">
     <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css">
-    <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
+    <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script> {% endcomment %}
 
     {%- if settings.favicon != blank -%}
       <link
@@ -607,6 +604,54 @@ body {
       }
       document.documentElement.style.setProperty('--viewport-height', window.visualViewport.height + 'px');
       document.documentElement.style.setProperty('--viewport-width', window.visualViewport.width + 'px');
+
+      
+      function getBroswerDetails() {
+        //Checking the user's OS and Browser
+        if ((navigator.userAgent).includes("Android")) {
+            document.querySelector("html").classList.add("android");
+        } else if ((navigator.userAgent).includes("Mac")) {
+            document.querySelector("html").classList.add("mac");
+        } else {
+            document.querySelector("html").classList.add("windows");
+        }
+    
+    
+        //-- Browser --//
+        var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
+        var isFirefox = typeof InstallTrigger !== 'undefined';
+        var isSafari = /constructor/i.test(window.HTMLElement) || (function(p) {
+            return p.toString() === "[object SafariRemoteNotification]";
+        })(!window['safari'] || (typeof safari !== 'undefined' && window['safari'].pushNotification));
+        var isIE = /*@cc_on!@*/ false || !!document.documentMode;
+        var isEdge = !isIE && !!window.StyleMedia;
+        var isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
+        var isEdgeChromium = isChrome && (navigator.userAgent.indexOf("Edg") != -1);
+        var isBlink = (isChrome || isOpera) && !!window.CSS;
+        if (isFirefox) {
+            document.querySelector("html").classList.add("isFirefox")
+        } else if (isChrome) {
+            document.querySelector("html").classList.add("isChrome")
+        } else if (isSafari) {
+            document.querySelector("html").classList.add("isSafari")
+        } else if (isOpera) {
+            document.querySelector("html").classList.add("isOpera")
+        } else if (isIE) {
+            document.querySelector("html").classList.add("isIE")
+        } else if (isEdge) {
+            document.querySelector("html").classList.add("isEdge")
+        } else if (isEdgeChromium) {
+            document.querySelector("html").classList.add("isEdgeChromium")
+        } else {
+            document.querySelector("html").classList.add("isBlink")
+        }
+    }
+      getBroswerDetails();
+
+      if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+        // true for mobile device
+        document.querySelector("html").classList.add("mobile");
+      }
     </script>
 
     <link

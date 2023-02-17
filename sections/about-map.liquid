@@ -52,7 +52,7 @@
               data-click-to-jump-link
               data-href="{{section.settings.ellipse_link}}"
               href="javascript:void(0)"
-              target="_blank"
+              
             >
               <div class="map_sticker_container">
                 <div class="map_sticker_text">
@@ -71,7 +71,6 @@
               data-click-to-jump-link
               data-href="{{section.settings.rectangle_link}}"
               href="javascript:void(0)"
-              target="_blank"
             >
               <div class="map_sticker_container">
                 <div class="map_sticker_text">
@@ -90,7 +89,7 @@
               data-click-to-jump-link
               data-href="{{section.settings.circle_link}}"
               href="javascript:void(0)"
-              target="_blank"
+              
             >
               <div class="map_sticker_container">
                 <div class="map_sticker_text">
@@ -140,11 +139,9 @@
   </div>
 </div>
 <script>
-  // scrolling js
+   // scrolling js
   const internalLinks = document.querySelectorAll('a[data-click-to-jump-link]');
-
-  internalLinks.forEach((link) => {
-    link.addEventListener('click', function (e) {
+  function handleLinkClick(e) {
       console.log('e', e.currentTarget);
       e.preventDefault();
       if (e.currentTarget.getAttribute('data-href') == '') {
@@ -153,19 +150,24 @@
       let targetOffset = document.querySelector(`${e.currentTarget.getAttribute('data-href')}`).offsetTop;
       console.log(targetOffset);
       let headerOffset = document.querySelector('#shopify-section-header').offsetHeight;
-      console.log(headerOffset);
-      window.scroll({
-        top: targetOffset - headerOffset,
-        behavior: 'smooth',
-      });
-    });
+      let offset = document.querySelector(".image_text_slide_main").offsetHeight;
+      if(!document.querySelector("html").classList.contains("mobile")){
+        let height = 0;
+        document.querySelectorAll(".about_slide").forEach((element, index) => { 
+          index < 2 ? height+=element.clientWidth  : "";
+        });
+        let scrollDistance = ((targetOffset + headerOffset) + (height - window.innerWidth));
+        gsap.to(window, {duration: .5, delay: .5, scrollTo: {y : `${e.currentTarget.getAttribute('data-href')}`, offsetY: -312 }, ease: 'Power1.easeInOut'})
+        // gsap.to(window, {duration: .5, delay: .5, scrollTo: {y : `${e.currentTarget.getAttribute('data-href')}`, offsetY: height }, ease: 'Power1.easeInOut'})
+      }
+    }
+  internalLinks.forEach((link) => {
+    link.addEventListener('click', handleLinkClick.bind(this), true);
   });
-  
-
   //gsap.registerPlugin(ScrollTrigger);
-  (function(){
+(function(){
     function loadGsapFunction(){
-      if (window.innerWidth > 749) {
+      if (window.innerWidth > 749 && !document.querySelector("html").classList.contains("mobile")) {
         gsap.to('.image_text_slide_main', {
           xPercent: -100,
           x: () => innerWidth,
@@ -217,16 +219,14 @@
         });
       } {% endcomment %}
 }
-
-
-let gsapInterval = setInterval(function(){
-    if(window.gsapLoaded != undefined){
-        clearInterval(gsapInterval);
-       // if(window.innerWidth > 749){
-            loadGsapFunction();
-       // }
-    }
-});
+    let gsapInterval = setInterval(function(){
+        if(window.gsapLoaded != undefined){
+            clearInterval(gsapInterval);
+           // if(window.innerWidth > 749){
+                loadGsapFunction();
+           // }
+        }
+    });
 })();
 
 </script>

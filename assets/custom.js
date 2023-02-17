@@ -1,4 +1,4 @@
-(function () {
+(function () {  
     window.gsapLoaded = false;
     const gsapInterval = setInterval(() => {
         if (window.gsap != undefined) {
@@ -45,8 +45,6 @@
             })
         }
     }
-
-
     function AboutMapAnimation() {
         console.log("Making map pinned!...")
         if (document.querySelector(".map_container")) {
@@ -77,7 +75,6 @@
 
         }
     }
-
 })();
 
 window.setGridHeight = (selector) =>{

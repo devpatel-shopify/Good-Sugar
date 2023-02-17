@@ -1,3 +1,7 @@
+
+.about_image_text {
+    background: radial-gradient(53.71% 70.37% at 50% 87.2%, #F58325 0%, #D0C7E3 100%);
+}
 .about_image_text .text {
     
     padding-top: 135px;
