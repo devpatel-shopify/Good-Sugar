@@ -77,13 +77,7 @@
             if (this.searchData["search_terms"].indexOf(queryKey) > -1) {
                 this.searchData.results.map((({ search_terms: s, products: e, articles: r }) => { s.replaceAll(" ", "-").toLowerCase().trim().indexOf(queryKey) > -1 && e && (searchResults.products.push(...e), r && searchResults.articles.push(...r)) }));
                 let productsArray = Array.from(new Set(searchResults.products)), articlesArray = Array.from(new Set(searchResults.articles));
-                articlesArray = articlesArray.filter((value, index, self) =>{
-                  console.log(self.findIndex((t) => (t.title === value.title && t.link === value.link)));
-                  return index === self.findIndex((t) => {
-                    console.log(t);
-                    return (t.title === value.title && t.link === value.link)
-                    })
-                })
+                console.log(articlesArray);
                 let searchCount = productsArray.length + articlesArray.length;
                 document.title = `Search: ${searchCount} results found for "${this.query} - Good Sugar"`;
 
