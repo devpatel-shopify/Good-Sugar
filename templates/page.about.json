@@ -33,14 +33,6 @@
             "text": "<p>Just because they claim “juice” or “pressed” or “health” doesn’t mean they are.<\/p>"
           }
         },
-        "19b74642-fa43-4133-9e72-4ff58871b06f": {
-          "type": "style_1",
-          "disabled": true,
-          "settings": {
-            "text": "<p>In fact, as Marcus saw first hand, it likely means they’re not.<\/p>",
-            "image": "shopify:\/\/shop_images\/DISGUSTING-JUICE_1_2.png"
-          }
-        },
         "13b89d5e-45b8-4ba2-afa6-0d4f64f97629": {
           "type": "style_1",
           "settings": {
@@ -51,7 +43,6 @@
       },
       "block_order": [
         "e5737233-ed4e-4bab-adc3-d2c8d8d255b0",
-        "19b74642-fa43-4133-9e72-4ff58871b06f",
         "13b89d5e-45b8-4ba2-afa6-0d4f64f97629"
       ],
       "settings": {
