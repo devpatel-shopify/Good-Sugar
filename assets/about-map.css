@@ -235,6 +235,9 @@ backdrop-filter: blur(2px);
   .map_text_title h1 {
     --heading-h1-font-size:30px;
   }
+  .map_text_title {
+    max-width:350px;
+  }
 }
 
 @media screen and (max-width:1400px) {
