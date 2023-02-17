@@ -31,9 +31,9 @@
 </style>
 
 <div class="about_map" id="about-mp--{{ section.id }}">
-  <div class="about_map_main" id="about_map_main">
-    <div class="about_map_wrapper map--small">
-      <div class="map_text_container">
+  <div class="about_map_main">
+    <div class="about_map_wrapper map--small" id="about_map_main">
+      <div class="about_slide map_text_container">
         <div class="map_text_title_box">
           <div class="map_text_title">
             <h1 class="lowercase">{{ section.settings.heading }}</h1>
@@ -46,8 +46,65 @@
             </p>
           </div>
         </div>
+        {% if section.settings.ellipse_text != blank and section.settings.ellipse_link != blank %}
+          <div class="about_map_sticker block_{{ forloop.index }} image-type-ellipse map-sticker--{{ block.id }}">
+            <a
+              data-click-to-jump-link
+              data-href="{{section.settings.ellipse_link}}"
+              href="javascript:void(0)"
+              target="_blank"
+            >
+              <div class="map_sticker_container">
+                <div class="map_sticker_text">
+                  <div class="text">{{ section.settings.ellipse_text }}</div>
+                </div>
+                <div class="map_sticker_image">
+                  <img src="https://cdn.shopify.com/s/files/1/0680/9331/3298/files/image_8.png?v=1671134824">
+                </div>
+              </div>
+            </a>
+          </div>
+        {% endif %}
+        {% if section.settings.rectangle_text != blank and section.settings.rectangle_link != blank %}
+          <div class="about_map_sticker block_{{ forloop.index }} image-type-rectangle map-sticker--{{ block.id }}">
+            <a
+              data-click-to-jump-link
+              data-href="{{section.settings.rectangle_link}}"
+              href="javascript:void(0)"
+              target="_blank"
+            >
+              <div class="map_sticker_container">
+                <div class="map_sticker_text">
+                  <div class="text">{{ section.settings.rectangle_text }}</div>
+                </div>
+                <div class="map_sticker_image">
+                  <img src="https://cdn.shopify.com/s/files/1/0680/9331/3298/files/image_12.png?v=1671192667">
+                </div>
+              </div>
+            </a>
+          </div>
+        {% endif %}
+        {% if section.settings.circle_text != blank and section.settings.circle_link != blank %}
+          <div class="about_map_sticker block_{{ forloop.index }} image-type-circle map-sticker--{{ block.id }}">
+            <a
+              data-click-to-jump-link
+              data-href="{{section.settings.circle_link}}"
+              href="javascript:void(0)"
+              target="_blank"
+            >
+              <div class="map_sticker_container">
+                <div class="map_sticker_text">
+                  <div class="text">{{ section.settings.circle_text }}</div>
+                </div>
+                <div class="map_sticker_image">
+                  <img src="https://cdn.shopify.com/s/files/1/0680/9331/3298/files/image_14_1.png?v=1671192975">
+                </div>
+              </div>
+            </a>
+          </div>
+        {% endif %}
       </div>
-      <div class="map_container">
+      <div class="about_slide map_container">
         <div class="map_container_main">
           {% if section.settings.image_with_text_image != blank %}
             <div class="map_image">
@@ -65,64 +122,22 @@
           {% endif %}
         </div>
         {% if section.settings.map_addresh_text != blank %}
-          <div class="map_location_main large-up-hide medium-hide">
+          <div class="about_slide map_location_main medium-hide large-up-hide">
             <div class="map_location_text">
               {{ section.settings.map_addresh_text }}
             </div>
           </div>
         {% endif %}
       </div>
+      {% if section.settings.map_addresh_text != blank %}
+        <div class="about_slide map_location_main small-hide">
+          <div class="map_location_text">
+            {{ section.settings.map_addresh_text }}
+          </div>
+        </div>
+      {% endif %}
     </div>
-    {% if section.settings.ellipse_text != blank and section.settings.ellipse_link != blank %}
-      <div class="about_map_sticker block_{{ forloop.index }} image-type-ellipse map-sticker--{{ block.id }}">
-        <a data-click-to-jump-link data-href="{{section.settings.ellipse_link}}" href="javascript:void(0)" target="_blank">
-          <div class="map_sticker_container">
-            <div class="map_sticker_text">
-              <div class="text">{{ section.settings.ellipse_text }}</div>
-            </div>
-            <div class="map_sticker_image">
-              <img src="https://cdn.shopify.com/s/files/1/0680/9331/3298/files/image_8.png?v=1671134824">
-            </div>
-          </div>
-        </a>
-      </div>
-    {% endif %}
-    {% if section.settings.rectangle_text != blank and section.settings.rectangle_link != blank %}
-      <div class="about_map_sticker block_{{ forloop.index }} image-type-rectangle map-sticker--{{ block.id }}">
-        <a data-click-to-jump-link data-href="{{section.settings.rectangle_link}}" href="javascript:void(0)" target="_blank">
-          <div class="map_sticker_container">
-            <div class="map_sticker_text">
-              <div class="text">{{ section.settings.rectangle_text }}</div>
-            </div>
-            <div class="map_sticker_image">
-              <img src="https://cdn.shopify.com/s/files/1/0680/9331/3298/files/image_12.png?v=1671192667">
-            </div>
-          </div>
-        </a>
-      </div>
-    {% endif %}
-    {% if section.settings.circle_text != blank and section.settings.circle_link != blank %}
-      <div class="about_map_sticker block_{{ forloop.index }} image-type-circle map-sticker--{{ block.id }}">
-        <a data-click-to-jump-link data-href="{{section.settings.circle_link}}" href="javascript:void(0)" target="_blank">
-          <div class="map_sticker_container">
-            <div class="map_sticker_text">
-              <div class="text">{{ section.settings.circle_text }}</div>
-            </div>
-            <div class="map_sticker_image">
-              <img src="https://cdn.shopify.com/s/files/1/0680/9331/3298/files/image_14_1.png?v=1671192975">
-            </div>
-          </div>
-        </a>
-      </div>
-    {% endif %}
   </div>
-  {% if section.settings.map_addresh_text != blank %}
-    <div class="about_map_content small-hide">
-      <div class="text">
-        {{ section.settings.map_addresh_text }}
-      </div>
-    </div>
-  {% endif %}
 </div>
 <script>
   // scrolling js
@@ -145,8 +160,76 @@
       });
     });
   });
+  
+
+  //gsap.registerPlugin(ScrollTrigger);
+  (function(){
+    function loadGsapFunction(){
+      if (window.innerWidth > 749) {
+        gsap.to('.image_text_slide_main', {
+          xPercent: -100,
+          x: () => innerWidth,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: '.image_text_slide_main',
+            pin: '.image_text_slide_main',
+            start: 'top top',
+            end: 'bottom center',
+            //end: () => (innerWidth*2),
+            scrub: 3,
+            invalidateOnRefresh: true,
+            markers: true,
+          },
+        });
+
+        gsap.to('.about_map_wrapper', {
+          xPercent: -100,
+          x: () => innerWidth,
+          //x: () => document.getElementsByClassName("about_map_wrapper").offsetWidth,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: '.about_map_wrapper',
+            pin: '#MainContent',
+            start: 'top 128px',
+            end: 'bottom center',
+            //end: () => (innerWidth*2),
+            scrub: 3,
+            invalidateOnRefresh: true,
+            markers: true,
+          },
+        });
+      }
+      {% comment %} else{
+        gsap.to('.image_text_slide_main', {
+          xPercent: -100,
+          x: () => innerWidth,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: '.image_text_slide_main',
+            pin: '.image_text_slide_main',
+            start: 'top center',
+            end: 'bottom center',
+            //end: () => (innerWidth*2),
+            scrub: 3,
+            invalidateOnRefresh: true,
+            markers: true,
+          },
+        });
+      } {% endcomment %}
+}
+
+
+let gsapInterval = setInterval(function(){
+    if(window.gsapLoaded != undefined){
+        clearInterval(gsapInterval);
+       // if(window.innerWidth > 749){
+            loadGsapFunction();
+       // }
+    }
+});
+})();
+
 </script>
-<script src="{{ 'about-map.js' | asset_url }}" defer="defer"></script>
 
 {% schema %}
 {

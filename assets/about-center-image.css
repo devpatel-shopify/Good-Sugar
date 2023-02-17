@@ -75,9 +75,16 @@
     margin: 0;
     
 }
-.slide_item_wrapper .text {
-    padding: 70px 100px 70px 200px;
+.slide_item_1 .slide_item_wrapper .text {
+    max-width: 70vw;
 }
+
+.slide_item_wrapper .text {
+    padding: 30px 100px 30px 200px;
+    width: 100%;
+    /* min-width: 70vw; */
+}
+
 .style_2 .text p,
 .slide_item_wrapper .text p {
     max-width: 685px;
@@ -93,8 +100,13 @@
     display: flex;
     align-items: center;
 }
+.image_text_slider_wrapper .swiper-slide {
+    height: auto;
+    width: 100vw;
+}
 .image_text_slider_wrapper .swiper-wrapper  {
-align-items: center;
+/* align-items: center; */
+/* overflow: auto; */
 }
 .slide_item_wrapper img,
 .slide_item_wrapper .image {
@@ -104,7 +116,10 @@ align-items: center;
 
 .slide_item_wrapper .image {
     /* max-height: 373px; */
-    max-width: 400px;
+    /* max-width: 400px; */
+    /* height: 100%; */
+    min-width: 20vw;
+    width: 20vw;
     height: 100%;
 }
 .slide_item_wrapper img {
@@ -112,7 +127,7 @@ align-items: center;
     /* object-fit: cover; */
     height: 100%;
     width: 100%;
-    
+    object-fit: cover;
 }
 .image_text_slider .swiper-autoheight,
 .image_text_slider .swiper-autoheight .swiper-slide {
@@ -124,6 +139,7 @@ align-items: center;
     height: 100%;
     width: 100%;
     display: block;
+    object-fit: contain;
 }
 
 .about_center_image_wrapper {
@@ -164,39 +180,47 @@ justify-content: space-between;
 }
 
 .style_2 .text p, .slide_item_wrapper .text p {
-    font-size: 50px;
+    font-size: 40px;
 } 
 .style_1.slide_item_2 {
-width: calc(100% - 800px);
+/* width: calc(100% - 800px); */
 }
 .style_1.slide_item_4, 
 .style_1.slide_item_3 {
-    width: 400px;
+    max-width: 400px;
 }
 .style_1.slide_item_3 .slide_item_wrapper {
     display: block;
+}
+.style_1.slide_item_1 {
+    width: 100vw;
 }
 
 
 @media screen and (max-width:1500px) {
     .style_1.slide_item_2 {
-        width: 800px;
+        width: 100vw;
     }
 }
 @media screen and (max-width:1200px) {
     .image_text_main {
-        padding: 100px 100px 100px 150px;
+        padding: 100px 40px 100px 80px;
     }
     .slide_item_wrapper .text {
-        padding-left: 150px;
+        padding-left: 80px;
+        padding-right: 30px;
+    }
+    .slide_item_wrapper .image {
+        width: 25vw;
+        min-width: 25vw;
     }
 }
 
 @media screen and (max-width:1024px) {
     .slide_item_wrapper .text,
     .image_text_main {
-        padding-left: 70px;
-        padding-bottom: 70px;
+        padding-left: 40px;
+        padding-bottom: 30px;
     }
     .image_text_slider_wrapper .swiper-wrapper {
         padding-left: 0px;
@@ -222,13 +246,20 @@ width: calc(100% - 800px);
         max-height: 110px;
     }
     .style_2 .text p, .slide_item_wrapper .text p {
-        font-size: 40px;
+        font-size: 30px;
     }
     .about_center_image .heading {
         padding: 130px 20px;
     }
     .image_text_button {
         margin-top: 60px;
+    }
+    
+}
+
+@media screen and (max-width:900px) {
+    .style_2 .text p, .slide_item_wrapper .text p {
+        font-size: 25px;
     }
 }
 @media screen and (max-width:749px) {
@@ -241,6 +272,9 @@ width: calc(100% - 800px);
     }
     .image_text_main > div {
         /* width: 45%; */
+    }
+    .image_text_slider_wrapper .swiper-wrapper {
+        overflow: auto;
     }
     .image_text_slider_wrapper .swiper-wrapper {
         padding-left: 0px;
@@ -268,11 +302,15 @@ width: calc(100% - 800px);
 
     }
     .slide_item_wrapper .text {
-        padding: 37px 20px;
+        padding: 30px 20px;
+        /* min-width: 400px; */
     }
     .slide_item_wrapper .image {
         max-width: 100%;
-        max-height: 100%;
+        max-height: 400px;
+    }
+    .slide_item_wrapper img {
+        height: auto;
     }
     .center_image_wrapper {
         margin-right: -50px;
@@ -293,15 +331,30 @@ width: calc(100% - 800px);
         max-height: 58px;
     }
     .slide_item_wrapper img {
-        max-height: 189px;
+        /* max-height: 189px; */
+        min-height: 200px;
+        min-width: 200px;
     }
     .style_2 .text p, .slide_item_wrapper .text p {
         font-size: 20px;
     }
     .style_1.slide_item_2 {
-        width: 300px;
+        width: 100%;
     }
     .image_text_item .text p {
         font-size: 9px;
-    }  
+    }
+    .center_image_wrapper img {
+        max-height: 480px;
+    }
+    .style_1.slide_item_4, .style_1.slide_item_3 {
+        max-width: 200px;
+    } 
+    .slide_item_wrapper .image {
+        width: 200px;
+        min-width: 200px;
+    }
+    .slide_item_2 .slide_item_wrapper .text {
+        min-width: 350px;
+    }
 }

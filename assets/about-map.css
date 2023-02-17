@@ -86,8 +86,8 @@ width: 100%;
   display: block;
 }
 .about_map_sticker.image-type-rectangle {
-  top: -37px;
-  left: 42%;
+  top: 20px;
+  right: 17%;
 }
 .about_map_sticker.image-type-ellipse {
   top: 37.5%;
@@ -95,7 +95,7 @@ width: 100%;
 }
 .about_map_sticker.image-type-circle {
   top:55%;
-  left: 55%;
+  right: -3%;
 }
 /* .about_map_sticker.image-type-rectangle .map_sticker_image,
 .about_map_sticker.image-type-rectangle img, */
@@ -180,52 +180,89 @@ transform: rotate(-10deg);
   display: block;
   object-fit: cover;
 }
+
 @media screen and (min-width:750px) {
   .about_map_wrapper {
     display: flex;
-    /* align-items: flex-start; */
-    /* justify-content: center; */
     height: calc(100vh - var(--header-height) - 6px);
+    /* overflow: auto; */
   }
- .map--small .map_container {
-    width: 38%;
+  .map_location_main {
+    width: 50vw;
+    min-width: fit-content;
   }
+  .map_container_main,
   .map--small .map_text_container {
-    width: 62%;
+    width: 60vw;
+    min-width: 60vw;
   }
+  .map_location_text {
+    width: 30vw;
+  }
+  .map_location_text p {
+    max-width: 430px;
+  }
+  .map_location_main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 160px;
+    background: linear-gradient(270deg, #F6D42B 7.56%, #D9D9D9 87.35%);
+backdrop-filter: blur(2px);
+  }
+   
   .map_container {
+    border-right: var(--custom-border-width) solid var(--custom-text_color);
     border-left: var(--custom-border-width) solid var(--custom-text_color);
+    display: flex;
   }
   .map_text_title {
     max-width: 520px;
-    /* margin: 0 auto; */
   }
+  .about_map_wrapper,
+  .image_text_slide_main {
+  width: max-content;
+}
 }
 
 @media screen and (max-width:1600px) {
-  .about_map_sticker.image-type-circle {
-    top:55%;
-    left: 53%;
-  }
+  
 }
 
 @media screen and (max-width:1400px) {
-  .about_map_sticker.image-type-circle {
-    top:55%;
-    left: 52%;
+  .map_container_main,
+  .map--small .map_text_container {
+    width: 70vw;
+    min-width: 70vw;
+  }
+  .about_map_sticker.image-type-rectangle {
+    right: 13%;
   }
 }
 
 @media screen and (max-width:1200px) {
   .map_text_subtext_box, .map_text_title_box {
-    padding: 100px 100px 100px 150px;
+    padding: 154px 100px 100px 150px;
   }
-  .about_map_sticker.image-type-circle {
-    top:55%;
-    left: 50%;
-  }
+  
   .about_map_content .text {
      padding: 50px 150px;
+  }
+  .map--small .map_text_container {
+    width: 90vw;
+    min-width: 90vw;
+  }
+
+  .map_location_main {
+    width: 75vw;
+    min-width: 75vw;
+  }
+  .map_container_main {
+    width: 100vw;
+    min-width: 100vw;
+  }
+  .map_location_text {
+    width: 100vw;
   }
 }
 @media screen and (max-width:1024px) {
@@ -235,10 +272,7 @@ transform: rotate(-10deg);
   .map_text_title h1 {
     --heading-h1-font-size:32px;
   }
-  .about_map_sticker.image-type-circle {
-    top:55%;
-    left: 51%;
-  }
+  
   .about_map_sticker.image-type-rectangle .map_sticker_container {
     height: 120px;
     width: 180px;
@@ -252,7 +286,7 @@ transform: rotate(-10deg);
     width: 130px;
   }
   .about_map_sticker.image-type-rectangle {
-    left: 35%;
+    /* left: 35%; */
   }
   .about_map_sticker.image-type-ellipse {
     top: 43%;
@@ -265,10 +299,7 @@ transform: rotate(-10deg);
 
 
 @media screen and (max-width:900px) {
-  .about_map_sticker.image-type-circle {
-    top:55%;
-    left: 49%;
-  }
+
 }
 
 
@@ -303,8 +334,12 @@ transform: rotate(-10deg);
   .map_text_subtext {
     max-width: 134px;
   }
+  .map--small .map_text_container {
+    width: 100%;
+    min-width: 100%;
+  }
   .map_text_container {
-    border-bottom: var(--custom-border-width) solid var(--custom-border-color);
+    border-bottom: var(--custom-border-width) solid var(--custom-border-color);    
   }
   .map_container {
         display: flex;
@@ -330,6 +365,7 @@ transform: rotate(-10deg);
     line-height: 1.1;
     color: var(--custom-text_color);
     padding: 40px 10px 30px 20px;
+    width: 100%;
   }
   .map_location_text span {
     font-family: var(--font-heading-family);
@@ -338,6 +374,10 @@ transform: rotate(-10deg);
   }
   .map_container_main {
     height:inherit;
+    min-width: 50%;
+  }
+  .map_location_main {
+    min-width: 50%;
   }
   #googleMap {
     height: 100%;
@@ -377,4 +417,8 @@ transform: rotate(-10deg);
   .map_location_text p a, .about_map_content p a {
     text-underline-offset: 3px;
   }
+}
+
+.map_text_container {
+  position: relative;
 }

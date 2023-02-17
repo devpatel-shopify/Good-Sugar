@@ -33,43 +33,18 @@
             "text": "<p>Just because they claim “juice” or “pressed” or “health” doesn’t mean they are.<\/p>"
           }
         },
-        "469286d1-913c-4a78-8c19-47e74ee71294": {
-          "type": "style_2",
-          "disabled": true,
-          "settings": {
-            "text_2": "<p>In fact, as Marcus saw first hand, it likely means they’re not.<\/p>",
-            "image_1": "shopify:\/\/shop_images\/DISGUSTING-JUICE_1_2.png",
-            "image_2": "shopify:\/\/shop_images\/DISGUSTING-JUICE_1_3.png"
-          }
-        },
         "19b74642-fa43-4133-9e72-4ff58871b06f": {
           "type": "style_1",
-          "disabled": true,
           "settings": {
-            "text": "<p>In fact, as Marcus saw first hand, it likely means they’re not.<\/p>"
-          }
-        },
-        "e01c16fc-bd9c-4c5d-b356-85ffe1a4b311": {
-          "type": "style_1",
-          "settings": {
-            "text": "",
-            "image": "shopify:\/\/shop_images\/DISGUSTING-JUICE_1_2.png"
-          }
-        },
-        "000747c9-6943-4b4f-9e73-28bef5d2d779": {
-          "type": "style_1",
-          "settings": {
-            "text": "",
-            "image": "shopify:\/\/shop_images\/DISGUSTING-JUICE_1_3.png"
+            "text": "<p>In fact, as Marcus saw first hand, it likely means they’re not.<\/p>",
+            "image": "shopify:\/\/shop_images\/DISGUSTING-JUICE_1_2.png",
+            "image_2": "shopify:\/\/shop_images\/DISGUSTING-JUICE_1_3.png"
           }
         }
       },
       "block_order": [
         "e5737233-ed4e-4bab-adc3-d2c8d8d255b0",
-        "469286d1-913c-4a78-8c19-47e74ee71294",
-        "19b74642-fa43-4133-9e72-4ff58871b06f",
-        "e01c16fc-bd9c-4c5d-b356-85ffe1a4b311",
-        "000747c9-6943-4b4f-9e73-28bef5d2d779"
+        "19b74642-fa43-4133-9e72-4ff58871b06f"
       ],
       "settings": {
         "slider_bg": "linear-gradient(97deg, rgba(247, 237, 93, 1), rgba(209, 199, 223, 1) 100%)",
