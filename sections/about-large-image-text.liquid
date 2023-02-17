@@ -21,11 +21,11 @@
             <div class="image">
               <img src="{{- section.settings.background_image | image_url -}}">
               <div class="sticker_image_main desktop">
-                <div class="sticker_image">
+                <a class="sticker_image jumping-link" data-href="{{- section.settings.sticker_url -}}" href="javascript:void(0)">
                   {%- if section.settings.sticker_text != blank -%}
-                    <a class="jumping-link sticker_text"  data-href="{{- section.settings.sticker_url -}}" href="javascript:void(0)">
+                    <span class=" sticker_text" >
                     {{- section.settings.sticker_text -}}
-                    </a>
+                    </span>
                     {%- endif -%}
                   {%- if section.settings.sticker_image != blank -%}
                     <div class="image">
@@ -33,7 +33,7 @@
                     </div>
                   {%- endif -%}
                   
-                </div>
+                </a>
               </div>
             </div>
           {%- endif -%}
