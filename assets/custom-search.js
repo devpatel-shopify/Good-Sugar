@@ -79,7 +79,10 @@
                 let productsArray = Array.from(new Set(searchResults.products)), articlesArray = Array.from(new Set(searchResults.articles));
                 articlesArray = articlesArray.filter((value, index, self) =>{
                   console.log(self.findIndex((t) => (t.title === value.title && t.link === value.link)));
-                  return index === self.findIndex((t) => (t.title === value.title && t.link === value.link))
+                  return index === self.findIndex((t) => {
+                    console.log(t);
+                    return (t.title === value.title && t.link === value.link)
+                    })
                 })
                 let searchCount = productsArray.length + articlesArray.length;
                 document.title = `Search: ${searchCount} results found for "${this.query} - Good Sugar"`;
