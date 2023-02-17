@@ -61,9 +61,9 @@
                       <img src="{{ block.settings.image | img_url: 'master' }}">
                     </div>
                   {% endif %}
-                  {% if block.settings.image_2 != blank %}
+                  {% if block.settings.image_3 != blank %}
                     <div class="image " style="max-width:400px;">
-                      <img src="{{ block.settings.image_2 | img_url: 'master' }}">
+                      <img src="{{ block.settings.image_3 | img_url: 'master' }}">
                     </div>
                   {% endif %}
                 </div>
@@ -220,7 +220,7 @@
         },
         {
           "type": "image_picker",
-          "id": "image_2",
+          "id": "image_3",
           "label": "Image 2"
         }
       ]
