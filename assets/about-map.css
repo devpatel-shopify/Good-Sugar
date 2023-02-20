@@ -86,7 +86,7 @@ width: 100%;
   display: block;
 }
 .about_map_sticker.image-type-rectangle {
-  top: 2px;
+  top: 20px;
   right: 17%;
 }
 .about_map_sticker.image-type-ellipse {
