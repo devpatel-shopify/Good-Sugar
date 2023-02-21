@@ -10,11 +10,10 @@ class PredictiveSearch extends HTMLElement {
     this.setupEventListeners();
     window.addEventListener("DOMContentLoaded", function () {
       _this.buildData();
-    })
+    });
   }
 
   async buildData() {
-    let _this = this;
     if (!document.querySelector("#search_results")) {
       console.error("JSON for search is missing, predictive search won't be able to function");
       return;
@@ -143,13 +142,14 @@ class PredictiveSearch extends HTMLElement {
     let searchResults = { "products": [], "articles": [] };
     this.searchCount = 0;
     let frag = document.createDocumentFragment(), fetchedContent = document.createElement('div');
-    async function _buildProductItems(e) { let t = e.map((e => fetch(`${window.Shopify.routes.root}products/${e}?view=search_item`).then((e => e.text())))), r = await Promise.all(t); frag.appendChild(fetchedContent); for (let e of r) { let t = document.createElement("div"); t.innerHTML = e, t.querySelector(".search-item-wrapper") && (fetchedContent.innerHTML += t.querySelector(".search-item-wrapper").innerHTML) } }
-    async function _buildArticleItems(e) { for (let i of e) fetchedContent.innerHTML += `<li id="predictive-search-option-" class="predictive-search__list-item" role="option" aria-selected="false"><a href="${i.link}" class="predictive-search__item predictive-search__item--link link link--text" tabindex="-1"><img class="predictive-search__image"  src="//cdn.shopify.com/s/files/1/0680/9331/3298/products/gs_temp-product_01_Desktop_35cb8729-15a9-4bcf-990e-79a456410c79.png?v=1675187158&width=150"  alt="${i.title}"  width="50"  height="44.063647490820074"><div class="predictive-search__item-content"><h3 class="predictive-search__item-heading h5">${i.title}</h3> </div></a></li>` }
+
+    async function _buildProductItems(e) { let t = e.map((async (e, t) => { if (t < 3) { const t = await fetch(`${window.Shopify.routes.root}products/${e}?view=search_item`); return await t.text() } return "" })), r = await Promise.all(t); frag.appendChild(fetchedContent); for (let e of r) { let t = document.createElement("div"); t.innerHTML = e, t.querySelector(".search-item-wrapper") && (fetchedContent.innerHTML += t.querySelector(".search-item-wrapper").innerHTML) } }
+
+    async function _buildArticleItems(e) { for (let i of e) fetchedContent.innerHTML += `<li id="predictive-search-option-" class="predictive-search__list-item" role="option" aria-selected="false"><a href="${i.link}" target="_blank" class="predictive-search__item predictive-search__item--link link link--text" tabindex="-1"><img class="predictive-search__image" src="//cdn.shopify.com/s/files/1/0680/9331/3298/products/gs_temp-product_01_Desktop_35cb8729-15a9-4bcf-990e-79a456410c79.png?v=1675187158&width=150" alt="${i.title}" width="50" height="44.063647490820074"/><div class="predictive-search__item-content search__item-title"><h3 class="predictive-search__item-heading h5">${i.title}</h3></div></a></li>` }
 
     if (!document.querySelector("#search_results")) {
       return;
     }
-
 
     const queryKey = searchTerm.replace(" ", "-").toLowerCase();
     // this.setLiveRegionLoadingState();
@@ -158,10 +158,10 @@ class PredictiveSearch extends HTMLElement {
       this.renderSearchResults(this.cachedResults[queryKey]);
       return;
     }
+
     if (this.searchData["search_terms"].indexOf(queryKey) > -1) {
       this.searchData.results.map((({ search_terms: s, products: e, articles: r }) => { s.replaceAll(" ", "-").toLowerCase().trim().indexOf(queryKey) > -1 && e && (searchResults.products.push(...e), r && searchResults.articles.push(...r)) }));
       this.searchCount = searchResults.products.length + searchResults.articles.length;
-      console.log(this.searchCount);
       await _buildProductItems(searchResults.products);
       await _buildArticleItems(searchResults.articles);
       fetchedContent.innerHTML += `<li id="predictive-search-option-search-keywords" class="predictive-search__list-item more-result" role="option"><button class="predictive-search__item predictive-search__item--term link link--text h5 animate-arrow" tabindex="-1">${window.searchStrings.searchFor.replace("{{ terms }}", searchTerm)}<svg viewBox="0 0 14 10" fill="none" aria-hidden="true" focusable="false" class="icon icon-arrow" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.537.808a.5.5 0 01.817-.162l4 4a.5.5 0 010 .708l-4 4a.5.5 0 11-.708-.708L11.793 5.5H1a.5.5 0 010-1h10.793L8.646 1.354a.5.5 0 01-.109-.546z" fill="currentColor"></path></svg></button></li> `;
