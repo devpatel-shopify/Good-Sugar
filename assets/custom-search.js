@@ -88,7 +88,8 @@
                 this.resultsContainer.insertAdjacentHTML("beforeend", articlesContent.querySelector(".content").innerHTML);
                 this.showResults(this.originalQuery);
             } else {
-                this.hideResults()
+                this.hideResults();
+                document.title = `Search: 0 results found for "${this.query} - Good Sugar"`;
             }
         }
     }
