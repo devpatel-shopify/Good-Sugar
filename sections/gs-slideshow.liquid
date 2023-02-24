@@ -1,11 +1,15 @@
+{{ 'magicscroll.css' | asset_url | stylesheet_tag }}
 {{ 'swiper-bundle.min.css' | asset_url | stylesheet_tag }}
 {{ 'gs-slideshow.css' | asset_url | stylesheet_tag }}
 {{ 'video-section.css' | asset_url | stylesheet_tag }}
 {{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
 
+<script type="module" src="{{ 'magicscroll.js' | asset_url }}"></script>
+
+{% comment %}
 <script type="module" src="{{ 'swiper-bundle.min.js' | asset_url }}"></script>
 <script type="module" src="{{ 'swiper-bundle.esm.browser.min.js' | asset_url }}"></script>
-
+{% endcomment %}
 {% style %}
 {%- for block in section.blocks -%}
   {%- if block.type == 'style_1' -%}
@@ -51,7 +55,7 @@
 
   <div class="swiper swiper-carousel">
   <!-- Additional required wrapper -->
-  <div class="swiper-wrapper">
+  <div class="swiper-wrapper MagicScroll">
     <!-- Slides -->
     {%- for block in section.blocks -%}
       {%- if block.type == 'style_1' -%}
@@ -439,87 +443,417 @@
         </div>
       {%- endif -%}
     {%- endfor -%}
+    <!-- Slides -->
+    {%- for block in section.blocks -%}
+      {%- if block.type == 'style_1' -%}
+        <div
+          class="swiper-slide gs_style_1"
+          id="Slide-{{ section.id }}-{{ forloop.index }}"
+          {{ block.shopify_attributes }}
+          role="group"
+          aria-roledescription="{{ 'sections.slideshow.slide' | t }}"
+          aria-label="{{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
+          tabindex="-1"
+          data-index="{{- forloop.index -}}">
+          <style>
+            #Slide-{{ section.id }}-{{ forloop.index }}.main_slider_image .image::after {
+              opacity: {{ block.settings.image_overlay_opacity | divided_by: 100.0 }}
+              ;
+            }
+          </style>
+          <div class="main_slider_wrapper">
+            <div class="main_slider_image">
+              {% if block.settings.video_url != blank or block.settings.local_video != blank %}
+                {% if block.settings.local_video != blank %}
+                  <div class="local_video">
+                    <div class="local_video_container">
+                      <video
+                        autoplay
+                        loop
+                        muted>
+                        <source
+                          src="{{ block.settings.local_video }}"
+                          type="video/mp4">
+                      </video>
+                    </div>
+                  </div>
+                {% else %}
+                  <div class="video">
+                    <div class="video_container">
+                      <deferred-media class="video-section__media deferred-media no-js-hidden gradient global-media-settings" data-media-id="{{ block.settings.video_url.id }}">
+                        {%- if block.settings.video_url.type == 'youtube' -%}
+                          <iframe src="https://www.youtube.com/embed/{{ block.settings.video_url.id }}?autoplay=1&mute=1&loop=1"></iframe>
+                        {%- else -%}
+                          <iframe
+                            src="https://player.vimeo.com/video/{{ block.settings.video_url.id }}"
+                            class="js-vimeo"
+                            allow="autoplay; encrypted-media"
+                            allowfullscreen
+                            title="{{ block.settings.description | escape }}"></iframe>
+                        {%- endif -%}
+                      </deferred-media>
+                    </div>
+                  </div>
+                {% endif %}
+              {% else %}
+                <div class="image">
+                  {%- if block.settings.image -%}
+                    {%- assign height = block.settings.image.width
+                      | divided_by: block.settings.image.aspect_ratio
+                      | round -%}
+                    {{
+                       block.settings.image
+                       | image_url: width: 3840
+                       | image_tag:
+                       loading: 'lazy',
+                       height: height,
+                       sizes: '100vw',
+                       class: 'desktop_image small-hide',
+                       widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840' }}
+                    {%- if block.settings['mobile-image'] != blank -%}
+                      {{
+                         block.settings['mobile-image']
+                         | image_url: width: 750
+                         | image_tag:
+                         loading: 'lazy',
+                         height: height,
+                         sizes: '100vw',
+                         class: 'mobile_image medium-hide large-up-hide',
+                         widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840' }}
+                    {%- else -%}
+                      {{
+                         block.settings.image
+                         | image_url: width: 3840
+                         | image_tag:
+                         loading: 'lazy',
+                         height: height,
+                         sizes: '100vw',
+                         class: 'desktop_image desktop_image_for_mobile medium-hide large-up-hide',
+                         widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840' }}
+                    {%- endif -%}
+                  {%- else -%}
+                    {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
+                  {%- endif -%}
+                </div>
+              {% endif %}
+            </div>
+            <div class="main_slider_content_box">
+              <div class="main_slider_content">
+                {% if block.settings.leftsubheading != blank %}
+                  <div class="main_slider_subheader mobile-view medium-hide large-up-hide item-1">
+                    <div class="subheader item_1 mobile-{{ block.settings.mobile_left_subheading_text_alignment }}">
+                      {{ block.settings.leftsubheading }}
+                    </div>
+                  </div>
+                {% endif %}
+                {% if block.settings.heading != blank %}
+                  <div class="main_slider_header desktop-{{ block.settings.heading_text_alignment }} mobile-{{ block.settings.mobile_heading_text_alignment }} ">
+                    {{ block.settings.heading }}
+                  </div>
+                {% endif %}
+                {% if block.settings.leftsubheading != blank or block.settings.rightsubheading != blank %}
+                  <div class="main_slider_subheader small-hide">
+                    {% if block.settings.leftsubheading != blank %}
+                      <div class="subheader item_1 desktop-{{ block.settings.left_subheading_text_alignment }} desktop-box-position--{{ block.settings.left_box_position }}">
+                        {{ block.settings.leftsubheading }}
+                      </div>
+                    {% endif %}
+                    {% if block.settings.rightsubheading != blank %}
+                      <div class="subheader item_2 desktop-{{ block.settings.right_subheading_text_alignment }} desktop-box-position--{{ block.settings.right_box_position }}">
+                        {{ block.settings.rightsubheading }}
+                      </div>
+                    {% endif %}
+                  </div>
+                {% endif %}
+                {% if block.settings.link != blank %}
+                  <div class="main_slider_button desktop-btn-position--{{ block.settings.btn_position }} mobile-btn-position--{{ block.settings.mobile_btn_position }}">
+                    <a href="{{ block.settings.link }}" class="btn btn_bg--{{ block.id }}">
+                      <span class="btn_text">{{ block.settings.button_label }}</span>
+                      <img src="{{ block.settings.buttonbgimage | img_url: 'master' }}" alt="Slider Button" class="animation">                      
+                    </a>
+                  </div>
+                {% endif %}
+                {% if block.settings.rightsubheading != blank %}
+                  <div class="main_slider_subheader mobile-view medium-hide large-up-hide item-2">
+                    <div class="subheader item_2 mobile-{{ block.settings.mobile_right_subheading_text_alignment }}">
+                      {{ block.settings.rightsubheading }}
+                    </div>
+                  </div>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </div>
+      {%- endif -%}
+      {%- if block.type == 'style_2' -%}
+        <div
+          class="swiper-slide gs_style_2"
+          id="Slide-{{ section.id }}-{{ forloop.index }}"
+          {{ block.shopify_attributes }}>
+          <div class="main_slider_wrapper">
+            <div class="main_slider_image">
+              {% if block.settings.video_url != blank or block.settings.local_video != blank %}
+                {% if block.settings.local_video != blank %}
+                  <div class="local_video">
+                    <div class="local_video_container">
+                      <video
+                        
+                        loop
+                        muted>
+                        <source src="{{ block.settings.local_video }}" type="video/mp4">
+                      </video>
+                    </div>
+                  </div>
+                {% else %}
+                  <div class="video">
+                    <div class="video_container">
+                      <deferred-media class="video-section__media deferred-media no-js-hidden gradient global-media-settings" data-media-id="{{ block.settings.video_url.id }}">
+                        {%- if block.settings.video_url.type == 'youtube' -%}
+                          <iframe src="https://www.youtube.com/embed/{{ block.settings.video_url.id }}?autoplay=1&mute=1&loop=1"></iframe>
+                        {%- else -%}
+                          <iframe
+                            src="https://player.vimeo.com/video/{{ block.settings.video_url.id }}"
+                            class="js-vimeo"
+                            allow="autoplay; encrypted-media"
+                            allowfullscreen
+                            title="{{ block.settings.description | escape }}"></iframe>
+                        {%- endif -%}
+                      </deferred-media>
+                    </div>
+                  </div>
+                {% endif %}
+              {% else %}
+                <div class="image">
+                  {%- if block.settings.image -%}
+                    {%- assign height = block.settings.image.width
+                      | divided_by: block.settings.image.aspect_ratio
+                      | round -%}
+                    {{
+                       block.settings.image
+                       | image_url: width: 3840
+                       | image_tag:
+                       loading: 'lazy',
+                       height: height,
+                       sizes: '100vw',
+                       class: 'desktop_image small-hide',
+                       widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840' }}
+                    {%- if block.settings['mobile-image'] != blank -%}
+                      {{
+                         block.settings['mobile-image']
+                         | image_url: width: 750
+                         | image_tag:
+                         loading: 'lazy',
+                         height: height,
+                         sizes: '100vw',
+                         class: 'mobile_image medium-hide large-up-hide',
+                         widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840' }}
+                    {%- else -%}
+                      {{
+                         block.settings.image
+                         | image_url: width: 3840
+                         | image_tag:
+                         loading: 'lazy',
+                         height: height,
+                         sizes: '100vw',
+                         class: 'desktop_image desktop_image_for_mobile medium-hide large-up-hide',
+                         widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840' }}
+                    {%- endif -%}
+                  {%- else -%}
+                    {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
+                  {%- endif -%}
+                </div>
+              {% endif %}
+            </div>
+            <div class="main_slider_content_box">
+              <div class="main_slider_content">
+
+                <div class="main_slider_header center desktop-{{ block.settings.heading_text_alignment }} mobile-{{ block.settings.mobile_heading_text_alignment }} ">
+                  {{ block.settings.heading_2 }}
+                </div>
+
+                <div class="main_slider_button medium-hide large-up-hide">
+                  <a href="{{ block.settings.link }}" class="btn btn_bg--{{ block.id }} animation">
+                    <span class="btn_text">{{ block.settings.button_label }}</span>
+                    <img src="{{ block.settings.buttonbgimage | img_url: 'master' }}" alt="Slider Button" class="animation">                    
+                  </a>
+                </div>
+
+                <div class="main_slider_subheader">
+                  {% if block.settings.leftsubheading_2 != blank %}
+                    <div class="subheader item_1 desktop-{{ block.settings.left_subheading_text_alignment }} desktop-box-position--{{ block.settings.left_box_position }}">
+                      {{ block.settings.leftsubheading_2 }}
+                    </div>
+                  {% endif %}
+                  <div class="main_slider_button small-hide">
+                    <div class="btn btn_bg--{{ block.id }}">
+                      <a href="{{ block.settings.link }}" >
+                      <span class="btn_text">{{ block.settings.button_label }}</span>
+                      </a>
+                      <a href="{{ block.settings.link }}">
+                      <img src="{{ block.settings.buttonbgimage | img_url: 'master' }}" alt="Slider Button" class="">
+                      </a>                      
+                    </div>
+                  </div>
+                  {% if block.settings.rightsubheading_2 != blank %}
+                    <div class="subheader item_2 desktop-{{ block.settings.right_subheading_text_alignment }} desktop-box-position--{{ block.settings.right_box_position }}">
+                      {{ block.settings.rightsubheading_2 }}
+                    </div>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      {%- endif -%}
+      {%- if block.type == 'style_3' -%}
+        <div
+          class="swiper-slide gs_style_3"
+          id="Slide-{{ section.id }}-{{ forloop.index }}"
+          {{ block.shopify_attributes }}
+          role="group"
+          aria-roledescription="{{ 'sections.slideshow.slide' | t }}"
+          aria-label="{{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
+          tabindex="-1"
+          data-index="{{- forloop.index -}}">
+          <div class="main_slider_box">
+            <div class="main_slider_wrapper">
+              <div class="main_slider_item item_left">
+                <div class="main_slider_item_wrapper">
+                  <div class="main_slider_image">
+                    <div class="image">
+                      {%- if block.settings.image -%}
+                        {%- assign height = block.settings.image.width
+                          | divided_by: block.settings.image.aspect_ratio
+                          | round -%}
+                        {{
+                           block.settings.image
+                           | image_url: width: 3840
+                           | image_tag:
+                           loading: 'lazy',
+                           height: height,
+                           sizes: '100vw',
+                           class: 'desktop_image small-hide',
+                           widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840' }}
+                        {%- if block.settings['mobile-image'] != blank -%}
+                          {{
+                             block.settings['mobile-image']
+                             | image_url: width: 750
+                             | image_tag:
+                             loading: 'lazy',
+                             height: height,
+                             sizes: '100vw',
+                             class: 'mobile_image medium-hide large-up-hide',
+                             widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840' }}
+                        {%- else -%}
+                          {{
+                             block.settings.image
+                             | image_url: width: 3840
+                             | image_tag:
+                             loading: 'lazy',
+                             height: height,
+                             sizes: '100vw',
+                             class: 'desktop_image desktop_image_for_mobile medium-hide large-up-hide',
+                             widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840' }}
+                        {%- endif -%}
+                      {%- else -%}
+                        {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
+                      {%- endif -%}
+                    </div>
+                  </div>
+                  <div class="main_slider_content">
+                    <div class="heading">{{ block.settings.heading_3 }}</div>
+                  </div>
+                </div>
+              </div>
+              <div class="main_slider_item item_right">
+                <div class="main_slider_item_wrapper">
+                  <div class="main_slider_image">
+                    <div class="image">
+                      {%- if block.settings.image_right -%}
+                        {%- assign height = block.settings.image_right.width
+                          | divided_by: block.settings.image_right.aspect_ratio
+                          | round -%}
+                        {{
+                           block.settings.image_right
+                           | image_url: width: 3840
+                           | image_tag:
+                           loading: 'lazy',
+                           height: height,
+                           sizes: '100vw',
+                           class: 'desktop_image small-hide',
+                           widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840' }}
+                        {%- if block.settings['mobile-image_right'] != blank -%}
+                          {{
+                             block.settings['mobile-image_right']
+                             | image_url: width: 750
+                             | image_tag:
+                             loading: 'lazy',
+                             height: height,
+                             sizes: '100vw',
+                             class: 'mobile_image medium-hide large-up-hide',
+                             widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840' }}
+                        {%- else -%}
+                          {{
+                             block.settings.image_right
+                             | image_url: width: 3840
+                             | image_tag:
+                             loading: 'lazy',
+                             height: height,
+                             sizes: '100vw',
+                             class: 'desktop_image desktop_image_for_mobile medium-hide large-up-hide',
+                             widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840' }}
+                        {%- endif -%}
+                      {%- else -%}
+                        {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
+                      {%- endif -%}
+                    </div>
+                  </div>
+                  <div class="main_slider_content">
+                    <div class="text">{{ block.settings.text_3 }}</div>
+                    <div class="main_slider_button small-hide">
+                      <a href="{{ block.settings.link }}" class="btn btn_bg--{{ block.id }} animation">
+                        <span class="btn_text">{{ block.settings.button_label }}</span>
+                        <img src="{{ block.settings.buttonbgimage | img_url: 'master' }}" alt="Slider Button" class="animation">                
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="main_slider_button">
+              <a href="{{ block.settings.link }}" class="btn btn_bg--{{ block.id }} animation">
+                <span class="btn_text">{{ block.settings.button_label }}</span>
+                <img src="{{ block.settings.buttonbgimage | img_url: 'master' }}" alt="Slider Button" class="animation">                
+              </a>
+            </div>
+          </div>
+        </div>
+      {%- endif -%}
+    {%- endfor -%}
   </div>
-  <!-- If we need pagination -->
-  <div class="swiper-pagination"></div>
-
-  <!-- If we need navigation buttons -->
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-button-next"></div>
-
-  <!-- If we need scrollbar -->
-  <div class="swiper-scrollbar"></div>
 </div>
-
-{% comment %} <script type="module" src="{{ 'gs-slideshow.js' | asset_url }}"></script> {% endcomment %}
-
-<script>
-
-  let mySwiper = new Swiper(".swiper", {
-    direction: "vertical",
-    effect: "coverflow",
-    spaceBetween: 0,
-    grabCursor: false,
-    centeredSlides: !0,
-    speed: {{ speed }},
-    loop: !0,
-    loopedSlides: 6,
-    slidesPerView: "auto",
-    mousewheel: true,
-
-   //freeMode: true,
-    keyboard: {
-      enabled: true
-    },
-    coverflowEffect: {
-      rotate: 0,
-      stretch: '86%',
-      depth: '200',
-      modifier: 1,
-      slideShadows: true
-    },
-    on: {
-      {% comment %}
-        beforeInit : () => {
-          document.querySelector(".loading_main").classList.remove("hidden");
-        },{% endcomment %}
-      init(e) {
-        for (let r = 0; r < e.slides.length; r += 1) {
-          const t = e.slides[r],
-            o = e.slides[r].progress,
-            i = Math.abs(o);
-          t.style.opacity = i > 2.5
-            ? 0
-            : 1;
-        }
-      },
-      afterInit: function() {},
-      progress(e) {
-        for (let r = 0; r < e.slides.length; r += 1) {
-          const t = e.slides[r],
-            o = e.slides[r].progress,
-            i = Math.abs(o);
-          t.style.opacity = i > 2.5
-            ? 0
-            : 1;
-        }
-      }
-    }
-  });
-
-
-  let GSSlideshowParent = document.getElementById('MainContent');
-  let GSSlideshow = document.querySelector('.gs-slideshow-section');
-  let GSSlideshowHeight = GSSlideshow.getBoundingClientRect().height;
-  GSSlideshowParent.style.setProperty('min-height', `${
-    parseInt(GSSlideshowHeight)
-  }px`);
-</script>
 
 {%- if request.design_mode -%}
   <script src="{{ 'theme-editor.js' | asset_url }}" defer="defer"></script>
 {%- endif -%}
-
+<script>
+  // window.addEventListener("DOMContentLoaded", function(){
+    let GSSlideshowParent = document.getElementById('MainContent');
+    let GSSlideshow = document.querySelector('.gs-slideshow-section');
+    let bodyHeight = document.body.clientHeight;
+    if(window.innerWidth > 768){
+      
+    }
+    var MagicScrollOptions = {
+      height: `${document.body.clientHeight}`,
+      // height: 1000,
+      items: "auto",
+      mode: "carousel",
+      orientation: "vertical",
+      draggable: true
+    };
+  // });
+</script>
 {% schema %}
   {
     "name": "Main Slideshow",
