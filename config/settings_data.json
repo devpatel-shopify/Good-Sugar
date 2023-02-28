@@ -24,7 +24,7 @@
         "type": "header",
         "settings": {
           "header_bg": "rgba(0,0,0,0)",
-          "logo": "shopify:\/\/shop_images\/new-logo.png",
+          "logo": "shopify:\/\/shop_images\/goodsugar_logo.svg",
           "logo_width": 160,
           "menu": "main-menu",
           "enable_sticky_header": true
