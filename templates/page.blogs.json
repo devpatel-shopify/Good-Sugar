@@ -243,31 +243,38 @@
             "link": "shopify:\/\/blogs\/meditation"
           }
         },
-        "template--18200788664594__43c96b6f-7677-4e38-8a24-d18992b68390-167873364270945103-1": {
+        "6edcbefc-f2b2-4f28-9ebc-b9e51c2f25b2": {
           "type": "column",
-          "disabled": true,
           "settings": {
-            "image": "shopify:\/\/shop_images\/03_plantbased_web.webp",
-            "title": "Company Info",
+            "image": "shopify:\/\/shop_images\/mockup-of-a-woman-wearing-sublimated-leggings-while-practicing-yoga-36303-r-el2_1.webp",
+            "title": "yoga",
             "text": "",
-            "link_label": "Read All",
-            "link": "shopify:\/\/blogs\/company-info"
+            "link_label": "",
+            "link": "shopify:\/\/blogs\/yoga"
           }
         },
-        "template--18200788664594__43c96b6f-7677-4e38-8a24-d18992b68390-167873364270945103-2": {
+        "c9902776-ab45-4344-95a7-0f24f3f79c36": {
           "type": "column",
-          "disabled": true,
           "settings": {
-            "image": "shopify:\/\/shop_images\/running-runner-long-distance-fitness-40751.webp",
-            "title": "Exercise & Lifestyle",
+            "image": "shopify:\/\/shop_images\/iStock-1286273487_1_1.webp",
+            "title": "addiction",
             "text": "",
-            "link_label": "Read All",
-            "link": "shopify:\/\/blogs\/nutrition-philosophy"
+            "link_label": "",
+            "link": "shopify:\/\/blogs\/addiction"
+          }
+        },
+        "de27dc76-d663-4acf-9b52-0a4faf4ca078": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/iStock-1345465533.webp",
+            "title": "relationships",
+            "text": "",
+            "link_label": "",
+            "link": "shopify:\/\/blogs\/relationships"
           }
         },
         "1ccc85e0-e680-4b49-8c28-41363f1226dc": {
           "type": "column",
-          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/iStock-1091692964.webp",
             "title": "Our Science",
@@ -276,20 +283,28 @@
             "link": "shopify:\/\/blogs\/our-science"
           }
         },
-        "f6eea2b3-683b-4321-ac3b-62ea84280f77": {
+        "template--18200788664594__43c96b6f-7677-4e38-8a24-d18992b68390-167873364270945103-1": {
           "type": "column",
-          "disabled": true,
           "settings": {
-            "image": "shopify:\/\/shop_images\/37788733_10156716901127878_5664591568800055296_o.webp",
-            "title": "Personal Stories",
+            "image": "shopify:\/\/shop_images\/03_plantbased_web.webp",
+            "title": "Company Info",
             "text": "",
             "link_label": "Read All",
-            "link": "shopify:\/\/blogs\/personal-bio"
+            "link": "shopify:\/\/blogs\/company-info"
+          }
+        },
+        "1249d94e-8ff7-43f1-bf3f-033fbe37a9a0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/iStock-1264157294.webp",
+            "title": "Street Knowledge",
+            "text": "",
+            "link_label": "Read All",
+            "link": "shopify:\/\/blogs\/street-knowledge"
           }
         },
         "9e87168c-d02c-4e5e-8d44-06b518bac279": {
           "type": "column",
-          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/42988E68-9E14-4F18-89AD-2FB3128B531C.webp",
             "title": "Press & Media",
@@ -298,15 +313,14 @@
             "link": "shopify:\/\/blogs\/press-media"
           }
         },
-        "1249d94e-8ff7-43f1-bf3f-033fbe37a9a0": {
+        "f6eea2b3-683b-4321-ac3b-62ea84280f77": {
           "type": "column",
-          "disabled": true,
           "settings": {
-            "image": "shopify:\/\/shop_images\/iStock-1264157294.webp",
-            "title": "Street Knowledge",
+            "image": "shopify:\/\/shop_images\/37788733_10156716901127878_5664591568800055296_o.webp",
+            "title": "Personal Stories",
             "text": "",
             "link_label": "Read All",
-            "link": "shopify:\/\/blogs\/street-knowledge"
+            "link": "shopify:\/\/blogs\/personal-bio"
           }
         },
         "34f94f3e-2d63-4bd9-90ea-f93add81a94e": {
@@ -320,14 +334,14 @@
             "link": "#"
           }
         },
-        "6edcbefc-f2b2-4f28-9ebc-b9e51c2f25b2": {
+        "d4b5df01-aa1c-40e6-a395-5d11e4ce5c72": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/mockup-of-a-woman-wearing-sublimated-leggings-while-practicing-yoga-36303-r-el2_1.webp",
-            "title": "yoga",
+            "image": "shopify:\/\/shop_images\/Image_4-2-21_at_6.07_PM_2.webp",
+            "title": "menu draft",
             "text": "",
             "link_label": "",
-            "link": "shopify:\/\/blogs\/yoga"
+            "link": "shopify:\/\/blogs\/pop-up-menu"
           }
         }
       },
@@ -340,14 +354,16 @@
         "4cf4173f-fe3d-404d-a03d-62be8d1ab3ef",
         "09783879-a491-4921-9307-56889fff6591",
         "bafcaf63-8f72-4ecf-a446-dc39f6ed88ba",
-        "template--18200788664594__43c96b6f-7677-4e38-8a24-d18992b68390-167873364270945103-1",
-        "template--18200788664594__43c96b6f-7677-4e38-8a24-d18992b68390-167873364270945103-2",
+        "6edcbefc-f2b2-4f28-9ebc-b9e51c2f25b2",
+        "c9902776-ab45-4344-95a7-0f24f3f79c36",
+        "de27dc76-d663-4acf-9b52-0a4faf4ca078",
         "1ccc85e0-e680-4b49-8c28-41363f1226dc",
-        "f6eea2b3-683b-4321-ac3b-62ea84280f77",
-        "9e87168c-d02c-4e5e-8d44-06b518bac279",
+        "template--18200788664594__43c96b6f-7677-4e38-8a24-d18992b68390-167873364270945103-1",
         "1249d94e-8ff7-43f1-bf3f-033fbe37a9a0",
+        "9e87168c-d02c-4e5e-8d44-06b518bac279",
+        "f6eea2b3-683b-4321-ac3b-62ea84280f77",
         "34f94f3e-2d63-4bd9-90ea-f93add81a94e",
-        "6edcbefc-f2b2-4f28-9ebc-b9e51c2f25b2"
+        "d4b5df01-aa1c-40e6-a395-5d11e4ce5c72"
       ],
       "settings": {
         "title": "good articles",
