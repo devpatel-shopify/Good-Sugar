@@ -53,6 +53,61 @@
         "padding_bottom": 36
       }
     },
+    "15488ff9-0900-49a5-bb9d-b5cfa368194d": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--18200788664594__15488ff9-0900-49a5-bb9d-b5cfa368194d-167881882548f7a496-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/51572A92-97C5-4C59-AFDD-B15BD849A6BF_520x500_1fd142a6-8c90-4439-87e8-ee571a446861.webp",
+            "title": "about the goodsugar diet™ book",
+            "text": "<p>I don’t offer cheats, fast tips, or shortcuts. I combine simple teachings and practical steps of guidance that I learned and utilized when dealing with my own troubles to help you get in control of your diet and improve your life.<\/p>",
+            "link_label": "read more",
+            "link": "shopify:\/\/blogs\/the-goodsugar-diet-support-pages\/the-goodsugar-diet-lose-weight-burn-fat-boost-immunity-and-expand-your-mind"
+          }
+        },
+        "template--18200788664594__15488ff9-0900-49a5-bb9d-b5cfa368194d-167881882548f7a496-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/iStock-860155900_520x500_520x500_c3ac18bd-8d75-4b55-bc41-5eca34ac8012.jpg",
+            "title": "meditation is so easy",
+            "text": "<p>We could look to almost anyone to teach us something about reality. Does it matter where they’re from? Whether you’re a monkey from the Himalayas or a bus driver in a big city, you have to keep an open mind and make sure that you let everyone teach you great lessons.<\/p>",
+            "link_label": "read more",
+            "link": "shopify:\/\/blogs\/meditation\/meditation-is-so-easy-supports-part-6-of-the-goodsugar-diet™"
+          }
+        },
+        "template--18200788664594__15488ff9-0900-49a5-bb9d-b5cfa368194d-167881882548f7a496-2": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--18200788664594__15488ff9-0900-49a5-bb9d-b5cfa368194d-167881882548f7a496-0",
+        "template--18200788664594__15488ff9-0900-49a5-bb9d-b5cfa368194d-167881882548f7a496-1",
+        "template--18200788664594__15488ff9-0900-49a5-bb9d-b5cfa368194d-167881882548f7a496-2"
+      ],
+      "settings": {
+        "title": "latest posts",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "Button label",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "009b274e-05cf-4311-beb9-3746618e5832": {
       "type": "featured-blog",
       "settings": {
@@ -290,12 +345,55 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "4ee5f7b2-7824-4b0f-aa95-0f85546cc791": {
+      "type": "collage",
+      "blocks": {
+        "template--18200788664594__4ee5f7b2-7824-4b0f-aa95-0f85546cc791-16788190027d72a8b1-0": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "description": "Describe the video",
+            "image_padding": false
+          }
+        },
+        "template--18200788664594__4ee5f7b2-7824-4b0f-aa95-0f85546cc791-16788190027d72a8b1-1": {
+          "type": "product",
+          "settings": {
+            "product": "",
+            "second_image": false
+          }
+        },
+        "template--18200788664594__4ee5f7b2-7824-4b0f-aa95-0f85546cc791-16788190027d72a8b1-2": {
+          "type": "collection",
+          "settings": {
+            "collection": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--18200788664594__4ee5f7b2-7824-4b0f-aa95-0f85546cc791-16788190027d72a8b1-0",
+        "template--18200788664594__4ee5f7b2-7824-4b0f-aa95-0f85546cc791-16788190027d72a8b1-1",
+        "template--18200788664594__4ee5f7b2-7824-4b0f-aa95-0f85546cc791-16788190027d72a8b1-2"
+      ],
+      "settings": {
+        "heading": "Multimedia collage",
+        "heading_size": "h1",
+        "desktop_layout": "left",
+        "mobile_layout": "collage",
+        "card_styles": "product-card-wrapper",
+        "color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
     "d85bba96-d37a-4c9c-9c9b-e9290818a412",
+    "15488ff9-0900-49a5-bb9d-b5cfa368194d",
     "009b274e-05cf-4311-beb9-3746618e5832",
-    "43c96b6f-7677-4e38-8a24-d18992b68390"
+    "43c96b6f-7677-4e38-8a24-d18992b68390",
+    "4ee5f7b2-7824-4b0f-aa95-0f85546cc791"
   ]
 }
