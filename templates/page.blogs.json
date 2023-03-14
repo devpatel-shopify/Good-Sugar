@@ -79,10 +79,11 @@
         "template--18200788664594__15488ff9-0900-49a5-bb9d-b5cfa368194d-167881882548f7a496-2": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
+            "image": "shopify:\/\/shop_images\/iStock-1176395971_520x500_765fff2a-9cd2-4aa3-a345-a8dbc5cb2c8b.webp",
+            "title": "thinking addiction",
+            "text": "<p>[Opening Meditation and Addiction] Humanity's most prevalent addiction is thinking. I'm not speaking of thinking along the lines of analyzing situations, responding to danger, or analyzing critical things that require immediate attention. Rather I'm speaking of secondary unproductive thinking patterns that don’t serve<\/p>",
+            "link_label": "read more",
+            "link": "shopify:\/\/blogs\/meditation\/thinking-addiction"
           }
         }
       },
@@ -99,7 +100,7 @@
         "columns_desktop": 3,
         "column_alignment": "left",
         "background_style": "primary",
-        "button_label": "Button label",
+        "button_label": "",
         "button_link": "",
         "color_scheme": "background-1",
         "columns_mobile": "1",
@@ -110,6 +111,7 @@
     },
     "009b274e-05cf-4311-beb9-3746618e5832": {
       "type": "featured-blog",
+      "disabled": true,
       "settings": {
         "heading": "the goodsugar diet™ support pages",
         "heading_size": "h1",
