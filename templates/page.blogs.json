@@ -177,10 +177,70 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/iStock-1286273487_1.webp",
-            "title": "Exercise & Lifestyle",
+            "title": "exercise & lifestyle",
             "text": "",
-            "link_label": "Read All",
+            "link_label": "read all",
             "link": "shopify:\/\/blogs\/nutrition-philosophy"
+          }
+        },
+        "f4ca1ff7-47a7-4e33-8356-112fc9ec498d": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/71Mn5HEwAzL._AC_SL1500.webp",
+            "title": "juicing & smoothies",
+            "text": "",
+            "link_label": "read all",
+            "link": "shopify:\/\/blogs\/juicing-smoothies"
+          }
+        },
+        "c4f28bd9-7564-4c4b-8ba8-082e0583cefd": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/iStock-1255120096.webp",
+            "title": "sustainability",
+            "text": "",
+            "link_label": "read all",
+            "link": "shopify:\/\/blogs\/sustainability"
+          }
+        },
+        "41234c76-57c2-4a91-9949-5fd6b98481f6": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/iStock-961732678.webp",
+            "title": "probiotics knowledge",
+            "text": "",
+            "link_label": "read all",
+            "link": "shopify:\/\/blogs\/probiotic-general-knowledge"
+          }
+        },
+        "4cf4173f-fe3d-404d-a03d-62be8d1ab3ef": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/iStock-1017680574.webp",
+            "title": "supplements knowledge",
+            "text": "",
+            "link_label": "read all",
+            "link": "shopify:\/\/blogs\/vitamin-knowledge"
+          }
+        },
+        "09783879-a491-4921-9307-56889fff6591": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/iStock-1154130629.webp",
+            "title": "self improvement strategies",
+            "text": "",
+            "link_label": "read all",
+            "link": "shopify:\/\/blogs\/self-help-tips"
+          }
+        },
+        "bafcaf63-8f72-4ecf-a446-dc39f6ed88ba": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/iStock-1184115734.webp",
+            "title": "meditation",
+            "text": "",
+            "link_label": "read all",
+            "link": "shopify:\/\/blogs\/meditation"
           }
         },
         "template--18200788664594__43c96b6f-7677-4e38-8a24-d18992b68390-167873364270945103-1": {
@@ -205,29 +265,9 @@
             "link": "shopify:\/\/blogs\/nutrition-philosophy"
           }
         },
-        "f4ca1ff7-47a7-4e33-8356-112fc9ec498d": {
-          "type": "column",
-          "disabled": true,
-          "settings": {
-            "image": "shopify:\/\/shop_images\/71Mn5HEwAzL._AC_SL1500.webp",
-            "title": "Juicing & Smoothies",
-            "text": "",
-            "link_label": "Read All",
-            "link": "shopify:\/\/blogs\/juicing-smoothies"
-          }
-        },
-        "bafcaf63-8f72-4ecf-a446-dc39f6ed88ba": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/iStock-1184115734.webp",
-            "title": "Meditation",
-            "text": "",
-            "link_label": "Read All",
-            "link": "shopify:\/\/blogs\/meditation"
-          }
-        },
         "1ccc85e0-e680-4b49-8c28-41363f1226dc": {
           "type": "column",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/iStock-1091692964.webp",
             "title": "Our Science",
@@ -238,6 +278,7 @@
         },
         "f6eea2b3-683b-4321-ac3b-62ea84280f77": {
           "type": "column",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/37788733_10156716901127878_5664591568800055296_o.webp",
             "title": "Personal Stories",
@@ -257,28 +298,9 @@
             "link": "shopify:\/\/blogs\/press-media"
           }
         },
-        "41234c76-57c2-4a91-9949-5fd6b98481f6": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/iStock-961732678.webp",
-            "title": "Probiotics Knowledge",
-            "text": "",
-            "link_label": "Read All",
-            "link": "shopify:\/\/blogs\/probiotic-general-knowledge"
-          }
-        },
-        "09783879-a491-4921-9307-56889fff6591": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/iStock-1154130629.webp",
-            "title": "Self Improvement Strategies",
-            "text": "",
-            "link_label": "Read All",
-            "link": "shopify:\/\/blogs\/self-help-tips"
-          }
-        },
         "1249d94e-8ff7-43f1-bf3f-033fbe37a9a0": {
           "type": "column",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/iStock-1264157294.webp",
             "title": "Street Knowledge",
@@ -289,6 +311,7 @@
         },
         "34f94f3e-2d63-4bd9-90ea-f93add81a94e": {
           "type": "column",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/iStock-1170262672.webp",
             "title": "Good Articles",
@@ -296,22 +319,35 @@
             "link_label": "All Articles",
             "link": "#"
           }
+        },
+        "6edcbefc-f2b2-4f28-9ebc-b9e51c2f25b2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mockup-of-a-woman-wearing-sublimated-leggings-while-practicing-yoga-36303-r-el2_1.webp",
+            "title": "yoga",
+            "text": "",
+            "link_label": "",
+            "link": "shopify:\/\/blogs\/yoga"
+          }
         }
       },
       "block_order": [
         "2b1f2760-d9e0-428d-846e-5faee43ccd95",
         "template--18200788664594__43c96b6f-7677-4e38-8a24-d18992b68390-167873364270945103-0",
+        "f4ca1ff7-47a7-4e33-8356-112fc9ec498d",
+        "c4f28bd9-7564-4c4b-8ba8-082e0583cefd",
+        "41234c76-57c2-4a91-9949-5fd6b98481f6",
+        "4cf4173f-fe3d-404d-a03d-62be8d1ab3ef",
+        "09783879-a491-4921-9307-56889fff6591",
+        "bafcaf63-8f72-4ecf-a446-dc39f6ed88ba",
         "template--18200788664594__43c96b6f-7677-4e38-8a24-d18992b68390-167873364270945103-1",
         "template--18200788664594__43c96b6f-7677-4e38-8a24-d18992b68390-167873364270945103-2",
-        "f4ca1ff7-47a7-4e33-8356-112fc9ec498d",
-        "bafcaf63-8f72-4ecf-a446-dc39f6ed88ba",
         "1ccc85e0-e680-4b49-8c28-41363f1226dc",
         "f6eea2b3-683b-4321-ac3b-62ea84280f77",
         "9e87168c-d02c-4e5e-8d44-06b518bac279",
-        "41234c76-57c2-4a91-9949-5fd6b98481f6",
-        "09783879-a491-4921-9307-56889fff6591",
         "1249d94e-8ff7-43f1-bf3f-033fbe37a9a0",
-        "34f94f3e-2d63-4bd9-90ea-f93add81a94e"
+        "34f94f3e-2d63-4bd9-90ea-f93add81a94e",
+        "6edcbefc-f2b2-4f28-9ebc-b9e51c2f25b2"
       ],
       "settings": {
         "title": "good articles",
