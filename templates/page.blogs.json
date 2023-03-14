@@ -70,96 +70,6 @@
         "padding_bottom": 36
       }
     },
-    "c6442809-6879-48ae-bd1e-bf1c151e3c94": {
-      "type": "featured-blog",
-      "disabled": true,
-      "settings": {
-        "heading": "Sustainability",
-        "heading_size": "h1",
-        "blog": "sustainability",
-        "post_limit": 3,
-        "columns_desktop": 3,
-        "color_scheme": "background-1",
-        "show_image": true,
-        "show_date": false,
-        "show_author": false,
-        "show_view_all": true,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "1459584c-9954-458a-88d5-af11932cb039": {
-      "type": "featured-blog",
-      "disabled": true,
-      "settings": {
-        "heading": "Self Improvement Strategies",
-        "heading_size": "h1",
-        "blog": "self-help-tips",
-        "post_limit": 3,
-        "columns_desktop": 3,
-        "color_scheme": "background-1",
-        "show_image": true,
-        "show_date": true,
-        "show_author": false,
-        "show_view_all": true,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "3e548558-3cc5-4fbc-a08b-e606c012f773": {
-      "type": "featured-blog",
-      "disabled": true,
-      "settings": {
-        "heading": "Probiotics Knowledge",
-        "heading_size": "h1",
-        "blog": "probiotic-general-knowledge",
-        "post_limit": 3,
-        "columns_desktop": 3,
-        "color_scheme": "background-1",
-        "show_image": true,
-        "show_date": true,
-        "show_author": false,
-        "show_view_all": true,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "de1375dd-bf9f-476e-ab3b-a98d0d7da321": {
-      "type": "featured-blog",
-      "disabled": true,
-      "settings": {
-        "heading": "Supplements Knowledge",
-        "heading_size": "h1",
-        "blog": "vitamin-knowledge",
-        "post_limit": 3,
-        "columns_desktop": 3,
-        "color_scheme": "background-1",
-        "show_image": true,
-        "show_date": true,
-        "show_author": false,
-        "show_view_all": true,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "61b53bef-127f-46be-ba99-2bb61e73b493": {
-      "type": "featured-blog",
-      "disabled": true,
-      "settings": {
-        "heading": "Recipes",
-        "heading_size": "h1",
-        "blog": "recipes",
-        "post_limit": 3,
-        "columns_desktop": 3,
-        "color_scheme": "background-1",
-        "show_image": true,
-        "show_date": true,
-        "show_author": false,
-        "show_view_all": true,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "43c96b6f-7677-4e38-8a24-d18992b68390": {
       "type": "multicolumn",
       "blocks": {
@@ -335,13 +245,12 @@
         },
         "34f94f3e-2d63-4bd9-90ea-f93add81a94e": {
           "type": "column",
-          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/iStock-1170262672.webp",
-            "title": "Good Articles",
+            "title": "the goodsugar diet™ support pages",
             "text": "",
-            "link_label": "All Articles",
-            "link": "#"
+            "link_label": "read all",
+            "link": "shopify:\/\/blogs\/the-goodsugar-diet-support-pages"
           }
         }
       },
@@ -387,11 +296,6 @@
     "main",
     "d85bba96-d37a-4c9c-9c9b-e9290818a412",
     "009b274e-05cf-4311-beb9-3746618e5832",
-    "c6442809-6879-48ae-bd1e-bf1c151e3c94",
-    "1459584c-9954-458a-88d5-af11932cb039",
-    "3e548558-3cc5-4fbc-a08b-e606c012f773",
-    "de1375dd-bf9f-476e-ab3b-a98d0d7da321",
-    "61b53bef-127f-46be-ba99-2bb61e73b493",
     "43c96b6f-7677-4e38-8a24-d18992b68390"
   ]
 }
