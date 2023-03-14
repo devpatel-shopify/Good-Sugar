@@ -71,7 +71,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/goodsugar-reduce-single-use-plastic_520x500_aab42e00-139c-49f4-ae57-a7190663a7f7.webp",
             "title": "help goodsugar™ reduce single use plastic",
-            "text": "<p>goodsugar™ is my second wellness business founded in New York. My team and I are committed to reducing, and whenever possible, eliminating single use plastic from our packaging! Serving juice, smoothies, salads, and healthy foods in a plastic container is ironic. <\/p>",
+            "text": "<p>goodsugar™ is my second wellness business founded in New York. My team and I are committed to reducing, and whenever possible, eliminating single use plastic from our packaging!<\/p>",
             "link_label": "read more",
             "link": "shopify:\/\/blogs\/sustainability\/no-more-single-use-plastic"
           }
@@ -81,7 +81,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/iStock-1176395971_520x500_765fff2a-9cd2-4aa3-a345-a8dbc5cb2c8b.webp",
             "title": "thinking addiction",
-            "text": "<p>[Opening Meditation and Addiction] Humanity's most prevalent addiction is thinking. I'm not speaking of thinking along the lines of analyzing situations, responding to danger, or analyzing critical things that require immediate attention. Rather I'm speaking of secondary unproductive thinking patterns that don’t serve<\/p>",
+            "text": "<p>Humanity's most prevalent addiction is thinking. I'm not speaking of thinking along the lines of analyzing situations, responding to danger, or analyzing critical things that require immediate attention. <\/p>",
             "link_label": "read more",
             "link": "shopify:\/\/blogs\/meditation\/thinking-addiction"
           }
@@ -130,6 +130,16 @@
     "43c96b6f-7677-4e38-8a24-d18992b68390": {
       "type": "multicolumn",
       "blocks": {
+        "34f94f3e-2d63-4bd9-90ea-f93add81a94e": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/iStock-1170262672.webp",
+            "title": "the goodsugar diet™ support pages",
+            "text": "",
+            "link_label": "read all",
+            "link": "shopify:\/\/blogs\/the-goodsugar-diet-support-pages"
+          }
+        },
         "2b1f2760-d9e0-428d-846e-5faee43ccd95": {
           "type": "column",
           "settings": {
@@ -299,19 +309,10 @@
             "link_label": "read all",
             "link": "shopify:\/\/blogs\/pop-up-menu"
           }
-        },
-        "34f94f3e-2d63-4bd9-90ea-f93add81a94e": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/iStock-1170262672.webp",
-            "title": "the goodsugar diet™ support pages",
-            "text": "",
-            "link_label": "read all",
-            "link": "shopify:\/\/blogs\/the-goodsugar-diet-support-pages"
-          }
         }
       },
       "block_order": [
+        "34f94f3e-2d63-4bd9-90ea-f93add81a94e",
         "2b1f2760-d9e0-428d-846e-5faee43ccd95",
         "template--18200788664594__43c96b6f-7677-4e38-8a24-d18992b68390-167873364270945103-0",
         "f4ca1ff7-47a7-4e33-8356-112fc9ec498d",
@@ -328,8 +329,7 @@
         "1249d94e-8ff7-43f1-bf3f-033fbe37a9a0",
         "9e87168c-d02c-4e5e-8d44-06b518bac279",
         "f6eea2b3-683b-4321-ac3b-62ea84280f77",
-        "d4b5df01-aa1c-40e6-a395-5d11e4ce5c72",
-        "34f94f3e-2d63-4bd9-90ea-f93add81a94e"
+        "d4b5df01-aa1c-40e6-a395-5d11e4ce5c72"
       ],
       "settings": {
         "title": "good articles",
