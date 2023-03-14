@@ -56,7 +56,7 @@
     "009b274e-05cf-4311-beb9-3746618e5832": {
       "type": "featured-blog",
       "settings": {
-        "heading": "THE goodsugar DIET™ Support",
+        "heading": "latest posts",
         "heading_size": "h1",
         "blog": "the-goodsugar-diet-support-pages",
         "post_limit": 3,
@@ -163,6 +163,16 @@
     "43c96b6f-7677-4e38-8a24-d18992b68390": {
       "type": "multicolumn",
       "blocks": {
+        "2b1f2760-d9e0-428d-846e-5faee43ccd95": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/iStock-1081090762plants_use_this.webp",
+            "title": "recipes",
+            "text": "",
+            "link_label": "read all",
+            "link": "shopify:\/\/blogs\/recipes"
+          }
+        },
         "template--18200788664594__43c96b6f-7677-4e38-8a24-d18992b68390-167873364270945103-0": {
           "type": "column",
           "settings": {
@@ -257,16 +267,6 @@
             "link": "shopify:\/\/blogs\/probiotic-general-knowledge"
           }
         },
-        "2b1f2760-d9e0-428d-846e-5faee43ccd95": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/iStock-1081090762plants_use_this.webp",
-            "title": "Recipes",
-            "text": "",
-            "link_label": "Read All",
-            "link": "shopify:\/\/blogs\/recipes"
-          }
-        },
         "09783879-a491-4921-9307-56889fff6591": {
           "type": "column",
           "settings": {
@@ -299,6 +299,7 @@
         }
       },
       "block_order": [
+        "2b1f2760-d9e0-428d-846e-5faee43ccd95",
         "template--18200788664594__43c96b6f-7677-4e38-8a24-d18992b68390-167873364270945103-0",
         "template--18200788664594__43c96b6f-7677-4e38-8a24-d18992b68390-167873364270945103-1",
         "template--18200788664594__43c96b6f-7677-4e38-8a24-d18992b68390-167873364270945103-2",
@@ -308,13 +309,12 @@
         "f6eea2b3-683b-4321-ac3b-62ea84280f77",
         "9e87168c-d02c-4e5e-8d44-06b518bac279",
         "41234c76-57c2-4a91-9949-5fd6b98481f6",
-        "2b1f2760-d9e0-428d-846e-5faee43ccd95",
         "09783879-a491-4921-9307-56889fff6591",
         "1249d94e-8ff7-43f1-bf3f-033fbe37a9a0",
         "34f94f3e-2d63-4bd9-90ea-f93add81a94e"
       ],
       "settings": {
-        "title": "Good Articles",
+        "title": "good articles",
         "heading_size": "h1",
         "image_width": "half",
         "image_ratio": "circle",
