@@ -249,7 +249,7 @@
             "image": "shopify:\/\/shop_images\/mockup-of-a-woman-wearing-sublimated-leggings-while-practicing-yoga-36303-r-el2_1.webp",
             "title": "yoga",
             "text": "",
-            "link_label": "",
+            "link_label": "read all",
             "link": "shopify:\/\/blogs\/yoga"
           }
         },
@@ -259,7 +259,7 @@
             "image": "shopify:\/\/shop_images\/iStock-1286273487_1_1.webp",
             "title": "addiction",
             "text": "",
-            "link_label": "",
+            "link_label": "read all",
             "link": "shopify:\/\/blogs\/addiction"
           }
         },
@@ -277,9 +277,9 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/iStock-1091692964.webp",
-            "title": "Our Science",
+            "title": "our science",
             "text": "",
-            "link_label": "Read All",
+            "link_label": "read all",
             "link": "shopify:\/\/blogs\/our-science"
           }
         },
@@ -287,9 +287,9 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/03_plantbased_web.webp",
-            "title": "Company Info",
+            "title": "company info",
             "text": "",
-            "link_label": "Read All",
+            "link_label": "read all",
             "link": "shopify:\/\/blogs\/company-info"
           }
         },
@@ -297,9 +297,9 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/iStock-1264157294.webp",
-            "title": "Street Knowledge",
+            "title": "street knowledge",
             "text": "",
-            "link_label": "Read All",
+            "link_label": "read all",
             "link": "shopify:\/\/blogs\/street-knowledge"
           }
         },
@@ -307,9 +307,9 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/42988E68-9E14-4F18-89AD-2FB3128B531C.webp",
-            "title": "Press & Media",
+            "title": "press & media",
             "text": "",
-            "link_label": "Read All",
+            "link_label": "read all",
             "link": "shopify:\/\/blogs\/press-media"
           }
         },
@@ -317,10 +317,20 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/37788733_10156716901127878_5664591568800055296_o.webp",
-            "title": "Personal Stories",
+            "title": "personal stories",
             "text": "",
-            "link_label": "Read All",
+            "link_label": "read all",
             "link": "shopify:\/\/blogs\/personal-bio"
+          }
+        },
+        "d4b5df01-aa1c-40e6-a395-5d11e4ce5c72": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Image_4-2-21_at_6.07_PM_2.webp",
+            "title": "menu draft",
+            "text": "",
+            "link_label": "",
+            "link": "shopify:\/\/blogs\/pop-up-menu"
           }
         },
         "34f94f3e-2d63-4bd9-90ea-f93add81a94e": {
@@ -332,16 +342,6 @@
             "text": "",
             "link_label": "All Articles",
             "link": "#"
-          }
-        },
-        "d4b5df01-aa1c-40e6-a395-5d11e4ce5c72": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Image_4-2-21_at_6.07_PM_2.webp",
-            "title": "menu draft",
-            "text": "",
-            "link_label": "",
-            "link": "shopify:\/\/blogs\/pop-up-menu"
           }
         }
       },
@@ -362,8 +362,8 @@
         "1249d94e-8ff7-43f1-bf3f-033fbe37a9a0",
         "9e87168c-d02c-4e5e-8d44-06b518bac279",
         "f6eea2b3-683b-4321-ac3b-62ea84280f77",
-        "34f94f3e-2d63-4bd9-90ea-f93add81a94e",
-        "d4b5df01-aa1c-40e6-a395-5d11e4ce5c72"
+        "d4b5df01-aa1c-40e6-a395-5d11e4ce5c72",
+        "34f94f3e-2d63-4bd9-90ea-f93add81a94e"
       ],
       "settings": {
         "title": "good articles",
