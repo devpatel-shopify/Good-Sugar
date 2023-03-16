@@ -82,7 +82,7 @@
 .image_horizontal_main {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     column-gap: 35px;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -178,7 +178,7 @@
         justify-content: flex-start;
     }
     .image_slider_wrapper {
-        min-width: 175px;
+        min-width: 205px;
     }
     .image_horizontal_main::after {
         content: "1";
@@ -190,7 +190,6 @@
         opacity: 0;
         margin-left: -10px;
     }
-
 }
 
 @media screen and (max-width:375px) {

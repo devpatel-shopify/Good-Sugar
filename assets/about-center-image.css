@@ -170,7 +170,11 @@ max-width: 432px;
     font-size: 20px;
     line-height: 1.15;
 }
-
+.image_text_item.right_part .text p span {
+    line-height: 0.5;
+    vertical-align: bottom;
+    color: var(--custom-text_color);
+}
 .slider_style_2_image_wrapper {
     display: flex;
     height: 100%;

@@ -98,21 +98,30 @@
                     <div class="menu-grid_subtitle desktop-position--{{ block.settings.sub_title_text_position }}">
                       <span class="menu-grid_subtitle_text desktop-{{ block.settings.sub_title_text_alignment }} mobile-{{ block.settings.sub_title_text_alignment_mob }}" data-splitting >
                         {{- block.settings.sub_title -}}
-                      </span>
-                    </div>
+                        {%- if block.settings.button_label != blank -%}
+                          <a href="{{ block.settings.button_link }}" class="buttonbutton--secondary">{{ block.settings.button_label | escape }}</a>
+                        {%- endif -%} 
+                      </span>   
+                                      
+                    </div>                   
                   {%- endif -%}
+
+                  
+
                 </div>
                 <div class="menu-grid_box_item item_right">
                   {%- if block.settings.btn_bg != blank and block.settings.btn_text_11 != blank and block.settings.btn_link != blank -%}
+                    <a href="{{ block.settings.btn_link }}">
                     <div class="menu-grid_btn_box">
-                      <a href="{{ block.settings.btn_link }}" class="menu-grid_btn_wrapper" target="_blank">
+                      <span class="menu-grid_btn_wrapper">
                         <div class="btn_text">{{ block.settings.btn_text_11 }}</div>
                         <img
                           src="{{ block.settings.btn_bg | img_url: 'master' }}"
                           alt="{{ block.settings.btn_bg.alt }}}"
                         >                        
-                      </a>
+                      </span>
                     </div>
+                  </a>
                   {%- endif -%}
                 </div>
               </div>
@@ -265,6 +274,17 @@
           "type": "richtext",
           "id": "sub_title",
           "label": "Sub Title "
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "default": "Button label",
+          "label": "Button Label"          
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button Link"
         },
         {
           "type":"select",

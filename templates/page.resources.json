@@ -4,6 +4,7 @@
       "type": "main-page",
       "disabled": true,
       "settings": {
+        "section_color": "#000",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -124,33 +125,30 @@
         },
         "b6bbc944-8c96-48aa-be42-e1965ff01111": {
           "type": "image",
-          "disabled": true,
           "settings": {
-            "image": "shopify:\/\/shop_images\/image_27.png",
-            "title": "",
-            "text": "",
+            "image": "shopify:\/\/shop_images\/image_36.png",
+            "title": "podcast",
+            "text": "<p><a href=\"https:\/\/www.ilovegoodsugar.com\/blogs\/self-help-tips\" target=\"_blank\" title=\"https:\/\/www.ilovegoodsugar.com\/blogs\/self-help-tips\">get the <br\/>book<\/a><\/p>",
             "title_color": "#000000",
             "text_color": "#000000"
           }
         },
         "1821de9b-7527-412c-81ce-b118131d9ade": {
           "type": "image",
-          "disabled": true,
           "settings": {
-            "image": "shopify:\/\/shop_images\/image_28.png",
-            "title": "",
-            "text": "",
+            "image": "shopify:\/\/shop_images\/image_37.png",
+            "title": "contact",
+            "text": "<p><a href=\"https:\/\/www.ilovegoodsugar.com\/blogs\/self-help-tips\" target=\"_blank\" title=\"https:\/\/www.ilovegoodsugar.com\/blogs\/self-help-tips\">Learn from Marcus<\/a><\/p>",
             "title_color": "#000000",
             "text_color": "#000000"
           }
         },
         "9b586695-e97b-47c3-a898-55a4263957ec": {
           "type": "image",
-          "disabled": true,
           "settings": {
-            "image": "shopify:\/\/shop_images\/image_29.png",
-            "title": "",
-            "text": "",
+            "image": "shopify:\/\/shop_images\/image_39.png",
+            "title": "hiring",
+            "text": "<p><a href=\"https:\/\/www.ilovegoodsugar.com\/blogs\/self-help-tips\" target=\"_blank\" title=\"https:\/\/www.ilovegoodsugar.com\/blogs\/self-help-tips\">Learn from<\/a><\/p><p><a href=\"https:\/\/www.ilovegoodsugar.com\/blogs\/self-help-tips\" target=\"_blank\" title=\"https:\/\/www.ilovegoodsugar.com\/blogs\/self-help-tips\">others<\/a><\/p>",
             "title_color": "#000000",
             "text_color": "#000000"
           }
