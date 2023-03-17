@@ -97,7 +97,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/image-28.png",
             "title": "blog",
-            "text": "<p><a href=\"https:\/\/www.ilovegoodsugar.com\/blogs\/self-help-tips\" target=\"_blank\" title=\"https:\/\/www.ilovegoodsugar.com\/blogs\/self-help-tips\">learn from <br\/>marcus<\/a><\/p>",
+            "text": "<p><a href=\"\/pages\/learn-from-marcus\" title=\"Learn from Marcus\">learn from <br\/>marcus<\/a><\/p>",
             "title_color": "#eca847",
             "text_color": "#ffffff"
           }
