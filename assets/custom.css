@@ -394,23 +394,48 @@ main#MainContent {
 }
 .yellow_bar_color {
     border-bottom: var(--custom-border-width) solid var(--custom-border-color);
-    padding: 2.5rem 0;
+    padding: 2.3rem 0;
 	border-top: var(--custom-border-width) solid var(--custom-border-color);
 }
 .yellow_bar_color .main-page-title {
     margin: 0;
     padding: 0;
+    color: var(--custom-text_color);
+    text-transform: lowercase;
+    font-size: var(--heading-h1-font-size);
+    font-weight: 800;
+    line-height: 1;
 }
 .yellow_bar_color .title--primary {
     margin: 0;
+	color: var(--custom-text_color);
+}
+.page-hiring .yellow_bar_color {
+    margin-bottom: 50px;
 }
 .menu-grid_subtitle span .buttonbutton--secondary {
-    padding: 30px;
+    padding: 30px 0 0;
     display: inline-block;
-    color: red;
+    color: #5c398d;
     text-transform: uppercase;
-	font-size: 14px;
-	text-decoration: underline;
+	font-size: 14px;	
+	font-weight: 600;
+	position: relative;
+	z-index: 1;
+}
+.menu-grid_subtitle span .buttonbutton--secondary::after{
+	content: "";
+    position: absolute;
+    top: auto;
+    bottom: -2px;
+    width: 0;
+    height: 2px;   
+    transition: width .5s;
+	left: 0;
+}
+.menu-grid_subtitle span .buttonbutton--secondary:hover::after{
+	width: 100%;
+    transition: width .5s;
 }
 @media screen and (max-width: 1749px) {
 
@@ -706,6 +731,10 @@ main#MainContent {
 @media screen and (max-width:749px) {
 	.page-resources #MainContent {
 		background: radial-gradient(53.71% 70.37% at 50% 104.2%, #F58325 0%, #D0C7E3 100%);
+	}
+	.menu-grid_subtitle span .buttonbutton--secondary {
+		font-size: 9px;
+		
 	}
 }
 

@@ -37,7 +37,7 @@ new Swiper('.menu-grid_slider', {
     breakpoints: {
       // when window width is >= 640px
       640: {
-        slidesPerView: 1,
+        slidesPerView: 1.3,
         spaceBetween: 0
       }
     }

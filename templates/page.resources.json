@@ -4,7 +4,7 @@
       "type": "main-page",
       "disabled": true,
       "settings": {
-        "section_color": "#000",
+        "section_color": "#000000",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -96,7 +96,7 @@
         "c8edeed7-1a17-410e-bdac-a67fb72da30d": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/image-28.png",
+            "image": "shopify:\/\/shop_images\/2.png",
             "title": "blog",
             "text": "<p><a href=\"https:\/\/www.ilovegoodsugar.com\/blogs\/self-help-tips\" target=\"_blank\" title=\"https:\/\/www.ilovegoodsugar.com\/blogs\/self-help-tips\">learn from <br\/>marcus<\/a><\/p>",
             "title_color": "#eca847",
@@ -106,7 +106,7 @@
         "f7dae696-d8d3-4759-b2ec-2e198559c542": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/image-27.png",
+            "image": "shopify:\/\/shop_images\/1.png",
             "title": "library",
             "text": "<p><a href=\"https:\/\/www.ilovegoodsugar.com\/pages\/all-articles\" target=\"_blank\" title=\"https:\/\/www.ilovegoodsugar.com\/pages\/all-articles\">learn from<br\/> others<\/a><\/p>",
             "title_color": "#5c398d",
@@ -116,7 +116,7 @@
         "98922060-4799-4846-b99b-decf03aa02a1": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/image-29.png",
+            "image": "shopify:\/\/shop_images\/3.png",
             "title": "book",
             "text": "<p><a href=\"https:\/\/www.ilovegoodsugar.com\/products\/the-goodsugar-diet-printed-book\" target=\"_blank\" title=\"https:\/\/www.ilovegoodsugar.com\/products\/the-goodsugar-diet-printed-book\">get the <br\/>book<\/a><\/p>",
             "title_color": "#5c398d",
@@ -126,30 +126,30 @@
         "b6bbc944-8c96-48aa-be42-e1965ff01111": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/image_36.png",
+            "image": "shopify:\/\/shop_images\/4.png",
             "title": "podcast",
             "text": "<p><a href=\"https:\/\/www.ilovegoodsugar.com\/blogs\/self-help-tips\" target=\"_blank\" title=\"https:\/\/www.ilovegoodsugar.com\/blogs\/self-help-tips\">get the <br\/>book<\/a><\/p>",
-            "title_color": "#000000",
+            "title_color": "#5c398d",
             "text_color": "#000000"
           }
         },
         "1821de9b-7527-412c-81ce-b118131d9ade": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/image_37.png",
+            "image": "shopify:\/\/shop_images\/5.png",
             "title": "contact",
             "text": "<p><a href=\"https:\/\/www.ilovegoodsugar.com\/blogs\/self-help-tips\" target=\"_blank\" title=\"https:\/\/www.ilovegoodsugar.com\/blogs\/self-help-tips\">Learn from Marcus<\/a><\/p>",
-            "title_color": "#000000",
-            "text_color": "#000000"
+            "title_color": "#eca847",
+            "text_color": "#f6f5f1"
           }
         },
         "9b586695-e97b-47c3-a898-55a4263957ec": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/image_39.png",
+            "image": "shopify:\/\/shop_images\/6.png",
             "title": "hiring",
             "text": "<p><a href=\"https:\/\/www.ilovegoodsugar.com\/blogs\/self-help-tips\" target=\"_blank\" title=\"https:\/\/www.ilovegoodsugar.com\/blogs\/self-help-tips\">Learn from<\/a><\/p><p><a href=\"https:\/\/www.ilovegoodsugar.com\/blogs\/self-help-tips\" target=\"_blank\" title=\"https:\/\/www.ilovegoodsugar.com\/blogs\/self-help-tips\">others<\/a><\/p>",
-            "title_color": "#000000",
+            "title_color": "#5c398d",
             "text_color": "#000000"
           }
         }

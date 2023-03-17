@@ -12,6 +12,7 @@
     }
     .grid-bg--{{ block.id }} .menu-grid_subtitle p span,
     .grid-bg--{{ block.id }} .menu-grid_subtitle p,
+    .grid-bg--{{ block.id }} .menu-grid_subtitle .buttonbutton--secondary,
     .grid-bg--{{ block.id }} .menu-grid_subtitle p .char::before {
       color: {{ block.settings.subtitle_color }};
     }
@@ -20,10 +21,12 @@
       color: {{ block.settings.button_color }};
     }
 
-
+    .grid-bg--{{ block.id }} .buttonbutton--secondary:after{
+    background: {{ block.settings.subtitle_color }};
+    }
     .grid-bg--{{ block.id }} {
     border-top: var(--custom-border-width) solid {{ block.settings.border_color }};
-    border-bottom: var(--custom-border-width) solid {{ block.settings.border_color }};
+    {% comment %} border-bottom: var(--custom-border-width) solid {{ block.settings.border_color }}; {% endcomment %}
   }
   .grid-bg--{{ block.id }} .menu-grid_title {
     border-bottom: var(--custom-border-width) solid {{ block.settings.border_color }};

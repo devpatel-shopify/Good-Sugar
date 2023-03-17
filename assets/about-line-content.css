@@ -36,10 +36,13 @@
 }
 .line {
     width: 100%;
-    height:var(--custom-border-width);
-    background-color: var(--custom-border-color);    
+    /* height:var(--custom-border-width);
+    background-color: var(--custom-border-color);     */
     display: block !important;
     margin-top: 40px;
+}
+.line p {
+    color: var(--custom-text_color);
 }
 
 .about_line_box_line_text {
@@ -99,5 +102,6 @@
     }
     .line {
         margin-top: 38px;
+        padding: 0 20px;
     }
 }
