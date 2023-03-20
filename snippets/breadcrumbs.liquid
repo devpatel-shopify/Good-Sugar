@@ -36,7 +36,7 @@
         <span class="breadcrumb_sign">/</span>
         <li class="breadcrumbs__item">{{ collection.title | link_to: collection.url, class: 'breadcrumbs__link', title:collection.title | capitalize  }}</li>
         {%- else -%}  
-        <li><a href="/">Home</a></li>
+        <li><a href="/">Home</a></li><span class="breadcrumb_sign">/</span>
         <li class="breadcrumbs__item">{{ hinted_collection.title | link_to: hinted_collection.url, class: 'breadcrumbs__link',title:hinted_collection.title | capitalize  }}</li> 
         {%- endif -%}
         <span class="breadcrumb_sign">/</span>
