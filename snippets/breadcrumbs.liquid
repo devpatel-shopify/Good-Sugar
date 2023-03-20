@@ -6,6 +6,7 @@
 
 {%- case t -%}
 
+    {%- when 'product' -%}
     {%- if collection -%}
         {%- assign hinted_collection = collection -%}
     {%- comment -%} embed: on product pages, use metafield then prod_multicat_sel then default to first {%- endcomment -%}
