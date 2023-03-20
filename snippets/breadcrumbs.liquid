@@ -1,98 +1,25 @@
 {{ 'breadcrumbs.css' | asset_url | stylesheet_tag }}
 
-{%- unless template == 'index' or template == 'cart' or template == 'list-collections' or template == '404' -%}
-{%- assign t = template | split: '.' | first -%}
 
-
-{%- case t -%}
-
-    {%- when 'product' -%}
-    {%- if collection -%}
-        {%- assign hinted_collection = collection -%}
-    {%- comment -%} embed: on product pages, use metafield then prod_multicat_sel then default to first {%- endcomment -%}
-    {%- elsif product.collections[0] and product.metafields.my_fields.default_collection_handle -%}
-        {%- for loop_collection in product.collections -%}
-            {%- if loop_collection.handle == product.metafields.my_fields.default_collection_handle -%}
-                {%- assign hinted_collection = loop_collection -%}
-            {%- endif -%}
-        {%- endfor -%}
-    {%- elsif product.collections[0] and prod_multicat_sel == "first" -%}
-        {%- assign hinted_collection = product.collections.first -%}
-    {%- elsif product.collections[0] and prod_multicat_sel == "last" -%}
-        {%- assign hinted_collection = product.collections.last -%}
-    {%- elsif product.collections[0] and prod_multicat_sel == "generic" -%}
-        {%- assign hinted_collection = false -%}
-    {%- elsif product.collections[0] -%}
-        {%- assign hinted_collection = product.collections.first -%}
-    {%- else -%}
-        {%- assign hinted_collection = false -%}
-    {%- endif -%}  
-
-    {% assign CurrentCollection = hinted_collection.handle %}
-
-    <div class="breadcrumbs_container">
-      <ul class="breadcrumbs">
-        {%- if collection.url -%}
-        <span class="breadcrumb_sign">/</span>
-        <li class="breadcrumbs__item">{{ collection.title | link_to: collection.url, class: 'breadcrumbs__link', title:collection.title | capitalize  }}</li>
-        {%- else -%}  
-        <li><a href="/">Home</a></li><span class="breadcrumb_sign">/</span>
-        <li class="breadcrumbs__item">{{ hinted_collection.title | link_to: hinted_collection.url, class: 'breadcrumbs__link',title:hinted_collection.title | capitalize  }}</li> 
-        {%- endif -%}
-        <span class="breadcrumb_sign">/</span>
-        <li><a class="breadcrumbs__link" href="{{ product.url }}" title="{{ product.title }}" aria-current="page">{{ product.title | capitalize}}</a></li>
-      </ul>  
-    </div> 
-
-    {%- when 'blog' -%} 
-     <div class="breadcrumbs_container">
-        <ul class="breadcrumbs">
-          <li><a href="/">Home</a></li>
-          {% if template contains 'collection' %}
-          <span class="breadcrumb_sign">/</span> <li><a href="{{ collection.url }}">{{ collection.title }}</a></li>
-          {% elsif template contains 'product' %}
-      
-          {% if collection.title != blank %}
-            <span class="breadcrumb_sign">/</span> <li><a href="{{ collection.url }}">{{ collection.title }}</a></li>
-          {% endif %}
-          <span class="breadcrumb_sign">/</span> <li><a href="{{ product.url }}">{{ product.title }}</a></li>
-          {% endif %}
-      
-          {% if template contains 'page' %}
-            {% if page.handle  == 'new-tb-apparel-page' %}
-              <span class="breadcrumb_sign">/</span> <li>{{ page.title }}</li>
-            {% else %}
-            <span class="breadcrumb_sign">/</span> <li>{{ page.title | capitalize }}</li>
-            {% endif %}
-          {% endif %}
-        </ul>  
-      </div>
-
-      {%- when 'page' -%}
-      <div class="breadcrumbs_container">
-        <ul class="breadcrumbs">
-          <li><a href="/">Home</a></li>
-          {% if template contains 'collection' %}
-          <span class="breadcrumb_sign">/</span> <li><a href="{{ collection.url }}">{{ collection.title }}</a></li>
-          {% elsif template contains 'product' %}
-      
-          {% if collection.title != blank %}
-            <span class="breadcrumb_sign">/</span> <li><a href="{{ collection.url }}">{{ collection.title }}</a></li>
-          {% endif %}
-          <span class="breadcrumb_sign">/</span> <li><a href="{{ product.url }}">{{ product.title }}</a></li>
-          {% endif %}
-      
-          {% if template contains 'page' %}
-            {% if page.handle  == 'new-tb-apparel-page' %}
-              <span class="breadcrumb_sign">/</span> <li>{{ page.title }}</li>
-            {% else %}
-            <span class="breadcrumb_sign">/</span> <li>{{ page.title | capitalize }}</li>
-            {% endif %}
-          {% endif %}
-        </ul>  
-      </div>
-
-    {%- endcase -%}
-
-
-{% endunless %}  
+<div class="breadcrumbs_container">
+    <ul class="breadcrumbs">
+      <li><a href="/">Home</a></li>
+      {% if template contains 'collection' %}
+      <span class="breadcrumb_sign">/</span> <li><a href="{{ collection.url }}">{{ collection.title }}</a></li>
+      {% elsif template contains 'product' %}
+  
+      {% if collection.title != blank %}
+        <span class="breadcrumb_sign">/</span> <li><a href="{{ collection.url }}">{{ collection.title }}</a></li>
+      {% endif %}
+      <span class="breadcrumb_sign">/</span> <li><a href="{{ product.url }}">{{ product.title }}</a></li>
+      {% endif %}
+  
+      {% if template contains 'page' %}
+        {% if page.handle  == 'new-tb-apparel-page' %}
+          <span class="breadcrumb_sign">/</span> <li>{{ page.title }}</li>
+        {% else %}
+        <span class="breadcrumb_sign">/</span> <li>{{ page.title | capitalize }}</li>
+        {% endif %}
+      {% endif %}
+    </ul>  
+  </div>
