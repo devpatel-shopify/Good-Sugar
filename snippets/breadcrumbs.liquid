@@ -30,27 +30,31 @@
 
     {% assign CurrentCollection = hinted_collection.handle %}
 
-    {%- if collection.url -%}
-    <li class="breadcrumbs__item divider 456">
-      <span class="breadcrumbs__link">›</span>
-    </li>
-    <li class="breadcrumbs__item">
-      <h3>{{ collection.title | link_to: collection.url, class: 'breadcrumbs__link', title:collection.title | capitalize  }}</h3>
-    </li>
-    {%- else -%}  
-     <li class="breadcrumbs__item divider 789">
-        <span class="breadcrumbs__link">›</span>
-      </li>
-      <li class="breadcrumbs__item">
-        <h3>{{ hinted_collection.title | link_to: hinted_collection.url, class: 'breadcrumbs__link',title:hinted_collection.title | capitalize  }}</h3>
-      </li> 
-    {%- endif -%}
-    <li class="breadcrumbs__item divider 000">
-      <span class="breadcrumbs__link">›</span>
-    </li>
-    <li class="breadcrumbs__item">
-      <h3><a class="breadcrumbs__link" href="{{ product.url }}" title="{{ product.title }}" aria-current="page">{{ product.title | capitalize}}</a></h3>
-    </li>
+    <div class="breadcrumbs_container">
+      <ul class="breadcrumbs">
+        {%- if collection.url -%}
+        <li class="breadcrumbs__item divider 456">
+          <span class="breadcrumbs__link">›</span>
+        </li>
+        <li class="breadcrumbs__item">
+          <h3>{{ collection.title | link_to: collection.url, class: 'breadcrumbs__link', title:collection.title | capitalize  }}</h3>
+        </li>
+        {%- else -%}  
+         <li class="breadcrumbs__item divider 789">
+            <span class="breadcrumbs__link">›</span>
+          </li>
+          <li class="breadcrumbs__item">
+            <h3>{{ hinted_collection.title | link_to: hinted_collection.url, class: 'breadcrumbs__link',title:hinted_collection.title | capitalize  }}</h3>
+          </li> 
+        {%- endif -%}
+        <li class="breadcrumbs__item divider 000">
+          <span class="breadcrumbs__link">›</span>
+        </li>
+        <li class="breadcrumbs__item">
+          <h3><a class="breadcrumbs__link" href="{{ product.url }}" title="{{ product.title }}" aria-current="page">{{ product.title | capitalize}}</a></h3>
+        </li>
+      </ul>  
+    </div> 
 
     {%- when 'blog' -%} 
      <div class="breadcrumbs_container">
