@@ -33,22 +33,14 @@
     <div class="breadcrumbs_container">
       <ul class="breadcrumbs">
         {%- if collection.url -%}
-        <li class="breadcrumbs__item divider 456">
-          <span class="breadcrumb_sign">/</span>
-        </li>
-        <li class="breadcrumbs__item">
-          <h3>{{ collection.title | link_to: collection.url, class: 'breadcrumbs__link', title:collection.title | capitalize  }}</h3>
-        </li>
+        <span class="breadcrumb_sign">/</span>
+        <li class="breadcrumbs__item">{{ collection.title | link_to: collection.url, class: 'breadcrumbs__link', title:collection.title | capitalize  }}</li>
         {%- else -%}  
-          <li><a href="/">Home</a></li>
-          <li class="breadcrumbs__item">
-            <h3>{{ hinted_collection.title | link_to: hinted_collection.url, class: 'breadcrumbs__link',title:hinted_collection.title | capitalize  }}</h3>
-          </li> 
+        <li><a href="/">Home</a></li>
+        <li class="breadcrumbs__item">{{ hinted_collection.title | link_to: hinted_collection.url, class: 'breadcrumbs__link',title:hinted_collection.title | capitalize  }}</li> 
         {%- endif -%}
-        <li><span class="breadcrumb_sign">/</span></li>
-        <li class="breadcrumbs__item">
-          <h3><a class="breadcrumbs__link" href="{{ product.url }}" title="{{ product.title }}" aria-current="page">{{ product.title | capitalize}}</a></h3>
-        </li>
+        <span class="breadcrumb_sign">/</span>
+        <li><a class="breadcrumbs__link" href="{{ product.url }}" title="{{ product.title }}" aria-current="page">{{ product.title | capitalize}}</a></li>
       </ul>  
     </div> 
 
