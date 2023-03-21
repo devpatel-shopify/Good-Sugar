@@ -687,7 +687,7 @@ body {
   <body class="template-{{ template.name }} page-{{ page.handle }}">
     <div class="loading_main">
       <section class="section-wrapper" data-type="horizontal">
-        <div class="section__cards">
+        {% comment %} <div class="section__cards">
           <div class="section__card-inner">
             <a href="javascript:void(0);" class="loading_main_logo">
               {%- if settings.logo != blank -%}
@@ -711,7 +711,7 @@ body {
               {%- endif -%}
             </a>
           </div>
-        </div>
+        </div> {% endcomment %}
       </section>
     </div>
 
