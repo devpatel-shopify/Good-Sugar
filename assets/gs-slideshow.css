@@ -182,8 +182,7 @@
     -webkit-text-stroke-width: 3px;
     -webkit-text-stroke-color: #D1C8E3;
     color: #000000;
-    /*font-size: 125px;*/
-    font-size: 100px;
+    font-size: 80px;
     font-family: 'Bangers';
     line-height: 1.1;
 }
@@ -193,7 +192,7 @@
 }
 
 .gs_style_2 .main_slider_header {
-    font-size: 70px;
+    font-size: 65px;
     color: #ffffff;
     line-height: 1.05;
     text-transform: lowercase;
@@ -225,6 +224,7 @@
     .gs_style_2 .main_slider_header {
         font-size: 28px;
     }
+    
 }
 .gs_style_1 .main_slider_subheader .subheader {
     /*max-width: 350px;*/
@@ -520,17 +520,26 @@ text-transform: lowercase;
     .gs_style_1 .main_slider_subheader .subheader {
         font-size: 20px;
     }
+    .gs_style_1 .main_slider_header {
+        font-size: 70px;
+    }
+    .gs_style_2 .main_slider_subheader {
+        margin-top: 30px;
+        column-gap: 50px;
+    }
 }
 
 @media screen and (max-width:1100px) {
     .gs_style_1 .main_slider_header {
-        font-size: 80px;
+        font-size: 55px;
     }
 
     .gs_style_1 .main_slider_subheader .subheader {
-        font-size: 20px;
+        font-size: 18px;
     }
-    
+    .gs_style_1 .main_slider_subheader {
+        margin-top: 20px;
+    }
 }
 
 @media screen and (max-width:1024px) {
@@ -571,7 +580,16 @@ text-transform: lowercase;
 
 @media screen and (max-width:900px) {
     .gs_style_1 .main_slider_header {
-        font-size: 60px;
+        font-size: 50px;
+    }
+    .gs_style_1 .main_slider_subheader {
+        margin-top: 20px;
+    }
+    .gs_style_1 .main_slider_subheader .subheader {
+        font-size: 18px;
+    }
+    .gs_style_3 .text {
+        font-size: 15px;
     }
 }
 
@@ -637,9 +655,11 @@ text-transform: lowercase;
         
         border: 2px solid #000000;
     }*/
-    .gs_style_3 .heading,
-    .gs_style_2 .main_slider_header {
+    .gs_style_3 .heading {
         font-size: 25px;
+    }
+    .gs_style_2 .main_slider_header {
+        font-size: 35px;
     }
     .gs_style_3 .btn_text,
     .gs_style_2 .btn_text {
@@ -780,13 +800,16 @@ text-transform: lowercase;
         font-size: 11px;
     }
     .gs_style_3 .heading {
-        font-size: 35px;
+        font-size: 23px;
     }
     .gs_style_2 .main_slider_header {
-        font-size: 28px;
+        font-size: 23px;
     }
     .gs_style_3 .main_slider_button {
         margin-top: -9px;
+    }
+    .gs_style_1 .main_slider_header {
+        font-size: 35px;
     }
 }
 
