@@ -18,19 +18,19 @@
   }
 {%- endstyle -%}
 
-<div class="page-width section-{{ section.id }}-padding">
-
-  <div class="yellow_bar_color" style="background: {{ section.settings.section_color }}">
-    <div class="page-width section-{{ section.id }}-padding">  
-    <h1 class="main-page-title page-title h0">
-      {{ page.title | escape }}
-    </h1>
-  </div>
-  </div>
-  
+<div class="yellow_bar_color" style="background: {{ section.settings.section_color }}">
+  <div class="page-width section-{{ section.id }}-padding">  
   <h1 class="main-page-title page-title h0">
     {{ page.title | escape }}
   </h1>
+</div>
+</div>
+
+<div class="page-width section-{{ section.id }}-padding">
+  
+  {% comment %} <h1 class="main-page-title page-title h0">
+    {{ page.title | escape }}
+  </h1> {% endcomment %}
   <div class="rte">
     {{ page.content }}
   </div>

@@ -18,12 +18,12 @@
           {%- if section.settings.title != blank or section.settings.subtitle != blank or section.settings.bottom_text != blank-%}
             <div class="about_line_box_line">
               <div class="about_line_box_line_container">
+                <div class="line">{{ section.settings.line }}</div>
+                {% comment %} <div class="line"></div>
                 <div class="line"></div>
-               {% comment %} <div class="line"></div>
                 <div class="line"></div>
                 <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>{% endcomment %}
+                <div class="line"></div> {% endcomment %}
               </div>
               {%- if section.settings.bottom_text != blank -%}
                 <div class="about_line_box_line_text">
@@ -51,6 +51,11 @@
       "type":"richtext",
       "id":"subtitle",
       "label":"Subtitle Text"
+    },
+    {
+      "type":"richtext",
+      "id":"line",
+      "label":"line Text"
     },
     {
       "type":"richtext",

@@ -53,6 +53,7 @@
             line-clamp: 3; 
     -webkit-box-orient: vertical;
     font-weight: 800;
+    text-align: center;
 }
 .image_slider_content .text {
     font-family: var(--nav-font-family);

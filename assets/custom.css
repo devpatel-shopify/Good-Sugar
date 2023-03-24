@@ -449,6 +449,9 @@ main#MainContent {
 .template-search {
     text-align: center;
 }
+ul.faq_page {
+    margin-top: 50px;
+}
 @media screen and (max-width: 1749px) {
 
 	/* .header-wrapper .header{padding: 43px 0 47px;} */

@@ -4,7 +4,7 @@
       "type": "main-page",
       "disabled": true,
       "settings": {
-        "section_color": "#000",
+        "section_color": "#000000",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -15,7 +15,7 @@
         "fa7b2565-5550-4292-8e30-70b346c96819": {
           "type": "text",
           "settings": {
-            "text": "<p><a href=\"https:\/\/www.ilovegoodsugar.com\/blogs\/self-help-tips\" target=\"_blank\" title=\"https:\/\/www.ilovegoodsugar.com\/blogs\/self-help-tips\">get the <br\/>book<\/a><\/p>",
+            "text": "<p><a href=\"https:\/\/www.ilovegoodsugar.com\/blogs\/self-help-tips\" target=\"_blank\" title=\"https:\/\/www.ilovegoodsugar.com\/blogs\/self-help-tips\">get the  book<\/a><\/p>",
             "text_color": "#5c398d",
             "font-size": 50,
             "font_size_tab": 40,
@@ -49,7 +49,7 @@
         "0c40241f-4a50-42de-949a-91599207cde4": {
           "type": "text",
           "settings": {
-            "text": "<p><a href=\"https:\/\/www.ilovegoodsugar.com\/blogs\/self-help-tips\" target=\"_blank\" title=\"https:\/\/www.ilovegoodsugar.com\/blogs\/self-help-tips\">Learn from<\/a><\/p><p><a href=\"https:\/\/www.ilovegoodsugar.com\/blogs\/self-help-tips\" target=\"_blank\" title=\"https:\/\/www.ilovegoodsugar.com\/blogs\/self-help-tips\">others<\/a><\/p>",
+            "text": "<p><a href=\"https:\/\/www.ilovegoodsugar.com\/blogs\/self-help-tips\" target=\"_blank\" title=\"https:\/\/www.ilovegoodsugar.com\/blogs\/self-help-tips\">Learn from others<\/a><\/p>",
             "text_color": "#5c398d",
             "font-size": 20,
             "font_size_tab": 20,

@@ -3,7 +3,8 @@
 <style>
     {%- for block in section.blocks -%}
         .text-slider--{{ block.id }} .text p,
-        .text-slider--{{ block.id }} .text {
+        .text-slider--{{ block.id }} .text,
+        .text-slider--{{ block.id }} .text a {
             color:{{ block.settings.text_color }};
         }
         .text-slider--{{ block.id }} .text p {
