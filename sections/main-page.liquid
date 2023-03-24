@@ -19,6 +19,15 @@
 {%- endstyle -%}
 
 <div class="page-width section-{{ section.id }}-padding">
+
+  <div class="yellow_bar_color" style="background: {{ section.settings.section_color }}">
+    <div class="page-width section-{{ section.id }}-padding">  
+    <h1 class="main-page-title page-title h0">
+      {{ page.title | escape }}
+    </h1>
+  </div>
+  </div>
+  
   <h1 class="main-page-title page-title h0">
     {{ page.title | escape }}
   </h1>
@@ -33,6 +42,12 @@
   "tag": "section",
   "class": "section",
   "settings": [
+    {
+      "type": "color",
+      "id": "section_color",
+      "label": "Section Background Color",
+      "default": "#000"
+    },
     {
       "type": "header",
       "content": "t:sections.all.padding.section_padding_heading"

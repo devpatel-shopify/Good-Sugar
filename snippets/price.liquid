@@ -93,7 +93,8 @@ Usage:
     {%- endunless -%}
     <div class="price_order_tag">
       {%- if fromCustom != blank -%}
-        {{- product.metafields.add_to_cart.label -}}
+        <span>{{- product.metafields.add_to_cart.label | split: '<br>' | first -}}</span><br>
+        {{- product.metafields.add_to_cart.label | split: '<br>' | last -}}
       {%- else -%}
         {%- if product.selected_or_first_available_variant.available -%}
           {{ 'products.product.add_to_cart' | t }}

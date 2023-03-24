@@ -383,11 +383,16 @@
     }
 }
 
+@media screen and (max-width:1280px) {
+    .product-title_main_block {
+        padding: 85px 60px 94px 60px;
+    }
+}
 @media screen and (max-width:1080px) {
     .true_false_icons,
     .product_custom_block.product__description,
     .product-title_main_block {
-        padding: 60px 60px;
+        padding: 60px 10px;
     }
     .product_page_slider_image .swiper-arrow svg {
         height: 50px;

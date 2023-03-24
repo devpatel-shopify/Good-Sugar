@@ -3,6 +3,7 @@
     "main": {
       "type": "main-search",
       "settings": {
+        "section_color": "#ffff55",
         "columns_desktop": 3,
         "image_ratio": "adapt",
         "show_secondary_image": false,

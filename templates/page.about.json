@@ -4,6 +4,7 @@
       "type": "main-page",
       "disabled": true,
       "settings": {
+        "section_color": "#000000",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -13,7 +14,7 @@
       "settings": {
         "heading": "Pure Juice and Food.",
         "text": "With goodsugar, you don’t have to compromise between what your taste buds want and what your body needs.",
-        "map_addresh_text": "<p><strong>Were closer to you than you are to buying your own professional-grade blender. <\/strong><\/p><p><strong>Still got questions after reading through all that nonsense?<\/strong><\/p><p><strong>reach out directly: <br\/><\/strong><a href=\"\/pages\/contact\" target=\"_blank\" title=\"Contact\"><strong>help@ilovegoodsugar.com<\/strong><\/a><strong> <br\/><br\/><br\/>69th St & 3rd Ave, <br\/>New York, NY 10021<br\/><br\/>hours:<\/strong><br\/>Mon-fri 8am-7pm<br\/>sat-sun 8am-5pm<\/p>",
+        "map_addresh_text": "<p><strong>Were closer to you than you are to buying your own professional-grade blender. <\/strong><\/p><p><strong>Still got questions after reading through all that nonsense?<\/strong><\/p><p><strong>reach out directly: <br\/><\/strong><a href=\"mailto:info@ilovegoodsugar.com\" title=\"mailto:info@ilovegoodsugar.com\"><strong>info@ilovegoodsugar.com<\/strong><\/a><strong><br\/><br\/><br\/>69th St & 3rd Ave, <br\/>New York, NY 10021<br\/><br\/>hours:<\/strong><br\/>Mon-fri 8am-7pm<br\/>sat-sun 8am-5pm<\/p>",
         "iframeLink": "<iframe src=\"https:\/\/www.google.com\/maps\/embed?pb=!1m18!1m12!1m3!1d462562.65091384546!2d54.9473014622803!3d25.075759465454052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f43496ad9c645%3A0xbde66e5084295162!2sDubai%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2sin!4v1676286878346!5m2!1sen!2sin\" width=\"800\" height=\"600\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"><\/iframe>",
         "image_with_text_image": "shopify:\/\/shop_images\/image_13.png",
         "ellipse_text": "brand",
@@ -51,7 +52,7 @@
         "heading": "We were meant to eat plants.",
         "center_image": "shopify:\/\/shop_images\/celery_goodsugar_1.png",
         "left_text": "<p>This isn’t some whackadoo POV that our founder, Marcus Antebi, picked up after years of jumping out of planes and pressing fresh juice – it’s what the unvarnished science consistently shows. <\/p>",
-        "right_text": "<p>He just listened…and learned…and tinkered…and toiled…until finally he created an approach to juicing that didn’t require pasteurization or additives or preservatives: just the pure way nature intended. <\/p><p><br\/>You can taste it in everything we make and how good everything makes you feel. <\/p>",
+        "right_text": "<p>He just listened<span>…<\/span>and learned<span>…<\/span>and tinkered<span>…<\/span>and toiled<span>…<\/span>until finally he created an approach to juicing that didn’t require pasteurization or additives or preservatives: just the pure way nature intended. <\/p><p><br>You can taste it in everything we make and how good everything makes you feel. <\/p>",
         "btn_bg_image": "shopify:\/\/shop_images\/image_10.png",
         "btn_text": "<p>learn more<br\/>from marcus<\/p>",
         "btn_url": "shopify:\/\/pages\/resources"
