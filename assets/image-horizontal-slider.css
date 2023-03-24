@@ -84,7 +84,7 @@
 .image_horizontal_main {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     column-gap: 35px;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -147,7 +147,12 @@
         font-size: 25px;
     }
 }
+@media screen and (max-width:800px) {
+ .image_horizontal_main {
+    justify-content: flex-start;
+  }
 
+}
 
 @media screen and (max-width:749px) {
     .image_slider_content .title {
