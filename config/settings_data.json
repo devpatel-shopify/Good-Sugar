@@ -14,6 +14,7 @@
     "heading_h4_tab": 35,
     "heading_h1_mob": 25,
     "heading_h4_mob": 16,
+    "page_width": 1600,
     "disable_store_add_to_cart_functionality": true,
     "hide_show_price": true,
     "blog_card_color_scheme": "background-2",
