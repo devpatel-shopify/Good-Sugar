@@ -85,5 +85,11 @@ font-weight: 700;
     max-width: 100px;
     max-height: 45px;
 }
+.loyalty_module_box .title {
+    font-size: 12px;
+}
+.loyalty_module_box .text ul li {
+    font-size: 12px;
+}
 }
 

@@ -173,3 +173,14 @@
 .article-template__back:last-child {
   margin-bottom: 3.2rem;
 }
+
+
+@media screen and (max-width: 749px){
+  .article-template__social-sharing+header, .article-template__social-sharing+.article-template__content {
+    font-size: 12px;
+    line-height: normal;
+}
+.caption-with-letter-spacing {
+  font-size: 12px;
+}
+}

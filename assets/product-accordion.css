@@ -205,6 +205,9 @@ display: none;
     .accordion_main details[open] summary {
         padding-bottom: 0;
     }
+    .accordion_main .title, .accordian_content {
+        font-size: 12px;
+    }
     
 
 }

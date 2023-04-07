@@ -658,6 +658,9 @@ table:not([class]) th {
   .small-hide {
     display: none !important;
   }
+  .caption-with-letter-spacing {
+    font-size: 12px;
+  }
 }
 @media screen and (min-width: 750px) {
   .slideshow_hide_content {

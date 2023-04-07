@@ -226,4 +226,7 @@ margin-top: 20px;
   .product-recommendations .card__information {
     padding-top: 15px;
   }
+  .product-recommendations .card__description, .product-recommendations .card__description p {
+    font-size: 12px;
+}
 }

@@ -166,6 +166,12 @@ body.overflow-hidden-tablet {
 	font-size: 0;
 	position: relative;
 	z-index: 9;
+	display: flex;
+	align-items: center;
+}
+.header-right .cart .icon.icon-cart-empty {
+    width: 22px;
+    height: 22px;
 }
 
 .header__icon .icon {
@@ -181,7 +187,7 @@ body.overflow-hidden-tablet {
 }
 
 .header-right header-drawer {
-	margin-left: 37px;
+	margin-left: 20px !important;
 }
 
 .header-right header-drawer .header__icon {
@@ -1137,6 +1143,10 @@ body {
 	.card__price_main a .btn_bg img {
 		max-width: 120px;
 		max-height: 70px;
+	}
+	.rte {
+		font-size: 12px;
+		line-height: 1.3;
 	}
 }
 

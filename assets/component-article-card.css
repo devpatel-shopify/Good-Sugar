@@ -140,3 +140,10 @@
     }
   }
 }
+
+@media screen and (max-width: 749px){
+  .article-card__excerpt {
+    font-size: 12px;
+    line-height: 1.3;
+}
+}

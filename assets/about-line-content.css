@@ -78,7 +78,7 @@
     }
     .about_line_content .heading p {
         padding: 25px 20px 0px 20px;
-        font-size: 9px;
+        font-size: 12px;
         max-width: 300px;
     }
     .about_line_content_box {
@@ -86,7 +86,7 @@
         /* padding: 0 20px; */
     }
     .about_line_box_text p {
-        font-size: 9px; 
+        font-size: 12px; 
     }
     .about_line_box_text {
         padding: 0 20px;
@@ -100,5 +100,7 @@
     .line {
         margin-top: 38px;
         padding: 0 20px;
+        font-size: 12px;
+        line-height: 1.2;
     }
 }

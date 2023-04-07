@@ -342,7 +342,7 @@ backdrop-filter: blur(2px);
     width: 70px;
   }
   .map_sticker_text .text {
-    font-size: 11px;
+    font-size: 12px;
   }
   .map_text_subtext_box, .map_text_title_box {
     padding: 25px 20px;
@@ -380,7 +380,7 @@ backdrop-filter: blur(2px);
     
   }
   .map_location_text {
-    font-size: var(--body-font-size);
+    font-size: 12px;
     line-height: 1.1;
     color: var(--custom-text_color);
     padding: 40px 10px 30px 20px;
@@ -430,12 +430,16 @@ backdrop-filter: blur(2px);
     right: 33px;
   }
   .map_location_text p, .about_map_content .text p {
-    font-size: var(--body-font-size);
+    font-size: 12px;
         word-break: break-word;
   }
   .map_location_text p a, .about_map_content p a {
     text-underline-offset: 3px;
   }
+  .map_text_subtext p {
+  font-size: 12px;
+}
+
 }
 
 .map_text_container {

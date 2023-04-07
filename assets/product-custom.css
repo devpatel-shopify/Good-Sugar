@@ -460,6 +460,18 @@
     .true_false_icons .left_item {
         padding: 24px 20px;
     }
+    .product_title_attribute p {
+        font-size: 12px;
+    }
+    .product__description p, .product__description h2 {
+        font-size: 12px;
+    }
+    .true_false_icons .item_title {
+        font-size: 12px;
+    }
+    .true_false_icons .item_text {
+        font-size: 12px;
+    }
 }
 
 
