@@ -860,6 +860,11 @@ text-transform: lowercase;
         padding: 20px;
     }
 }
+@media screen and (max-width: 767px) {
+  .gs_style_3 .main_slider_content {
+    padding: 30px;
+}
+}
 
 @media screen and (max-width:320px) {
     .gs_style_1 .main_slider_header {
