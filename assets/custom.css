@@ -627,7 +627,7 @@ ul.faq_page {
 	}
 }
 
-@media screen and (max-width: 413px) {
+@media screen and (max-width: 425px) {
 	.header-right header-drawer {
 		margin-left: 15px;
 	}
