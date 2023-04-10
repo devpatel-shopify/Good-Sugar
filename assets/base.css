@@ -3156,8 +3156,3 @@ p a:hover {
   background-size: auto;
 }
 
-@media screen and (max-width:749px) {
-	body {
-    font-size: 12px !important;
-}
-}

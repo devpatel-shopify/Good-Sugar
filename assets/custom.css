@@ -1198,3 +1198,9 @@ body {
 		padding: 0 16px;
 	}
 }
+
+@media screen and (max-width:749px) {
+	body {
+    font-size: 12px !important;
+}
+}
