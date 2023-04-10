@@ -1148,6 +1148,10 @@ body {
 		font-size: 12px;
 		line-height: 1.3;
 	}
+  .page-width .rte {
+    font-size: 12px;
+    line-height: 1.5;
+}
 }
 
 @media screen and (min-width: 750px) and (max-width: 1400px) {
