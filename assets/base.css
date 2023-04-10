@@ -3158,7 +3158,7 @@ p a:hover {
 
 @media screen and (max-width:749px) {
 	.rte {
-		font-size: 12px;
+		font-size: 12px !important;
 		line-height: 1.3;
 	}
   .page-width .rte {
